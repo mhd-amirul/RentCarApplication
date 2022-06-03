@@ -1,0 +1,134 @@
+@extends('layouts.main')
+
+@section('container')
+@if (session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }} 
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
+<div class="card mb-3 mt-2 bg-secondary text-white">   
+    <div class="card-body p-2">
+        <h6 class="card-title m-0">Informasi Toko :</h5>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <div class="d-flex justify-content-center">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner m-2" style="max-height: 450px; max-width: 450px; overflow: hidden;">
+                    <div class="carousel-item active">
+                        <img src="{{ isset($shop->foto_usaha) == null ? url('images/notfound.png') : asset('storage/' . $shop->foto_usaha) }}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ isset($shop->pas_foto) == null ? url('images/notfound.png') : asset('storage/' . $shop->pas_foto) }}" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+            </div>
+        </div>
+        <h6 class="m-b-20 p-b-5 b-b-default f-w-600 mt-5">Information :</h6>
+        <div class="row">
+            <div class="col-sm-6 mb-4">
+                <p class="m-b-10 f-w-600">Nama Pemilik</p>
+                <h6 class="text-muted f-w-400">{{ $shop->nm_pu }}</h6>
+            </div>
+            <div class="col-sm-6 mb-4">
+                <p class="m-b-10 f-w-600">Nama Usaha</p>
+                <h6 class="text-muted f-w-400">{{ $shop->nm_usaha }}</h6>
+            </div>
+            <div class="col-sm-6 mb-4">
+                <p class="m-b-10 f-w-600">Alamat</p>
+                <h6 class="text-muted f-w-400">{{ $shop->alamat }}</h6>
+            </div>
+            <div class="col-sm-6 mb-4">
+                <p class="m-b-10 f-w-600">NIK</p>
+                <h6 class="text-muted f-w-400">{{ $shop->nik }}</h6>
+            </div>
+            <div class="col-sm-6 mb-4">
+                <p class="m-b-10 f-w-600">Surat Izin Usaha</p>
+                <a target="blank" href="{{ isset($shop->img_siu) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_siu) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+            </div>
+            <div class="col-sm-6 mb-4">
+                <p class="m-b-10 f-w-600">KTP</p>
+                <a target="blank" href="{{ isset($shop->img_ktp) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_ktp) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-9 mt-5">
+                    <a href="{{ route('allshops.index')}}" class="btn btn-primary">
+                        <i class="bi bi-arrow-left-circle" style="color: rgb(0, 0, 0);"></i> Back to All Shop
+                    </a>
+                    <a href="{{ route('allshops.edit', $shop->id) }}" class="btn btn-warning">
+                        <i class="bi bi-pencil-square"></i> Edit Toko
+                    </a>
+                    <a href="/shop" class="ml-2 btn btn-success">
+                        <i class="mr-2 bi bi-house-fill" style="color: rgb(0, 0, 0);"></i> Cek Lokasi Toko
+                    </a>
+                    <form action="{{ route('allshops.destroy', $shop->id) }}" method="post" class="d-inline">
+                        @method('delete')
+                        @csrf
+                        <button class=" ml-2 btn btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Menghapus Toko Juga Dapat Menghapus Data Mobil, Yakin Ingin Melanjutkan?')">
+                            <i class="bi bi-trash-fill"></i> Hapus
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card mb-3 mt-2 bg-secondary text-white"><div class="card-body p-2"><h6 class="card-title m-0">Daftar Mobil :</h5></div></div>
+    {{-- <div class="col-sm-3">
+        <a href="{{ route('allshops2.create') }}" class="btn btn-primary mb-3">Tambah data mobil</a>
+    </div> --}}
+<table class="table table-hover">
+    <thead>
+        <tr class="text-center">
+            <th scope="col">No</th>
+            <th scope="col">Gambar</th>
+            <th scope="col">Merk</th>
+            <th scope="col">Tahun Produksi</th>
+            <th scope="col">Muatan Penumpang</th>
+            <th scope="col">Harga Sewa</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        @forelse ($car as $car)
+        <tr class="text-center">
+            <th scope="row">{{ $loop->iteration }}</th>
+            <td>
+                <img src="{{ asset('storage/' . $car->gambar1) }}" height="50" width="100" alt="">
+            </td>
+            <td>{{ $car->merk->nama }}</td>
+            <td>{{ $car->tahun_produksi->nama }}</td>
+            <td>{{ $car->muatan_penumpang->nama }}</td>
+            <td>{{ $car->harga_sewa->nama }}</td>
+            <td>
+                <a href="{{ route('allcars.show', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                <a href="{{ route('allcars.edit', $car->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square"></i></a>
+                <form action="{{ route('allcars.destroy', $car->id) }}" method="post" class="d-inline">
+                    @method('delete')
+                    @csrf
+                    <button class="btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">
+                        <i class="bi bi-trash-fill"></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        @empty
+        <tr>
+            <td colspan="7" class="text-center h3">DATA KOSONG</td>
+        </tr>
+        @endforelse
+        </tbody>
+</table>
+@endsection
