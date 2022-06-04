@@ -60,12 +60,11 @@ Route::group(['middleware' => 'auth'], function ()
         Route::get('/changePass/{id}', [ProfilController::class, 'changePass'])->name('changePass');
         Route::put('/changePass/{id}', [ProfilController::class, 'updatePass'])->name('updatePass');
 
-        Route::group(['middleware' => 'admin'], function () 
+        Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () 
             {
                 // Route Khusus Admin
                 // Dashboard
-                Route::resource('admin', AdminDashboardController::class)
-                    ->except(['show', 'create', 'edit', 'update']);
+                Route::resource('dashboard', AdminDashboardController::class);
 
                 // Konfigurasi User
                 Route::resource('allusers', allUsersController::class)
@@ -89,7 +88,8 @@ Route::group(['middleware' => 'auth'], function ()
         Route::group(['middleware' => 'rental', 'prefix' => 'user-rental'], function () 
             {
                 // Route Khusus Toko Rental
-                Route::resource('shop', RentalController::class);
+                Route::resource('shop', RentalController::class)
+                    ->except(['index']);
                 Route::get('map/{id}', [mapController::class, 'setLocation'])->name('setLocation');
                 Route::put('map/update/{id}', [mapController::class, 'saveLocation'])->name('saveLocation');
                 Route::resource('/toko', TokoController::class)

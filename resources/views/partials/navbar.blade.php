@@ -30,7 +30,7 @@
                 @endcan
                 @can('admin')
                     <li>
-                        <a href="/admin" class="dropdown-item"><i class="mr-2 bi bi-shield-fill-exclamation"></i>Administrator</a>
+                        <a href="{{ route('dashboard.index') }}" class="dropdown-item"><i class="mr-2 bi bi-shield-fill-exclamation"></i>Administrator</a>
                     </li>
                     <li><hr class="dropdown-divider"></li>
                 @endcan

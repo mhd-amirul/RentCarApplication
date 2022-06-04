@@ -167,7 +167,7 @@
 
                     @forelse ($ulasan as $ulas)
                         <div class="d-flex flex-row user-info">
-                            <img class="rounded-circle" src="{{ isset($ulas->user->image) == null ? url('images/notfound.png') : asset('storage/' . $ulas->user->image) }}" width="40">
+                            <img class="rounded-circle" src="{{ isset($ulas->user->image) == null ? url('images/notfound.png') : asset('storage/' . $ulas->user->image) }}" width="50">
                             <div class="d-flex flex-column justify-content-start ml-2">
                                 <span class="d-block font-weight-bold name">{{ $ulas->user->username }}</span>
                                 <span class="date text-black-50">{{ $ulas->created_at->diffForHumans() }}</span>

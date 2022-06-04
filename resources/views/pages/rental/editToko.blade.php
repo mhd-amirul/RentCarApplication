@@ -9,7 +9,6 @@
             <form action="{{ route('toko.update', $data->id) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('put')
-                
                 <div class="card mb-2 bg-secondary text-white text-left">
                     <div class="card-body p-2">
                         <h6 class="card-title m-0">Toko :</h6>

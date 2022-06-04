@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\shop;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
 
 class AdminDashboardController extends Controller
 {
@@ -21,7 +22,7 @@ class AdminDashboardController extends Controller
                 ->with(
                     [
                         'title' => 'Administrator',
-                        'makeshop' => makeShop::all()
+                        'makeshop' => makeShop::latest()->fillter(request(['searchms']))->get()
                     ]
                 );
     }
@@ -53,7 +54,9 @@ class AdminDashboardController extends Controller
 
         makeShop::where('user_id', $request->user_id)->delete();
 
-        return redirect()->route('admin.index')->with('success', 'Permintaan di Terima');
+        return redirect()
+            ->route('dashboard.index')
+            ->with('success', 'Permintaan di Terima');
     }
 
     /**
@@ -64,7 +67,12 @@ class AdminDashboardController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('pages.admin.acceptShop',
+            [
+                'title' => 'Konfirmasi Toko',
+                'ms' => makeShop::findOrFail($id)
+            ]
+        );
     }
 
     /**
@@ -75,7 +83,7 @@ class AdminDashboardController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -97,10 +105,18 @@ class AdminDashboardController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        makeShop::where('id', $id)->delete();
+    {   
+        $rm = makeShop::findOrFail($id);
+        Storage::delete([
+            $rm->img_ktp,
+            $rm->img_siu,
+            $rm->pas_foto,
+            $rm->foto_usaha
+        ]);
+        $rm->delete();
+
         return redirect()
-            ->route('admin.index')
+            ->route('dashboard.index')
             ->with('success', 'Permintaan di Tolak');
     }
 }

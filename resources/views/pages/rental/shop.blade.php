@@ -118,7 +118,6 @@
 @endif
 
 <form action="{{ route('toko.index') }}">
-    @csrf
     <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="search.." name="search" value="{{ request('search') }}">
         <button class="btn btn-secondary" type="submit">Search</button>

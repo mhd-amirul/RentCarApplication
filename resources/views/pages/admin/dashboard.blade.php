@@ -57,82 +57,73 @@
             </div>
         </div>
     </div>
-<div class="card mb-3 mt-2 bg-secondary text-white"><div class="card-body p-2"><h6 class="card-title m-0">Pendaftar Toko : </h5></div></div>
-    <table class="table table-hover">
-        <thead>
-            <tr class="text-center">
-                <th scope="col">User ID</th>
-                <th scope="col">Nama Pemilik</th>
-                <th scope="col">Nama Usaha</th>
-                <th scope="col">Alamat</th>
-                <th scope="col">NIK</th>
-                <th scope="col">KTP</th>
-                <th scope="col">SIU</th>
-                <th scope="col">Pas Foto</th>
-                <th scope="col">Foto Usaha</th>
-                <th scope="col">Time</th>
-                <th scope="col">Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            @forelse ($makeshop as $ms)
-            <tr class="text-center">
-                <th scope="row">{{ $ms->user_id }}</th>
-                <td>{{ $ms->nm_pu }}</td>
-                <td>{{ $ms->nm_usaha }}</td>
-                <td>{{ $ms->alamat }}</td>
-                <td>{{ $ms->nik }}</td>
-                <td>
-                    <a href="{{ asset('storage/' . $ms->img_ktp) }}" target="blank" class="btn-sm btn-info">
-                        <i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="{{ asset('storage/' . $ms->img_siu) }}" target="blank" class="btn-sm btn-info">
-                        <i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="{{ asset('storage/' . $ms->pas_foto) }}" target="blank" class="btn-sm btn-info">
-                        <i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="{{ asset('storage/' . $ms->foto_usaha) }}" target="blank" class="btn-sm btn-info">
-                        <i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </td>
-                <td>{{ $ms->created_at }}</td>
-                <td>
-                    <form action="{{ route('admin.destroy', $ms->id) }}" method="post" class="d-inline">
-                        @method('delete')
+<div class="card mb-3 mt-2 bg-secondary text-white">
+    <div class="card-body p-2">
+        <h6 class="card-title m-0">Pendaftar Toko : </h5>
+    </div>
+</div>
+
+<form action="{{ route('dashboard.index') }}">
+    <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="search.." name="searchms" value="{{ request('searchms') }}">
+    <button class="btn btn-secondary" type="submit">Search</button>
+</div>
+</form>
+    
+@if ($makeshop->count())
+<div class="container">
+    <div class="row">
+        @foreach( $makeshop as $ms )
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    @if ($ms->pas_foto)
+                        <img src="{{ asset('storage/' . $ms->pas_foto) }}" alt="{{ $ms->pas_foto }}" class="card-img-top">
+                    @else
+                        <img src="{{ url('images/notfound.png') }}" alt="null" class="card-img-top">
+                    @endif
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $ms->nm_usaha }}</h5>
+                        <p>
+                            <small>
+                                Pemilik : <a href="#" class="text-decoration-none text-black">{{ $ms->nm_pu }}</a>
+                            </small>
+                        </p>
+                        <p class="card-text">
+                            User ID : {{ $ms->user_id }} <br> Alamat : {{ $ms->alamat }} <br> NIK : {{ $ms->nik }} <br> Created At : {{ $ms->created_at }}
+                        </p>
+
+                        <form action="{{ route('dashboard.store') }}" method="post" class="d-inline">
                         @csrf
-                        <button class="btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin?')">
-                            <i class="bi bi-trash-fill"></i>
-                        </button>
-                    </form>
-                    <form action="{{ route('admin.store') }}" method="post" class="d-inline">
-                        @csrf
-                        <input type="text" name="user_id" value="{{ $ms->user_id }}" hidden>
-                        <input type="text" name="nm_pu" value="{{ $ms->nm_pu }}" hidden>
-                        <input type="text" name="nm_usaha" value="{{ $ms->nm_usaha }}" hidden>
-                        <input type="text" name="alamat" value="{{ $ms->alamat }}" hidden>
-                        <input type="text" name="nik" value="{{ $ms->nik }}" hidden>
-                        <input type="text" name="img_ktp" value="{{ $ms->img_ktp }}" hidden>
-                        <input type="text" name="img_siu" value="{{ $ms->img_siu }}" hidden>
-                        <input type="text" name="pas_foto" value="{{ $ms->pas_foto }}" hidden>
-                        <input type="text" name="foto_usaha" value="{{ $ms->foto_usaha }}" hidden>
-                        <button class="btn-sm btn-success border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin?')">
-                            <i class="bi bi-check-circle"></i>
-                        </button>
-                    </form>
-                </td>
-            </tr>
-            @empty
-            <tr>
-                <td colspan="11" class="text-center h3">DATA KOSONG</td>
-            </tr>
-            @endforelse
-            </tbody>
-    </table>
+                            <input type="text" name="user_id" value="{{ $ms->user_id }}" hidden>
+                            <input type="text" name="nm_pu" value="{{ $ms->nm_pu }}" hidden>
+                            <input type="text" name="nm_usaha" value="{{ $ms->nm_usaha }}" hidden>
+                            <input type="text" name="alamat" value="{{ $ms->alamat }}" hidden>
+                            <input type="text" name="nik" value="{{ $ms->nik }}" hidden>
+                            <input type="text" name="img_ktp" value="{{ $ms->img_ktp }}" hidden>
+                            <input type="text" name="img_siu" value="{{ $ms->img_siu }}" hidden>
+                            <input type="text" name="pas_foto" value="{{ $ms->pas_foto }}" hidden>
+                            <input type="text" name="foto_usaha" value="{{ $ms->foto_usaha }}" hidden>
+                            <button class="btn-sm btn-success border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                        </form>
+                        <a href="{{ route('dashboard.show',$ms->id) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                        
+                        <form action="{{ route('dashboard.destroy', $ms->id) }}" method="post" class="d-inline">
+                            @method('delete')
+                            @csrf
+                            <button class="btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
+</div>
+@else
+    <p class="text-center fs-4 mt-5 mb-5">Empty !!!</p>
+@endif
+
 @endsection

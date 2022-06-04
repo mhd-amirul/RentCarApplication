@@ -60,7 +60,7 @@
                                                     </a>
                                                 @endif
                                                 @if ($data->role === 'admin')
-                                                    <a href="/admin" class="ml-2 btn btn-warning">
+                                                    <a href="{{ route('dashboard.index') }}" class="ml-2 btn btn-warning">
                                                         <i class="mr-2 bi bi-shield-fill-exclamation"></i>Administrator
                                                     </a>
                                                 @endif

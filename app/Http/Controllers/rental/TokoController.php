@@ -103,7 +103,15 @@ class TokoController extends Controller
 
     public function destroy($id)
     {
-        shop::where('id', $id)->delete();
+        $rm = shop::findOrFail($id);
+        Storage::delete([
+            $rm->img_ktp,
+            $rm->img_siu,
+            $rm->pas_foto,
+            $rm->foto_usaha
+        ]);
+        $rm->delete();
+        
         $user = User::where('id', auth()->user()->id)->first();
         $user['role'] = 'user';
         $user->save();
