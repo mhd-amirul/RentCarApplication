@@ -14,4 +14,18 @@ class shop extends Model
     {
         return $this->belongsTo(user::class);
     }
+
+    public function scopeFilterShop($query, array $filterShops)
+    {
+        # code...
+        if (isset($filterShops['searchShop']) ? $filterShops['searchShop'] : false) {
+            # code...
+            return $query->where('user_id', 'LIKE', '%' . $filterShops['searchShop'] . '%')
+                        ->orWhere('nm_pu', 'LIKE', '%' . $filterShops['searchShop'] . '%')
+                        ->orWhere('nm_usaha', 'LIKE', '%' . $filterShops['searchShop'] . '%')
+                        ->orWhere('alamat', 'LIKE', '%' . $filterShops['searchShop'] . '%')
+                        ->orWhere('nik', 'LIKE', '%' . $filterShops['searchShop'] . '%')
+                        ->orWhere('created_at', 'LIKE', '%' . $filterShops['searchShop'] . '%');
+        }
+    }
 }

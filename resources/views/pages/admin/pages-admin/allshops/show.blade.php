@@ -2,11 +2,12 @@
 
 @section('container')
 @if (session()->has('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                {{ session('success') }} 
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            @endif
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ session('success') }} 
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
 <div class="card mb-3 mt-2 bg-secondary text-white">   
     <div class="card-body p-2">
         <h6 class="card-title m-0">Informasi Toko :</h5>
@@ -23,6 +24,12 @@
                     <div class="carousel-item">
                         <img src="{{ isset($shop->pas_foto) == null ? url('images/notfound.png') : asset('storage/' . $shop->pas_foto) }}" class="d-block w-100" alt="...">
                     </div>
+                    <div class="carousel-item">
+                        <img src="{{ isset($shop->img_siu) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_siu) }}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ isset($shop->img_ktp) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_ktp) }}" class="d-block w-100" alt="...">
+                    </div>
                 </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -37,29 +44,40 @@
         <h6 class="m-b-20 p-b-5 b-b-default f-w-600 mt-5">Information :</h6>
         <div class="row">
             <div class="col-sm-6 mb-4">
-                <p class="m-b-10 f-w-600">Nama Pemilik</p>
-                <h6 class="text-muted f-w-400">{{ $shop->nm_pu }}</h6>
+                <div class="form-floating">
+                    <input type="text" class="form-control rounded-top" id="nm_pu" value="{{ $shop->nm_pu }}">
+                    <label for="nm_pu">Nama Pemilik</label>
+                </div>
             </div>
             <div class="col-sm-6 mb-4">
-                <p class="m-b-10 f-w-600">Nama Usaha</p>
-                <h6 class="text-muted f-w-400">{{ $shop->nm_usaha }}</h6>
+                <div class="form-floating">
+                    <input type="text" class="form-control rounded-top" id="nm_pu" value="{{ $shop->nm_usaha }}">
+                    <label for="nm_pu">Nama Usaha</label>
+                </div>
             </div>
             <div class="col-sm-6 mb-4">
-                <p class="m-b-10 f-w-600">Alamat</p>
-                <h6 class="text-muted f-w-400">{{ $shop->alamat }}</h6>
+                <div class="form-floating">
+                    <input type="text" class="form-control rounded-top" id="nm_pu" value="{{ $shop->alamat }}">
+                    <label for="nm_pu">Alamat</label>
+                </div>
             </div>
             <div class="col-sm-6 mb-4">
-                <p class="m-b-10 f-w-600">NIK</p>
-                <h6 class="text-muted f-w-400">{{ $shop->nik }}</h6>
+                <div class="form-floating">
+                    <input type="text" class="form-control rounded-top" id="nm_pu" value="{{ $shop->nik }}">
+                    <label for="nm_pu">NIK</label>
+                </div>
             </div>
             <div class="col-sm-6 mb-4">
-                <p class="m-b-10 f-w-600">Surat Izin Usaha</p>
-                <a target="blank" href="{{ isset($shop->img_siu) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_siu) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                <div class="form-floating">
+                    <input type="text" class="form-control rounded-top" id="nm_pu" value="{{ $shop->user->username }}">
+                    <label for="nm_pu">Username</label>
+                </div>
             </div>
             <div class="col-sm-6 mb-4">
-                <p class="m-b-10 f-w-600">KTP</p>
-                <a target="blank" href="{{ isset($shop->img_ktp) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_ktp) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-
+                <div class="form-floating">
+                    <input type="text" class="form-control rounded-top" id="nm_pu" value="+62 {{ $shop->user->no_hp }}">
+                    <label for="nm_pu">No Hp</label>
+                </div>
             </div>
             
             <div class="row">
@@ -67,16 +85,16 @@
                     <a href="{{ route('allshops.index')}}" class="btn btn-primary">
                         <i class="bi bi-arrow-left-circle" style="color: rgb(0, 0, 0);"></i> Back to All Shop
                     </a>
+                    <a href="{{ route('sharelok', $shop->id) }}" class="btn btn-success">
+                        <i class="mr-2 bi bi-house-fill" style="color: rgb(0, 0, 0);"></i> Cek Lokasi Toko
+                    </a>
                     <a href="{{ route('allshops.edit', $shop->id) }}" class="btn btn-warning">
                         <i class="bi bi-pencil-square"></i> Edit Toko
-                    </a>
-                    <a href="/shop" class="ml-2 btn btn-success">
-                        <i class="mr-2 bi bi-house-fill" style="color: rgb(0, 0, 0);"></i> Cek Lokasi Toko
                     </a>
                     <form action="{{ route('allshops.destroy', $shop->id) }}" method="post" class="d-inline">
                         @method('delete')
                         @csrf
-                        <button class=" ml-2 btn btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Menghapus Toko Juga Dapat Menghapus Data Mobil, Yakin Ingin Melanjutkan?')">
+                        <button class=" btn btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Menghapus Toko Juga Dapat Menghapus Data Mobil, Yakin Ingin Melanjutkan?')">
                             <i class="bi bi-trash-fill"></i> Hapus
                         </button>
                     </form>
@@ -85,10 +103,16 @@
         </div>
     </div>
 </div>
+
 <div class="card mb-3 mt-2 bg-secondary text-white"><div class="card-body p-2"><h6 class="card-title m-0">Daftar Mobil :</h5></div></div>
-    {{-- <div class="col-sm-3">
-        <a href="{{ route('allshops2.create') }}" class="btn btn-primary mb-3">Tambah data mobil</a>
-    </div> --}}
+
+<form action="">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="search.." name="search" value="{{ request('search') }}">
+        <button class="btn btn-secondary" type="submit">Search</button>
+    </div>
+</form>
+
 <table class="table table-hover">
     <thead>
         <tr class="text-center">
@@ -106,7 +130,7 @@
         <tr class="text-center">
             <th scope="row">{{ $loop->iteration }}</th>
             <td>
-                <img src="{{ asset('storage/' . $car->gambar1) }}" height="50" width="100" alt="">
+                <img src="{{ isset($car->gambar1) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar1) }}" height="50" width="100" alt="">
             </td>
             <td>{{ $car->merk->nama }}</td>
             <td>{{ $car->tahun_produksi->nama }}</td>
@@ -131,4 +155,5 @@
         @endforelse
         </tbody>
 </table>
+
 @endsection

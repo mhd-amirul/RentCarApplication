@@ -5,10 +5,10 @@
         <div class="col-13">
             <div class="row">
                 <div class="col">
-                    <input type="text" name="longitude" id="longitude" value="{{ $shop->longitude }}" hidden>
+                    <input type="text" name="longitude" id="longitude" value="{{ isset($shop->longitude) ? $shop->longitude : '97.1374572505087' }}" hidden>
                 </div>
                 <div class="col">
-                    <input type="text" name="latitude" id="latitude" value="{{ $shop->latitude }}" hidden>
+                    <input type="text" name="latitude" id="latitude" value="{{ isset($shop->latitude) ? $shop->latitude : '5.190902388476289' }}" hidden>
                 </div>
             </div>
     

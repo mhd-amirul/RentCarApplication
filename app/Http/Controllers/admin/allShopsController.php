@@ -22,7 +22,7 @@ class allShopsController extends Controller
             ->with(
                 [
                     'title' => 'Data Toko',
-                    'shop' => shop::all()
+                    'shop' => shop::latest()->filterShop(request(['searchShop']))->get()
                 ]
             );
     }
@@ -38,7 +38,7 @@ class allShopsController extends Controller
             ->with(
                 [
                     'title' => 'Tambah Toko',
-                    'users' => User::where('role', 'rental')->get()
+                    'users' => User::where('role', 'user')->get()
                 ]
             );
     }
@@ -64,6 +64,7 @@ class allShopsController extends Controller
                 'foto_usaha' => 'image|file|max:1024'
             ]
         );
+
         if ($request->file('img_ktp')) {
             $data['img_ktp'] = $request->file('img_ktp')->store('ktp');
         }
@@ -80,16 +81,15 @@ class allShopsController extends Controller
             $data['foto_usaha'] = $request->file('foto_usaha')->store('foto_usaha');
         }
 
+        $user = User::where('id', $request['user_id'])->first();
+        $user['role'] = 'rental';
+
         shop::create($data);
+        $user->save();
         return redirect()->route('allshops.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         return view('pages.admin.pages-admin.allshops.show')
@@ -111,12 +111,11 @@ class allShopsController extends Controller
      */
     public function edit($id)
     {
-        $data = shop::findOrFail($id);
         return view('pages.admin.pages-admin.allshops.edit')
             ->with(
                 [
-                    'data' => $data,
-                    'users' => User::all(),
+                    'data' => shop::findOrFail($id),
+                    'users' => User::where('role','<>','admin')->get(),
                     'title' => 'Edit Toko'
                 ]
             );
@@ -190,10 +189,30 @@ class allShopsController extends Controller
     public function destroy($id)
     {
         $shop = shop::findOrFail($id);
+        if ($shop->img_ktp) {
+            # code...
+            Storage::delete($shop->img_ktp);
+        }
+        if ($shop->img_siu) {
+            # code...
+            Storage::delete($shop->img_siu);
+        }
+        if ($shop->pas_foto) {
+            # code...
+            Storage::delete($shop->pas_foto);
+        }
+        if ($shop->foto_usaha) {
+            # code...
+            Storage::delete($shop->foto_usaha);
+        }
+        
         $user = User::where('id', $shop->user_id)->first();
         $user['role'] = 'user';
         $user->save();
+        
         $shop->delete();
-        return redirect()->back();
+        return redirect()
+            ->route('allshops.index')
+            ->with('success', 'Toko Berhasil di Hapus');
     }
 }

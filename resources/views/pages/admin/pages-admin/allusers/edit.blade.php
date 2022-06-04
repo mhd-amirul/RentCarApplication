@@ -36,6 +36,24 @@
                         </div>
                     @enderror
                 </div>
+                <div class="form-floating">
+                    <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Password">
+                    <label for="password">Password</label>
+                    @error('password')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+                <div class="form-floating">
+                    <input type="password" name="ConfirmPassword" class="form-control @error('ConfirmPassword') is-invalid @enderror" id="ConfirmPassword" placeholder="Confirm Password">
+                    <label for="ConfirmPassword">Confirm Password</label>
+                    @error('ConfirmPassword')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
                 <div class="card mt-2 mb-2 bg-secondary text-white text-left">
                     <div class="card-body p-2">
                         <h6 class="card-title m-0">Upload :</h6>

@@ -11,11 +11,6 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminDashboardController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('pages.admin.dashboard')
@@ -27,22 +22,11 @@ class AdminDashboardController extends Controller
                 );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $data = $request->all();
@@ -59,12 +43,6 @@ class AdminDashboardController extends Controller
             ->with('success', 'Permintaan di Terima');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         return view('pages.admin.acceptShop',
@@ -75,44 +53,36 @@ class AdminDashboardController extends Controller
         );
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {   
         $rm = makeShop::findOrFail($id);
-        Storage::delete([
-            $rm->img_ktp,
-            $rm->img_siu,
-            $rm->pas_foto,
-            $rm->foto_usaha
-        ]);
+        if ($rm->img_ktp) {
+            # code...
+            Storage::delete($rm->img_ktp);
+        }
+        if ($rm->img_siu) {
+            # code...
+            Storage::delete($rm->img_siu);
+        }
+        if ($rm->pas_foto) {
+            # code...
+            Storage::delete($rm->pas_foto);
+        }
+        if ($rm->foto_usaha) {
+            # code...
+            Storage::delete($rm->foto_usaha);
+        }
+
         $rm->delete();
 
         return redirect()

@@ -9,22 +9,6 @@
             <form action="{{ route('allshops.update', $data->id) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('put')
-                <div class="card mt-2 mb-2 bg-secondary text-white text-left">
-                    <div class="card-body p-2">
-                        <h6 class="card-title m-0">User :</h6>
-                    </div>
-                </div>
-                <div class="">
-                    <select name="user_id" id="user_id" class="form-control mb-3">
-                        @foreach ($users as $user)
-                            @if (old('user_id', $data->user_id) == $user->id)
-                                <option value="{{ $user->id }}" selected>{{ $loop->iteration }}. {{ $user->email }}</option>
-                            @else
-                                <option value="{{ $user->id }}">{{ $loop->iteration }}. {{ $user->email }}</option>
-                            @endif
-                        @endforeach
-                    </select>
-                </div>
                 <div class="card mb-2 bg-secondary text-white text-left">
                     <div class="card-body p-2">
                         <h6 class="card-title m-0">Toko :</h6>

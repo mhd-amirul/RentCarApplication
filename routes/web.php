@@ -62,15 +62,8 @@ Route::group(['middleware' => 'auth'], function ()
 
         Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () 
             {
-                // Route Khusus Admin
-                // Dashboard
                 Route::resource('dashboard', AdminDashboardController::class);
-
-                // Konfigurasi User
-                Route::resource('allusers', allUsersController::class)
-                    ->except(['show']);
-
-                // Konfigurasi Toko dan Mobil
+                Route::resource('allusers', allUsersController::class);
                 Route::resource('allshops', allShopsController::class);
                 Route::resource('allcars', CarController::class)
                     ->except(['index', 'create', 'store']);
