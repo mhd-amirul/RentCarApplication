@@ -24,7 +24,6 @@ class MobilUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'user_id' => '',
             'stok' => 'required|int',
             'deskripsi' => 'required',
             'gambar1' => 'image|file|max:1024',
