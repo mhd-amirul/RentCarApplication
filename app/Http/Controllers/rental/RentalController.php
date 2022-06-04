@@ -28,11 +28,9 @@ class RentalController extends Controller
             );
     }
 
-    public function store(Request $request)
+    public function store(CreateMobilRequest $request)
     {
         $data = $request->all();
-        return response()->json($data);
-
         if ($request->file('gambar1')) {
             $data['gambar1'] = $request->file('gambar1')->store('gambar1');
         }
@@ -49,94 +47,36 @@ class RentalController extends Controller
             $data['gambar5'] = $request->file('gambar5')->store('gambar5');
         }
 
-        // proses pengambilan nilai data mobil
+        $kriteria = kriteria::all();
+        $data['kata_kunci'] = $data['deskripsi'];
+        foreach ($kriteria as $k) {
+            # code...
+            $name = str_replace(' ','_',$k->nama);
+            $db = alternatif::where('id', $data[$name.'_id'])->first();
+            if ($db->kriteria_id == $k->id) {
+                $data['kata_kunci'] .= $db->nama.', ';
+            }
+        }
         
-
-        $merk_id = alternatif::where('id', $data['merk_id'])->first();
-        $tp_id = alternatif::where('id', $data['tp_id'])->first();
-        $kf_id = alternatif::where('id', $data['kf_id'])->first();
-        $km_id = alternatif::where('id', $data['km_id'])->first();
-        $mp_id = alternatif::where('id', $data['mp_id'])->first();
-        $km2_id = alternatif::where('id', $data['km2_id'])->first();
-        $jb_id = alternatif::where('id', $data['jb_id'])->first();
-        $hs_id = alternatif::where('id', $data['hs_id'])->first();
-
-        $data['kata_kunci'] =   $merk_id['nama'].
-                                ', '.$tp_id['nama'].
-                                ', '.$kf_id['nama'].
-                                ', '.$km_id['nama'].
-                                ', '.$mp_id['nama'].
-                                ', '.$km2_id['nama'].
-                                ', '.$jb_id['nama'].
-                                ', '.$hs_id['nama'].
-                                ', '.$data['deskripsi'];
-
         $data['user_id'] = auth()->user()->id;
-        $shop = shop::where('user_id', $data['user_id'])->first();
-        $data['shop_id'] = $shop->id;
-        
+        $data['shop_id'] = shop::where('user_id', $data['user_id'])->value('id');
         $car = car::create($data);
 
-        // proses simpan data ke array 
-        $kriteria1 = [
-            'car_id' => $car['id'],
-            'kriteria_id' => $merk_id['kriteria_id'],
-            'alternatif_id' => $data['merk_id'],
-            'nilai' => $merk_id['nilai']
-        ];
-        $kriteria2 = [
-            'car_id' => $car['id'],
-            'kriteria_id' => $tp_id['kriteria_id'],
-            'alternatif_id' => $data['tp_id'],
-            'nilai' => $tp_id['nilai']
-        ];
-        $kriteria3 = [
-            'car_id' => $car['id'],
-            'kriteria_id' => $kf_id['kriteria_id'],
-            'alternatif_id' => $data['kf_id'],
-            'nilai' => $kf_id['nilai']
-        ];
-        $kriteria4 = [
-            'car_id' => $car['id'],
-            'kriteria_id' => $km_id['kriteria_id'],
-            'alternatif_id' => $data['km_id'],
-            'nilai' => $km_id['nilai']
-        ];
-        $kriteria5 = [
-            
-            'car_id' => $car['id'],
-            'kriteria_id' => $mp_id['kriteria_id'],
-            'alternatif_id' => $data['mp_id'],
-            'nilai' => $mp_id['nilai']
-        ];
-        $kriteria6 = [
-            'car_id' => $car['id'],
-            'kriteria_id' => $km2_id['kriteria_id'],
-            'alternatif_id' => $data['km2_id'],
-            'nilai' => $km2_id['nilai']
-        ];
-        $kriteria7 = [
-            'car_id' => $car['id'],
-            'kriteria_id' => $jb_id['kriteria_id'],
-            'alternatif_id' => $data['jb_id'],
-            'nilai' => $jb_id['nilai']
-        ];
-        $kriteria8 = [
-            'car_id' => $car['id'],
-            'kriteria_id' => $hs_id['kriteria_id'],
-            'alternatif_id' => $data['hs_id'],
-            'nilai' => $hs_id['nilai']
-        ];
-
-        // Proses penyimpanan data nilai ke db
-        nilai::create($kriteria1);
-        nilai::create($kriteria2);
-        nilai::create($kriteria3);
-        nilai::create($kriteria4);
-        nilai::create($kriteria5);
-        nilai::create($kriteria6);
-        nilai::create($kriteria7);
-        nilai::create($kriteria8);
+        foreach ($kriteria as $k) {
+            # code...
+            $name = str_replace(' ','_',$k->nama);
+            $db = alternatif::where('id', $data[$name.'_id'])->first();
+            if ($db['kriteria_id'] == $k->id) {
+                # code...
+                $nilai = [
+                    'car_id' => $car->id,
+                    'kriteria_id' => $k->id,
+                    'alternatif_id' => $data[$name.'_id'],
+                    'nilai' => $db->nilai
+                ];
+                nilai::create($nilai);
+            }
+        }
         
         return redirect()
             ->route('toko.index')
@@ -172,14 +112,8 @@ class RentalController extends Controller
                 ->with(
                     [
                         'title' => 'Tambah Mobil',
-                        'merk' => alternatif::where('kriteria_id', 1)->get(),
-                        'tahun_produksi' => alternatif::where('kriteria_id', 2)->get(),
-                        'kondisi_fisik' => alternatif::where('kriteria_id', 3)->get(),
-                        'kondisi_mesin' => alternatif::where('kriteria_id', 4)->get(),
-                        'muatan_penumpang' => alternatif::where('kriteria_id', 5)->get(),
-                        'kapasitas_mesin' => alternatif::where('kriteria_id', 6)->get(),
-                        'jenis_bbm' => alternatif::where('kriteria_id', 7)->get(),
-                        'harga_sewa' => alternatif::where('kriteria_id', 8)->get(),
+                        'kriteria' => kriteria::all(),
+                        'alternatif' => alternatif::all(),
                         'car' => car::findOrFail($id)
                     ]
                 );

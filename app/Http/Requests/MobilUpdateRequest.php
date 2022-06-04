@@ -25,14 +25,6 @@ class MobilUpdateRequest extends FormRequest
     {
         return [
             'user_id' => '',
-            'merk_id' => 'required',
-            'tp_id' => 'required',
-            'kf_id' => 'required',
-            'km_id' => 'required',
-            'mp_id' => 'required',
-            'km2_id' => 'required',
-            'jb_id' => 'required',
-            'hs_id' => 'required',
             'stok' => 'required|int',
             'deskripsi' => 'required',
             'gambar1' => 'image|file|max:1024',

@@ -40,7 +40,7 @@
 
     <script>
         const defaultLocation = [97.1374572505087, 5.190902388476289]
-
+        
         mapboxgl.accessToken = '{{ env('MAPBOX_KEY') }}';
         const map = new mapboxgl.Map({
             container: 'map',

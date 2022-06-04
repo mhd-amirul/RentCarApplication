@@ -13,7 +13,26 @@
                         <h6 class="card-title m-0">Pilih Kriteria Mobil :</h6>
                     </div>
                 </div>
-                <div class="form-floating mb-1">
+
+                @foreach ($kriteria as $item)
+                    <div class="form-floating mb-1">
+                        <select name="{{ $item->nama."_id" }}" class="form-select" aria-label="Floating label select example">
+                            @foreach ($alternatif as $data)
+                                @if ($data->kriteria_id == $item->id)
+                                    @if (old('merk_id') == $data->id)
+                                        <option value="{{ $data->id }}" selected>{{ $data->nama }}</option>
+                                    @else
+                                        <option value="{{ $data->id }}">{{ $data->nama }}</option>
+                                    @endif
+                                @endif
+                            @endforeach
+                        </select>
+                        <label for="{{ $item->nama."_id" }}">{{ $item->nama }}</label>
+                    </div>
+                @endforeach
+
+
+                {{-- <div class="form-floating mb-1">
                         <select name="merk_id" class="form-select" aria-label="Floating label select example">
                             @foreach ($merk as $data)
                                 @if (old('merk_id', $car->merk_id) == $data->id)
@@ -108,7 +127,7 @@
                         @endforeach
                     </select>
                     <label for="hs_id">Harga Sewa</label>
-                </div>
+                </div> --}}
                 <div class="card mt-2 mb-2 bg-secondary text-white text-left">
                     <div class="card-body p-2">
                         <h6 class="card-title m-0">Informasi Mobil :</h6>

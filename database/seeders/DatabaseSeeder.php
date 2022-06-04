@@ -254,13 +254,13 @@ class DatabaseSeeder extends Seeder
                 'user_id' => '3',
                 'shop_id' => '2',
                 'merk_id' => '3',
-                'tp_id' => '5',
-                'kf_id' => '7',
-                'km_id' => '11',
-                'mp_id' => '13',
-                'km2_id' => '18',
-                'jb_id' => '21',
-                'hs_id' => '23'
+                'Tahun_Produksi_id' => '5',
+                'Kondisi_Fisik_id' => '7',
+                'Kondisi_Mesin_id' => '11',
+                'Muatan_Penumpang_id' => '13',
+                'Kapasitan_Mesin_id' => '18',
+                'Jenis_BBM_id' => '21',
+                'Harga_Sewa_id' => '23'
             ]
         );
 
@@ -269,13 +269,13 @@ class DatabaseSeeder extends Seeder
                 'user_id' => '3',
                 'shop_id' => '2',
                 'merk_id' => '1',
-                'tp_id' => '5',
-                'kf_id' => '7',
-                'km_id' => '12',
-                'mp_id' => '15',
-                'km2_id' => '17',
-                'jb_id' => '20',
-                'hs_id' => '22'
+                'Tahun_Produksi_id' => '5',
+                'Kondisi_Fisik_id' => '7',
+                'Kondisi_Mesin_id' => '12',
+                'Muatan_Penumpang_id' => '15',
+                'Kapasitan_Mesin_id' => '17',
+                'Jenis_BBM_id' => '20',
+                'Harga_Sewa_id' => '22'
             ]
         );
 
@@ -284,13 +284,13 @@ class DatabaseSeeder extends Seeder
                 'user_id' => '3',
                 'shop_id' => '2',
                 'merk_id' => '3',
-                'tp_id' => '4',
-                'kf_id' => '7',
-                'km_id' => '11',
-                'mp_id' => '13',
-                'km2_id' => '16',
-                'jb_id' => '21',
-                'hs_id' => '24'
+                'Tahun_Produksi_id' => '4',
+                'Kondisi_Fisik_id' => '7',
+                'Kondisi_Mesin_id' => '11',
+                'Muatan_Penumpang_id' => '13',
+                'Kapasitan_Mesin_id' => '16',
+                'Jenis_BBM_id' => '21',
+                'Harga_Sewa_id' => '24'
             ]
         );
 
@@ -299,13 +299,13 @@ class DatabaseSeeder extends Seeder
                 'user_id' => '3',
                 'shop_id' => '2',
                 'merk_id' => '1',
-                'tp_id' => '5',
-                'kf_id' => '9',
-                'km_id' => '12',
-                'mp_id' => '15',
-                'km2_id' => '17',
-                'jb_id' => '19',
-                'hs_id' => '23'
+                'Tahun_Produksi_id' => '5',
+                'Kondisi_Fisik_id' => '9',
+                'Kondisi_Mesin_id' => '12',
+                'Muatan_Penumpang_id' => '15',
+                'Kapasitan_Mesin_id' => '17',
+                'Jenis_BBM_id' => '19',
+                'Harga_Sewa_id' => '23'
             ]
         );
 
@@ -314,13 +314,13 @@ class DatabaseSeeder extends Seeder
                 'user_id' => '3',
                 'shop_id' => '2',
                 'merk_id' => '3',
-                'tp_id' => '6',
-                'kf_id' => '9',
-                'km_id' => '12',
-                'mp_id' => '15',
-                'km2_id' => '18',
-                'jb_id' => '21',
-                'hs_id' => '24'
+                'Tahun_Produksi_id' => '6',
+                'Kondisi_Fisik_id' => '9',
+                'Kondisi_Mesin_id' => '12',
+                'Muatan_Penumpang_id' => '15',
+                'Kapasitan_Mesin_id' => '18',
+                'Jenis_BBM_id' => '21',
+                'Harga_Sewa_id' => '24'
             ]
         );
 
@@ -330,13 +330,13 @@ class DatabaseSeeder extends Seeder
                 'user_id' => '2',
                 'shop_id' => '1',
                 'merk_id' => '3',
-                'tp_id' => '5',
-                'kf_id' => '7',
-                'km_id' => '11',
-                'mp_id' => '13',
-                'km2_id' => '18',
-                'jb_id' => '21',
-                'hs_id' => '23'
+                'Tahun_Produksi_id' => '5',
+                'Kondisi_Fisik_id' => '7',
+                'Kondisi_Mesin_id' => '11',
+                'Muatan_Penumpang_id' => '13',
+                'Kapasitan_Mesin_id' => '18',
+                'Jenis_BBM_id' => '21',
+                'Harga_Sewa_id' => '23'
             ]
         );
 
@@ -345,13 +345,13 @@ class DatabaseSeeder extends Seeder
                 'user_id' => '2',
                 'shop_id' => '1',
                 'merk_id' => '1',
-                'tp_id' => '5',
-                'kf_id' => '7',
-                'km_id' => '12',
-                'mp_id' => '15',
-                'km2_id' => '17',
-                'jb_id' => '20',
-                'hs_id' => '22'
+                'Tahun_Produksi_id' => '5',
+                'Kondisi_Fisik_id' => '7',
+                'Kondisi_Mesin_id' => '12',
+                'Muatan_Penumpang_id' => '15',
+                'Kapasitan_Mesin_id' => '17',
+                'Jenis_BBM_id' => '20',
+                'Harga_Sewa_id' => '22'
             ]
         );
 
@@ -360,13 +360,13 @@ class DatabaseSeeder extends Seeder
                 'user_id' => '2',
                 'shop_id' => '1',
                 'merk_id' => '3',
-                'tp_id' => '4',
-                'kf_id' => '7',
-                'km_id' => '11',
-                'mp_id' => '13',
-                'km2_id' => '16',
-                'jb_id' => '21',
-                'hs_id' => '24'
+                'Tahun_Produksi_id' => '4',
+                'Kondisi_Fisik_id' => '7',
+                'Kondisi_Mesin_id' => '11',
+                'Muatan_Penumpang_id' => '13',
+                'Kapasitan_Mesin_id' => '16',
+                'Jenis_BBM_id' => '21',
+                'Harga_Sewa_id' => '24'
             ]
         );
 
@@ -375,13 +375,13 @@ class DatabaseSeeder extends Seeder
                 'user_id' => '2',
                 'shop_id' => '1',
                 'merk_id' => '1',
-                'tp_id' => '5',
-                'kf_id' => '9',
-                'km_id' => '12',
-                'mp_id' => '15',
-                'km2_id' => '17',
-                'jb_id' => '19',
-                'hs_id' => '23'
+                'Tahun_Produksi_id' => '5',
+                'Kondisi_Fisik_id' => '9',
+                'Kondisi_Mesin_id' => '12',
+                'Muatan_Penumpang_id' => '15',
+                'Kapasitan_Mesin_id' => '17',
+                'Jenis_BBM_id' => '19',
+                'Harga_Sewa_id' => '23'
             ]
         );
 
@@ -390,13 +390,13 @@ class DatabaseSeeder extends Seeder
                 'user_id' => '2',
                 'shop_id' => '1',
                 'merk_id' => '3',
-                'tp_id' => '6',
-                'kf_id' => '9',
-                'km_id' => '12',
-                'mp_id' => '15',
-                'km2_id' => '18',
-                'jb_id' => '21',
-                'hs_id' => '24'
+                'Tahun_Produksi_id' => '6',
+                'Kondisi_Fisik_id' => '9',
+                'Kondisi_Mesin_id' => '12',
+                'Muatan_Penumpang_id' => '15',
+                'Kapasitan_Mesin_id' => '18',
+                'Jenis_BBM_id' => '21',
+                'Harga_Sewa_id' => '24'
             ]
         );
 

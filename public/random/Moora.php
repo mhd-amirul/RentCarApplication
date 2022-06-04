@@ -1,28 +1,8 @@
-public function store(CreateMobilRequest $request)
-    {
+<!-- controller Add Car  -->
+$d = explode(',',$data['Tahun_Produksi_id']);
+        return response()->json($data);
 
-        $data = $request->all();
-        if ($request->file('gambar1')) {
-            $data['gambar1'] = $request->file('gambar1')->store('gambar1');
-        }
-        if ($request->file('gambar2')) {
-            $data['gambar2'] = $request->file('gambar2')->store('gambar2');
-        }
-        if ($request->file('gambar3')) {
-            $data['gambar3'] = $request->file('gambar3')->store('gambar3');
-        }
-        if ($request->file('gambar4')) {
-            $data['gambar4'] = $request->file('gambar4')->store('gambar4');
-        }
-        if ($request->file('gambar5')) {
-            $data['gambar5'] = $request->file('gambar5')->store('gambar5');
-        }
-
-        $data['user_id'] = auth()->user()->id;
-        $shop = shop::where('user_id', $data['user_id'])->first();
-        $data['shop_id'] = $shop->id;
-        $car = car::create($data);
-
+    
         // proses pengambilan nilai data mobil
         $merk_id = alternatif::where('id', $data['merk_id'])->first();
         $tp_id = alternatif::where('id', $data['tp_id'])->first();
@@ -94,6 +74,97 @@ public function store(CreateMobilRequest $request)
         nilai::create($kriteria7);
         nilai::create($kriteria8);
 
-        // return response()->json($kriteria1);
-        return redirect()->route('shop.index')->with('success', 'Berhasil Menambah Mobil Baru');
+
+
+        <!-- CONTROLLER -->
+public function hitung(Request $request)
+{
+    $allKriteria = kriteria::all();
+    $kriteria = [];
+    foreach ($allKriteria as $row) {
+        $kriteria[
+            $row->id
+            ] = array(
+                $row->nama,
+                $row->type,
+                $row->bobot
+            );
+        }
+
+    $allCars = car::where('merk_id', $request->kritmerk)->where('stok','>','0')->get();
+    $alternatif = [];
+    foreach ($allCars as $row) {
+    $alternatif[$row->id] 
+        = array(
+            $row->merk_id,
+            $row->tp_id,
+            $row->kf_id,
+            $row->km_id,
+            $row->mp_id,
+            $row->km2_id,
+            $row->jb_id,
+            $row->hs_id,
+        );
     }
+
+    // Mengambil data nilai 
+    $db = DB::select('SELECT * FROM nilais ORDER BY car_id, kriteria_id');
+    $sample = [];
+    foreach ($db as $row) {
+        if (!isset($sample[$row->car_id])) {
+            $sample[$row->car_id] = [];
+        }
+        $sample[$row->car_id][$row->kriteria_id] = $row->nilai;
+    }
+
+    $normal = $sample;
+    foreach($kriteria as $id_kriteria => $k){
+        $pembagi = 0;
+        foreach($alternatif as $id_cars => $a){
+            $pembagi += pow($sample[$id_cars][$id_kriteria], 2);
+        }
+        foreach($alternatif as $id_cars => $a){
+            $normal[$id_cars][$id_kriteria] /= sqrt($pembagi);
+        }
+    }
+
+    //MENGHITUNG NILAI OPTIMASI
+    $optimasi = [];
+    $batas = 0;
+    foreach($alternatif as $id_cars => $a){
+        $optimasi[$id_cars] = 0;
+        foreach($kriteria as $id_kriteria => $k){
+            $data[$id_cars] = $normal[$id_cars][$id_kriteria] * $k[2];
+            if ($k[1] == 'benefit') {
+                $optimasi[$id_cars] += $data[$id_cars];
+            } else {
+                $optimasi[$id_cars] -= $data[$id_cars];
+            }
+        }
+        $batas++;
+    }
+    
+    // $index = key($result);
+    arsort($optimasi);
+    
+    foreach ($optimasi as $id_cars => $value) {
+        $result[] = [
+            'nilai_akhir' => $optimasi[$id_cars],
+            'car_id' => $id_cars,
+        ];
+    }
+    // ambil data mobil dari db
+    $cars = [];
+    for ($i=0; $i <= $batas-1; $i++) { 
+        $cars[] = car::where('id', $result[$i]['car_id'])->first();
+    }
+    $cars = array_slice($cars, 0, 5);
+
+    return view('pages.hasil')
+        ->with(
+            [
+                'title' => 'Hasil Rekomendasi',
+                'cars' => $cars
+            ]
+        );
+}

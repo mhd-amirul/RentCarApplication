@@ -92,7 +92,7 @@
                             <i class="mr-2 bi bi-house-fill" style="color: rgb(0, 0, 0);"></i> Cek Lokasi Toko
                         </a>
                     @else
-                        <a href="{{ route('sharelok', $shop->id) }}" class="ml-2 btn btn-success">
+                        <a href="{{ route('setLocation', $shop->id) }}" class="ml-2 btn btn-success">
                             <i class="mr-2 bi bi-map-fill" style="color: rgb(0, 0, 0);"></i> Atur Lokasi Toko
                         </a>
                     @endif
@@ -114,7 +114,7 @@
 @if ($lockCheck)
     <a href="{{ route('shop.create') }}" class="btn btn-primary mb-3">Tambah data mobil</a>
 @else
-    <p>Atur Lokasi Toko Untuk Menambahkan Mobil</p>
+    <p class="mb-2 mt-2"></p>
 @endif
 
 <form action="{{ route('toko.index') }}">
