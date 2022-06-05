@@ -6,7 +6,6 @@
     <div class="col-lg-6 mt-5">
         <main class="form-registration mt-5">
             <form action="{{ route('hitung') }}" method="GET">
-                @csrf
                 <div class="card mt-2 mb-2 bg-secondary text-white text-left">
                     <div class="card-body p-2">
                         <h6 class="card-title m-0">Pilih Merk Mobil : </h6>

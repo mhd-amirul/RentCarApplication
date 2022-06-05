@@ -34,7 +34,7 @@
         </div>
         <!--/.col-->
         <div class="col-sm-6 col-lg-3">
-            <div class="card text-white bg-info">
+            <div class="card text-white bg-warning">
                 <div class="card-body">
                     <div class="pt-1">
                         <a class="text-white fs-3" href="{{ route('allkriteria.index') }}">

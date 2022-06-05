@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="card mb-3 mt-2 bg-secondary text-white"><div class="card-body p-2"><h6 class="card-title m-0">Data Pengguna : </h5></div></div>
+<div class="card mb-3 mt-2 bg-secondary text-white"><div class="card-body p-2"><h6 class="card-title m-0">Menu</h5></div></div>
 <div class="row justify-content-center">
     <div class="col-lg-2">
         <div class="card text-white bg-dark">
@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="col-lg-2">
-        <div class="card text-white bg-primary">
+        <div class="card text-white bg-secondary">
             <div class="card-body">
                 <div class="pt-1">
                     <a class="text-white fs-6" href="{{ route('allusers.create') }}">
@@ -37,7 +37,7 @@
         </div>
     </div>
     <div class="col-lg-2">
-        <div class="card text-white bg-info">
+        <div class="card text-white bg-warning">
             <div class="card-body">
                 <div class="pt-1">
                     <a class="text-white fs-6" href="{{ route('allkriteria.index') }}">

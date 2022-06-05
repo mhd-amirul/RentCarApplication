@@ -11,11 +11,6 @@ use Illuminate\Support\Facades\Storage;
 
 class allShopsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('pages.admin.pages-admin.allshops.allshops')
@@ -27,11 +22,6 @@ class allShopsController extends Controller
             );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('pages.admin.pages-admin.allshops.tambah')
@@ -43,12 +33,6 @@ class allShopsController extends Controller
             );
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $data = $request->validate(
@@ -103,12 +87,6 @@ class allShopsController extends Controller
             );
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         return view('pages.admin.pages-admin.allshops.edit')
@@ -121,13 +99,6 @@ class allShopsController extends Controller
             );
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $db = shop::findOrFail($id);
@@ -145,7 +116,7 @@ class allShopsController extends Controller
         ];
 
         if ($request->nik != $db->nik) {
-            $rules['nik'] = 'required|size:16|unique:make_shops';
+            $rules['nik'] = 'required|size:16|unique:shops';
         }
 
         $data = $request->validate($rules);
@@ -174,7 +145,7 @@ class allShopsController extends Controller
             }
             $data['foto_usaha'] = $request->file('foto_usaha')->store('foto_usaha');
         }
-        // return response()->json($data);
+
         $db->update($data);
         return redirect()->route('allshops.index');
 

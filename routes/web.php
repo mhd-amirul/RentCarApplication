@@ -51,8 +51,8 @@ Route::group(['middleware' => 'auth'], function ()
         Route::post('logout', [AuthentikasiController::class, 'logout'])->name('logout');
 
         // Hasil Perhitungan Rekomendasi FrontEnd dan BackEnd
-        Route::get('hitung', [HomeController::class, 'hitung'])->name('hitung');
-        // Route::get('hitung', [HomeController::class, 'perhitungan'])->name('hitung');
+        // Route::get('hitung', [HomeController::class, 'hitung'])->name('hitung');
+        Route::get('hitung', [HomeController::class, 'perhitungan'])->name('hitung');
         
         // Profile dan password
         Route::resource('profil', ProfilController::class)

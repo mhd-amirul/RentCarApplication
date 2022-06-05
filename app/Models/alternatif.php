@@ -14,4 +14,15 @@ class alternatif extends Model
         return $this->belongsTo(kriteria::class);
     }
 
+    public function scopeFilterAlternatif($query, array $filters)
+    {
+        # code...
+        if (isset($filters['searchA']) ? $filters['searchA'] : false) {
+            # code...
+            return $query->where('id', 'LIKE', '%' . $filters['searchA'] . '%')
+                        ->orWhere('nama', 'LIKE', '%' . $filters['searchA'] . '%')
+                        ->orWhere('nilai', 'LIKE', '%' . $filters['searchA'] . '%');
+        }
+    }
+
 }

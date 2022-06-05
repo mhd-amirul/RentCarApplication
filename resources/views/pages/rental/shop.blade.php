@@ -16,7 +16,7 @@
     <div class="card-body">
         <div class="d-flex justify-content-center">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner m-2" style="max-height: 450px; max-width: 450px; overflow: hidden;">
+                <div class="carousel-inner m-2" style="max-height: 400px; max-width: 400px; overflow: hidden;">
                     <div class="carousel-item active">
                         <img src="{{ isset($shop->foto_usaha) == null ? url('images/notfound.png') : asset('storage/' . $shop->foto_usaha) }}" class="d-block w-100" alt="...">
                     </div>
@@ -74,12 +74,21 @@
             </div>
             <div class="col-sm-6 mb-4">
                 <p class="m-b-10 f-w-600">Surat Izin Usaha</p>
-                <a target="blank" href="{{ isset($shop->img_siu) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_siu) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                <div style="max-height: 250px; overflow: hidden;">
+                    <img src="{{ isset($shop->img_siu) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_siu) }}" alt="#" class="img-fluid">
+                </div>
+                <div class="card-img-overlay d-flex align-items-center p-0">
+                    <a target="blank" href="{{ isset($shop->img_siu) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_siu) }}" class="card-title text-center flex-fill p-4 fs-3 text-white text-decoration-none" style="background-color: rgba(0,0,0,0.7 )">Detail</a>
+                </div>
             </div>
             <div class="col-sm-6 mb-4">
                 <p class="m-b-10 f-w-600">KTP</p>
-                <a target="blank" href="{{ isset($shop->img_ktp) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_ktp) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-
+                <div style="max-height: 250px; overflow: hidden;">
+                    <img src="{{ isset($shop->img_ktp) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_ktp) }}" alt="#" class="img-fluid">
+                </div>
+                <div class="card-img-overlay d-flex align-items-center p-0">
+                    <a target="blank" href="{{ isset($shop->img_ktp) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_ktp) }}" class="card-title text-center flex-fill p-4 fs-3 text-white text-decoration-none" style="background-color: rgba(0,0,0,0.7 )">Detail</a>
+                </div>
             </div>
             
             <div class="row">

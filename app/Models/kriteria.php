@@ -11,5 +11,15 @@ class kriteria extends Model
 
     protected $guarded = ['id'];
 
-    
+    public function scopeFilterKriteria($query, array $filters)
+    {
+        # code...
+        if (isset($filters['searchK']) ? $filters['searchK'] : false) {
+            # code...
+            return $query->where('id', 'LIKE', '%' . $filters['searchK'] . '%')
+                        ->orWhere('nama', 'LIKE', '%' . $filters['searchK'] . '%')
+                        ->orWhere('bobot', 'LIKE', '%' . $filters['searchK'] . '%')
+                        ->orWhere('type', 'LIKE', '%' . $filters['searchK'] . '%');
+        }
+    }
 }
