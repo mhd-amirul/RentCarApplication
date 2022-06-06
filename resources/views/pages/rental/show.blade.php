@@ -117,7 +117,7 @@
                                         <i class="bi bi-trash-fill"></i> Hapus
                                     </button>
                                 </form>
-                                <a href="/lokasi/user/{{ $car->shop->id }}" class="ml-2 btn btn-success">
+                                <a href="{{ route('sharelok', $car->shop->id) }}" class="ml-2 btn btn-success">
                                     <i class="mr-2 bi bi-house-fill" style="color: rgb(0, 0, 0);"></i> Cek Lokasi Toko
                                 </a>
                             </div>

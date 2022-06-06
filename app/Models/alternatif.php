@@ -19,8 +19,7 @@ class alternatif extends Model
         # code...
         if (isset($filters['searchA']) ? $filters['searchA'] : false) {
             # code...
-            return $query->where('id', 'LIKE', '%' . $filters['searchA'] . '%')
-                        ->orWhere('nama', 'LIKE', '%' . $filters['searchA'] . '%')
+            return $query->where('nama', 'LIKE', '%' . $filters['searchA'] . '%')
                         ->orWhere('nilai', 'LIKE', '%' . $filters['searchA'] . '%');
         }
     }

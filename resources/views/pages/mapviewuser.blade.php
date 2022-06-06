@@ -43,7 +43,7 @@
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v11', // light-v10, outdoors-v11, satellite-v9, streets-v11, dark-v10
             center: defaultLocation,
-            zoom: 14.5
+            zoom: 10
         });
 
         map.addControl(new mapboxgl.NavigationControl())

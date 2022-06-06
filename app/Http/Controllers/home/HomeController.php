@@ -18,7 +18,9 @@ class HomeController extends Controller
         return view('pages.home')
             ->with([
                 'title' => 'Home',
-                'merk' => alternatif::where('kriteria_id', 1)->get()
+                'merk' => alternatif::where('kriteria_id', 1)->get(),
+                // 'kriteria' => kriteria::all(),
+                // 'alternatif' => alternatif::all()
             ]);
     }
 
@@ -36,7 +38,21 @@ class HomeController extends Controller
                 );
             }
 
-        $allCars = car::where('merk_id', $request->kritmerk)->where('stok','>','0')->get();
+        $allCars = car::where('merk_id', $request->kritmerk)
+                        ->where('stok','>','0')
+                        ->get();
+
+        // $allCars = [];
+        // foreach ($allKriteria as $k) {
+        //     # code...
+        //     $name = str_replace(' ','_',$k->nama.'_id');
+        //     return response()->json($name);
+        //     $allCars = car::where($name, $request[$name])
+        //                     ->where('')
+        //                     ->where('stok','>','0')
+        //                     ->get();
+        // }
+
         $alternatif = [];
         foreach ($allCars as $row) {
         $alternatif[$row->id] 
@@ -103,6 +119,7 @@ class HomeController extends Controller
         for ($i=0; $i <= $batas-1; $i++) { 
             $cars[] = car::where('id', $result[$i]['car_id'])->first();
         }
+
         $cars = array_slice($cars, 0, 5);
 
         return view('pages.hasil')
@@ -133,7 +150,7 @@ class HomeController extends Controller
             echo $kriteria[$id_kriteria][0]." [".$kriteria[$id_kriteria][1]."] = ".$kriteria[$id_kriteria][2]."<br>";
         }
 
-        $allCars = car::where('merk_id', $request->kritmerk)->get();
+        $allCars = car::where('merk_id', $request->kritmerk)->where('stok','>','0')->get();
         $alternatif = [];
         foreach ($allCars as $row) {
         $alternatif[$row->id] 

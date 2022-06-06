@@ -22,11 +22,6 @@ class AdminDashboardController extends Controller
                 );
     }
 
-    public function create()
-    {
-        //
-    }
-
     public function store(Request $request)
     {
         $data = $request->all();
@@ -51,16 +46,6 @@ class AdminDashboardController extends Controller
                 'ms' => makeShop::findOrFail($id)
             ]
         );
-    }
-
-    public function edit($id)
-    {
-        
-    }
-
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     public function destroy($id)

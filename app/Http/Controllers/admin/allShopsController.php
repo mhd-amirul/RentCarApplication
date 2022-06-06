@@ -80,7 +80,7 @@ class allShopsController extends Controller
             ->with(
                 [
                     'title' => 'Detail Toko',
-                    'car' => car::where('shop_id', $id)->get(),
+                    'car' => car::where('shop_id', $id)->filter(request(['search']))->get(),
                     'shop' => shop::where('id', $id)->first(),
 
                 ]
@@ -151,15 +151,11 @@ class allShopsController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $shop = shop::findOrFail($id);
+        $cars = car::where('shop_id', $shop->id)->get();
+
         if ($shop->img_ktp) {
             # code...
             Storage::delete($shop->img_ktp);
@@ -176,6 +172,33 @@ class allShopsController extends Controller
             # code...
             Storage::delete($shop->foto_usaha);
         }
+
+        if ($cars != null) {
+            # code...
+            foreach ($cars as $car) {
+                # code...
+                if ($car->gambar1) {
+                    # code...
+                    Storage::delete($car->gambar1);
+                }
+                if ($car->gambar2) {
+                    # code...
+                    Storage::delete($car->gambar2);
+                }
+                if ($car->gambar3) {
+                    # code...
+                    Storage::delete($car->gambar3);
+                }
+                if ($car->gambar4) {
+                    # code...
+                    Storage::delete($car->gambar4);
+                }
+                if ($car->gambar5) {
+                    # code...
+                    Storage::delete($car->gambar5);
+                }
+            }                
+        }
         
         $user = User::where('id', $shop->user_id)->first();
         $user['role'] = 'user';
@@ -185,5 +208,39 @@ class allShopsController extends Controller
         return redirect()
             ->route('allshops.index')
             ->with('success', 'Toko Berhasil di Hapus');
+    }
+
+    public function destroyCar($id)
+    {
+        # code...
+        $data = car::findOrFail($id);
+
+        if ($data->gambar1) {
+            # code...
+            Storage::delete($data->gambar1);
+        }
+        if ($data->gambar2) {
+            # code...
+            Storage::delete($data->gambar2);
+        }
+        if ($data->gambar3) {
+            # code...
+            Storage::delete($data->gambar3);
+        }
+        if ($data->gambar4) {
+            # code...
+            Storage::delete($data->gambar4);
+        }
+        if ($data->gambar5) {
+            # code...
+            Storage::delete($data->gambar5);
+        }
+
+        $id = $data['shop_id'];
+
+        $data->delete();
+        return redirect()
+            ->route('allshops.show', $id)
+            ->with('success', 'Data Berhasil di Hapus');
     }
 }

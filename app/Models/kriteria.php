@@ -16,8 +16,7 @@ class kriteria extends Model
         # code...
         if (isset($filters['searchK']) ? $filters['searchK'] : false) {
             # code...
-            return $query->where('id', 'LIKE', '%' . $filters['searchK'] . '%')
-                        ->orWhere('nama', 'LIKE', '%' . $filters['searchK'] . '%')
+            return $query->where('nama', 'LIKE', '%' . $filters['searchK'] . '%')
                         ->orWhere('bobot', 'LIKE', '%' . $filters['searchK'] . '%')
                         ->orWhere('type', 'LIKE', '%' . $filters['searchK'] . '%');
         }

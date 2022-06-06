@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-2">
+    {{-- <div class="col-lg-2">
         <div class="card text-white bg-secondary">
             <div class="card-body">
                 <div class="pt-1">
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div class="col-lg-2">
         <div class="card text-white bg-primary">
             <div class="card-body">

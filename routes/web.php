@@ -5,7 +5,6 @@ use App\Http\Controllers\admin\allAlternatifController;
 use App\Http\Controllers\admin\allKriteriaController;
 use App\Http\Controllers\admin\allShopsController;
 use App\Http\Controllers\admin\allUsersController;
-use App\Http\Controllers\admin\CarController;
 use App\Http\Controllers\authentikasi\AuthentikasiController;
 use App\Http\Controllers\home\HomeController;
 use App\Http\Controllers\map\mapController;
@@ -27,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['middleware' => 'guest', 'prefix' => 'guest'], function ()
-{
+    {
         // Proses Login
         Route::get('login', [AuthentikasiController::class, 'login'])->name('login');
         Route::post('login', [AuthentikasiController::class, 'check']);
@@ -49,24 +48,23 @@ Route::group(['middleware' => 'auth'], function ()
         Route::get('ulasan/{id}', [ulasanController::class, 'ulasanView'])->name('ulasan');
         Route::put('ulasan/{id}', [ulasanController::class, 'createUlasan'])->name('ulasanU');
         Route::post('logout', [AuthentikasiController::class, 'logout'])->name('logout');
-
-        // Hasil Perhitungan Rekomendasi FrontEnd dan BackEnd
-        // Route::get('hitung', [HomeController::class, 'hitung'])->name('hitung');
-        Route::get('hitung', [HomeController::class, 'perhitungan'])->name('hitung');
-        
-        // Profile dan password
         Route::resource('profil', ProfilController::class)
                 ->except(['show', 'destroy']);
         Route::get('/changePass/{id}', [ProfilController::class, 'changePass'])->name('changePass');
         Route::put('/changePass/{id}', [ProfilController::class, 'updatePass'])->name('updatePass');
 
+        // Hasil Perhitungan Rekomendasi FrontEnd dan BackEnd
+        Route::get('hitung', [HomeController::class, 'hitung'])->name('hitung');
+        // Route::get('hitung', [HomeController::class, 'perhitungan'])->name('hitung');
+
+
         Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () 
             {
-                Route::resource('dashboard', AdminDashboardController::class);
+                Route::resource('dashboard', AdminDashboardController::class)
+                    ->except(['edit', 'update', 'create']);
                 Route::resource('allusers', allUsersController::class);
                 Route::resource('allshops', allShopsController::class);
-                Route::resource('allcars', CarController::class)
-                    ->except(['index', 'create', 'store']);
+                Route::delete('car/{id}', [allShopsController::class, 'destroyCar'])->name('carDelete');
 
                 // Konfigurasi Kriteria
                 Route::resource('allkriteria', allKriteriaController::class)

@@ -137,9 +137,8 @@
             <td>{{ $car->muatan_penumpang->nama }}</td>
             <td>{{ $car->harga_sewa->nama }}</td>
             <td>
-                <a href="{{ route('allcars.show', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                <a href="{{ route('allcars.edit', $car->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square"></i></a>
-                <form action="{{ route('allcars.destroy', $car->id) }}" method="post" class="d-inline">
+                <a href="{{ route('detailMobil', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                <form action="{{ route('carDelete', $car->id) }}" method="post" class="d-inline">
                     @method('delete')
                     @csrf
                     <button class="btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">

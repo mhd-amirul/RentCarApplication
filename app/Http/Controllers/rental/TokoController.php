@@ -103,36 +103,60 @@ class TokoController extends Controller
 
     public function destroy($id)
     {
-        $rm = shop::findOrFail($id);
-        Storage::delete([
-            $rm->img_ktp,
-            $rm->img_siu,
-            $rm->pas_foto,
-            $rm->foto_usaha
-        ]);
-        $rm->delete();
+        $shop = shop::findOrFail($id);
+        $cars = car::where('shop_id', $shop->id)->get();
+
+        if ($shop->img_ktp) {
+            # code...
+            Storage::delete($shop->img_ktp);
+        }
+        if ($shop->img_siu) {
+            # code...
+            Storage::delete($shop->img_siu);
+        }
+        if ($shop->pas_foto) {
+            # code...
+            Storage::delete($shop->pas_foto);
+        }
+        if ($shop->foto_usaha) {
+            # code...
+            Storage::delete($shop->foto_usaha);
+        }
+
+        if ($cars != null) {
+            # code...
+            foreach ($cars as $car) {
+                # code...
+                if ($car->gambar1) {
+                    # code...
+                    Storage::delete($car->gambar1);
+                }
+                if ($car->gambar2) {
+                    # code...
+                    Storage::delete($car->gambar2);
+                }
+                if ($car->gambar3) {
+                    # code...
+                    Storage::delete($car->gambar3);
+                }
+                if ($car->gambar4) {
+                    # code...
+                    Storage::delete($car->gambar4);
+                }
+                if ($car->gambar5) {
+                    # code...
+                    Storage::delete($car->gambar5);
+                }
+            }                
+        }
         
-        $user = User::where('id', auth()->user()->id)->first();
+        $user = User::where('id', $shop->user_id)->first();
         $user['role'] = 'user';
         $user->save();
+
+        $shop->delete();
         return redirect()
             ->route('profil.index')
             ->with('success', 'Toko Berhasil di Hapus');
     }
-
-    
-    // public function create()
-    // {
-    //     //
-    // }
-
-    // public function store(Request $request)
-    // {
-    //     //
-    // }
-
-    // public function show($id)
-    // {
-    //     //
-    // }
 }

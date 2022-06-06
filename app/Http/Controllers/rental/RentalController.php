@@ -192,7 +192,30 @@ class RentalController extends Controller
 
     public function destroy($id)
     {
-        car::where('id', $id)->delete();
+        $data = car::findOrFail($id);
+
+        if ($data->gambar1) {
+            # code...
+            Storage::delete($data->gambar1);
+        }
+        if ($data->gambar2) {
+            # code...
+            Storage::delete($data->gambar2);
+        }
+        if ($data->gambar3) {
+            # code...
+            Storage::delete($data->gambar3);
+        }
+        if ($data->gambar4) {
+            # code...
+            Storage::delete($data->gambar4);
+        }
+        if ($data->gambar5) {
+            # code...
+            Storage::delete($data->gambar5);
+        }
+
+        $data->delete();
         return redirect()
                 ->route('toko.index')
                 ->with(

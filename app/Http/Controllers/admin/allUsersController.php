@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\akunRequest;
 use App\Http\Controllers\Controller;
+use App\Models\car;
+use App\Models\shop;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
@@ -54,12 +56,6 @@ class allUsersController extends Controller
         );
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         return view('pages.admin.pages-admin.allusers.edit')
@@ -110,15 +106,65 @@ class allUsersController extends Controller
             ->with('success', 'Data User Berhasil di Ubah');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        User::where('id', $id)->delete();
+        $user = User::findOrFail($id);
+        if ($user->image) {
+            # code...
+            Storage::delete($user->image);
+        }
+
+        if ($user->role == 'rental') {
+            # code...
+            $shop = shop::where('user_id', $id)->first();
+            $cars = car::where('shop_id', $shop->id)->get();
+            
+            if ($shop->img_ktp) {
+                # code...
+                Storage::delete($shop->img_ktp);
+            }
+            if ($shop->img_siu) {
+                # code...
+                Storage::delete($shop->img_siu);
+            }
+            if ($shop->pas_foto) {
+                # code...
+                Storage::delete($shop->pas_foto);
+            }
+            if ($shop->foto_usaha) {
+                # code...
+                Storage::delete($shop->foto_usaha);
+            }
+
+            if ($cars != null) {
+                # code...
+                foreach ($cars as $car) {
+                    # code...
+                    if ($car->gambar1) {
+                        # code...
+                        Storage::delete($car->gambar1);
+                    }
+                    if ($car->gambar2) {
+                        # code...
+                        Storage::delete($car->gambar2);
+                    }
+                    if ($car->gambar3) {
+                        # code...
+                        Storage::delete($car->gambar3);
+                    }
+                    if ($car->gambar4) {
+                        # code...
+                        Storage::delete($car->gambar4);
+                    }
+                    if ($car->gambar5) {
+                        # code...
+                        Storage::delete($car->gambar5);
+                    }
+                }                
+            }
+        }
+
+        $user->delete();
         return redirect()
             ->route('allusers.index')
             ->with('success', 'User Berhasil di Hapus');
