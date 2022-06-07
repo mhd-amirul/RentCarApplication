@@ -34,7 +34,6 @@ class AuthentikasiController extends Controller
                     'success' => 'Berhasil Mendaftar!!!'
                 ]
             );
-
     }
 
     public function login()

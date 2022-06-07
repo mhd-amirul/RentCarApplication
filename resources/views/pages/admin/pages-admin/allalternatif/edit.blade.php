@@ -4,7 +4,7 @@
 <div class="row justify-content-center mt-5 mb-5">
     <div class="col-lg-5 mt-4">
         <main class="form-registration mt-5">
-            <h1 class="h3 mb-3 fw-normal text-center">Edit Kriteria</h1>
+            <h1 class="h3 mb-3 fw-normal text-center">Edit Alternatif</h1>
             <form action="{{ route('allalternatif.update', $alternatif->id) }}" method="post">
                 @method('put')
                 @csrf

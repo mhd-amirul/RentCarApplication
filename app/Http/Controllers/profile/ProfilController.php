@@ -12,11 +12,6 @@ use Illuminate\Support\Facades\Storage;
 
 class ProfilController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('pages.profile.profil')
@@ -28,12 +23,7 @@ class ProfilController extends Controller
                     ]
                 );
     }
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         return view('pages.profile.edit')
@@ -45,13 +35,6 @@ class ProfilController extends Controller
                 ); 
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $db = User::findOrFail($id);
@@ -88,7 +71,6 @@ class ProfilController extends Controller
 
     public function store(TokoRequest $request)
     {
-
         $data = $request->all();
         if ($request->file('img_ktp')) {
             $data['img_ktp'] = $request->file('img_ktp')->store('ktp');

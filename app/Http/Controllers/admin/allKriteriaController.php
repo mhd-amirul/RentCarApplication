@@ -43,11 +43,6 @@ class allKriteriaController extends Controller
         return redirect()->route('allkriteria.index');
     }
 
-    public function show($id)
-    {
-        //
-    }
-
     public function edit($id)
     {
         return view('pages.admin.pages-admin.allkriteria.edit')
