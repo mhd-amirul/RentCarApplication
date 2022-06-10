@@ -50,7 +50,7 @@
             </div>
             <div class="col-sm-6 mb-4">
                 <div class="form-floating">
-                    <input type="text" class="form-control rounded-top" id="nm_pu" value="+62 {{ auth()->user()->no_hp }}">
+                    <input type="text" class="form-control rounded-top" id="nm_pu" value="+62 {{ $shop->no_hp }}">
                     <label for="nm_pu">No Hp</label>
                 </div>
             </div>

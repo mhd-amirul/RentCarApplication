@@ -1,19 +1,14 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="row justify-content-center mb-5">
-    <div class="col-lg-6">
+<div class="row justify-content-center">
+    <div class="col-12">
         <main class="form-registration mt-3">
-                <div class="card mt-2 mb-2 bg-secondary text-white text-left">
-                    <div class="card-body p-2">
-                        <h3 class="card-title m-0 text-center"> Atur Lokasi Toko</h3>
-                    </div>
-                </div>
                 <div class="card-header bg-dark text-white mt-3 mb-3">
-                    Map
+                    Atur Lokasi Toko
                 </div>
                 <div class="card_body border border-dark">
-                    <div id='map' style='width: 100%; height: 70vh;'></div>  
+                    <div id='map' style='width: 100%; height: 60vh;'></div>  
                 </div>
                 <form action="{{ route('saveLocation', $shop->id) }}" method="post">
                 @method('put')
@@ -67,18 +62,18 @@
                 showUserHeading: true
             })
         );
-        
-        map.on('click', (e) => {
-                const long = e.lngLat.lng
-                const lat = e.lngLat.lat
-                
-                // const mark = new mapboxgl.Marker()
-                //     .setLngLat([long, lat])
-                //     .addTo(map);
 
-                document.getElementById("longitude").value = long;
-                document.getElementById("latitude").value = lat;
-            }
-        )
+        var marker = new mapboxgl.Marker();
+        function add_marker (event) {
+            var coordinates = event.lngLat;
+
+            document.getElementById("longitude").value = coordinates.lng;
+            document.getElementById("latitude").value = coordinates.lat;
+
+            marker.setLngLat(coordinates).addTo(map);
+        }
+
+        map.on('click', add_marker);
+
     </script>
 @endpush

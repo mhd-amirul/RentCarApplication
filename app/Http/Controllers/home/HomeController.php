@@ -9,6 +9,7 @@ use App\Models\alternatif;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\nilai;
 use App\Models\ulasan;
 
 class HomeController extends Controller
@@ -36,22 +37,11 @@ class HomeController extends Controller
                     $row->type,
                     $row->bobot
                 );
-            }
+        }
 
         $allCars = car::where('merk_id', $request->kritmerk)
                         ->where('stok','>','0')
                         ->get();
-
-        // $allCars = [];
-        // foreach ($allKriteria as $k) {
-        //     # code...
-        //     $name = str_replace(' ','_',$k->nama.'_id');
-        //     return response()->json($name);
-        //     $allCars = car::where($name, $request[$name])
-        //                     ->where('')
-        //                     ->where('stok','>','0')
-        //                     ->get();
-        // }
 
         $alternatif = [];
         foreach ($allCars as $row) {
@@ -70,6 +60,7 @@ class HomeController extends Controller
 
         // Mengambil data nilai 
         $db = DB::select('SELECT * FROM nilais ORDER BY car_id, kriteria_id');
+
         $sample = [];
         foreach ($db as $row) {
             if (!isset($sample[$row->car_id])) {
@@ -121,12 +112,15 @@ class HomeController extends Controller
         }
 
         $cars = array_slice($cars, 0, 5);
-
+        
         return view('pages.hasil')
             ->with(
                 [
                     'title' => 'Hasil Rekomendasi',
-                    'cars' => $cars
+                    'cars' => $cars,
+                    // 'kriteria' => $allKriteria,
+                    // 'data_mobil' => $allCars,
+                    // 'db' => $db
                 ]
             );
     }

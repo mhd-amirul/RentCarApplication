@@ -5,10 +5,11 @@
         <div class="col-13">
             <div class="row">
                 <div class="col">
-                    <input type="text" name="longitude" id="longitude" value="{{ isset($shop->longitude) ? $shop->longitude : '97.1374572505087' }}" hidden>
-                </div>
-                <div class="col">
-                    <input type="text" name="latitude" id="latitude" value="{{ isset($shop->latitude) ? $shop->latitude : '5.190902388476289' }}" hidden>
+                    <input type="text" hidden name="longitude" id="longitude" value="{{ isset($shop->longitude) ? $shop->longitude : '97.1374572505087' }}" >
+                    <input type="text" hidden name="latitude" id="latitude" value="{{ isset($shop->latitude) ? $shop->latitude : '5.190902388476289' }}" >
+                    <input type="text" hidden name="nm_pu" id="nm_pu" value="{{ isset($shop->nm_pu) ? $shop->nm_pu : 'Empty...' }}" >
+                    <input type="text" hidden name="nm_usaha" id="nm_usaha" value="{{ isset($shop->nm_usaha) ? $shop->nm_usaha : 'Empty...' }}" >
+                    <input type="text" hidden name="no_hp" id="no_hp" value="{{ isset($shop->user->no_hp) ? $shop->user->no_hp : 'Empty...' }}" >
                 </div>
             </div>
     
@@ -18,11 +19,6 @@
             <div class="card_body border border-dark">
                 <div id='map' style='width: 100%; height: 70vh;'></div>  
             </div>
-    
-            {{-- <form action="" method="post">
-                @csrf
-                <button class="w-100 btn btn-lg btn-secondary mt-2" type="submit">Atur</button>
-            </form> --}}
         </div>
     </div>
 @endsection
@@ -35,6 +31,9 @@
     <script>
         const long = document.getElementById("longitude").value;
         const lat = document.getElementById("latitude").value;
+        const nm_pu = document.getElementById("nm_pu").value;
+        const nm_usaha = document.getElementById("nm_usaha").value;
+        const no_hp = document.getElementById("no_hp").value;
 
         const defaultLocation = [long, lat]
 
@@ -60,6 +59,11 @@
 
         const mark = new mapboxgl.Marker()
                 .setLngLat([long, lat])
+                .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML(
+                    `<p>Nama Pemilik Usaha : ${nm_pu}</p>
+                    <p>Nama Usaha : ${nm_usaha}</p>
+                    <p>No Hp : +62 ${no_hp}</p>`
+                ))
                 .addTo(map);
     </script>
 @endpush

@@ -25,6 +25,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [HomeController::class, 'index'])->name('/');
+Route::get('daftar', [HomeController::class, 'daftarMobil'])->name('daftar');
+Route::get('detail/{id}', [HomeController::class, 'detailMobil'])->name('detailMobil');
+Route::get('profileToko/{id}', [HomeController::class, 'profileToko'])->name('profileToko');
+Route::get('/map/{id}', [mapController::class, 'shareLocation'])->name('sharelok');
+
+// Hasil Perhitungan Rekomendasi FrontEnd dan BackEnd
+// Route::get('hitung', [HomeController::class, 'hitung'])->name('hitung');
+Route::get('hitung', [HomeController::class, 'perhitungan'])->name('hitung');
+
 Route::group(['middleware' => 'guest', 'prefix' => 'guest'], function ()
     {
         // Proses Login
@@ -40,11 +50,6 @@ Route::group(['middleware' => 'guest', 'prefix' => 'guest'], function ()
 Route::group(['middleware' => 'auth'], function ()
     {
         // Home / Daftar mobil / Informasi Mobil / Informasi / map / Ulasan / logOut
-        Route::get('/', [HomeController::class, 'index'])->name('/');
-        Route::get('daftar', [HomeController::class, 'daftarMobil'])->name('daftar');
-        Route::get('detail/{id}', [HomeController::class, 'detailMobil'])->name('detailMobil');
-        Route::get('profileToko/{id}', [HomeController::class, 'profileToko'])->name('profileToko');
-        Route::get('/map/{id}', [mapController::class, 'shareLocation'])->name('sharelok');
         Route::get('ulasan/{id}', [ulasanController::class, 'ulasanView'])->name('ulasan');
         Route::put('ulasan/{id}', [ulasanController::class, 'createUlasan'])->name('ulasanU');
         Route::post('logout', [AuthentikasiController::class, 'logout'])->name('logout');
@@ -52,11 +57,6 @@ Route::group(['middleware' => 'auth'], function ()
                 ->except(['show', 'destroy']);
         Route::get('/changePass/{id}', [ProfilController::class, 'changePass'])->name('changePass');
         Route::put('/changePass/{id}', [ProfilController::class, 'updatePass'])->name('updatePass');
-
-        // Hasil Perhitungan Rekomendasi FrontEnd dan BackEnd
-        Route::get('hitung', [HomeController::class, 'hitung'])->name('hitung');
-        // Route::get('hitung', [HomeController::class, 'perhitungan'])->name('hitung');
-
 
         Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () 
             {

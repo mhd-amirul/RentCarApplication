@@ -100,6 +100,9 @@
                         <a href="{{ route('sharelok', $shop->id) }}" class="ml-2 btn btn-success">
                             <i class="mr-2 bi bi-house-fill" style="color: rgb(0, 0, 0);"></i> Cek Lokasi Toko
                         </a>
+                        <a href="{{ route('setLocation', $shop->id) }}" class="ml-2 btn btn-primary">
+                            <i class="mr-2 bi bi-map-fill" style="color: rgb(0, 0, 0);"></i> Edit Lokasi Toko
+                        </a>
                     @else
                         <a href="{{ route('setLocation', $shop->id) }}" class="ml-2 btn btn-success">
                             <i class="mr-2 bi bi-map-fill" style="color: rgb(0, 0, 0);"></i> Atur Lokasi Toko
