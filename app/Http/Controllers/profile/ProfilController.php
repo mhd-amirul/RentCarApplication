@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Storage;
 
 class ProfilController extends Controller
 {
+
     public function index()
     {
         return view('pages.profile.profil')

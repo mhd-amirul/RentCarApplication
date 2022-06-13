@@ -22,7 +22,7 @@
 <div class="container">
     <div class="row">
         @foreach( $cars as $car )
-            <div class="col-md-4 mb-3">
+            <div class="col-sm-3 mb-3">
                 <div class="card">
                     @if ($car->gambar1)
                         <img src="{{ asset('storage/' . $car->gambar1) }}" alt="{{ $car->merk->nama }}" class="img-fluid">

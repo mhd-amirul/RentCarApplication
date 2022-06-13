@@ -2,8 +2,8 @@
 
 @section('container')
 
-<div class="row justify-content-center mb-5 ">
-    <div class="col-lg-6 mt-5">
+<div class="row justify-content-center mb-5">
+    <div class="col-lg-6 mt-5" style="margin-bottom: 10cm;">
         <main class="form-registration mt-5">
             <form action="{{ route('hitung') }}" method="GET">
                 <div class="card mt-2 mb-2 bg-secondary text-white text-left">

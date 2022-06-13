@@ -84,7 +84,7 @@
 <div class="container">
     <div class="row">
         @foreach( $shop as $shop )
-            <div class="col-md-4 mb-3">
+            <div class="col-md-3 mb-3">
                 <div class="card">
                     @if ($shop->pas_foto)
                         <img src="{{ asset('storage/' . $shop->pas_foto) }}" alt="{{ $shop->pas_foto }}" class="card-img-top">

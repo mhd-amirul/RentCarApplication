@@ -82,7 +82,6 @@ class HomeController extends Controller
 
         //MENGHITUNG NILAI OPTIMASI
         $optimasi = [];
-        $batas = 0;
         foreach($alternatif as $id_cars => $a){
             $optimasi[$id_cars] = 0;
             foreach($kriteria as $id_kriteria => $k){
@@ -93,7 +92,6 @@ class HomeController extends Controller
                     $optimasi[$id_cars] -= $data[$id_cars];
                 }
             }
-            $batas++;
         }
         
         // $index = key($result);
@@ -104,23 +102,17 @@ class HomeController extends Controller
                 'nilai_akhir' => $optimasi[$id_cars],
                 'car_id' => $id_cars,
             ];
-        }
-        // ambil data mobil dari db
-        $cars = [];
-        for ($i=0; $i <= $batas-1; $i++) { 
-            $cars[] = car::where('id', $result[$i]['car_id'])->first();
+
+            $cars[] = car::where('id', $id_cars)->first();
         }
 
         $cars = array_slice($cars, 0, 5);
-        
+
         return view('pages.hasil')
             ->with(
                 [
                     'title' => 'Hasil Rekomendasi',
-                    'cars' => $cars,
-                    // 'kriteria' => $allKriteria,
-                    // 'data_mobil' => $allCars,
-                    // 'db' => $db
+                    'cars' => $cars
                 ]
             );
     }
@@ -150,20 +142,20 @@ class HomeController extends Controller
         $alternatif[$row->id] 
             = array(
                 $row->merk_id,
-                $row->tp_id,
-                $row->kf_id,
-                $row->km_id,
-                $row->mp_id,
-                $row->km2_id,
-                $row->jb_id,
-                $row->hs_id,
+                $row->Tahun_Produksi_id,
+                $row->Kondisi_Fisik_id,
+                $row->Kondisi_Mesin_id,
+                $row->Muatan_Penumpang_id,
+                $row->Kapasitan_Mesin_id,
+                $row->Jenis_BBM_id,
+                $row->Harga_Sewa_id,
             );
         }
 
         echo "<br>=========================Data Alternatif====================================<br>";
-        foreach ($alternatif as $id_siswa => $value) {
+        foreach ($alternatif as $id_alt => $value) {
             for ($i=0; $i <= 7 ; $i++) { 
-                echo $alternatif[$id_siswa][$i]." | ";
+                echo $alternatif[$id_alt][$i]." | ";
             }
             echo "<br>";
         }
@@ -219,7 +211,6 @@ class HomeController extends Controller
                     $optimasi[$id_cars] -= $data[$id_cars];
                 }
             }
-            $batas++;
         }
 
         //menampilkan NILAI OPTIMASI
@@ -231,11 +222,13 @@ class HomeController extends Controller
         
         // $index = key($result);
         arsort($optimasi);
+        $cars = [];
         foreach ($optimasi as $id_cars => $value) {
             $result[] = [
                 'nilai_akhir' => $optimasi[$id_cars],
                 'car_id' => $id_cars,
             ];
+            $cars[] = car::where('id', $id_cars)->first();
         }
 
         echo "<br>=========================PERANGKINGAN====================================<br>";
@@ -244,16 +237,13 @@ class HomeController extends Controller
             echo "<br>";
         }
 
-        // ambil data mobil dari db
-        $cars = [];
-        for ($i=0; $i <= $batas-1; $i++) { 
-            $cars[] = car::where('id', $result[$i]['car_id'])->first();
-        }
         $cars = array_slice($cars, 0, 5);
 
-        echo "<br>=========================Data Ke Fornt End====================================<br>";
+        echo "<br>=========================HASIL REKOMENDASI====================================<br>";
         foreach ($cars as $car) {
-            echo "[".$car."]"." = ";
+            echo "===============================================================================<br> 
+                    [".$car."] 
+                <br>===============================================================================";
             echo "<br>";
         }
     }
@@ -288,7 +278,7 @@ class HomeController extends Controller
             ->with(
                 [
                     'title' => 'Daftar Mobil',
-                    'cars' => car::latest()->filter(request(['search']))->paginate(6)->withQueryString()
+                    'cars' => car::latest()->filter(request(['search']))->paginate(8)->withQueryString()
                 ]
             );
     }

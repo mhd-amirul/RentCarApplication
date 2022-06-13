@@ -14,6 +14,7 @@
     <div class="container mt-4">
         @yield('container')
     </div>
+    @include('partials.footer')
     
     @include('includes.script')
     @stack('script-map')

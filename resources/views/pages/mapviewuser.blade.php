@@ -24,10 +24,11 @@
 @endsection
 
 @push('script-map-user')
-    {{-- mapbox --}}
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
-
+    <link 
+        rel="stylesheet" 
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" 
+        type="text/css">
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
     <script>
         const long = document.getElementById("longitude").value;
         const lat = document.getElementById("latitude").value;
@@ -60,10 +61,17 @@
         const mark = new mapboxgl.Marker()
                 .setLngLat([long, lat])
                 .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML(
-                    `<p>Nama Pemilik Usaha : ${nm_pu}</p>
-                    <p>Nama Usaha : ${nm_usaha}</p>
+                    `<p>Pemilik : ${nm_pu} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    <p>Toko : ${nm_usaha}</p>
                     <p>No Hp : +62 ${no_hp}</p>`
                 ))
                 .addTo(map);
+
+        map.addControl(
+            new MapboxDirections({
+                    accessToken: mapboxgl.accessToken
+                }
+            ),'top-left'
+        );
     </script>
 @endpush

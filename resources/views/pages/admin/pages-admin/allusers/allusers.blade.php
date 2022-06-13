@@ -83,7 +83,7 @@
 <div class="container">
     <div class="row">
         @foreach( $user as $user )
-            <div class="col-md-4 mb-3">
+            <div class="col-md-3 mb-3">
                 <div class="card">
                     @if ($user->image)
                         <img src="{{ asset('storage/' . $user->image) }}" alt="{{ $user->image }}" class="card-img-top">
