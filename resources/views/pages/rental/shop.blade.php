@@ -142,11 +142,7 @@
         @foreach( $car as $car )
             <div class="col-md-3 mb-3">
                 <div class="card">
-                    @if ($car->gambar1)
-                        <img src="{{ asset('storage/' . $car->gambar1) }}" alt="{{ $car->merk->nama }}" class="img-fluid">
-                    @else
-                        <img src="{{ url('images/notfound.png') }}" alt="{{ $car->merk->nama }}" class="card-img-top">
-                    @endif
+                    <img src="{{ isset($car->gambar1) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar1) }}" alt="{{ $car->merk->nama }}" class="img-fluid">
                     <div class="card-body">
                         <h5 class="card-title">{{ $car->merk->nama }}</h5>
                         <p>

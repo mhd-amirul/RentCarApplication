@@ -14,13 +14,7 @@
                     <div class="row m-l-0 m-r-0">
                         <div class="col-sm-4 bg-c-lite-green user-profile">
                             <div class="card-block text-center text-white">
-                                @if ($data->image)
-                                    <div class="m-b-25">
-                                        <img src="{{ asset('storage/' . $data->image) }}" alt="" class="img-radius rounded-circle border border-danger border-1 bg-dark" width="100" height="100">
-                                    </div>
-                                @else
-                                    <img src="https://img.icons8.com/bubbles/100/000000/user.png" alt="" class="img-fluid">
-                                @endif
+                                <img src="{{ isset($data->image) == null ? url('https://img.icons8.com/bubbles/100/000000/user.png') : asset('storage/' . $data->image) }}" alt="" class="img-fluid rounded-circle border border-danger border-1 bg-dark" width="100" height="100">
                                 <h6 class="f-w-600"></h6>
                             </div>
                         </div>

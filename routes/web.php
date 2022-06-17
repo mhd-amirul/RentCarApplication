@@ -32,8 +32,8 @@ Route::get('profileToko/{id}', [HomeController::class, 'profileToko'])->name('pr
 Route::get('/map/{id}', [mapController::class, 'shareLocation'])->name('sharelok');
 
 // Hasil Perhitungan Rekomendasi FrontEnd dan BackEnd
-// Route::get('hitung', [HomeController::class, 'hitung'])->name('hitung');
-Route::get('hitung', [HomeController::class, 'perhitungan'])->name('hitung');
+Route::get('hitung', [HomeController::class, 'hitung'])->name('hitung');
+// Route::get('hitung', [HomeController::class, 'perhitungan'])->name('hitung');
 
 Route::group(['middleware' => 'guest', 'prefix' => 'guest'], function ()
     {
