@@ -43,7 +43,7 @@
                         @endforeach
                     </select>
                 </div>
-                <button class="w-100 btn btn-lg btn-secondary mt-3" type="submit">Edit</button>
+                <button class="w-100 btn btn-lg btn-secondary mt-3" type="submit">Update</button>
             </form>
         </main>
     </div>

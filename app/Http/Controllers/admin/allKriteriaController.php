@@ -14,7 +14,7 @@ class allKriteriaController extends Controller
             ->with(
                 [
                     'title' => 'Data Kriteria',
-                    'kriteria' => kriteria::latest()->filterKriteria(request(['searchK']))->get()
+                    'kriteria' => kriteria::orderBy('id')->filterKriteria(request(['searchK']))->get()
                 ]
             );
     }

@@ -31,11 +31,11 @@ class car extends Model
     }
 
     public function kapasitas_mesin () {
-        return $this->belongsTo(alternatif::class, 'Kondisi_Mesin_id', 'id');
+        return $this->belongsTo(alternatif::class, 'Kapasitan_Mesin_id', 'id');
     }
 
     public function kondisi_mesin () {
-        return $this->belongsTo(alternatif::class, 'Kapasitan_Mesin_id', 'id');
+        return $this->belongsTo(alternatif::class, 'Kondisi_Mesin_id', 'id');
     }
 
     public function kondisi_fisik () {

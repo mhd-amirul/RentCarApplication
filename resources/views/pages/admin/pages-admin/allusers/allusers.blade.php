@@ -91,16 +91,13 @@
                         <img src="{{ url('images/notfound.png') }}" alt="null" class="card-img-top">
                     @endif
                     <div class="card-body">
-                        <h5 class="card-title">{{ $user->Username }}</h5>
-                        <p>
-                            <small>
-                                Username : <a href="#" class="text-decoration-none text-black">{{ $user->Username }}</a>
-                            </small>
-                        </p>
+                        <h5 class="card-title">{{ $user->username }}</h5>
+                        
                         <p class="card-text">
                             ID : {{ $user->id }} <br> Email : {{ $user->email }} <br> Role : {{ $user->role }} <br> No Hp : {{ $user->no_hp }} <br> Created At : {{ $user->created_at }}
                         </p>
                         <a href="{{ route('allusers.show',$user->id) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                        <a href="{{ route('allusers.edit', $user->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square" style="color: rgb(0, 0, 0);"></i></a>
                         
                         <form action="{{ route('allusers.destroy', $user->id) }}" method="post" class="d-inline">
                             @method('delete')

@@ -17,8 +17,10 @@
             </div>
             @endif
 
-            <main class="form-signin mt-5">
-                <h1 class="h3 mb-3 fw-normal text-center">Log In</h1>
+            <main class="form-signin mb-2">
+                <div class="d-flex justify-content-center mb-3">
+                    <img src="{{ url('images/person.png') }}" width="100" alt="">
+                </div>
                 <form action="login" method="post">
                     @csrf
                     <div class="form-floating">

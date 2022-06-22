@@ -4,7 +4,7 @@
 <div class="row justify-content-center mt-5 mb-5">
     <div class="col-lg-5 mt-4">
         <main class="form-registration mt-5">
-            <h1 class="h3 mb-3 fw-normal text-center">Tambah Kriteria</h1>
+            <h1 class="h3 mb-3 fw-normal text-center">Edit Kriteria</h1>
             <form action="{{ route('allkriteria.update', $kriteria->id) }}" method="post">
                 @method('put')
                 @csrf
@@ -39,7 +39,7 @@
                         <option value="cost">cost</option>
                     </select>
                 </div>
-                <button class="w-100 btn btn-lg btn-secondary mt-3" type="submit">Edit</button>
+                <button class="w-100 btn btn-lg btn-secondary mt-3" type="submit">Update</button>
             </form>
         </main>
     </div>

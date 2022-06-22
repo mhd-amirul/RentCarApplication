@@ -28,7 +28,7 @@
                             </div>
                         @enderror
                     </div>
-                    <button class="w-100 btn btn-lg btn-secondary " type="submit">Tambahkan</button>
+                    <button class="w-100 btn btn-lg btn-secondary " type="submit">Kirim</button>
                 </form>
             </main>
         </div>

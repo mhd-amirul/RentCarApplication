@@ -15,7 +15,7 @@ class allAlternatifController extends Controller
             ->with(
                 [
                     'title' => 'Data Kriteria',
-                    'alternatif' => alternatif::latest()->filterAlternatif(request(['searchA']))->get()
+                    'alternatif' => alternatif::orderBy('id')->filterAlternatif(request(['searchA']))->get()
                 ]
             );
     }

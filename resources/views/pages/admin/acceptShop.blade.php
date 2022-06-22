@@ -81,14 +81,14 @@
                         <input type="text" name="pas_foto" value="{{ $ms->pas_foto }}" hidden>
                         <input type="text" name="foto_usaha" value="{{ $ms->foto_usaha }}" hidden>
                         <button class="btn-sm btn-success border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Mengupload?')">
-                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-pencil-square"></i> Terima
                         </button>
                     </form>
                     <form action="{{ route('dashboard.destroy', $ms->id) }}" method="post" class="d-inline">
                         @method('delete')
                         @csrf
                         <button class="btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">
-                            <i class="bi bi-trash-fill"></i>
+                            <i class="bi bi-trash-fill"></i> Tolak
                         </button>
                     </form>
                 </div>

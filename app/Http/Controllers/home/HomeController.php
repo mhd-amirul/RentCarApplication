@@ -277,7 +277,10 @@ class HomeController extends Controller
             ->with(
                 [
                     'title' => 'Daftar Mobil',
-                    'cars' => car::latest()->filter(request(['search']))->paginate(8)->withQueryString()
+                    'cars' => car::orderBy('merk_id')
+                                    ->filter(request(['search']))
+                                    ->paginate(8)
+                                    ->withQueryString()
                 ]
             );
     }

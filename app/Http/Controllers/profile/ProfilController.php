@@ -102,24 +102,31 @@ class ProfilController extends Controller
             ->with(
                 [
                     'title' => 'Change Password',
-                    'data' => User::findOrFail($id)
+                    'user' => User::findOrFail($id)
                 ]
             );
     }
 
     public function updatePass(Request $request, $id)
     {
-        $db = User::findOrFail($id);
+        $user = User::findOrFail($id);
         
-        $val = $request->validate(
-            [
-                'password' => 'min:5',
-                'confirmPassword' => 'same:password'
-            ]
-        );
-        $val['password'] = Hash::make($val['password']);
+        $rules = [
+                'password' => 'required',
+                'newpassword' => 'required|min:5',
+                'confirmPassword' => 'required|same:newpassword'
+            ];
 
-        $db->update($val);
+        if (!Hash::check($request->password, $user->password)) {
+            # code...
+            return redirect()
+                ->route('changePass',$id)
+                ->with('failed', 'Password lama tidak sesuai');
+        }
+
+        $val = $request->validate($rules);
+        $val['password'] = Hash::make($val['password']);
+        $user->update($val);
         return redirect()
             ->route('profil.index')
             ->with('success', 'Password Berhasil di Ubah');

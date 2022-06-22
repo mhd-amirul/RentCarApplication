@@ -105,7 +105,7 @@
 </div>
 
 <div class="card mb-3 mt-2 bg-secondary text-white"><div class="card-body p-2"><h6 class="card-title m-0">Daftar Mobil :</h5></div></div>
-
+    <a href="{{ isset($shop->latitude) && ($shop->longitude) ? route('addCarAdmin',$shop->id) : '#' }}" class="btn btn-primary mb-3">Tambah data mobil</a>
 <form action="">
     <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="search.." name="search" value="{{ request('search') }}">
@@ -138,6 +138,7 @@
             <td>{{ $car->harga_sewa->nama }}</td>
             <td>
                 <a href="{{ route('detailMobil', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                <a href="{{ route('editCarAdmin', $car->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square" style="color: rgb(0, 0, 0);"></i></a>
                 <form action="{{ route('carDelete', $car->id) }}" method="post" class="d-inline">
                     @method('delete')
                     @csrf

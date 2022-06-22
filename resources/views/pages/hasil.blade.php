@@ -26,7 +26,7 @@
                             </small>
                         </p>
                         <p class="card-text">Merk : {{ $car->merk->nama }}, Tahun Produksi : {{ $car->tahun_produksi->nama }}, Muatan Penumpang : {{ $car->muatan_penumpang->nama }}, Harga Sewa : {{ $car->harga_sewa->nama }}</p>
-                        <a href="{{ route('detailMobil', $car->id) }}" class="btn btn-secondary">Detail</a>
+                        <a href="{{ route('detailMobil', $car->id) }}" class="btn btn-secondary w-100">Detail</a>
                     </div>
                 </div>
             @else

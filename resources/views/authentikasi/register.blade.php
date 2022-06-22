@@ -2,9 +2,11 @@
 
 @section('container')
 <div class="row justify-content-center">
-    <div class="col-lg-5 mt-5">
+    <div class="col-lg-5">
         <main class="form-registration">
-            <h1 class="h3 mb-3 fw-normal text-center">Daftar Akun</h1>
+            <div class="d-flex justify-content-center mb-3">
+                <img src="{{ url('images/person.png') }}" width="100" alt="">
+            </div>
             <form action="register" method="post">
                 @csrf
                 <div class="form-floating">

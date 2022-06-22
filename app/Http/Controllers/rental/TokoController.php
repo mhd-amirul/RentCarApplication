@@ -29,7 +29,7 @@ class TokoController extends Controller
                 ->with(
                     [
                         'title' => 'Toko',
-                        'car' => car::where('user_id', auth()->user()->id)->filter(request(['search']))->get(),
+                        'car' => car::where('user_id', auth()->user()->id)->orderBy('merk_id')->filter(request(['search']))->get(),
                         'shop' => $shop,
                         'lockCheck' => $lock
                     ]

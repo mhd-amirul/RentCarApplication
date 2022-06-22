@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\adminCarController;
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\admin\allAlternatifController;
 use App\Http\Controllers\admin\allKriteriaController;
@@ -64,6 +65,10 @@ Route::group(['middleware' => 'auth'], function ()
                     ->except(['edit', 'update', 'create']);
                 Route::resource('allusers', allUsersController::class);
                 Route::resource('allshops', allShopsController::class);
+                Route::get('tambah/{id}', [adminCarController::class, 'addCarAdmin'])->name('addCarAdmin');
+                Route::get('edit/{id}', [adminCarController::class, 'editCarAdmin'])->name('editCarAdmin');
+                Route::post('tambah/{id}', [adminCarController::class, 'createCarAdmin'])->name('createCarAdmin');
+                Route::put('edit/{id}', [adminCarController::class, 'updateCarAdmin'])->name('updateCarAdmin');
                 Route::delete('car/{id}', [allShopsController::class, 'destroyCar'])->name('carDelete');
 
                 // Konfigurasi Kriteria

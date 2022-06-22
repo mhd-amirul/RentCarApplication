@@ -19,7 +19,7 @@ class allUsersController extends Controller
             ->with(
                 [
                     'title' => 'Data Users',
-                    'user' => User::where('role', '<>','admin')->latest()->filterUser(request(['searchUser']))->get()
+                    'user' => User::where('role', '<>','admin')->orderBy('username')->filterUser(request(['searchUser']))->get()
                 ]
             );
     }

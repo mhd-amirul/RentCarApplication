@@ -73,7 +73,7 @@
 
                 <div class="card mt-4 mb-2 bg-secondary text-white text-left">
                     <div class="card-body p-2">
-                        <h6 class="card-title m-0">Pilih Akses :</h6>
+                        <h6 class="card-title m-0">Role :</h6>
                     </div>
                 </div>
                 <div class="">

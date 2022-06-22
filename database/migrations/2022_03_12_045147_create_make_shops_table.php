@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('make_shops', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('nm_pu');
             $table->string('nm_usaha');
             $table->string('alamat');
