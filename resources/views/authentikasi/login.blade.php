@@ -38,9 +38,18 @@
                     </div>
                     <button class="w-100 btn btn-lg btn-secondary" type="submit">Sign in</button>
                 </form>
-                <small class="d-block text-center mt-3">
-                    Dont Have Account? <a href="register">Register Now!</a>
-                </small>
+                <div class="row">
+                    <div class="col">
+                        <small class="d-block text-center mt-3">
+                            Forgot Password?<a href="{{ route('forgotPass') }}"> Click Here!</a>
+                        </small>
+                    </div>
+                    <div class="col">
+                        <small class="d-block text-center mt-3">
+                            Dont Have Account? <a href="register">Register Now!</a>
+                        </small>
+                    </div>
+                </div>
             </main>
         </div>
     </div>

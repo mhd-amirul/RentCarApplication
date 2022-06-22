@@ -42,6 +42,9 @@ Route::group(['middleware' => 'guest', 'prefix' => 'guest'], function ()
         Route::get('login', [AuthentikasiController::class, 'login'])->name('login');
         Route::post('login', [AuthentikasiController::class, 'check']);
         
+        // forget Password 
+        Route::get('forgot-password', [AuthentikasiController::class, 'forgotPass'])->name('forgotPass');
+        
         // Proses Register
         Route::get('register', [AuthentikasiController::class, 'register']);
         Route::post('register', [AuthentikasiController::class, 'store']);

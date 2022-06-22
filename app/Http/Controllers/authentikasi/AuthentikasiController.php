@@ -70,4 +70,16 @@ class AuthentikasiController extends Controller
         $request->session()->regenerateToken();
         return redirect()->route('login');
     }
+
+    public function forgotPass()
+    {
+        # code...
+        return view('authentikasi.forgotPass')
+            ->with(
+                [
+                    'title' => 'Forgot Password'
+                ]
+            );
+    }
+
 }
