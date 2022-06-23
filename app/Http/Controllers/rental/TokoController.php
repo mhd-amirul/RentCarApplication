@@ -8,13 +8,14 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TokoController extends Controller
 {
     public function index()
     {
         $shop = shop::where('user_id', auth()->user()->id)->first();
-        
+
         $lock = [];
         if ($shop->longitude != null && $shop->latitude != null) {
             # code...
@@ -52,7 +53,7 @@ class TokoController extends Controller
     {
         $db = shop::findOrFail($id);
 
-        $rules = 
+        $rules =
         [
             'nm_pu' => 'required',
             'nm_usaha' => 'required',
@@ -94,11 +95,11 @@ class TokoController extends Controller
             }
             $data['foto_usaha'] = $request->file('foto_usaha')->store('foto_usaha');
         }
-        
+
         $db->update($data);
+        Alert::success('success', 'Data Toko Berhasil di Ubah');
         return redirect()
-            ->route('toko.index')
-            ->with('success', 'Data Toko Berhasil di Ubah');
+            ->route('toko.index');
     }
 
     public function destroy($id)
@@ -147,16 +148,16 @@ class TokoController extends Controller
                     # code...
                     Storage::delete($car->gambar5);
                 }
-            }                
+            }
         }
-        
+
         $user = User::where('id', $shop->user_id)->first();
         $user['role'] = 'user';
         $user->save();
 
         $shop->delete();
+        Alert::success('success', 'Toko Berhasil di Hapus');
         return redirect()
-            ->route('profil.index')
-            ->with('success', 'Toko Berhasil di Hapus');
+            ->route('profil.index');
     }
 }

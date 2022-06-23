@@ -2,12 +2,12 @@
 
 @section('container')
 <div class="mb-5">
-    @if (session()->has('success'))
+    {{-- @if (session()->has('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ session('success') }} 
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-    @endif
+    @endif --}}
     <div class="row">
         <div class="col-xl-12 mt-2">
             <div class="card user-card-full">

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\map;
 use App\Http\Controllers\Controller;
 use App\Models\shop;
 use Illuminate\Http\Request;
-
+use RealRashid\SweetAlert\Facades\Alert;
 
 class mapController extends Controller
 {
@@ -33,8 +33,8 @@ class mapController extends Controller
 
         $db = shop::findOrFail($id);
         $db->update($val);
-
-        return redirect()->route('toko.index')->with('success', 'Lokasi Toko Berhasil di Atur');
+        Alert::success('success', 'Lokasi Toko Berhasil di Atur');
+        return redirect()->route('toko.index');
     }
 
     public function shareLocation($id)

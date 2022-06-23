@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Models\nilai;
 use App\Models\ulasan;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
 {
@@ -107,7 +108,6 @@ class HomeController extends Controller
         }
 
         $cars = array_slice($cars, 0, 10);
-
         return view('pages.hasil')
             ->with(
                 [
@@ -308,97 +308,5 @@ class HomeController extends Controller
                 'title' => 'Lokasi',
                 'shop' => shop::findOrFail($id)
             ]);
-    }
-
-    public function hitung2(Request $request)
-    {
-        $allKriteria = kriteria::all();
-        $kriteria = [];
-        foreach ($allKriteria as $row) {
-            $kriteria[
-                $row->id
-                ] = array(
-                    $row->nama,
-                    $row->type,
-                    $row->bobot
-                );
-        }
-
-        $allCars = car::where('merk_id', $request->kritmerk)
-                        ->where('stok','>','0')
-                        ->get();
-
-        $alternatif = [];
-        foreach ($allCars as $row) {
-        $alternatif[$row->id] 
-            = array(
-                $row->merk_id,
-                $row->Tahun_Produksi_id,
-                $row->Kondisi_Fisik_id,
-                $row->Kondisi_Mesin_id,
-                $row->Muatan_Penumpang_id,
-                $row->Kapasitan_Mesin_id,
-                $row->Jenis_BBM_id,
-                $row->Harga_Sewa_id,
-            );
-        }
-
-        // Mengambil data nilai 
-        $db = DB::select('SELECT * FROM nilais ORDER BY car_id, kriteria_id');
-
-        $sample = [];
-        foreach ($db as $row) {
-            if (!isset($sample[$row->car_id])) {
-                $sample[$row->car_id] = [];
-            }
-            $sample[$row->car_id][$row->kriteria_id] = $row->nilai;
-        }
-
-        $normal = $sample;
-        foreach($kriteria as $id_kriteria => $k){
-            $pembagi = 0;
-            foreach($alternatif as $id_cars => $a){
-                $pembagi += pow($sample[$id_cars][$id_kriteria], 2);
-            }
-            foreach($alternatif as $id_cars => $a){
-                $normal[$id_cars][$id_kriteria] /= sqrt($pembagi);
-            }
-        }
-
-        //MENGHITUNG NILAI OPTIMASI
-        $optimasi = [];
-        foreach($alternatif as $id_cars => $a){
-            $optimasi[$id_cars] = 0;
-            foreach($kriteria as $id_kriteria => $k){
-                $data[$id_cars] = $normal[$id_cars][$id_kriteria] * $k[2];
-                if ($k[1] == 'benefit') {
-                    $optimasi[$id_cars] += $data[$id_cars];
-                } else {
-                    $optimasi[$id_cars] -= $data[$id_cars];
-                }
-            }
-        }
-        
-        // $index = key($result);
-        arsort($optimasi);
-        $cars = [];
-        foreach ($optimasi as $id_cars => $value) {
-            $result[] = [
-                'nilai_akhir' => $optimasi[$id_cars],
-                'car_id' => $id_cars,
-            ];
-
-            $cars[] = car::where('id', $id_cars)->first();
-        }
-
-        $cars = array_slice($cars, 0, 10);
-
-        return view('pages.hasil')
-            ->with(
-                [
-                    'title' => 'Hasil Rekomendasi',
-                    'cars' => $cars
-                ]
-            );
     }
 }

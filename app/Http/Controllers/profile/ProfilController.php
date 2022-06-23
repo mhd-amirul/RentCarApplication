@@ -9,6 +9,7 @@ use App\Http\Requests\TokoRequest;
 use App\Models\makeShop;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ProfilController extends Controller
 {
@@ -33,7 +34,7 @@ class ProfilController extends Controller
                         'title' => 'Edit Profile',
                         'data' => User::findOrFail($id)
                     ]
-                ); 
+                );
     }
 
     public function update(Request $request, $id)
@@ -62,7 +63,8 @@ class ProfilController extends Controller
         }
 
         $db->update($data);
-        return redirect()->route('profil.index')->with('success', 'Profil Berhasil di Ubah');
+        Alert::success('success', 'Profil Berhasil di Ubah');
+        return redirect()->route('profil.index');
     }
 
     public function create()
@@ -90,9 +92,10 @@ class ProfilController extends Controller
         }
 
         $data['user_id'] = auth()->user()->id;
-        
+
         makeShop::create($data);
-        return redirect()->route('profil.index')->with(['success' => 'Berhasil!!! Mohon Tunggu Verifikasi Admin!!!']);
+        Alert::success('Pendaftaran berhasil!', 'Harap menunggu informasi selanjutnya!');
+        return redirect()->route('profil.index');
     }
 
     public function changePass($id)
@@ -110,7 +113,7 @@ class ProfilController extends Controller
     public function updatePass(Request $request, $id)
     {
         $user = User::findOrFail($id);
-        
+
         $rules = [
                 'password' => 'required',
                 'newpassword' => 'required|min:5',
@@ -119,16 +122,16 @@ class ProfilController extends Controller
 
         if (!Hash::check($request->password, $user->password)) {
             # code...
+            Alert::error('failed', 'Password lama tidak sesuai');
             return redirect()
-                ->route('changePass',$id)
-                ->with('failed', 'Password lama tidak sesuai');
+                ->route('changePass',$id);
         }
 
         $val = $request->validate($rules);
         $val['password'] = Hash::make($val['password']);
         $user->update($val);
+        Alert::success('success', 'Password Berhasil di Ubah');
         return redirect()
-            ->route('profil.index')
-            ->with('success', 'Password Berhasil di Ubah');
+            ->route('profil.index');
     }
 }

@@ -13,6 +13,7 @@ use App\Http\Requests\CreateMobilRequest;
 use App\Http\Requests\MobilUpdateRequest;
 use App\Models\kriteria;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class RentalController extends Controller
 {
@@ -57,7 +58,7 @@ class RentalController extends Controller
                 $data['kata_kunci'] .= $db->nama.', ';
             }
         }
-        
+
         $data['user_id'] = auth()->user()->id;
         $data['shop_id'] = shop::where('user_id', $data['user_id'])->value('id');
         $car = car::create($data);
@@ -77,10 +78,10 @@ class RentalController extends Controller
                 nilai::create($nilai);
             }
         }
-        
+
+        Alert::success('success', 'Berhasil Menambah Mobil Baru');
         return redirect()
-            ->route('toko.index')
-            ->with('success', 'Berhasil Menambah Mobil Baru');
+            ->route('toko.index');
     }
 
     public function show($id)
@@ -123,8 +124,7 @@ class RentalController extends Controller
     {
         $database = car::findOrFail($id);
         $data = $request->all();
-        // return response()->json($data);
-                
+
         if ($request->file('gambar1')) {
             if ($request->oldgambar1) {
                 Storage::delete($request->oldgambar1);
@@ -185,9 +185,9 @@ class RentalController extends Controller
         }
         $database->update($data);
 
+        Alert::success('success', 'Data Mobil Berhasil di Ubah');
         return redirect()
-            ->route('toko.index')
-            ->with('success', 'Data Mobil Berhasil di Ubah');
+            ->route('toko.index');
     }
 
     public function destroy($id)
@@ -216,13 +216,9 @@ class RentalController extends Controller
         }
 
         $data->delete();
+        Alert::success('success', 'Mobil Berhasil di Hapus!!!');
         return redirect()
-                ->route('toko.index')
-                ->with(
-                    [
-                        'success' => 'Mobil Berhasil di Hapus!!!'
-                    ]
-                );
+                ->route('toko.index');
     }
 
 }

@@ -8,6 +8,7 @@ use App\Http\Requests\akunRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AuthentikasiController extends Controller
 {
@@ -27,13 +28,9 @@ class AuthentikasiController extends Controller
         $data['password'] = Hash::make($data['password']);
 
         User::create($data);
+        Alert::success('Success Title', 'Success Message');
         return redirect()
-            ->route('login')
-            ->with(
-                [
-                    'success' => 'Berhasil Mendaftar!!!'
-                ]
-            );
+            ->route('login');
     }
 
     public function login()
@@ -57,10 +54,12 @@ class AuthentikasiController extends Controller
 
         if (Auth::attempt($data)) {
             $request->session()->regenerate();
+            Alert::success('Success', 'Login Berhasil');
             return redirect()->intended('profil');
         }
-
-        return back()->with('errlog', 'Login Gagal');
+        
+        Alert::error('Login Gagal');
+        return back();
     }
 
     public function logout(Request $request)

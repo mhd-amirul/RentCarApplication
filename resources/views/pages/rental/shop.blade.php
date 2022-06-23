@@ -1,12 +1,6 @@
 @extends('layouts.main')
 
 @section('container')
-@if (session()->has('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                {{ session('success') }} 
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            @endif
 <div class="card mb-3 mt-2 bg-secondary text-white">   
     <div class="card-body p-2">
         <h6 class="card-title m-0">Informasi Toko :</h5>

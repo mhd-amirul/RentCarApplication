@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\car;
 use App\Models\ulasan;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ulasanController extends Controller
 {
@@ -32,6 +33,7 @@ class ulasanController extends Controller
 
         $val['user_id'] = auth()->user()->id;
         ulasan::create($val);
+        Alert::success('success', 'Ulasan berhasil ditambah');
         return redirect()->route('detailMobil', $id);
     }
 }
