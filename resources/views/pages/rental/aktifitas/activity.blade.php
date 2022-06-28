@@ -19,5 +19,24 @@
             </div>
         </div>
     </div>
+    <table class="table table-hover">
+        <thead>
+            <tr >
+                <th scope="col">ID</th>
+                <th scope="col">Nama Peminjam</th>
+                <th scope="col">NIK</th>
+                <th scope="col">Tgl Peminjaman</th>
+                <th scope="col">batas Peminjaman</th>
+                <th scope="col">berkas file</th>
+                <th scope="col">Data Mobil</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td colspan="8" class="text-center h3">DATA KOSONG</td>
+            </tr>
+            </tbody>
+    </table>
 </div>
 @endsection
