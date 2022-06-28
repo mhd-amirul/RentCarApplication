@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
             'nama' => 'Kondisi Fisik',
             'bobot' => 0.2,
             'type' => 'benefit'
-        ]);	
+        ]);
 
         kriteria::create([
             'nama' => 'Kondisi Mesin',
@@ -58,7 +58,7 @@ class DatabaseSeeder extends Seeder
             'nama' => 'Kapasitan Mesin',
             'bobot' => 0.1,
             'type' => 'benefit'
-        ]);	
+        ]);
 
         kriteria::create([
             'nama' => 'Jenis BBM',
@@ -92,17 +92,17 @@ class DatabaseSeeder extends Seeder
         // Table Alternatif  Tahun Produksi====================================================================================
         alternatif::create([
             'kriteria_id' => 2,
-            'nama' => '< 2015',
+            'nama' => 'dibawah tahun 2015',
             'nilai' => 1
         ]);
         alternatif::create([
             'kriteria_id' => 2,
-            'nama' => '2016',
+            'nama' => 'tahun 2016',
             'nilai' => 2
         ]);
         alternatif::create([
             'kriteria_id' => 2,
-            'nama' => '> 2016',
+            'nama' => 'diatas tahun 2016',
             'nilai' => 3
         ]);
 
@@ -143,37 +143,37 @@ class DatabaseSeeder extends Seeder
         // Table Alternatif  Muatan Penumpang====================================================================================
         alternatif::create([
             'kriteria_id' => 5,
-            'nama' => '<= 2',
+            'nama' => 'dibawah 2 orang',
             'nilai' => 1
         ]);
         alternatif::create([
             'kriteria_id' => 5,
-            'nama' => '3 s/d 4',
+            'nama' => '3 sampai 4 orang',
             'nilai' => 2
         ]);
         alternatif::create([
             'kriteria_id' => 5,
-            'nama' => '>= 4',
+            'nama' => 'diatas 4 orang',
             'nilai' => 3
         ]);
 
         // Table Alternatif  Merk====================================================================================
         alternatif::create([
             'kriteria_id' => 6,
-            'nama' => '<1000cc',
+            'nama' => 'dibawah 1000cc',
             'nilai' => 1
         ]);
         alternatif::create([
             'kriteria_id' => 6,
-            'nama' => '1000cc - 1100cc',
+            'nama' => '1000cc sampai 1100cc',
             'nilai' => 2
         ]);
         alternatif::create([
             'kriteria_id' => 6,
-            'nama' => '> 1100cc',
+            'nama' => 'diatas 1100cc',
             'nilai' => 3
         ]);
-        
+
         // Table Alternatif  Harga Sewa====================================================================================
         alternatif::create([
             'kriteria_id' => 7,
@@ -194,17 +194,17 @@ class DatabaseSeeder extends Seeder
         // Table Alternatif  Jenis BBM====================================================================================
         alternatif::create([
             'kriteria_id' => 8,
-            'nama' => '> 450rb/hari',
+            'nama' => 'diatas 450rb/hari',
             'nilai' => 1
         ]);
         alternatif::create([
             'kriteria_id' => 8,
-            'nama' => '351 - 450rb/hari',
+            'nama' => '351 sampai 450rb/hari',
             'nilai' => 2
         ]);
         alternatif::create([
             'kriteria_id' => 8,
-            'nama' => '251 - 350rb/hari',
+            'nama' => '251 sampai 350rb/hari',
             'nilai' => 3
         ]);
 
@@ -237,7 +237,9 @@ class DatabaseSeeder extends Seeder
             'nm_pu' => 'Muhammad Amirul',
             'nm_usaha' => 'PT. Abadi Jaya',
             'alamat' => 'Sawang',
-            'nik' => 1764302753917385
+            'nik' => 1764302753917385,
+            'longitude' => '97.13690609330234',
+            'latitude' => '5.192398741628807'
         ]);
 
         shop::create([
@@ -245,7 +247,9 @@ class DatabaseSeeder extends Seeder
             'nm_pu' => 'Muhammad Alif',
             'nm_usaha' => 'PT. Usaha Jaya',
             'alamat' => 'Bireun',
-            'nik' => 1764308365217385
+            'nik' => 1764308365217385,
+            'longitude' => '97.12444092459418',
+            'latitude' => '5.175811232102191'
         ]);
 
         // Table car====================================================================================
@@ -329,7 +333,7 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        
+
         car::create(
             [
                 'user_id' => '2',

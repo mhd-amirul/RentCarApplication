@@ -20,14 +20,15 @@ class HomeController extends Controller
         return view('pages.home')
             ->with([
                 'title' => 'Home',
-                'merk' => alternatif::where('kriteria_id', 1)->get(),
-                // 'kriteria' => kriteria::all(),
-                // 'alternatif' => alternatif::all()
+                // 'merk' => alternatif::where('kriteria_id', 1)->get(),
+                'kriteria' => kriteria::whereNotIn('id', [3,4])->get(),
+                'alternatif' => alternatif::all()
             ]);
     }
 
     public function hitung(Request $request)
     {
+        return response()->json($request);
         $allKriteria = kriteria::all();
         $kriteria = [];
         foreach ($allKriteria as $row) {
@@ -40,13 +41,20 @@ class HomeController extends Controller
                 );
         }
 
-        $allCars = car::where('merk_id', $request->kritmerk)
+        $allCars = car::where('merk_id', $request->merk_id)
+                        ->where('Tahun_Produksi_id', $request->Tahun_Produksi_id)
+                        ->where('Kondisi_Fisik_id', $request->Kondisi_Fisik_id)
+                        ->where('Kondisi_Mesin_id', $request->Kondisi_Mesin_id)
+                        ->where('Muatan_Penumpang_id', $request->Muatan_Penumpang_id)
+                        ->where('Kapasitan_Mesin_id', $request->Kapasitan_Mesin_id)
+                        ->where('Jenis_BBM_id', $request->Jenis_BBM_id)
+                        ->where('Harga_Sewa_id', $request->Harga_Sewa_id)
                         ->where('stok','>','0')
                         ->get();
 
         $alternatif = [];
         foreach ($allCars as $row) {
-        $alternatif[$row->id] 
+        $alternatif[$row->id]
             = array(
                 $row->merk_id,
                 $row->Tahun_Produksi_id,
@@ -59,7 +67,7 @@ class HomeController extends Controller
             );
         }
 
-        // Mengambil data nilai 
+        // Mengambil data nilai
         $db = DB::select('SELECT * FROM nilais ORDER BY car_id, kriteria_id');
 
         $sample = [];
@@ -94,7 +102,7 @@ class HomeController extends Controller
                 }
             }
         }
-        
+
         // $index = key($result);
         arsort($optimasi);
         $cars = [];
@@ -108,6 +116,13 @@ class HomeController extends Controller
         }
 
         $cars = array_slice($cars, 0, 10);
+        if ($cars) {
+            Alert::success('Success');
+        } elseif ($cars == null){
+            Alert::error('Gagal' , 'Data Tidak ditemukan');
+        } else {
+            Alert::error('Unknown');
+        }
         return view('pages.hasil')
             ->with(
                 [
@@ -139,7 +154,7 @@ class HomeController extends Controller
         $allCars = car::where('merk_id', $request->kritmerk)->where('stok','>','0')->get();
         $alternatif = [];
         foreach ($allCars as $row) {
-        $alternatif[$row->id] 
+        $alternatif[$row->id]
             = array(
                 $row->merk_id,
                 $row->Tahun_Produksi_id,
@@ -154,13 +169,13 @@ class HomeController extends Controller
 
         echo "<br>=========================Data Alternatif====================================<br>";
         foreach ($alternatif as $id_alt => $value) {
-            for ($i=0; $i <= 7 ; $i++) { 
+            for ($i=0; $i <= 7 ; $i++) {
                 echo $alternatif[$id_alt][$i]." | ";
             }
             echo "<br>";
         }
 
-        // Mengambil data nilai 
+        // Mengambil data nilai
         $db = DB::select('SELECT * FROM nilais ORDER BY car_id, kriteria_id');
         $sample = [];
         foreach ($db as $row) {
@@ -219,7 +234,7 @@ class HomeController extends Controller
             echo "[".$id_optimasi."]"." = ".$optimasi[$id_optimasi];
             echo "<br>";
         }
-        
+
         // $index = key($result);
         arsort($optimasi);
         $cars = [];
@@ -240,8 +255,8 @@ class HomeController extends Controller
 
         echo "<br>=========================HASIL REKOMENDASI====================================<br>";
         foreach ($cars as $car) {
-            echo "===============================================================================<br> 
-                    [".$car."] 
+            echo "===============================================================================<br>
+                    [".$car."]
                 <br>===============================================================================";
             echo "<br>";
         }
