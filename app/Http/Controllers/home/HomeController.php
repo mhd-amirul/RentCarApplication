@@ -59,7 +59,7 @@ class HomeController extends Controller
                 $row->Kondisi_Fisik_id,
                 $row->Kondisi_Mesin_id,
                 $row->Muatan_Penumpang_id,
-                $row->Kapasitan_Mesin_id,
+                $row->Kapasitas_Mesin_id,
                 $row->Jenis_BBM_id,
                 $row->Harga_Sewa_id,
             );
@@ -147,7 +147,16 @@ class HomeController extends Controller
             echo $kriteria[$id_kriteria][0]." [".$kriteria[$id_kriteria][1]."] = ".$kriteria[$id_kriteria][2]."<br>";
         }
 
-        $allCars = car::where('merk_id', $request->kritmerk)->where('stok','>','0')->get();
+        $filterCars = car::query();
+        foreach ($allKriteria as $k) {
+            # code...
+            $name = str_replace(' ','_',$k->nama.'_id');
+            if ($request->filled($name)) {
+                $filterCars->where($name, $request[$name]);
+            }
+        }
+        $allCars = $filterCars->get();
+
         $alternatif = [];
         foreach ($allCars as $row) {
         $alternatif[$row->id]
@@ -157,7 +166,7 @@ class HomeController extends Controller
                 $row->Kondisi_Fisik_id,
                 $row->Kondisi_Mesin_id,
                 $row->Muatan_Penumpang_id,
-                $row->Kapasitan_Mesin_id,
+                $row->Kapasitas_Mesin_id,
                 $row->Jenis_BBM_id,
                 $row->Harga_Sewa_id,
             );
@@ -247,7 +256,7 @@ class HomeController extends Controller
             echo "[".$id_optimasi."]"." = ".$optimasi[$id_optimasi];
             echo "<br>";
         }
-        $cars = array_slice($cars, 0, 5);
+        $cars = array_slice($cars, 0, 10);
 
         echo "<br>=========================HASIL REKOMENDASI====================================<br>";
         foreach ($cars as $car) {

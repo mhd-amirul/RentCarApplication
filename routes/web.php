@@ -33,18 +33,18 @@ Route::get('profileToko/{id}', [HomeController::class, 'profileToko'])->name('pr
 Route::get('/map/{id}', [mapController::class, 'shareLocation'])->name('sharelok');
 
 // Hasil Perhitungan Rekomendasi FrontEnd dan BackEnd
-Route::get('hitung', [HomeController::class, 'hitung'])->name('hitung');
-// Route::get('hitung', [HomeController::class, 'perhitungan'])->name('hitung');
+// Route::get('hitung', [HomeController::class, 'hitung'])->name('hitung');
+Route::get('hitung', [HomeController::class, 'perhitungan'])->name('hitung');
 
 Route::group(['middleware' => 'guest', 'prefix' => 'guest'], function ()
     {
         // Proses Login
         Route::get('login', [AuthentikasiController::class, 'login'])->name('login');
         Route::post('login', [AuthentikasiController::class, 'check']);
-        
-        // forget Password 
+
+        // forget Password
         Route::get('forgot-password', [AuthentikasiController::class, 'forgotPass'])->name('forgotPass');
-        
+
         // Proses Register
         Route::get('register', [AuthentikasiController::class, 'register']);
         Route::post('register', [AuthentikasiController::class, 'store']);
@@ -62,7 +62,7 @@ Route::group(['middleware' => 'auth'], function ()
         Route::get('/changePass/{id}', [ProfilController::class, 'changePass'])->name('changePass');
         Route::put('/changePass/{id}', [ProfilController::class, 'updatePass'])->name('updatePass');
 
-        Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () 
+        Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function ()
             {
                 Route::resource('dashboard', AdminDashboardController::class)
                     ->except(['edit', 'update', 'create']);
@@ -84,7 +84,7 @@ Route::group(['middleware' => 'auth'], function ()
             }
         );
 
-        Route::group(['middleware' => 'rental', 'prefix' => 'user-rental'], function () 
+        Route::group(['middleware' => 'rental', 'prefix' => 'user-rental'], function ()
             {
                 // Route Khusus Toko Rental
                 Route::resource('shop', RentalController::class)

@@ -16,7 +16,7 @@
                     <div style="max-height: 350px; overflow: hidden;">
                         <img src="{{ isset($car->gambar1) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar1) }}" alt="" class="img-fluid">
                     </div>
-                    
+
                     <div class="card-body">
                         <h3 class="card-title">{{ $car->merk->nama }}</h3>
                         <h4 class="card-title">Rank : {{ $loop->iteration }}</h4>
@@ -30,7 +30,7 @@
                     </div>
                 </div>
             @else
-                <div class="col-sm-3 mb-3">
+                <div class="col-sm-4 mb-3">
                     <div class="card">
                         <img src="{{ isset($car->gambar1) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar1) }}" alt="{{ $car->merk->nama }}" class="card-img-top">
                         <div class="card-body">
@@ -38,7 +38,8 @@
                             <h5 class="card-title">Rank : {{ $loop->iteration }}</h5>
                             <p>
                                 <small>
-                                    Usaha : <a href="{{ route('profileToko', $car->shop->id) }}" class="text-decoration-none text-black">{{ $car->shop->nm_usaha }}</a>
+                                    Usaha : <a href="{{ route('profileToko', $car->shop->id) }}" class="text-decoration-none">{{ $car->shop->nm_usaha }}</a>
+                                    {{ $car->created_at->diffForHumans() }}
                                 </small>
                             </p>
                             <p class="card-text">Merk : {{ $car->merk->nama }}, Tahun Produksi : {{ $car->tahun_produksi->nama }}, Muatan Penumpang : {{ $car->muatan_penumpang->nama }}, Harga Sewa : {{ $car->harga_sewa->nama }}</p>
