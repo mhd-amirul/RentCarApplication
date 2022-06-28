@@ -21,7 +21,7 @@ class car extends Model
     public function merk () {
         return $this->belongsTo(alternatif::class, 'merk_id', 'id');
     }
-    
+
     public function tahun_produksi () {
         return $this->belongsTo(alternatif::class, 'Tahun_Produksi_id', 'id');
     }
@@ -31,7 +31,7 @@ class car extends Model
     }
 
     public function kapasitas_mesin () {
-        return $this->belongsTo(alternatif::class, 'Kapasitan_Mesin_id', 'id');
+        return $this->belongsTo(alternatif::class, 'Kapasitas_Mesin_id', 'id');
     }
 
     public function kondisi_mesin () {
@@ -41,7 +41,7 @@ class car extends Model
     public function kondisi_fisik () {
         return $this->belongsTo(alternatif::class, 'Kondisi_Fisik_id', 'id');
     }
-    
+
     public function jenis_bbm () {
         return $this->belongsTo(alternatif::class, 'Jenis_BBM_id', 'id');
     }

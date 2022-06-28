@@ -55,7 +55,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         kriteria::create([
-            'nama' => 'Kapasitan Mesin',
+            'nama' => 'Kapasitas Mesin',
             'bobot' => 0.1,
             'type' => 'benefit'
         ]);
@@ -263,7 +263,7 @@ class DatabaseSeeder extends Seeder
                 'Kondisi_Fisik_id' => '7',
                 'Kondisi_Mesin_id' => '11',
                 'Muatan_Penumpang_id' => '13',
-                'Kapasitan_Mesin_id' => '18',
+                'Kapasitas_Mesin_id' => '18',
                 'Jenis_BBM_id' => '21',
                 'Harga_Sewa_id' => '23'
             ]
@@ -279,7 +279,7 @@ class DatabaseSeeder extends Seeder
                 'Kondisi_Fisik_id' => '7',
                 'Kondisi_Mesin_id' => '12',
                 'Muatan_Penumpang_id' => '15',
-                'Kapasitan_Mesin_id' => '17',
+                'Kapasitas_Mesin_id' => '17',
                 'Jenis_BBM_id' => '20',
                 'Harga_Sewa_id' => '22'
             ]
@@ -295,7 +295,7 @@ class DatabaseSeeder extends Seeder
                 'Kondisi_Fisik_id' => '7',
                 'Kondisi_Mesin_id' => '11',
                 'Muatan_Penumpang_id' => '13',
-                'Kapasitan_Mesin_id' => '16',
+                'Kapasitas_Mesin_id' => '16',
                 'Jenis_BBM_id' => '21',
                 'Harga_Sewa_id' => '24'
             ]
@@ -311,7 +311,7 @@ class DatabaseSeeder extends Seeder
                 'Kondisi_Fisik_id' => '9',
                 'Kondisi_Mesin_id' => '12',
                 'Muatan_Penumpang_id' => '15',
-                'Kapasitan_Mesin_id' => '17',
+                'Kapasitas_Mesin_id' => '17',
                 'Jenis_BBM_id' => '19',
                 'Harga_Sewa_id' => '23'
             ]
@@ -327,7 +327,7 @@ class DatabaseSeeder extends Seeder
                 'Kondisi_Fisik_id' => '9',
                 'Kondisi_Mesin_id' => '12',
                 'Muatan_Penumpang_id' => '15',
-                'Kapasitan_Mesin_id' => '18',
+                'Kapasitas_Mesin_id' => '18',
                 'Jenis_BBM_id' => '21',
                 'Harga_Sewa_id' => '24'
             ]
@@ -344,7 +344,7 @@ class DatabaseSeeder extends Seeder
                 'Kondisi_Fisik_id' => '7',
                 'Kondisi_Mesin_id' => '11',
                 'Muatan_Penumpang_id' => '13',
-                'Kapasitan_Mesin_id' => '18',
+                'Kapasitas_Mesin_id' => '18',
                 'Jenis_BBM_id' => '21',
                 'Harga_Sewa_id' => '23'
             ]
@@ -360,7 +360,7 @@ class DatabaseSeeder extends Seeder
                 'Kondisi_Fisik_id' => '7',
                 'Kondisi_Mesin_id' => '12',
                 'Muatan_Penumpang_id' => '15',
-                'Kapasitan_Mesin_id' => '17',
+                'Kapasitas_Mesin_id' => '17',
                 'Jenis_BBM_id' => '20',
                 'Harga_Sewa_id' => '22'
             ]
@@ -376,7 +376,7 @@ class DatabaseSeeder extends Seeder
                 'Kondisi_Fisik_id' => '7',
                 'Kondisi_Mesin_id' => '11',
                 'Muatan_Penumpang_id' => '13',
-                'Kapasitan_Mesin_id' => '16',
+                'Kapasitas_Mesin_id' => '16',
                 'Jenis_BBM_id' => '21',
                 'Harga_Sewa_id' => '24'
             ]
@@ -392,7 +392,7 @@ class DatabaseSeeder extends Seeder
                 'Kondisi_Fisik_id' => '9',
                 'Kondisi_Mesin_id' => '12',
                 'Muatan_Penumpang_id' => '15',
-                'Kapasitan_Mesin_id' => '17',
+                'Kapasitas_Mesin_id' => '17',
                 'Jenis_BBM_id' => '19',
                 'Harga_Sewa_id' => '23'
             ]
@@ -408,7 +408,7 @@ class DatabaseSeeder extends Seeder
                 'Kondisi_Fisik_id' => '9',
                 'Kondisi_Mesin_id' => '12',
                 'Muatan_Penumpang_id' => '15',
-                'Kapasitan_Mesin_id' => '18',
+                'Kapasitas_Mesin_id' => '18',
                 'Jenis_BBM_id' => '21',
                 'Harga_Sewa_id' => '24'
             ]

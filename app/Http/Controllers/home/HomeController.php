@@ -28,7 +28,42 @@ class HomeController extends Controller
 
     public function hitung(Request $request)
     {
-        return response()->json($request);
+        $kriteria = kriteria::all();
+        $allCars = car::query();
+        // if ($request->filled('merk_id')) {
+        //     $allCars->where('merk_id', $request->merk_id);
+        // }
+        // if ($request->filled('Tahun_Produksi_id')) {
+        //     $allCars->where('Tahun_Produksi_id', $request->Tahun_Produksi_id);
+        // }
+        // if ($request->filled('Muatan_Penumpang_id')) {
+        //     $allCars->where('Muatan_Penumpang_id', $request->Muatan_Penumpang_id);
+        // }
+        // if ($request->filled('Kapasitan_Mesin_id')) {
+        //     $allCars->where('Kapasitan_Mesin_id', $request->Kapasitan_Mesin_id);
+        // }
+        // if ($request->filled('Jenis_BBM_id')) {
+        //     $allCars->where('Jenis_BBM_id', $request->Jenis_BBM_id);
+        // }
+        // if ($request->filled('Harga_Sewa_id')) {
+        //     $allCars->where('Harga_Sewa_id', $request->Harga_Sewa_id);
+        // }
+        foreach ($kriteria as $k) {
+            # code...
+            $name = str_replace(' ','_',$k->nama.'_id');
+            if ($request->filled($name)) {
+                $allCars->where($name, $request->merk_id);
+            }
+        }
+        $post = $allCars->get();
+        return response()->json($post);
+
+
+
+
+        // return response()->json($allCars);
+
+
         $allKriteria = kriteria::all();
         $kriteria = [];
         foreach ($allKriteria as $row) {
@@ -40,17 +75,6 @@ class HomeController extends Controller
                     $row->bobot
                 );
         }
-
-        $allCars = car::where('merk_id', $request->merk_id)
-                        ->where('Tahun_Produksi_id', $request->Tahun_Produksi_id)
-                        ->where('Kondisi_Fisik_id', $request->Kondisi_Fisik_id)
-                        ->where('Kondisi_Mesin_id', $request->Kondisi_Mesin_id)
-                        ->where('Muatan_Penumpang_id', $request->Muatan_Penumpang_id)
-                        ->where('Kapasitan_Mesin_id', $request->Kapasitan_Mesin_id)
-                        ->where('Jenis_BBM_id', $request->Jenis_BBM_id)
-                        ->where('Harga_Sewa_id', $request->Harga_Sewa_id)
-                        ->where('stok','>','0')
-                        ->get();
 
         $alternatif = [];
         foreach ($allCars as $row) {
@@ -116,13 +140,11 @@ class HomeController extends Controller
         }
 
         $cars = array_slice($cars, 0, 10);
-        if ($cars) {
-            Alert::success('Success');
-        } elseif ($cars == null){
-            Alert::error('Gagal' , 'Data Tidak ditemukan');
-        } else {
-            Alert::error('Unknown');
-        }
+
+        if ($cars) { Alert::success('Success'); }
+        elseif ($cars == null){ Alert::error('Failed'); }
+        else { Alert::error('Unknown Error'); }
+
         return view('pages.hasil')
             ->with(
                 [

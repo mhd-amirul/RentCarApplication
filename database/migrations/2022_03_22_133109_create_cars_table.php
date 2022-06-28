@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreignId('Kondisi_Fisik_id')->references('id')->on('alternatifs')->onDelete('cascade');
             $table->foreignId('Kondisi_Mesin_id')->references('id')->on('alternatifs')->onDelete('cascade');
             $table->foreignId('Muatan_Penumpang_id')->references('id')->on('alternatifs')->onDelete('cascade');
-            $table->foreignId('Kapasitan_Mesin_id')->references('id')->on('alternatifs')->onDelete('cascade');
+            $table->foreignId('Kapasitas_Mesin_id')->references('id')->on('alternatifs')->onDelete('cascade');
             $table->foreignId('Jenis_BBM_id')->references('id')->on('alternatifs')->onDelete('cascade');
             $table->foreignId('Harga_Sewa_id')->references('id')->on('alternatifs')->onDelete('cascade');
             $table->integer('stok')->nullable();

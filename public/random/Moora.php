@@ -348,23 +348,14 @@ $kritCar[] = $request->all();
 
 $allCars = [];
 foreach ($kritCar as $req) {
-    # code...
     if ($req['merk_id']) {
-        # code...
         if ($req['Tahun_Produksi_id']) {
-            # code...
             if ($req['Kondisi_Fisik_id']) {
-                # code...
                 if ($req['Kondisi_Mesin_id']) {
-                    # code...
                     if ($req['Muatan_Penumpang_id']) {
-                        # code...
                         if ($req['Kapasitan_Mesin_id']) {
-                            # code...
                             if ($req['Jenis_BBM_id']) {
-                                # code...
                                 if ($req['Harga_Sewa_id']) {
-                                    # code...
                                     $allCars = car::where('merk_id', $req['merk_id'])
                                         ->where('Tahun_Produksi_id', $req['Tahun_Produksi_id'])
                                         ->where('Kondisi_Fisik_id', $req['Kondisi_Fisik_id'])
@@ -384,17 +375,17 @@ foreach ($kritCar as $req) {
             }
         }
         if ($req['Kondisi_Fisik_id']) {
-            # code...
+
             if ($req['Kondisi_Mesin_id']) {
-                # code...
+
                 if ($req['Muatan_Penumpang_id']) {
-                    # code...
+
                     if ($req['Kapasitan_Mesin_id']) {
-                        # code...
+
                         if ($req['Jenis_BBM_id']) {
-                            # code...
+
                             if ($req['Harga_Sewa_id']) {
-                                # code...
+
                                 $allCars = car::where('merk_id', $req['merk_id'])
                                     ->where('Kondisi_Fisik_id', $req['Kondisi_Fisik_id'])
                                     ->where('Kondisi_Mesin_id', $req['Kondisi_Mesin_id'])
@@ -412,15 +403,15 @@ foreach ($kritCar as $req) {
             }
         }
         if ($req['Kondisi_Mesin_id']) {
-            # code...
+
             if ($req['Muatan_Penumpang_id']) {
-                # code...
+
                 if ($req['Kapasitan_Mesin_id']) {
-                    # code...
+
                     if ($req['Jenis_BBM_id']) {
-                        # code...
+
                         if ($req['Harga_Sewa_id']) {
-                            # code...
+
                             $allCars = car::where('merk_id', $req['merk_id'])
                                 ->where('Kondisi_Mesin_id', $req['Kondisi_Mesin_id'])
                                 ->where('Muatan_Penumpang_id', $req['Muatan_Penumpang_id'])
@@ -436,13 +427,13 @@ foreach ($kritCar as $req) {
             }
         }
         if ($req['Muatan_Penumpang_id']) {
-            # code...
+
             if ($req['Kapasitan_Mesin_id']) {
-                # code...
+
                 if ($req['Jenis_BBM_id']) {
-                    # code...
+
                     if ($req['Harga_Sewa_id']) {
-                        # code...
+
                         $allCars = car::where('merk_id', $req['merk_id'])
                             ->where('Muatan_Penumpang_id', $req['Muatan_Penumpang_id'])
                             ->where('Kapasitan_Mesin_id', $req['Kapasitan_Mesin_id'])
@@ -456,11 +447,11 @@ foreach ($kritCar as $req) {
             }
         }
         if ($req['Kapasitan_Mesin_id']) {
-            # code...
+
             if ($req['Jenis_BBM_id']) {
-                # code...
+
                 if ($req['Harga_Sewa_id']) {
-                    # code...
+
                     $allCars = car::where('merk_id', $req['merk_id'])
                         ->where('Kapasitan_Mesin_id', $req['Kapasitan_Mesin_id'])
                         ->where('Jenis_BBM_id', $req['Jenis_BBM_id'])
@@ -472,9 +463,9 @@ foreach ($kritCar as $req) {
             }
         }
         if ($req['Jenis_BBM_id']) {
-            # code...
+
             if ($req['Harga_Sewa_id']) {
-                # code...
+
                 $allCars = car::where('merk_id', $req['merk_id'])
                     ->where('Jenis_BBM_id', $req['Jenis_BBM_id'])
                     ->where('Harga_Sewa_id', $req['Harga_Sewa_id'])
@@ -484,7 +475,7 @@ foreach ($kritCar as $req) {
             }
         }
         if ($req['Harga_Sewa_id']) {
-            # code...
+
             $allCars = car::where('merk_id', $req['merk_id'])
                 ->where('Harga_Sewa_id', $req['Harga_Sewa_id'])
                 ->where('stok','>','0')
@@ -494,37 +485,37 @@ foreach ($kritCar as $req) {
     }
 
     if ($req->Tahun_Produksi_id) {
-        # code...
+
 
     }
 
     if ($req->Kondisi_Fisik_id) {
-        # code...
+
 
     }
 
     if ($req->Kondisi_Mesin_id) {
-        # code...
+
 
     }
 
     if ($req->Muatan_Penumpang_id) {
-        # code...
+
 
     }
 
     if ($req->Kapasitan_Mesin_id) {
-        # code...
+
 
     }
 
     if ($req->Jenis_BBM_id) {
-        # code...
+
 
     }
 
     if ($req->Harga_Sewa_id) {
-        # code...
+
 
     }
 }
