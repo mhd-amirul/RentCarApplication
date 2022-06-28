@@ -16,7 +16,7 @@ class TokoController extends Controller
     {
         $shop = shop::where('user_id', auth()->user()->id)->first();
 
-        return view('pages.rental.shop')
+        return view('pages.rental.toko.shop')
                 ->with(
                     [
                         'title' => 'Toko',
@@ -29,7 +29,7 @@ class TokoController extends Controller
     public function edit($id)
     {
         $data = shop::findOrFail($id);
-        return view('pages.rental.editToko')
+        return view('pages.rental.toko.editToko')
             ->with(
                 [
                     'title' => 'Edit Toko',
@@ -148,5 +148,10 @@ class TokoController extends Controller
         Alert::success('success', 'Toko Berhasil di Hapus');
         return redirect()
             ->route('profil.index');
+    }
+
+    public function activityView()
+    {
+        return view('');
     }
 }

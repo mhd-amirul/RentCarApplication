@@ -19,7 +19,7 @@ class RentalController extends Controller
 {
     public function create()
     {
-        return view('pages.rental.tambah')
+        return view('pages.rental.mobil.tambah')
             ->with(
                 [
                     'title' => 'Tambah Mobil',
@@ -97,7 +97,7 @@ class RentalController extends Controller
             $hasil = $rate / $jumlah;
         }
         // return response()->json($car);
-        return view('pages.rental.show')
+        return view('pages.rental.mobil.show')
             ->with(
                 [
                     'title' => 'Detail Mobil',
@@ -111,7 +111,7 @@ class RentalController extends Controller
 
     public function edit($id)
     {
-        return view('pages.rental.edit')
+        return view('pages.rental.mobil.edit')
                 ->with(
                     [
                         'title' => 'Tambah Mobil',
