@@ -29,34 +29,17 @@ class HomeController extends Controller
     public function hitung(Request $request)
     {
         $kriteria = kriteria::all();
-        $allCars = car::query();
-        // if ($request->filled('merk_id')) {
-        //     $allCars->where('merk_id', $request->merk_id);
-        // }
-        // if ($request->filled('Tahun_Produksi_id')) {
-        //     $allCars->where('Tahun_Produksi_id', $request->Tahun_Produksi_id);
-        // }
-        // if ($request->filled('Muatan_Penumpang_id')) {
-        //     $allCars->where('Muatan_Penumpang_id', $request->Muatan_Penumpang_id);
-        // }
-        // if ($request->filled('Kapasitan_Mesin_id')) {
-        //     $allCars->where('Kapasitan_Mesin_id', $request->Kapasitan_Mesin_id);
-        // }
-        // if ($request->filled('Jenis_BBM_id')) {
-        //     $allCars->where('Jenis_BBM_id', $request->Jenis_BBM_id);
-        // }
-        // if ($request->filled('Harga_Sewa_id')) {
-        //     $allCars->where('Harga_Sewa_id', $request->Harga_Sewa_id);
-        // }
+        $filterCars = car::query();
+
         foreach ($kriteria as $k) {
             # code...
             $name = str_replace(' ','_',$k->nama.'_id');
             if ($request->filled($name)) {
-                $allCars->where($name, $request->merk_id);
+                $filterCars->where($name, $request[$name]);
             }
         }
-        $post = $allCars->get();
-        return response()->json($post);
+        $allCars = $filterCars->get();
+        return response()->json($allCars);
 
 
 

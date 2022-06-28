@@ -15,7 +15,7 @@
                     @foreach ($kriteria as $item)
                         <div class="col-sm-6">
                             <div class="form-floating mb-1">
-                                <select name="{{ $item->nama."_id" }}" class="form-select" aria-label="Floating label select example">
+                                <select name="{{ str_replace(' ', '_',$item->nama.'_id') }}" class="form-select" aria-label="Floating label select example">
                                     @foreach ($alternatif as $data)
                                         @if ($data->kriteria_id == $item->id)
                                             <option value="" hidden>Pilih Kriteria...</option>
@@ -23,7 +23,7 @@
                                         @endif
                                     @endforeach
                                 </select>
-                                <label for="{{ $item->nama."_id" }}">{{ $item->nama }}</label>
+                                <label for="{{ str_replace(' ', '_',$item->nama.'_id') }}">{{ $item->nama }}</label>
                             </div>
                         </div>
                     @endforeach
