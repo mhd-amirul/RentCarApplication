@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="card mb-3 mt-2 bg-secondary text-white">   
+<div class="card mb-3 mt-2 bg-secondary text-white">
     <div class="card-body p-2">
         <h6 class="card-title m-0">Informasi Toko :</h5>
     </div>
@@ -84,13 +84,13 @@
                     <a target="blank" href="{{ isset($shop->img_ktp) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_ktp) }}" class="card-title text-center flex-fill p-4 fs-3 text-white text-decoration-none" style="background-color: rgba(0,0,0,0.7 )">Detail</a>
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-sm-9 mt-5">
                     <a href="{{ route('toko.edit', $shop->id) }}" class="btn btn-warning">
                         <i class="bi bi-pencil-square"></i> Edit Toko
                     </a>
-                    @if ($lockCheck)
+                    @if ($shop->longitude != null && $shop->latitude != null)
                         <a href="{{ route('sharelok', $shop->id) }}" class="ml-2 btn btn-success">
                             <i class="mr-2 bi bi-house-fill" style="color: rgb(0, 0, 0);"></i> Cek Lokasi Toko
                         </a>
@@ -102,6 +102,9 @@
                             <i class="mr-2 bi bi-map-fill" style="color: rgb(0, 0, 0);"></i> Atur Lokasi Toko
                         </a>
                     @endif
+                    <a href="{{ route('toko.edit', $shop->id) }}" class="btn btn-dark text-white">
+                        <i class="bi bi-activity"></i> Aktifitas
+                    </a>
                     <form action="{{ route('toko.destroy', $shop->id) }}" method="post" class="d-inline">
                         @method('delete')
                         @csrf
@@ -116,7 +119,7 @@
 </div>
 
 <div class="card mb-3 mt-2 bg-secondary text-white"><div class="card-body p-2"><h6 class="card-title m-0">Daftar Mobil :</h5></div></div>
-    
+
 @if ($lockCheck)
     <a href="{{ route('shop.create') }}" class="btn btn-primary mb-3">Tambah data mobil</a>
 @else

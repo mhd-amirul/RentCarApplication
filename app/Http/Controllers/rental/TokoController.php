@@ -16,23 +16,12 @@ class TokoController extends Controller
     {
         $shop = shop::where('user_id', auth()->user()->id)->first();
 
-        $lock = [];
-        if ($shop->longitude != null && $shop->latitude != null) {
-            # code...
-            $lock = [
-                    'longitude' => $shop->longitude,
-                    'latitude' => $shop->latitude];
-        } else {
-            $lock = [];
-        }
-
         return view('pages.rental.shop')
                 ->with(
                     [
                         'title' => 'Toko',
                         'car' => car::where('user_id', auth()->user()->id)->orderBy('merk_id')->filter(request(['search']))->get(),
                         'shop' => $shop,
-                        'lockCheck' => $lock
                     ]
                 );
     }
