@@ -12,7 +12,7 @@ class mapController extends Controller
     public function setLocation($id)
     {
         # code...
-        return view('pages.rental.setLocation')
+        return view('pages.rental.toko.setLocation')
             ->with(
                 [
                     'title' => 'Set Lokasi Toko',

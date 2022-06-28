@@ -7,6 +7,7 @@ use App\Models\shop;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\history;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -150,13 +151,50 @@ class TokoController extends Controller
             ->route('profil.index');
     }
 
-    public function activityView()
+    public function activityView($id)
     {
         return view('pages.rental.aktifitas.activity')
             ->with(
                 [
-                    'title' => 'Aktifitas Toko'
+                    'title' => 'Aktifitas Toko',
+                    'histories' => history::where('shop_id', $id)->get(),
+                    'shop' => shop::where('id', $id)->first()
                 ]
             );
+    }
+
+    public function activityAdd($id)
+    {
+        return view('pages.rental.aktifitas.tambah')
+            ->with(
+                [
+                    'title' => 'Add Activity',
+                    'shop' => shop::find($id),
+                    'cars' => car::where('shop_id', $id)->get()
+                ]
+            );
+    }
+
+    public function activityStore(Request $request, $id)
+    {
+        $request['shop_id'] = $id;
+        $rules = [
+            'nama_pinjam' => 'required',
+            'tgl_pinjam' => 'required',
+            'nik_pinjam' => 'required|int',
+            'batas_pinjam' => 'required',
+            'car_id' => 'required',
+            'shop_id' => 'required',
+            'berkas_pinjam' => 'mimes:pdf||file|max:1024'
+        ];
+        $data = $request->validate($rules);
+
+        if ($request->file('berkas_pinjam')) {
+            $data['berkas_pinjam'] = $request->file('berkas_pinjam')->store('Berkas-Peminjaman');
+        }
+
+        history::create($data);
+        Alert::success('Success', 'AKtifitas berhasil ditambah');
+        return redirect()->route('activityView',$id);
     }
 }

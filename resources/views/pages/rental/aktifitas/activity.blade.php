@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="col-sm-4 justify-content-start">
-        <a href="" class="btn btn-primary">Add Aktivity</a>
+        <a href="{{ route('activityAdd',$shop->id) }}" class="btn btn-primary">Add Aktivity</a>
     </div>
     <div class="col-sm-12">
         <div class="card mb-3 mt-2 bg-secondary text-white">
@@ -33,9 +33,30 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td colspan="8" class="text-center h3">DATA KOSONG</td>
-            </tr>
+            @forelse ($histories as $h)
+                <tr>
+                    <td>{{ $h->id }}</td>
+                    <td>{{ $h->nama_pinjam }}</td>
+                    <td>{{ $h->nik_pinjam }}</td>
+                    <td>{{ $h->tgl_pinjam }}</td>
+                    <td>{{ $h->batas_pinjam }}</td>
+                    <td>
+                        <a target="blank" href="{{ isset($h->berkas_pinjam) == null ? url('images/notfound.png') : asset('storage/' . $h->berkas_pinjam) }}" class="btn-sm btn-info">
+                            <i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ route('shop.show', $h->car_id) }}" class="btn-sm btn-info">
+                            <i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i>
+                        </a>
+                    </td>
+
+                </tr>
+            @empty
+                <tr>
+                    <td colspan="8" class="text-center h3">DATA KOSONG</td>
+                </tr>
+            @endforelse
             </tbody>
     </table>
 </div>

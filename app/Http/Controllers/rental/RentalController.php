@@ -32,7 +32,6 @@ class RentalController extends Controller
     public function store(CreateMobilRequest $request)
     {
 
-        return response()->json($request);
         $data = $request->all();
         if ($request->file('gambar1')) {
             $data['gambar1'] = $request->file('gambar1')->store('gambar1');
