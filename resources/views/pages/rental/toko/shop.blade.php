@@ -102,7 +102,7 @@
                             <i class="mr-2 bi bi-map-fill" style="color: rgb(0, 0, 0);"></i> Atur Lokasi Toko
                         </a>
                     @endif
-                    <a href="{{ route('toko.edit', $shop->id) }}" class="btn btn-dark text-white">
+                    <a href="{{ route('activityView', $shop->id) }}" class="btn btn-dark text-white">
                         <i class="bi bi-activity"></i> Aktifitas
                     </a>
                     <form action="{{ route('toko.destroy', $shop->id) }}" method="post" class="d-inline">
@@ -120,7 +120,7 @@
 
 <div class="card mb-3 mt-2 bg-secondary text-white"><div class="card-body p-2"><h6 class="card-title m-0">Daftar Mobil :</h5></div></div>
 
-@if ($lockCheck)
+@if ($shop->longitude != null && $shop->latitude != null)
     <a href="{{ route('shop.create') }}" class="btn btn-primary mb-3">Tambah data mobil</a>
 @else
     <p class="mb-2 mt-2"></p>

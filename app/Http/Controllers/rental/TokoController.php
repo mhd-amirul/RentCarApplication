@@ -152,6 +152,11 @@ class TokoController extends Controller
 
     public function activityView()
     {
-        return view('');
+        return view('pages.rental.aktifitas.activity')
+            ->with(
+                [
+                    'title' => 'Aktifitas Toko'
+                ]
+            );
     }
 }
