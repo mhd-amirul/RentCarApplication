@@ -28,25 +28,6 @@ class HomeController extends Controller
 
     public function hitung(Request $request)
     {
-        $kriteria = kriteria::all();
-        $filterCars = car::query();
-
-        foreach ($kriteria as $k) {
-            # code...
-            $name = str_replace(' ','_',$k->nama.'_id');
-            if ($request->filled($name)) {
-                $filterCars->where($name, $request[$name]);
-            }
-        }
-        $allCars = $filterCars->get();
-        return response()->json($allCars);
-
-
-
-
-        // return response()->json($allCars);
-
-
         $allKriteria = kriteria::all();
         $kriteria = [];
         foreach ($allKriteria as $row) {
@@ -58,6 +39,16 @@ class HomeController extends Controller
                     $row->bobot
                 );
         }
+
+        $filterCars = car::query();
+        foreach ($allKriteria as $k) {
+            # code...
+            $name = str_replace(' ','_',$k->nama.'_id');
+            if ($request->filled($name)) {
+                $filterCars->where($name, $request[$name]);
+            }
+        }
+        $allCars = $filterCars->get();
 
         $alternatif = [];
         foreach ($allCars as $row) {
