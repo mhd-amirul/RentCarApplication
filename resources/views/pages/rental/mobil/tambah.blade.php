@@ -4,7 +4,7 @@
 <div class="row justify-content-center mb-5">
     <div class="col-lg-6">
         <main class="form-registration mt-3">
-            <h1 class="h3 mb-5 fw-normal text-center">Tambah Mobil</h1>
+            <h1 class="h3 mb-4 fw-normal text-center">TAMBAH MOBIL</h1>
             <form action="{{ route('shop.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="card mt-2 mb-2 bg-secondary text-white text-left">
@@ -134,7 +134,12 @@
                         </div>
                     </div>
                 </div>
-                <button class="w-100 btn btn-lg btn-secondary mt-3" type="submit">Tambah</button>
+
+                <div class="row justify-content-center">
+                    <div class="col-sm-10 mt-4">
+                        <button class="w-100 btn btn-danger mt-3 text-white" type="submit">TAMBAH MOBIL</button>
+                    </div>
+                </div>
             </form>
         </main>
     </div>
