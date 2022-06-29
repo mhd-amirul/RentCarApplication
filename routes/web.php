@@ -89,9 +89,12 @@ Route::group(['middleware' => 'auth'], function ()
                 // Route Khusus Toko Rental
                 Route::resource('shop', RentalController::class)
                     ->except(['index']);
+
                 Route::get('activityView/{id}', [TokoController::class, 'activityView'])->name('activityView');
+                Route::get('activityViewCetak/{id}', [TokoController::class, 'activityViewCetak'])->name('activityViewCetak');
                 Route::get('activityAdd/{id}', [TokoController::class, 'activityAdd'])->name('activityAdd');
                 Route::post('activityStore/{id}', [TokoController::class, 'activityStore'])->name('activityStore');
+
                 Route::get('map/{id}', [mapController::class, 'setLocation'])->name('setLocation');
                 Route::put('map/update/{id}', [mapController::class, 'saveLocation'])->name('saveLocation');
                 Route::resource('/toko', TokoController::class)

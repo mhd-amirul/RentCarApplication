@@ -25,7 +25,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="form-floating">
-                    <input type="date" name="tgl_pinjam" class="form-control rounded-top @error('tgl_pinjam') is-invalid @enderror" id="tgl_pinjam" placeholder="Tanggal Peminjaman" value="{{ old('tgl_pinjam') }}" required>
+                    <input type="datetime-local" name="tgl_pinjam" class="form-control rounded-top @error('tgl_pinjam') is-invalid @enderror" id="tgl_pinjam" placeholder="Tanggal Peminjaman" value="{{ old('tgl_pinjam') }}" required>
                     <label for="tgl_pinjam">Tanggal Peminjaman</label>
                     @error('tgl_pinjam')
                         <div class="invalid-feedback">
@@ -49,7 +49,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="form-floating">
-                    <input type="date" name="batas_pinjam" class="form-control rounded-top @error('batas_pinjam') is-invalid @enderror" id="batas_pinjam" placeholder="Batas Peminjaman" value="{{ old('batas_pinjam') }}" required>
+                    <input type="datetime-local" name="batas_pinjam" class="form-control rounded-top @error('batas_pinjam') is-invalid @enderror" id="batas_pinjam" placeholder="Batas Peminjaman" value="{{ old('batas_pinjam') }}" required>
                     <label for="batas_pinjam">Batas Peminjaman</label>
                     @error('batas_pinjam')
                         <div class="invalid-feedback">
@@ -64,7 +64,7 @@
                 <div class="form-floating mb-1">
                     <select name="car_id" class="form-select" aria-label="Floating label select example">
                         @foreach ($cars as $car)
-                            <option value="{{ $car->id }}" selected>{{ $loop->iteration.' . '.$car->merk->nama }}</option>
+                            <option data-image_="" value="{{ $car->id }}" selected>{{ $loop->iteration.' . '.$car->merk->nama.' (Plat : '.'BL1232AH'.' )' }}</option>
                         @endforeach
                     </select>
                     <label for="car_id">Mobil Rental</label>

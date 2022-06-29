@@ -18,9 +18,9 @@ return new class extends Migration
             $table->foreignId('shop_id')->references('id')->on('shops')->onDelete('cascade');
             $table->string('nama_pinjam');
             $table->string('nik_pinjam');
-            $table->string('tgl_pinjam');
-            $table->date('batas_pinjam');
-            $table->date('berkas_pinjam')->nullable();
+            $table->dateTime('tgl_pinjam');
+            $table->dateTime('batas_pinjam');
+            $table->string('berkas_pinjam')->nullable();
             $table->foreignId('car_id')->references('id')->on('cars');
             $table->timestamps();
         });

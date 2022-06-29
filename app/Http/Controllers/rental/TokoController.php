@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\history;
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -185,7 +186,7 @@ class TokoController extends Controller
             'batas_pinjam' => 'required',
             'car_id' => 'required',
             'shop_id' => 'required',
-            'berkas_pinjam' => 'mimes:pdf||file|max:1024'
+            'berkas_pinjam' => 'mimes:pdf||max:1024'
         ];
         $data = $request->validate($rules);
 
@@ -196,5 +197,16 @@ class TokoController extends Controller
         history::create($data);
         Alert::success('Success', 'AKtifitas berhasil ditambah');
         return redirect()->route('activityView',$id);
+    }
+
+    public function activityViewCetak($id)
+    {
+        $data = [
+            'data_cetak' => history::where('shop_id', $id)->get(),
+            'shop' => shop::findorfail($id)
+        ];
+
+        $pdf = PDF::loadview('pages.rental.aktifitas.cetak_pdf', $data);
+        return $pdf->download('laporan-history-rental.pdf');
     }
 }

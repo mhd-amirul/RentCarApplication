@@ -9,8 +9,9 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-4 justify-content-start">
-        <a href="{{ route('activityAdd',$shop->id) }}" class="btn btn-primary">Add Aktivity</a>
+    <div class="col-sm-4">
+        <a href="{{ route('activityAdd',$shop->id) }}" class="btn btn-primary"><i class="bi bi-file-earmark-plus"></i> Add Activity</a>
+        <a target="blank" href="{{ route('activityViewCetak', $shop->id) }}" class="btn btn-success"><i class="bi bi-printer-fill"></i>  Print</a>
     </div>
     <div class="col-sm-12">
         <div class="card mb-3 mt-2 bg-secondary text-white">
@@ -42,12 +43,12 @@
                     <td>{{ $h->batas_pinjam }}</td>
                     <td>
                         <a target="blank" href="{{ isset($h->berkas_pinjam) == null ? url('images/notfound.png') : asset('storage/' . $h->berkas_pinjam) }}" class="btn-sm btn-info">
-                            <i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i>
+                            Lihat <i class="bi bi-eye" style="color: rgb(255, 255, 255);"></i>
                         </a>
                     </td>
                     <td>
                         <a href="{{ route('shop.show', $h->car_id) }}" class="btn-sm btn-info">
-                            <i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i>
+                            Lihat <i class="bi bi-eye" style="color: rgb(255, 255, 255);"></i>
                         </a>
                     </td>
 

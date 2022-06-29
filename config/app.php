@@ -168,6 +168,7 @@ return [
          * Package Service Providers...
          */
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -192,7 +193,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // ...
-        
+
     ])->toArray(),
 
 ];
