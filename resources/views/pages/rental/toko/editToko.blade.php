@@ -3,7 +3,7 @@
 @section('container')
 
 <div class="row justify-content-center">
-    <div class="col-lg-5 mt-4">
+    <div class="col-lg-6 mt-4">
         <main class="form-registration">
             <h1 class="h3 mb-3 fw-normal text-center">Edit Toko</h1>
             <form action="{{ route('toko.update', $data->id) }}" method="post" enctype="multipart/form-data">
@@ -51,54 +51,68 @@
                         </div>
                     @enderror
                 </div>
-                
+
                 <div class="card mt-2 mb-2 bg-secondary text-white text-left">
                     <div class="card-body p-2">
                         <h6 class="card-title m-0">Upload Berkas :</h6>
                     </div>
                 </div>
 
-                <div class="custom-file">
-                    <label for="img_ktp"><i class="bi bi-file-earmark-image"></i> Scan KTP</label>
-                    <input type="hidden" name="oldgambar1" value="{{ $data->img_ktp }}">
-                    <input type="file" name="img_ktp" class="form-control @error('img_ktp') is-invalid @enderror" id="img_ktp">
-                    @error('img_ktp')
-                        <div class="invalid-feedback">
-                            {{ $message }}
+                <div class="row">
+                    <div class="col-sm-6 mt-3">
+                        <div class="custom-file">
+                            <label for="img_ktp"><i class="bi bi-file-earmark-image"></i> Scan KTP</label>
+                            <input type="hidden" name="oldgambar1" value="{{ $data->img_ktp }}">
+                            <input type="file" name="img_ktp" class="form-control @error('img_ktp') is-invalid @enderror" id="img_ktp">
+                            @error('img_ktp')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
-                    @enderror
-                </div>
-                <div class="custom-file">
-                    <label for="img_siu" class="mt-3"><i class="bi bi-file-earmark-image"></i> Surat Izin Usaha</label>
-                    <input type="hidden" name="oldgambar2" value="{{ $data->img_siu }}">
-                    <input type="file" name="img_siu" class="form-control @error('img_siu') is-invalid @enderror" id="img_siu">
-                    @error('img_siu')
-                        <div class="invalid-feedback">
-                            {{ $message }}
+                    </div>
+                    <div class="col-sm-6 mt-3">
+                        <div class="custom-file">
+                            <label for="img_siu"><i class="bi bi-file-earmark-image"></i> Surat Izin Usaha</label>
+                            <input type="hidden" name="oldgambar2" value="{{ $data->img_siu }}">
+                            <input type="file" name="img_siu" class="form-control @error('img_siu') is-invalid @enderror" id="img_siu">
+                            @error('img_siu')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
-                    @enderror
-                </div>
-                <div class="custom-file">
-                    <label for="pas_foto" class="mt-3"><i class="bi bi-file-earmark-image"></i> Pas Foto</label>
-                    <input type="hidden" name="oldgambar3" value="{{ $data->pas_foto }}">
-                    <input type="file" name="pas_foto" class="form-control @error('pas_foto') is-invalid @enderror" id="pas_foto">
-                    @error('pas_foto')
-                        <div class="invalid-feedback">
-                            {{ $message }}
+                    </div>
+                    <div class="col-sm-6 mt-3">
+                        <div class="custom-file">
+                            <label for="pas_foto"><i class="bi bi-file-earmark-image"></i> Pas Foto</label>
+                            <input type="hidden" name="oldgambar3" value="{{ $data->pas_foto }}">
+                            <input type="file" name="pas_foto" class="form-control @error('pas_foto') is-invalid @enderror" id="pas_foto">
+                            @error('pas_foto')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
-                    @enderror
-                </div>
-                <div class="custom-file">
-                    <label for="foto_usaha" class="mt-3"><i class="bi bi-file-earmark-image"></i> Foto Usaha</label>
-                    <input type="hidden" name="oldgambar4" value="{{ $data->foto_usaha }}">
-                    <input type="file" name="foto_usaha" class="form-control @error('foto_usaha') is-invalid @enderror" id="foto_usaha">
-                    @error('foto_usaha')
-                        <div class="invalid-feedback">
-                            {{ $message }}
+                    </div>
+                    <div class="col-sm-6 mt-3">
+                        <div class="custom-file">
+                            <label for="foto_usaha"><i class="bi bi-file-earmark-image"></i> Foto Usaha</label>
+                            <input type="hidden" name="oldgambar4" value="{{ $data->foto_usaha }}">
+                            <input type="file" name="foto_usaha" class="form-control @error('foto_usaha') is-invalid @enderror" id="foto_usaha">
+                            @error('foto_usaha')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
-                    @enderror
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-10">
+                            <button class="w-100 btn btn-danger mt-5 mb-5 text-white" type="submit">UPDATE</button>
+                        </div>
+                    </div>
                 </div>
-                <button class="w-100 btn btn-lg btn-secondary mt-5 mb-5" type="submit">Kirim</button>
             </form>
         </main>
     </div>
