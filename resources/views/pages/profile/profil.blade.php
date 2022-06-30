@@ -10,8 +10,8 @@
 <div class="row justify-content-center mt-5">
     <div class="col-sm-10">
         <div class="card mb-3">
-            <div class="bg-c-lite-green text-center">
-                <img src="{{ isset($data->image) == null ? url('images/person.png') : asset('storage/' . $data->image) }}" width="300" class="{{ isset($data->image) == null ? 'my-3' : '' }}" style="clip-path: circle()">
+            <div class="bg-dark text-center">
+                <img src="{{ isset($data->image) == null ? url('images/person.png') : asset('storage/' . $data->image) }}" width="300" class="my-3" style="clip-path: circle()">
             </div>
 
             <div class="card-body">
