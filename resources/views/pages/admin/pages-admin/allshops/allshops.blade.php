@@ -73,13 +73,6 @@
 </div>
 </form>
 
-@if (session()->has('success'))
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-    {{ session('success') }} 
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-@endif
-
 @if ($shop->count())
 <div class="container">
     <div class="row">
@@ -87,22 +80,21 @@
             <div class="col-md-3 mb-3">
                 <div class="card">
                     @if ($shop->pas_foto)
-                        <img src="{{ asset('storage/' . $shop->pas_foto) }}" alt="{{ $shop->pas_foto }}" class="card-img-top">
+                        <div style="max-height: 166px; overflow: hidden;" class="bg-dark">
+                            <img src="{{ asset('storage/' . $shop->pas_foto) }}" alt="" class="img-fluid">
+                        </div>
                     @else
                         <img src="{{ url('images/notfound.png') }}" alt="null" class="card-img-top">
                     @endif
                     <div class="card-body">
-                        <h5 class="card-title">{{ $shop->nm_usaha }}</h5>
-                        <p>
-                            <small>
-                                Nama Usaha : <a href="#" class="text-decoration-none text-black">{{ $shop->nm_usaha }}</a>
-                            </small>
-                        </p>
                         <p class="card-text">
-                            ID : {{ $shop->id }} <br> Name Pemilik : {{ $shop->nm_pu }} <br> Created At : {{ $shop->created_at }}
+                            ID : {{ $shop->id }} <br>
+                            Name Pemilik : {{ $shop->nm_pu }} <br>
+                            Name Usaha : {{ $shop->nm_usaha }} <br>
+                            Created At : {{ $shop->created_at }}
                         </p>
                         <a href="{{ route('allshops.show',$shop->id) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                        
+                        <a href="{{ route('allshops.edit', $shop->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square" style="color: rgb(0, 0, 0);"></i></a>
                         <form action="{{ route('allshops.destroy', $shop->id) }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf
@@ -117,44 +109,6 @@
     </div>
 </div>
 @else
-    <p class="text-center fs-4 mt-5 mb-5">Empty !!!</p>
+    <p class="text-center fs-4 mt-5 mb-5">Data tidak ditemukan!</p>
 @endif
-
-{{-- <table class="table table-hover">
-    <thead>
-        <tr >
-            <th scope="col">ID</th>
-            <th scope="col">Name Pemilik</th>
-            <th scope="col">Nama Usaha</th>
-            <th scope="col">alamat</th>
-            <th scope="col">Created At</th>
-            <th scope="col">Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        @forelse ($shop as $shop)
-        <tr >
-            <th scope="row">{{ $shop->id }}</th>
-            <td>{{ $shop->nm_pu }}</td>
-            <td>{{ $shop->nm_usaha }}</td>
-            <td>{{ $shop->alamat }}</td>
-            <td>{{ $shop->created_at }}</td>
-            <td>
-                <a href="{{ route('allshops.show', $shop->id) }}" class="btn-sm btn-info" style="color: rgb(0, 0, 0);"><i class="bi bi-eye-fill"></i></a>
-                <form action="{{ route('allshops.destroy', $shop->id ) }}" method="post" class="d-inline">
-                    @method('delete')
-                    @csrf
-                    <button class="btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin?')">
-                        <i class="bi bi-trash-fill"></i>
-                    </button>
-                </form>
-            </td>
-        </tr>
-        @empty
-        <tr>
-            <td colspan="5" class="text-center h3">DATA KOSONG</td>
-        </tr>
-        @endforelse
-        </tbody>
-</table> --}}
 @endsection
