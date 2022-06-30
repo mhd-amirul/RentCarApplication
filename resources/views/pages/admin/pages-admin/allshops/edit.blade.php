@@ -8,7 +8,7 @@
                 <h1 class="h3 mb-3 fw-normal text-center">EDIT TOKO</h1><hr>
                 <form action="{{ route('allshops.update', $data->id) }}" method="post" enctype="multipart/form-data">
                     @csrf
-
+                    @method('put')
                     <div class="row">
                         <div class="col-sm-6 mt-2">
                             <div class="form-floating">
