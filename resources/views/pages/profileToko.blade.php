@@ -54,7 +54,9 @@
                     </div>
                     <div class="col-sm-6 mb-4">
                         <p class="m-b-10 f-w-600">Surat Izin Usaha</p>
-                        <a target="blank" href="{{ isset($shop->img_siu) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_siu) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i> Lihat Detail</a>
+                        <div style="max-height: 200px; max-width: 376px; overflow: hidden;" class="border border-dark">
+                            <img src="{{ isset($shop->img_siu) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_siu) }}" alt="#" class="img-fluid">
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 ">
