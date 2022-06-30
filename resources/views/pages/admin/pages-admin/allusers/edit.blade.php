@@ -47,7 +47,7 @@
                             </div>
 
                             <div class="form-floating mb-3">
-                                <input type="oldpassword" name="oldpassword" class="form-control @error('oldpassword') is-invalid @enderror" id="oldpassword" placeholder="Password Lama">
+                                <input type="password" name="oldpassword" class="form-control @error('oldpassword') is-invalid @enderror" id="oldpassword" placeholder="Password Lama">
                                 <label for="oldpassword">Password Lama</label>
                                 @error('oldpassword')
                                     <div class="invalid-feedback">
