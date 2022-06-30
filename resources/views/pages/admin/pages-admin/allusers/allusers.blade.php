@@ -89,7 +89,6 @@
                         <div style="max-height: 166px; overflow: hidden;" class="bg-dark">
                             <img src="{{ asset('storage/' . $user->image) }}" alt="" class="img-fluid">
                         </div>
-                        {{-- <img src="{{ asset('storage/' . $user->image) }}" alt="{{ $user->image }}" class="card-img-top"> --}}
                     @else
                         <img src="{{ url('images/notfound.png') }}" alt="null" class="card-img-top">
                     @endif
@@ -116,6 +115,6 @@
     </div>
 </div>
 @else
-    <p class="text-center fs-4 mt-5 mb-5">Empty !!!</p>
+    <p class="text-center fs-4 mt-5 mb-5">Data tidak ditemukan!</p>
 @endif
 @endsection
