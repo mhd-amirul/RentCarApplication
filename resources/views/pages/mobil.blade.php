@@ -1,20 +1,20 @@
 @extends('layouts.main')
 
 @section('container')
-<h1 class="mb-5 text-center">{{ $title }}</h1>
-<div class="row justify-content-center mb-3">
-    <div class="col-md-6">
+<h1 class="mt-5 mb-3 text-center">DAFTAR MOBIL</h1>
+<div class="row justify-content-center">
+    <div class="col-md-8">
         <form action="{{ route('daftar') }}">
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="search.." name="search" value="{{ request('search') }}">
-                <button class="btn btn-secondary" type="submit">Search</button>
+                <button class="btn btn-primary" type="submit">Search</button>
             </div>
         </form>
     </div>
-</div>
-<div class="card mt-2 mb-4 bg-secondary text-white text-left">
-    <div class="card-body p-2">
-        <h6 class="card-title m-0">Daftar Mobil : </h6>
+    <div class="col-md-12">
+        <div class="card px-1 bg-danger">
+            <h1></h1>
+        </div>
     </div>
 </div>
 
@@ -33,7 +33,7 @@
                             </small>
                         </p>
                         <p class="card-text">Merk : {{ $car->merk->nama }}, Tahun Produksi : {{ $car->tahun_produksi->nama }}, Muatan Penumpang : {{ $car->muatan_penumpang->nama }}, Harga Sewa : {{ $car->harga_sewa->nama }}</p>
-                        <a href="{{ route('detailMobil', $car->id) }}" class="btn btn-secondary">Detail</a>
+                        <a href="{{ route('detailMobil', $car->id) }}" class="btn btn-sm btn-primary">Detail</a>
                     </div>
                 </div>
             </div>
