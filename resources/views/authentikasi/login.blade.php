@@ -8,7 +8,7 @@
                     <div class="row justify-content-center mb-5">
                         <div class="col-sm-7">
                             <div class="d-flex justify-content-center mb-3">
-                                <img src="{{ url('images/person.png') }}" width="100" alt="">
+                                <img src="{{ url('images/person.png') }}"  width="300" alt="">
                             </div>
                             <form action="login" method="post">
                                 @csrf
