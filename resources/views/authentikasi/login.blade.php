@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="col">
                                     <small class="d-block text-center mt-3">
-                                        Dont Have Account? <a href="register">Register Now!</a>
+                                        Dont Have Account? <a href="register">Create Now!</a>
                                     </small>
                                 </div>
                             </div>
