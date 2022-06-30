@@ -1,21 +1,22 @@
 @extends('layouts.main')
 
 @section('container')
-    <div class="row justify-content-center mt-5">
-        <div class="col-lg-5 mt-4">
-            <main class="form-signin mt-5">
-                <h1 class="h3 mb-3 fw-normal text-center">Rating Dan Ulasan</h1>
+    <div class="row justify-content-center" style="margin-top: 2cm">
+        <div class="col-lg-6">
+            <main class="form-signin">
+                <div class="card py-5 px-5 border border-gray-800">
+                    <h1 class="h3 mb-3 fw-normal text-center">Rating Dan Ulasan</h1>
                 <form action="{{ route('ulasanU', $car->id) }}" method="post">
                     @method('put')
                     @csrf
                     <input name="car_id" type="hidden" value="{{ $car->id }}">
                     <div class="form-floating mb-1">
                         <select name="rating" class="form-select" aria-label="Floating label select example">
-                                <option value="1" selected>1</option>
-                                <option value="2" selected>2</option>
-                                <option value="3" selected>3</option>
-                                <option value="4" selected>4</option>
-                                <option value="5" selected>5</option>
+                                <option value="1">Bintang 1</option>
+                                <option value="2">Bintang 2</option>
+                                <option value="3">Bintang 3</option>
+                                <option value="4">Bintang 4</option>
+                                <option value="5" selected>Bintang 5</option>
                         </select>
                         <label for="merk_id">Rating</label>
                     </div>
@@ -28,8 +29,9 @@
                             </div>
                         @enderror
                     </div>
-                    <button class="w-100 btn btn-lg btn-secondary " type="submit">Kirim</button>
+                    <button class="w-100 btn btn-primary " type="submit">SUBMIT</button>
                 </form>
+                </div>
             </main>
         </div>
     </div>
