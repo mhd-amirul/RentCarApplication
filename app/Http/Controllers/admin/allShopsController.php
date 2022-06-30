@@ -38,7 +38,7 @@ class allShopsController extends Controller
     {
         $data = $request->validate(
             [
-                'user_id' => '',
+                'user_id' => 'required',
                 'nm_pu' => 'required',
                 'nm_usaha' => 'required',
                 'alamat' => 'required',
@@ -53,24 +53,22 @@ class allShopsController extends Controller
         if ($request->file('img_ktp')) {
             $data['img_ktp'] = $request->file('img_ktp')->store('ktp');
         }
-
         if ($request->file('img_siu')) {
             $data['img_siu'] = $request->file('img_siu')->store('surat_ijin_usaha');
         }
-
         if ($request->file('pas_foto')) {
             $data['pas_foto'] = $request->file('pas_foto')->store('pas_foto');
         }
-
         if ($request->file('foto_usaha')) {
             $data['foto_usaha'] = $request->file('foto_usaha')->store('foto_usaha');
         }
 
         $user = User::where('id', $request['user_id'])->first();
         $user['role'] = 'rental';
+        $user->save();
 
         shop::create($data);
-        $user->save();
+        Alert::success('success', 'berhasil membuat toko');
         return redirect()->route('allshops.index');
     }
 
