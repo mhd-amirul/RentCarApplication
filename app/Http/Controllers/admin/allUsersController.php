@@ -90,12 +90,15 @@ class allUsersController extends Controller
                 return redirect()
                     ->back();
             }
-            # code...
             $rules['password'] = 'min:5';
             $rules['ConfirmPassword'] = 'same:password';
         }
 
         $data = $request->validate($rules);
+
+        if ($request->oldpassword != null) {
+            $data['password'] = Hash::make($data['password']);
+        }
 
         if ($request->file('image')) {
             if ($request->oldimg) {
@@ -105,9 +108,7 @@ class allUsersController extends Controller
         }
 
 
-        $data['password'] = Hash::make($data['password']);
         $db->update($data);
-
         Alert::success('success', 'Data User Berhasil di Ubah');
         return redirect()
             ->route('allusers.index');
