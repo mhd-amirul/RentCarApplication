@@ -203,9 +203,9 @@ class allShopsController extends Controller
         $user->save();
 
         $shop->delete();
+        Alert::success('success', 'Toko Berhasil di Hapus');
         return redirect()
-            ->route('allshops.index')
-            ->with('success', 'Toko Berhasil di Hapus');
+            ->route('allshops.index');
     }
 
     public function destroyCar($id)
