@@ -72,7 +72,7 @@
     <div class="col-lg-9">
         <div class="card px-5 py-5">
             <h3>DAFTAR MOBIL</h3>
-            <table class="table table-hover">
+            <table class="table table-responsive table-hover">
                 <thead>
                     <tr class="text-center">
                         <th scope="col">No</th>
@@ -109,5 +109,4 @@
         </div>
     </div>
 </div>
-
 @endsection

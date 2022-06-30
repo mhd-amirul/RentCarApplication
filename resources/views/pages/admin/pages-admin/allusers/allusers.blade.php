@@ -74,7 +74,7 @@
 
 @if (session()->has('success'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">
-    {{ session('success') }} 
+    {{ session('success') }}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 @endif
@@ -83,22 +83,25 @@
 <div class="container">
     <div class="row">
         @foreach( $user as $user )
-            <div class="col-md-3 mb-3">
+            <div class="col-sm-3 mb-3">
                 <div class="card">
                     @if ($user->image)
-                        <img src="{{ asset('storage/' . $user->image) }}" alt="{{ $user->image }}" class="card-img-top">
+                        <div style="max-height: 166px; overflow: hidden;" class="bg-dark">
+                            <img src="{{ asset('storage/' . $user->image) }}" alt="" class="img-fluid">
+                        </div>
+                        {{-- <img src="{{ asset('storage/' . $user->image) }}" alt="{{ $user->image }}" class="card-img-top"> --}}
                     @else
                         <img src="{{ url('images/notfound.png') }}" alt="null" class="card-img-top">
                     @endif
                     <div class="card-body">
                         <h5 class="card-title">{{ $user->username }}</h5>
-                        
+
                         <p class="card-text">
                             ID : {{ $user->id }} <br> Email : {{ $user->email }} <br> Role : {{ $user->role }} <br> No Hp : {{ $user->no_hp }} <br> Created At : {{ $user->created_at }}
                         </p>
                         <a href="{{ route('allusers.show',$user->id) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
                         <a href="{{ route('allusers.edit', $user->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square" style="color: rgb(0, 0, 0);"></i></a>
-                        
+
                         <form action="{{ route('allusers.destroy', $user->id) }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf

@@ -3,11 +3,11 @@
 @section('container')
 @if (session()->has('success'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">
-    {{ session('success') }} 
+    {{ session('success') }}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 @endif
-<div class="card mb-3 mt-2 bg-secondary text-white"><div class="card-body p-2"><h6 class="card-title m-0">Administrator : </h5></div></div>
+<h2 class="text-center">DASHBOARD ADMIN</h2><hr>
     <div class="row">
         <div class="col-sm-6 col-lg-3">
             <div class="card text-white bg-primary">
@@ -69,7 +69,10 @@
     <button class="btn btn-secondary" type="submit">Search</button>
 </div>
 </form>
-    
+{{-- <div class="table-responsive">
+	<table class="table table-bordered table-striped">
+	</table>
+</div> --}}
 @if ($makeshop->count())
 <div class="container">
     <div class="row">
@@ -77,7 +80,10 @@
             <div class="col-md-3 mb-3">
                 <div class="card">
                     @if ($ms->pas_foto)
-                        <img src="{{ asset('storage/' . $ms->pas_foto) }}" alt="{{ $ms->pas_foto }}" class="card-img-top">
+                        {{-- <img src="{{ asset('storage/' . $ms->pas_foto) }}" alt="{{ $ms->pas_foto }}" class="card-img-top"> --}}
+                        <div style="max-height: 166px; overflow: hidden;" class="bg-dark">
+                            <img src="{{ asset('storage/' . $ms->pas_foto) }}" alt="" class="img-fluid">
+                        </div>
                     @else
                         <img src="{{ url('images/notfound.png') }}" alt="null" class="card-img-top">
                     @endif
@@ -108,7 +114,7 @@
                             </button>
                         </form>
                         <a href="{{ route('dashboard.show',$ms->id) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                        
+
                         <form action="{{ route('dashboard.destroy', $ms->id) }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf
@@ -134,9 +140,9 @@
 @endsection
 
 {{-- @section('chart-Script')
-<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts.js"></script>
 <script>
-    
+
     Highcharts.chart('Chart-admin', {
     chart: {
         type: 'column'
@@ -197,3 +203,4 @@
 });
 </script>
 @endsection --}}
+
