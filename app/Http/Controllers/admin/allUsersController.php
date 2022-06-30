@@ -10,6 +10,7 @@ use App\Models\car;
 use App\Models\shop;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class allUsersController extends Controller
 {
@@ -41,9 +42,9 @@ class allUsersController extends Controller
         $data['password'] = Hash::make($data['password']);
         User::create($data);
 
+        Alert::success('success', 'User Berhasil di Tambah');
         return redirect()
-            ->route('allusers.index')
-            ->with('success', 'User Berhasil di Tambah');
+            ->route('allusers.index');
     }
 
     public function show($id)
