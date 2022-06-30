@@ -69,10 +69,7 @@
     <button class="btn btn-secondary" type="submit">Search</button>
 </div>
 </form>
-{{-- <div class="table-responsive">
-	<table class="table table-bordered table-striped">
-	</table>
-</div> --}}
+
 @if ($makeshop->count())
 <div class="container">
     <div class="row">
@@ -80,7 +77,6 @@
             <div class="col-md-3 mb-3">
                 <div class="card">
                     @if ($ms->pas_foto)
-                        {{-- <img src="{{ asset('storage/' . $ms->pas_foto) }}" alt="{{ $ms->pas_foto }}" class="card-img-top"> --}}
                         <div style="max-height: 166px; overflow: hidden;" class="bg-dark">
                             <img src="{{ asset('storage/' . $ms->pas_foto) }}" alt="" class="img-fluid">
                         </div>
@@ -88,40 +84,14 @@
                         <img src="{{ url('images/notfound.png') }}" alt="null" class="card-img-top">
                     @endif
                     <div class="card-body">
-                        <h5 class="card-title">{{ $ms->nm_usaha }}</h5>
-                        <p>
-                            <small>
-                                Pemilik : <a href="#" class="text-decoration-none text-black">{{ $ms->nm_pu }}</a>
-                            </small>
-                        </p>
                         <p class="card-text">
-                            User ID : {{ $ms->user_id }} <br> Alamat : {{ $ms->alamat }} <br> NIK : {{ $ms->nik }} <br> Created At : {{ $ms->created_at }}
+                            User ID : {{ $ms->user_id }} <br>
+                            Nama Pemilik : {{ $ms->nm_pu }} <br>
+                            Nama Usaha : {{ $ms->nm_usaha }} <br>
                         </p>
-
-                        <form action="{{ route('dashboard.store') }}" method="post" class="d-inline">
-                        @csrf
-                            <input type="text" name="user_id" value="{{ $ms->user_id }}" hidden>
-                            <input type="text" name="nm_pu" value="{{ $ms->nm_pu }}" hidden>
-                            <input type="text" name="nm_usaha" value="{{ $ms->nm_usaha }}" hidden>
-                            <input type="text" name="alamat" value="{{ $ms->alamat }}" hidden>
-                            <input type="text" name="nik" value="{{ $ms->nik }}" hidden>
-                            <input type="text" name="img_ktp" value="{{ $ms->img_ktp }}" hidden>
-                            <input type="text" name="img_siu" value="{{ $ms->img_siu }}" hidden>
-                            <input type="text" name="pas_foto" value="{{ $ms->pas_foto }}" hidden>
-                            <input type="text" name="foto_usaha" value="{{ $ms->foto_usaha }}" hidden>
-                            <button class="btn-sm btn-success border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">
-                                <i class="bi bi-pencil-square"></i>
-                            </button>
-                        </form>
-                        <a href="{{ route('dashboard.show',$ms->id) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-
-                        <form action="{{ route('dashboard.destroy', $ms->id) }}" method="post" class="d-inline">
-                            @method('delete')
-                            @csrf
-                            <button class="btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">
-                                <i class="bi bi-trash-fill"></i>
-                            </button>
-                        </form>
+                        <a href="{{ route('dashboard.show',$ms->id) }}" class="btn-sm btn-primary">
+                            <i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i> Detail
+                        </a>
                     </div>
                 </div>
             </div>
@@ -129,7 +99,7 @@
     </div>
 </div>
 @else
-    <p class="text-center fs-4 mt-5 mb-5">Empty !!!</p>
+    <p class="text-center fs-4 mt-5 mb-5">Pencarian tidak ditemukan!</p>
 @endif
 
 <div class="panel">
