@@ -2,7 +2,7 @@
 
 @section('container')
 <div class="row justify-content-center mb-5">
-    <div class="col-lg-6">
+    <div class="col-lg-7">
         <div class="card py-3 px-3 border border-gray-800">
             <main class="form-registration mt-3">
                 <h1 class="h3 mb-4 fw-normal text-center">TAMBAH MOBIL</h1>
