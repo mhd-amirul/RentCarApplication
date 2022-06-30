@@ -173,8 +173,8 @@ class allUsersController extends Controller
         }
 
         $user->delete();
+        Alert::success('success', 'User Berhasil di Hapus');
         return redirect()
-            ->route('allusers.index')
-            ->with('success', 'User Berhasil di Hapus');
+            ->route('allusers.index');
     }
 }
