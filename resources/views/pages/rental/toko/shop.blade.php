@@ -113,9 +113,7 @@
             </div>
         </form>
     </div>
-    <div class="col-lg-12">
-        <div class="card my-2 mx-3 bg-danger"><h1></h1></div>
-
+    <div class="col-lg-10">
         @if ($car->count())
         <div class="container">
             <div class="row">
@@ -130,7 +128,6 @@
                                         Usaha : <a href="{{ route('profileToko', $car->shop->id) }}" class="text-decoration-none text-black">{{ $car->shop->nm_usaha }}</a>
                                     </small>
                                 </p>
-                                <p class="card-text">Merk : {{ $car->merk->nama }}, Tahun Produksi : {{ $car->tahun_produksi->nama }}, Muatan Penumpang : {{ $car->muatan_penumpang->nama }}, Harga Sewa : {{ $car->harga_sewa->nama }}</p>
                                 <a href="{{ route('shop.show', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
                                 <a href="{{ route('shop.edit', $car->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square"></i></a>
                                 <form action="{{ route('shop.destroy', $car->id) }}" method="post" class="d-inline">
@@ -151,11 +148,4 @@
         @endif
         </div>
 </div>
-
-
-
-
-
-
-
 @endsection
