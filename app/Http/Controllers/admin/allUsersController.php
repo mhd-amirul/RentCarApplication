@@ -74,7 +74,6 @@ class allUsersController extends Controller
         $rules = [
             'username' => 'required|min:5',
             'image' => 'image|file|max:1024',
-            'role' => 'required'
         ];
 
         if ($request->email != $db->email) {
@@ -84,7 +83,13 @@ class allUsersController extends Controller
             $rules['no_hp'] = 'min:3|unique:users';
         }
 
-        if ($request->password != null) {
+        if ($request->oldpassword != null) {
+            if (!Hash::check($request->oldpassword, $db->password)) {
+                # code...
+                Alert::error('failed', 'Password lama tidak sesuai');
+                return redirect()
+                    ->back();
+            }
             # code...
             $rules['password'] = 'min:5';
             $rules['ConfirmPassword'] = 'same:password';
@@ -102,9 +107,10 @@ class allUsersController extends Controller
 
         $data['password'] = Hash::make($data['password']);
         $db->update($data);
+
+        Alert::success('success', 'Data User Berhasil di Ubah');
         return redirect()
-            ->route('allusers.index')
-            ->with('success', 'Data User Berhasil di Ubah');
+            ->route('allusers.index');
     }
 
     public function destroy($id)
