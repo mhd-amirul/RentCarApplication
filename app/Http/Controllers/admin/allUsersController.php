@@ -37,6 +37,7 @@ class allUsersController extends Controller
     public function store(akunRequest $request)
     {
         $data = $request->all();
+        $data['role'] = 'user';
 
         $data['password'] = Hash::make($data['password']);
         User::create($data);
@@ -118,7 +119,7 @@ class allUsersController extends Controller
             # code...
             $shop = shop::where('user_id', $id)->first();
             $cars = car::where('shop_id', $shop->id)->get();
-            
+
             if ($shop->img_ktp) {
                 # code...
                 Storage::delete($shop->img_ktp);
@@ -160,7 +161,7 @@ class allUsersController extends Controller
                         # code...
                         Storage::delete($car->gambar5);
                     }
-                }                
+                }
             }
         }
 
