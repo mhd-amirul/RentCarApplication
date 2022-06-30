@@ -38,7 +38,6 @@ class allUsersController extends Controller
     {
         $data = $request->all();
         $data['role'] = 'user';
-
         $data['password'] = Hash::make($data['password']);
         User::create($data);
 
