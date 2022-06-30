@@ -107,7 +107,11 @@
                             </div>
                         </div>
                     </div>
-                    <button class="w-100 btn btn-primary mt-5" type="submit">SUBMIT</button>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-6">
+                            <button class="w-100 btn btn-primary mt-5" type="submit">SUBMIT</button>
+                        </div>
+                    </div>
                 </form>
             </main>
         </div>
