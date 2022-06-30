@@ -25,7 +25,7 @@
                                 <div class="carousel-item">
                                     <img src="{{ isset($car->gambar5) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar1) }}" class="d-block w-100" alt="...">
                                 </div>
-                                
+
                             </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -98,7 +98,7 @@
                             <div class="col-sm-6 mb-4">
                                 <article class="text-muted f-w-400">
                                     @if ($car->deskripsi)
-                                        {!! $car->deskripsi !!}        
+                                        {!! $car->deskripsi !!}
                                     @else
                                         {!! 'Deskripsi Tidak Tersedia' !!}
                                     @endif
@@ -107,7 +107,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-9 mt-5">
-                                <a href="{{ route('sharelok', $car->shop->id) }}" class="ml-2 btn btn-success">
+                                <a href="{{ route('sharelok', $car->shop->id) }}" class="btn btn-success">
                                     <i class="mr-2 bi bi-house-fill" style="color: rgb(0, 0, 0);"></i> Cek Lokasi Toko
                                 </a>
                             </div>
