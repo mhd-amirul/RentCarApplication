@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\shop;
 use App\Models\User;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminDashboardController extends Controller
 {
@@ -33,9 +34,9 @@ class AdminDashboardController extends Controller
 
         makeShop::where('user_id', $request->user_id)->delete();
 
+        Alert::success('success', 'Permintaan di Terima');
         return redirect()
-            ->route('dashboard.index')
-            ->with('success', 'Permintaan di Terima');
+            ->route('dashboard.index');
     }
 
     public function show($id)
@@ -49,7 +50,7 @@ class AdminDashboardController extends Controller
     }
 
     public function destroy($id)
-    {   
+    {
         $rm = makeShop::findOrFail($id);
         if ($rm->img_ktp) {
             # code...
@@ -70,8 +71,8 @@ class AdminDashboardController extends Controller
 
         $rm->delete();
 
+        Alert::success('success', 'Permintaan di Tolak');
         return redirect()
-            ->route('dashboard.index')
-            ->with('success', 'Permintaan di Tolak');
+            ->route('dashboard.index');
     }
 }
