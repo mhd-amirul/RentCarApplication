@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class allShopsController extends Controller
 {
@@ -93,7 +94,6 @@ class allShopsController extends Controller
             ->with(
                 [
                     'data' => shop::findOrFail($id),
-                    'users' => User::where('role','<>','admin')->get(),
                     'title' => 'Edit Toko'
                 ]
             );
@@ -103,7 +103,7 @@ class allShopsController extends Controller
     {
         $db = shop::findOrFail($id);
 
-        $rules = 
+        $rules =
         [
             'user_id' => '',
             'nm_pu' => 'required',
@@ -147,8 +147,8 @@ class allShopsController extends Controller
         }
 
         $db->update($data);
+        Alert::success('Success', 'data berhasil diubah');
         return redirect()->route('allshops.index');
-
     }
 
     public function destroy($id)
@@ -197,13 +197,13 @@ class allShopsController extends Controller
                     # code...
                     Storage::delete($car->gambar5);
                 }
-            }                
+            }
         }
-        
+
         $user = User::where('id', $shop->user_id)->first();
         $user['role'] = 'user';
         $user->save();
-        
+
         $shop->delete();
         return redirect()
             ->route('allshops.index')
