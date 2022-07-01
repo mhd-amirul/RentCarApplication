@@ -12,6 +12,7 @@ use App\Models\nilai;
 use App\Models\shop;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class adminCarController extends Controller
 {
@@ -49,7 +50,7 @@ class adminCarController extends Controller
         }
 
         $kriteria = kriteria::all();
-        $data['kata_kunci'] = $data['deskripsi'].', ';
+        $data['kata_kunci'] = '';
         foreach ($kriteria as $k) {
             # code...
             $name = str_replace(' ','_',$k->nama.'_id');
@@ -78,10 +79,10 @@ class adminCarController extends Controller
                 nilai::create($nilai);
             }
         }
-        return response()->json([$data, $car, $nilai]);
+
+        Alert::success('success', 'Berhasil Menambah Mobil Baru');
         return redirect()
-            ->route('allshops.show',$id)
-            ->with('success', 'Berhasil Menambah Mobil Baru');
+            ->route('allshops.show',$id);
     }
 
     public function editCarAdmin($id)
@@ -104,7 +105,7 @@ class adminCarController extends Controller
         $database = car::findOrFail($id);
         $data = $request->all();
         // return response()->json($data);
-                
+
         if ($request->file('gambar1')) {
             if ($request->oldgambar1) {
                 Storage::delete($request->oldgambar1);
@@ -141,7 +142,7 @@ class adminCarController extends Controller
         }
 
         $kriteria = kriteria::all();
-        $data['kata_kunci'] = $data['deskripsi'].', ';
+        $data['kata_kunci'] = '';
         foreach ($kriteria as $k) {
             # code...
             $name = str_replace(' ','_',$k->nama.'_id');
@@ -165,8 +166,8 @@ class adminCarController extends Controller
         }
         $database->update($data);
 
+        Alert::success('success', 'Data Mobil Berhasil di Ubah');
         return redirect()
-            ->route('allshops.show',$database->shop_id)
-            ->with('success', 'Data Mobil Berhasil di Ubah');
+            ->route('allshops.show',$database->shop_id);
     }
 }
