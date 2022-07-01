@@ -86,7 +86,7 @@
     </div>
     <div class="col-lg-9">
         <div class="card px-5 py-5">
-            <h4 class="m-b-20 p-b-5 b-b-default mt-5">DAFTAR MOBIL</h4>
+            <h4 class="m-b-20 p-b-5 b-b-default ">DAFTAR MOBIL</h4>
             <div class="row">
                 <div class="col">
                     @if ($shop->longitude != null && $shop->latitude != null)
