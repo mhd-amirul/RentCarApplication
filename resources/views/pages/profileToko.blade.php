@@ -25,8 +25,7 @@
                             </button>
                     </div>
                 </div>
-                <h6 class="mt-5">INFORMASI TOKO</h6>
-                <hr>
+                <h6 class="m-b-20 p-b-5 b-b-default mt-3">INFORMASI TOKO</h6>
                 <div class="row">
                     <div class="col-sm-6 mb-4">
                         <div class="form-floating">
@@ -76,7 +75,6 @@
                 <thead>
                     <tr class="text-center">
                         <th scope="col">No</th>
-                        <th scope="col">Gambar</th>
                         <th scope="col">Merk</th>
                         <th scope="col">Tahun Produksi</th>
                         <th scope="col">Muatan Penumpang</th>
@@ -88,9 +86,6 @@
                     @forelse ($car as $car)
                     <tr class="text-center">
                         <th scope="row">{{ $loop->iteration }}</th>
-                        <td>
-                            <img src="{{ isset($car->gambar1) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar1) }}" height="50" width="100" alt="">
-                        </td>
                         <td>{{ $car->merk->nama }}</td>
                         <td>{{ $car->tahun_produksi->nama }}</td>
                         <td>{{ $car->muatan_penumpang->nama }}</td>
