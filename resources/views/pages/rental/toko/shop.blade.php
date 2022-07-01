@@ -96,56 +96,68 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-9">
-        <h4>DAFTAR MOBIL</h4>
-        <div class="card my-2 bg-danger"><h1></h1></div>
-        @if ($shop->longitude != null && $shop->latitude != null)
-            <a href="{{ route('shop.create') }}" class="btn btn-sm btn-primary mb-2">TAMBAH MOBIL</a>
-        @else
-            <p class="mb-21 mt-2"></p>
-        @endif
 
-        <form action="{{ route('toko.index') }}">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="search.." name="search" value="{{ request('search') }}">
-                <button class="btn btn-primary" type="submit">Search</button>
-            </div>
-        </form>
-    </div>
-    <div class="col-lg-10">
-        @if ($car->count())
-        <div class="container">
+    <div class="col-lg-9">
+        <div class="card px-5 py-5">
+            <h4 class="m-b-20 p-b-5 b-b-default ">DAFTAR MOBIL</h4>
             <div class="row">
-                @foreach( $car as $car )
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <img src="{{ isset($car->gambar1) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar1) }}" alt="{{ $car->merk->nama }}" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $car->merk->nama }}</h5>
-                                <p>
-                                    <small>
-                                        Usaha : <a href="{{ route('profileToko', $car->shop->id) }}" class="text-decoration-none text-black">{{ $car->shop->nm_usaha }}</a>
-                                    </small>
-                                </p>
-                                <p class="card-text">Merk : {{ $car->merk->nama }}, Tahun Produksi : {{ $car->tahun_produksi->nama }}, Muatan Penumpang : {{ $car->muatan_penumpang->nama }}, Harga Sewa : {{ $car->harga_sewa->nama }}</p>
-                                <a href="{{ route('shop.show', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                                <a href="{{ route('shop.edit', $car->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square"></i></a>
-                                <form action="{{ route('shop.destroy', $car->id) }}" method="post" class="d-inline">
-                                    @method('delete')
-                                    @csrf
-                                    <button class="btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">
-                                        <i class="bi bi-trash-fill"></i>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
+                <div class="col">
+                    @if ($shop->longitude != null && $shop->latitude != null)
+                        <a href="{{ route('shop.create') }}" class="btn btn-sm btn-primary mb-2">TAMBAH MOBIL</a>
+                    @else
+                        <p class="mb-21 mt-2"></p>
+                    @endif
+                </div>
+            </div>
+
+            <form action="{{ route('toko.index') }}">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="search.." name="search" value="{{ request('search') }}">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </form>
+
+            <div class="row justify-content-center ml-5">
+                <div class="col-sm-12 ml-2">
+                    <table class="table table-responsive table-hover">
+                        <thead>
+                            <tr class="text-center">
+                                <th scope="col">No</th>
+                                <th scope="col">Merk</th>
+                                <th scope="col">Tahun Produksi</th>
+                                <th scope="col">Harga Sewa</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($car as $car)
+                            <tr class="text-center">
+                                <th scope="row">{{ $loop->iteration }}</th>
+                                <td>{{ $car->merk->nama }}</td>
+                                <td>{{ $car->tahun_produksi->nama }}</td>
+                                <td>{{ $car->harga_sewa->nama }}</td>
+                                <td>
+                                    <a href="{{ route('shop.show', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                                    <a href="{{ route('shop.edit', $car->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square" style="color: rgb(0, 0, 0);"></i></a>
+                                    <form action="{{ route('shop.destroy', $car->id) }}" method="post" class="d-inline">
+                                        @method('delete')
+                                        @csrf
+                                        <button class="btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">
+                                            <i class="bi bi-trash-fill"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            @empty
+                            <tr>
+                                <td colspan="7" class="text-center h3">data tidak ditemukan!</td>
+                            </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-        @else
-            <p class="text-center fs-4 mt-5 mb-5">Mobil Tidak Ditemukan</p>
-        @endif
-        </div>
+    </div>
 </div>
 @endsection
