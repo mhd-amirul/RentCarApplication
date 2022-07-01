@@ -56,7 +56,7 @@
                 </div>
             @endif
         @empty
-            <h1 class="text-center mt-2" style="margin-bottom: 7cm">MOBIL YANG COCOK TIDAK DITEMUKAN</h1>
+            <h1 class="text-center mt-2" style="margin-bottom: 7cm">MOBIL TIDAK DITEMUKAN</h1>
         @endforelse
     </div>
 </div>
