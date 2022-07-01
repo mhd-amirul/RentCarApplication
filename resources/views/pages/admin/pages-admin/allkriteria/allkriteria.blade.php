@@ -70,7 +70,7 @@
         <div class="card px-5 py-5 border border-grey-500">
             <div class="row justify-content-center">
                 <div class="col-sm-12">
-                    <h4 class="m-b-20 p-b-5 b-b-default mt-3">Pendaftar Toko : </h4>
+                    <h4 class="m-b-20 p-b-5 b-b-default mt-3">Kriteria : </h4>
                     <form action="{{ route('allkriteria.index') }}">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="search.." name="searchK" value="{{ request('searchK') }}">
