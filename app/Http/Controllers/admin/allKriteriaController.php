@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Models\kriteria;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class allKriteriaController extends Controller
 {
@@ -17,30 +18,6 @@ class allKriteriaController extends Controller
                     'kriteria' => kriteria::orderBy('id')->filterKriteria(request(['searchK']))->get()
                 ]
             );
-    }
-
-    public function create()
-    {
-        return view('pages.admin.pages-admin.allkriteria.tambah')
-            ->with(
-                [
-                    'title' => 'Tambah Kriteria',
-                ]
-            );
-    }
-
-    public function store(Request $request)
-    {
-        $data = $request->validate(
-            [
-                'nama' => 'required',
-                'type' => 'required',
-                'bobot' => 'required'
-            ]
-        );
-
-        kriteria::create($data);
-        return redirect()->route('allkriteria.index');
     }
 
     public function edit($id)
@@ -60,16 +37,42 @@ class allKriteriaController extends Controller
         $data = $request->all();
 
         $db->update($data);
+        Alert::success('success', 'Data Berhasi di Ubah');
         return redirect()
-            ->route('allkriteria.index')
-            ->with('success', 'Data Berhasi di Ubah');
+            ->route('allkriteria.index');
     }
 
     public function destroy($id)
     {
         kriteria::findOrFail($id)->delete();
+
+        Alert::success('success', 'Data Berhasi di Hapus');
         return redirect()
-            ->route('allkriteria.index')
-            ->with('success', 'Data Berhasi di Hapus');
+            ->route('allkriteria.index');
     }
+
+
+    // public function create()
+    // {
+    //     return view('pages.admin.pages-admin.allkriteria.tambah')
+    //         ->with(
+    //             [
+    //                 'title' => 'Tambah Kriteria',
+    //             ]
+    //         );
+    // }
+
+    // public function store(Request $request)
+    // {
+    //     $data = $request->validate(
+    //         [
+    //             'nama' => 'required',
+    //             'type' => 'required',
+    //             'bobot' => 'required'
+    //         ]
+    //     );
+
+    //     kriteria::create($data);
+    //     return redirect()->route('allkriteria.index');
+    // }
 }
