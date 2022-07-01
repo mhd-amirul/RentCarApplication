@@ -25,8 +25,7 @@
                             </button>
                     </div>
                 </div>
-                <h6 class="mt-5">INFORMASI TOKO</h6>
-                <hr>
+                <h6 class="m-b-20 p-b-5 b-b-default f-w-600 mt-5">INFORMASI TOKO</h6>
                 <div class="row">
                     <div class="col-sm-6 mb-4">
                         <div class="form-floating">
