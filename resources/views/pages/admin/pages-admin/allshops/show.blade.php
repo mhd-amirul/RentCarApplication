@@ -58,14 +58,15 @@
                             <label for="nm_pu">NIK</label>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-sm-9 mt-5">
-                            <a href="{{ route('allshops.index')}}" class="btn btn-sm btn-primary">
+                            <a href="{{ route('allshops.index')}}" style="color: rgb(0, 0, 0);" class="btn btn-sm btn-primary">
                                 <i class="bi bi-arrow-left-circle"></i> Back
                             </a>
-                            @if ($shop->)
-
+                            @if ($shop->longitude != null && $shop->latitude != null)
+                                <a href="{{ route('sharelok', $shop->id) }}" style="color: rgb(0, 0, 0);" class="btn btn-sm btn-success">
+                                    <i class="bi bi-house-fill"></i> Lokasi Toko
+                                </a>
                             @endif
                             <a href="{{ route('allshops.edit', $shop->id) }}" class="btn btn-sm btn-warning">
                                 <i class="bi bi-pencil-square"></i> Edit Toko
@@ -83,58 +84,69 @@
             </div>
         </div>
     </div>
+    <div class="col-lg-9">
+        <div class="card px-5 py-5">
+            <h4 class="m-b-20 p-b-5 b-b-default mt-5">DAFTAR MOBIL</h4>
+            <div class="row">
+                <div class="col">
+                    @if ($shop->longitude != null && $shop->latitude != null)
+                        <a href="{{ route('addCarAdmin',$shop->id) }}" class="btn btn-sm btn-primary mb-2">TAMBAH MOBIL</a>
+                    @else
+                        <p class="mb-21 mt-2"></p>
+                    @endif
+                </div>
+            </div>
+
+            <form action="">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="search.." name="search" value="{{ request('search') }}">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </form>
+
+            <div class="row justify-content-center ml-5">
+                <div class="col-sm-12 ml-2">
+                    <table class="table table-responsive table-hover">
+                        <thead>
+                            <tr class="text-center">
+                                <th scope="col">No</th>
+                                <th scope="col">Merk</th>
+                                <th scope="col">Tahun Produksi</th>
+                                <th scope="col">Harga Sewa</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @forelse ($car as $car)
+                            <tr class="text-center">
+                                <th scope="row">{{ $loop->iteration }}</th>
+                                <td>{{ $car->merk->nama }}</td>
+                                <td>{{ $car->tahun_produksi->nama }}</td>
+                                <td>{{ $car->harga_sewa->nama }}</td>
+                                <td>
+                                    <a href="{{ route('detailMobil', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                                    <a href="{{ route('editCarAdmin', $car->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square" style="color: rgb(0, 0, 0);"></i></a>
+                                    <form action="{{ route('carDelete', $car->id) }}" method="post" class="d-inline">
+                                        @method('delete')
+                                        @csrf
+                                        <button class="btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">
+                                            <i class="bi bi-trash-fill"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            @empty
+                            <tr>
+                                <td colspan="7" class="text-center h3">DATA KOSONG</td>
+                            </tr>
+                            @endforelse
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="card mb-3 mt-2 bg-secondary text-white"><div class="card-body p-2"><h6 class="card-title m-0">Daftar Mobil :</h5></div></div>
-    <a href="{{ isset($shop->latitude) && ($shop->longitude) ? route('addCarAdmin',$shop->id) : '#' }}" class="btn btn-primary mb-3">Tambah data mobil</a>
-<form action="">
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="search.." name="search" value="{{ request('search') }}">
-        <button class="btn btn-secondary" type="submit">Search</button>
-    </div>
-</form>
-
-<table class="table table-hover">
-    <thead>
-        <tr class="text-center">
-            <th scope="col">No</th>
-            <th scope="col">Gambar</th>
-            <th scope="col">Merk</th>
-            <th scope="col">Tahun Produksi</th>
-            <th scope="col">Muatan Penumpang</th>
-            <th scope="col">Harga Sewa</th>
-            <th scope="col">Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        @forelse ($car as $car)
-        <tr class="text-center">
-            <th scope="row">{{ $loop->iteration }}</th>
-            <td>
-                <img src="{{ isset($car->gambar1) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar1) }}" height="50" width="100" alt="">
-            </td>
-            <td>{{ $car->merk->nama }}</td>
-            <td>{{ $car->tahun_produksi->nama }}</td>
-            <td>{{ $car->muatan_penumpang->nama }}</td>
-            <td>{{ $car->harga_sewa->nama }}</td>
-            <td>
-                <a href="{{ route('detailMobil', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                <a href="{{ route('editCarAdmin', $car->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square" style="color: rgb(0, 0, 0);"></i></a>
-                <form action="{{ route('carDelete', $car->id) }}" method="post" class="d-inline">
-                    @method('delete')
-                    @csrf
-                    <button class="btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">
-                        <i class="bi bi-trash-fill"></i>
-                    </button>
-                </form>
-            </td>
-        </tr>
-        @empty
-        <tr>
-            <td colspan="7" class="text-center h3">DATA KOSONG</td>
-        </tr>
-        @endforelse
-        </tbody>
-</table>
 
 @endsection
