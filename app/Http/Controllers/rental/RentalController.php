@@ -50,7 +50,8 @@ class RentalController extends Controller
         }
 
         $kriteria = kriteria::all();
-        $data['kata_kunci'] = $data['deskripsi'].', ';
+        $data['kata_kunci'] = '';
+        // $data['kata_kunci'] = $data['deskripsi'].', ';
         foreach ($kriteria as $k) {
             # code...
             $name = str_replace(' ','_',$k->nama.'_id');
@@ -162,7 +163,8 @@ class RentalController extends Controller
         }
 
         $kriteria = kriteria::all();
-        $data['kata_kunci'] = $data['deskripsi'].', ';
+        // $data['kata_kunci'] = $data['deskripsi'].', ';
+        $data['kata_kunci'] = '';
         foreach ($kriteria as $k) {
             # code...
             $name = str_replace(' ','_',$k->nama.'_id');
