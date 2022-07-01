@@ -66,14 +66,14 @@
                     <div class="row">
                         <div class="col-sm-12 mt-5">
                             <a href="{{ route('toko.edit', $shop->id) }}" class="btn btn-sm btn-warning">
-                                <i class="bi bi-pencil-square"></i> EDIT TOKO
+                                <i class="bi bi-pencil-square"></i> EDIT
                             </a>
                             @if ($shop->longitude != null && $shop->latitude != null)
                                 <a href="{{ route('sharelok', $shop->id) }}" class="btn btn-sm btn-success">
-                                    <i class="mr-2 bi bi-house-fill" style="color: rgb(0, 0, 0);"></i> LOKASI TOKO
+                                    <i class="mr-2 bi bi-house-fill" style="color: rgb(0, 0, 0);"></i> LOKASI
                                 </a>
                                 <a href="{{ route('setLocation', $shop->id) }}" class="btn btn-sm btn-primary">
-                                    <i class="mr-2 bi bi-map-fill" style="color: rgb(0, 0, 0);"></i> EDIT LOKASI TOKO
+                                    <i class="mr-2 bi bi-map-fill" style="color: rgb(0, 0, 0);"></i> EDIT LOKASI
                                 </a>
                             @else
                                 <a href="{{ route('setLocation', $shop->id) }}" class="btn btn-sm btn-success">
@@ -87,7 +87,7 @@
                                 @method('delete')
                                 @csrf
                                 <button class=" btn btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Menghapus Toko Juga Dapat Menghapus Data Mobil, Yakin Ingin Melanjutkan?')">
-                                    <i class="bi bi-trash-fill"></i> HAPUS TOKO
+                                    <i class="bi bi-trash-fill"></i> HAPUS
                                 </button>
                             </form>
                         </div>
