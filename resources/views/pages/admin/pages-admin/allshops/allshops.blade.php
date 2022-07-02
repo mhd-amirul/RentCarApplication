@@ -70,7 +70,7 @@
         <div class="card px-5 py-5 border border-grey-500">
             <div class="row justify-content-center">
                 <div class="col-sm-12">
-                    <h4 class="m-b-20 p-b-5 b-b-default mt-3">Pendaftar Toko : </h4>
+                    <h4 class="m-b-20 p-b-5 b-b-default mt-3">Shops</h4>
                     <form action="{{ route('allshops.index') }}">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="search.." name="searchShop" value="{{ request('searchShop') }}">
@@ -98,7 +98,6 @@
                                     <td>{{ $shop->nik }}</td>
                                     <td>
                                         <a href="{{ route('allshops.show',$shop->id) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                                        <a href="{{ route('allshops.edit', $shop->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square" style="color: rgb(0, 0, 0);"></i></a>
                                         <form action="{{ route('allshops.destroy', $shop->id) }}" method="post" class="d-inline">
                                             @method('delete')
                                             @csrf
