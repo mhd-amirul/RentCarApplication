@@ -69,15 +69,15 @@
                                 <i class="bi bi-pencil-square"></i> EDIT
                             </a>
                             @if ($shop->longitude != null && $shop->latitude != null)
-                                <a href="{{ route('sharelok', $shop->id) }}" class="btn btn-sm btn-success">
-                                    <i class="mr-2 bi bi-house-fill" style="color: rgb(0, 0, 0);"></i> LOKASI
+                                <a href="{{ route('sharelok', $shop->id) }}" class="btn btn-sm btn-success" style="color: rgb(0, 0, 0);">
+                                    <i class="bi bi-house-fill"></i> LOKASI
                                 </a>
-                                <a href="{{ route('setLocation', $shop->id) }}" class="btn btn-sm btn-primary">
-                                    <i class="mr-2 bi bi-map-fill" style="color: rgb(0, 0, 0);"></i> EDIT LOKASI
+                                <a href="{{ route('setLocation', $shop->id) }}" class="btn btn-sm btn-primary" style="color: rgb(0, 0, 0);">
+                                    <i class="bi bi-map-fill"></i> EDIT LOKASI
                                 </a>
                             @else
-                                <a href="{{ route('setLocation', $shop->id) }}" class="btn btn-sm btn-success">
-                                    <i class="mr-2 bi bi-map-fill" style="color: rgb(0, 0, 0);"></i> SET LOKASI TOKO
+                                <a href="{{ route('setLocation', $shop->id) }}" class="btn btn-sm btn-success" style="color: rgb(0, 0, 0);">
+                                    <i class="bi bi-map-fill"></i> SET LOKASI TOKO
                                 </a>
                             @endif
                             <a href="{{ route('activityView', $shop->id) }}" class="btn btn-sm btn-dark text-white">
