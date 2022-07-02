@@ -55,9 +55,9 @@
                                     <td>{{ $h->nik_pinjam }}</td>
                                     <td>{{ $h->tgl_pinjam }}</td>
                                     <td>{{ $h->batas_pinjam }}</td>
-                                    <td class="{{ isset($h->status) === 'late' ? 'text-danger' : 'text-success' }} text-uppercase">{{ $h->status }}</td>
+                                    <td class="{{ $h->status == 'late' ? 'text-danger' : 'text-success' }} text-uppercase">{{ $h->status }}</td>
                                     <td>
-                                        <a href="" class="text-dark btn-sm btn-primary">
+                                        <a href="{{ route('activityShow', $h->id) }}" class="text-dark btn-sm btn-primary">
                                             <i class="bi bi-eye-fill"></i>
                                         </a>
                                     </td>

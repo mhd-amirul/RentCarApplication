@@ -171,7 +171,7 @@ class TokoController extends Controller
                 [
                     'title' => 'Add Activity',
                     'shop' => shop::find($id),
-                    'cars' => car::where('shop_id', $id)->where('stok','>','0')->get()
+                    'cars' => car::where('shop_id', $id)->where('stok','standby')->get()
                 ]
             );
     }
@@ -196,12 +196,71 @@ class TokoController extends Controller
             $data['berkas_pinjam'] = $request->file('berkas_pinjam')->store('Berkas-Peminjaman');
         }
         $car = car::where('id', $request['car_id'])->first();
-        $car['stok'] = $car['stok'] - 1;
+        $car['stok'] = 'onused';
         $car->save();
 
         history::create($data);
-        // Alert::success('Success', 'AKtifitas berhasil ditambah');
-        return redirect()->route('activityView',$id)->with('success', 'Berhasil ditambah');
+        Alert::success('Success', 'Aktifitas berhasil ditambah');
+        return redirect()->route('activityView',$id);
+    }
+
+    public function activityShow($id)
+    {
+        # code...
+        return view('pages.rental.aktifitas.show')
+            ->with(
+                [
+                    'title' => 'Detail Aktifitas',
+                    'history' => history::findorfail($id)
+                ]
+            );
+    }
+
+    public function activityEdit($id)
+    {
+        $history = history::findorfail($id);
+        return view('pages.rental.aktifitas.edit')
+            ->with(
+                [
+                    'title' => 'Add Activity',
+                    'history' => $history,
+                    'car' => car::where('id', $history->car_id)->first()
+                ]
+            );
+    }
+
+    public function activityUpdate(Request $request, $id)
+    {
+        $rules = [
+            'nama_pinjam' => 'required',
+            'tgl_pinjam' => 'required',
+            'nik_pinjam' => 'required|int',
+            'batas_pinjam' => 'required',
+            'berkas_pinjam' => 'mimes:pdf||max:1024'
+        ];
+        $data = $request->validate($rules);
+
+        if ($request->file('berkas_pinjam')) {
+            if ($request->oldgambar1) {
+                Storage::delete($request->oldgambar1);
+            }
+            $data['berkas_pinjam'] = $request->file('berkas_pinjam')->store('Berkas-Peminjaman');
+        }
+
+        $db = history::findorfail($id)->update($data);
+        Alert::success('Success', 'Aktifitas berhasil diedit');
+        return redirect()->route('activityShow',$id);
+    }
+
+    public function activityReturn($id)
+    {
+        # code...
+        $data = history::findorfail($id);
+        $data['status'] = 'off';
+        // $car = car::where('id', $data->car_id);
+        // $car['stok'] = 'standby';
+        // dd();
+        return response()->json($id);
     }
 
     public function activityViewCetak($id)

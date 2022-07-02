@@ -88,8 +88,8 @@
                             </div>
                         </div>
                         <div class="col-sm-6 mb-4">
-                            <div class="form-floating">
-                                <input type="text" class=" form-control rounded-top" disabled value="{{ $car->stok }}">
+                            <div class="form-floating text-white">
+                                <input type="text" class="text-white form-control rounded-top {{ $car->stok == 'standby' ? 'bg-success' : 'bg-danger' }}" disabled value="{{ $car->stok }}">
                                 <label>Stok</label>
                             </div>
                         </div>
