@@ -96,9 +96,11 @@ Route::group(['middleware' => 'auth'], function ()
                 Route::get('activityAdd/{id}', [TokoController::class, 'activityAdd'])->name('activityAdd');
                 Route::get('activityShow/{id}', [TokoController::class, 'activityShow'])->name('activityShow');
                 Route::get('activityEdit/{id}', [TokoController::class, 'activityEdit'])->name('activityEdit');
+                Route::get('activityHistory/{id}', [TokoController::class, 'activityHistory'])->name('activityHistory');
                 Route::post('activityStore/{id}', [TokoController::class, 'activityStore'])->name('activityStore');
                 Route::put('activityUpdate/{id}', [TokoController::class, 'activityUpdate'])->name('activityUpdate');
                 Route::put('activityReturn/{id}', [TokoController::class, 'activityReturn'])->name('activityReturn');
+                Route::delete('activityDelete/{id}', [TokoController::class, 'activityDelete'])->name('activityDelete');
 
                 Route::get('map/{id}', [mapController::class, 'setLocation'])->name('setLocation');
                 Route::put('map/update/{id}', [mapController::class, 'saveLocation'])->name('saveLocation');

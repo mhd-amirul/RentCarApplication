@@ -9,7 +9,7 @@
                 <div class="col-sm-12">
                     <form action="{{ route('activityUpdate', $history->id) }}" method="post" enctype="multipart/form-data">
                         @csrf
-                        {{-- @method('put') --}}
+                        @method('put')
                         <div class="row justify-content-center">
                             <div class="col-sm-5">
                                 <div class="form-floating">
@@ -80,7 +80,24 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-sm-5">
-                                <button class="w-100 btn btn-sm btn-primary mt-3" type="submit">SUBMIT</button>
+                                <div class="modal fade" id="mobil" tabindex="-1" aria-labelledby="mobilLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="mobilLabel">Confirmation</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Yakin Ingin Mengubah Aktifitas Ini?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Confirm</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="w-100 btn btn-sm btn-primary text-decoration-none mt-3" data-bs-toggle="modal" data-bs-target="#mobil">SUBMIT</a>
                             </div>
                         </div>
                     </form>

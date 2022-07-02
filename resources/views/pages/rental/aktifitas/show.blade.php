@@ -32,13 +32,13 @@
                 </div>
                 <div class="col-sm-4 mb-4">
                     <div class="form-floating">
-                        <input type="text" class="form-control rounded-top" disabled value="">
+                        <input type="text" class="form-control rounded-top" disabled value="{{ $sisa_waktu }}">
                         <label>Sisa Waktu</label>
                     </div>
                 </div>
                 <div class="col-sm-4 mb-4">
                     <div class="form-floating text-white">
-                        <input type="text" class="form-control rounded-top text-white {{ $history->status == 'on' ? 'bg-success' : 'bg-danger' }}" disabled value="{{ $history->status }}">
+                        <input type="text" class="form-control rounded-top text-white {{ $history->status == 'on' ? 'bg-success' : '' }}{{ $history->status == 'late' ? 'bg-danger' : '' }}{{ $history->status == 'off' ? 'bg-secondary' : '' }}" disabled value="{{ $history->status }}">
                         <label>Status</label>
                     </div>
                 </div>
@@ -53,18 +53,60 @@
                     </div>
                 </div>
             </div>
-            <h2 class="m-b-20 p-b-5 b-b-default mt-3"></h2>
-            <div class="row">
-                <div class="col-sm-12">
-                    <a href="{{ route('activityEdit', $history->id) }}" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Edit</a>
-                    <form action="{{ route('activityReturn', $history->id) }}" class="d-inline">
-                        @csrf
-                        @method('put')
-                        {{-- <a href="" class="btn btn-success"><i class="bi bi-calendar2-check"></i> Returned</a> --}}
-                        <button class="btn btn-success" type="submit"><i class="bi bi-calendar2-check"></i> Returned</button>
-                    </form>
+            @if ($history->status == 'off')
+                <p></p>
+            @else
+                <h2 class="m-b-20 p-b-5 b-b-default mt-3"></h2>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <a href="{{ route('activityEdit', $history->id) }}" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Edit</a>
+                        <form action="{{ route('activityDelete', $history->id) }}" method="POST" class="d-inline">
+                            @csrf
+                            @method('delete')
+                            <div class="modal fade" id="deleteAct" tabindex="-1" aria-labelledby="deleteActLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="deleteActLabel">Confirmation</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Yakin Ingin Menghapus Aktifitas Ini?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="btn btn-primary">Confirm</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#deleteAct"><i class="bi bi-trash-fill"></i> Delete</a>
+                        </form>
+                        <form action="{{ route('activityReturn', $history->id) }}" method="POST" class="d-inline">
+                            @csrf
+                            @method('put')
+                            <div class="modal fade" id="retuenAct" tabindex="-1" aria-labelledby="retuenActLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="retuenActLabel">Confirmation</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Yakin Mobil sudah dikembalikan?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="btn btn-primary">Confirm</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-success text-decoration-none" data-bs-toggle="modal" data-bs-target="#retuenAct"><i class="bi bi-calendar2-check"></i> Returned</a>
+                        </form>
+                    </div>
                 </div>
-            </div>
+            @endif
         </div>
     </div>
 </div>

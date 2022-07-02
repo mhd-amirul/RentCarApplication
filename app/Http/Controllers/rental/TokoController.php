@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\history;
 use Barryvdh\DomPDF\Facade as PDF;
+use DateTime;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -207,11 +208,32 @@ class TokoController extends Controller
     public function activityShow($id)
     {
         # code...
+        // $data = history::findorfail($id);
+        // $awal = new DateTime($data->tgl_pinjam);
+        // $akhir = new DateTime($data->batas_pinjam);
+        // $diff = $awal->diff($akhir);
+        // $tahun = $diff->y;
+        // $bulan = $diff->m;
+        // $hari = $diff->d;
+        // $jam = $diff->h;
+        // $menit = $diff->i;
+
+        // if ($tahun == 0 && $bulan  == 0 && $hari  == 0 && $jam  == 0 && $menit  == 0) {
+        //     # code...
+        //     if ($data['status' == 'on']) {
+        //         # code...
+        //         $data['status'] = 'late';
+        //         $data->save();
+        //     }
+        // }
+
         return view('pages.rental.aktifitas.show')
             ->with(
                 [
                     'title' => 'Detail Aktifitas',
-                    'history' => history::findorfail($id)
+                    'history' => history::findorfail($id),
+                    'sisa_waktu' => '0'
+                    // 'sisa_waktu' => $bulan.' bulan, '.$hari.' hari, '.$jam.' jam, '.$menit.' menit'
                 ]
             );
     }
@@ -255,12 +277,43 @@ class TokoController extends Controller
     public function activityReturn($id)
     {
         # code...
+        $data = history::where('id', $id)->first();
+        $data->status = 'off';
+        $car = car::where('id', $data->car_id)->first();
+        $car->stok = 'standby';
+
+        $data->save();
+        $car->save();
+
+        Alert::success('Success', 'Mobil dikembalikan');
+        return redirect()->route('activityView', $car->shop_id);
+    }
+
+    public function activityDelete($id)
+    {
+        # code...
         $data = history::findorfail($id);
-        $data['status'] = 'off';
-        // $car = car::where('id', $data->car_id);
-        // $car['stok'] = 'standby';
-        // dd();
-        return response()->json($id);
+        $car = car::where('id', $data->car_id)->first();
+        $car->stok = 'standby';
+        $car->save();
+        $data->delete();
+
+
+        Alert::success('Success', 'History dihapus');
+        return redirect()->route('activityView', $car->shop_id);
+    }
+
+    public function activityHistory($id)
+    {
+        # code...
+        return view('pages.rental.aktifitas.history')
+                ->with(
+                    [
+                        'title' => 'History',
+                        'histories' => history::where('shop_id', $id)->where('status', 'off')->get(),
+                        'shop' => shop::findorfail($id)
+                    ]
+                );
     }
 
     public function activityViewCetak($id)

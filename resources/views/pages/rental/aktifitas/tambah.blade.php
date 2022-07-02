@@ -80,7 +80,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-sm-5">
-                                <button class="w-100 btn btn-lg btn-secondary mt-3" type="submit">Tambah</button>
+                                <button class="w-100 btn btn-sm btn-primary mt-5" type="submit">Tambah</button>
                             </div>
                         </div>
                     </form>
