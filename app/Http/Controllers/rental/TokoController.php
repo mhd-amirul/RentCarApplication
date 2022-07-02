@@ -158,7 +158,7 @@ class TokoController extends Controller
             ->with(
                 [
                     'title' => 'Aktifitas Toko',
-                    'histories' => history::where('shop_id', $id)->get(),
+                    'histories' => history::where('shop_id', $id)->where('status', 'on')->get(),
                     'shop' => shop::where('id', $id)->first()
                 ]
             );
@@ -171,7 +171,7 @@ class TokoController extends Controller
                 [
                     'title' => 'Add Activity',
                     'shop' => shop::find($id),
-                    'cars' => car::where(['shop_id' => $id, 'stok' > 0])->get()
+                    'cars' => car::where('shop_id', $id)->where('stok','>','0')->get()
                 ]
             );
     }
@@ -179,6 +179,7 @@ class TokoController extends Controller
     public function activityStore(Request $request, $id)
     {
         $request['shop_id'] = $id;
+        $request['status'] = 'on';
         $rules = [
             'nama_pinjam' => 'required',
             'tgl_pinjam' => 'required',
@@ -186,6 +187,7 @@ class TokoController extends Controller
             'batas_pinjam' => 'required',
             'car_id' => 'required',
             'shop_id' => 'required',
+            'status' => 'required',
             'berkas_pinjam' => 'mimes:pdf||max:1024'
         ];
         $data = $request->validate($rules);
@@ -193,10 +195,13 @@ class TokoController extends Controller
         if ($request->file('berkas_pinjam')) {
             $data['berkas_pinjam'] = $request->file('berkas_pinjam')->store('Berkas-Peminjaman');
         }
+        $car = car::where('id', $request['car_id'])->first();
+        $car['stok'] = $car['stok'] - 1;
+        $car->save();
 
         history::create($data);
-        Alert::success('Success', 'AKtifitas berhasil ditambah');
-        return redirect()->route('activityView',$id);
+        // Alert::success('Success', 'AKtifitas berhasil ditambah');
+        return redirect()->route('activityView',$id)->with('success', 'Berhasil ditambah');
     }
 
     public function activityViewCetak($id)

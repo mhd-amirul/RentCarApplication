@@ -98,12 +98,27 @@
                                     <td>0{{ $user->no_hp }}</td>
                                     <td>
                                         <a href="{{ route('allusers.show',$user->id) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                                        <a href="#" class="btn-sm btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#DeleteMs" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i></a>
                                         <form action="{{ route('allusers.destroy', $user->id) }}" method="post" class="d-inline">
                                             @method('delete')
                                             @csrf
-                                            <button class="btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">
-                                                <i class="bi bi-trash-fill"></i>
-                                            </button>
+                                            <div class="modal fade" id="DeleteMs" tabindex="-1" aria-labelledby="DeleteMsLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="DeleteMsLabel">Confirmation</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Yakin Ingin Menghapus user Ini?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                        <button type="submit" class="btn btn-primary">Confirm</button>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </form>
                                     </td>
                                 </tr>

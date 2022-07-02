@@ -28,7 +28,7 @@ class AuthentikasiController extends Controller
         $data['password'] = Hash::make($data['password']);
 
         User::create($data);
-        Alert::success('Success Title', 'Success Message');
+        Alert::success('Success', 'Registrasi Berhasil');
         return redirect()
             ->route('login');
     }
@@ -57,7 +57,7 @@ class AuthentikasiController extends Controller
             Alert::success('Success', 'Login Berhasil');
             return redirect()->intended('profil');
         }
-        
+
         Alert::error('Login Gagal');
         return back();
     }

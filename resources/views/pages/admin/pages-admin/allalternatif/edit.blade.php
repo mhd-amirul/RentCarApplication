@@ -46,7 +46,24 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <button class="w-100 btn btn-primary mt-2 mb-2" type="submit">SUBMIT</button>
+                            <div class="modal fade" id="DeleteMs" tabindex="-1" aria-labelledby="DeleteMsLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="DeleteMsLabel">Confirmation</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Yakin Ingin Mengubah Alternatif Ini?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="btn btn-primary">Confirm</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="w-100 btn btn-primary text-decoration-none mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#DeleteMs">SUBMIT</a>
                         </form>
                     </main>
                 </div>

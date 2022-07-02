@@ -127,7 +127,24 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-sm-10 mt-4">
-                                <button class="w-100 btn btn-danger mt-3" type="submit">EDIT MOBIL</button>
+                                <div class="modal fade" id="mobil" tabindex="-1" aria-labelledby="mobilLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="mobilLabel">Confirm</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Yakin Ingin Mengubah Informasi Mobil?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Hapus</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="w-100 btn btn-sm btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#mobil">EDIT MOBIL</a>
                             </div>
                         </div>
                     </div>

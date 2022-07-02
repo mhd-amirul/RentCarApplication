@@ -21,6 +21,7 @@ return new class extends Migration
             $table->dateTime('tgl_pinjam');
             $table->dateTime('batas_pinjam');
             $table->string('berkas_pinjam')->nullable();
+            $table->enum('status',['on', 'off', 'late']);
             $table->foreignId('car_id')->references('id')->on('cars');
             $table->timestamps();
         });

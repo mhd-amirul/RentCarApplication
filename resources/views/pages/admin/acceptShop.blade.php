@@ -72,18 +72,48 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <button class="btn btn-success border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Mengupload?')">
-                            <i class="bi bi-pencil-square"></i> Terima
-                        </button>
+                        <div class="modal fade" id="AcceptMs" tabindex="-1" aria-labelledby="AcceptMsLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="AcceptMsLabel">Confirm</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Yakin Ingin Menerima Toko Ini?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Terima</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-success text-decoration-none" data-bs-toggle="modal" data-bs-target="#AcceptMs" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i> Terima</a>
+                        <a href="#" class="btn btn-sm btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#DeleteMs" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i> Tolak</a>
                     </div>
                 </div>
             </form>
             <form action="{{ route('dashboard.destroy', $ms->id) }}" method="post" class="d-inline">
                 @method('delete')
                 @csrf
-                <button class="mt-2 btn btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">
-                    <i class="bi bi-trash-fill"></i> Tolak
-                </button>
+                <div class="modal fade" id="DeleteMs" tabindex="-1" aria-labelledby="DeleteMsLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="DeleteMsLabel">Confirm</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Yakin Ingin Menolak Toko Ini?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Hapus</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>

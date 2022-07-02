@@ -1,22 +1,14 @@
 @extends('layouts.main')
 
 @section('container')
-{{-- @if (session()->has('success'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        {{ session('success') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-@endif --}}
-
 <div class="row justify-content-center">
     <div class="col-lg-10">
         <div class="card px-4 py-4 border border-grey-500">
             <h2 class="m-b-20 p-b-5 b-b-default mt-3 text-center">LAPORAN AKTIFITAS</h2>
             <div class="row">
                 <div class="col-sm-12">
-                    <a href="{{ route('toko.index') }}" class="btn btn-dark"><i class="bi bi-arrow-left-circle"></i> Back</a>
+                    <a href="{{ route('toko.index') }}" class="btn btn-primary"><i class="bi bi-arrow-left-circle"></i> Back</a>
                     <a href="{{ route('activityAdd',$shop->id) }}" class="btn btn-primary"><i class="bi bi-file-earmark-plus"></i> Tambah</a>
-                    <a href="" class="btn btn-warning"><i class="bi bi-printer-fill"></i>  History</a>
                     <a target="blank" href="{{ route('activityViewCetak', $shop->id) }}" class="btn btn-success"><i class="bi bi-printer-fill"></i>  Print</a>
                 </div>
 

@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
+
 <div class="row justify-content-center">
     <div class="col-lg-9">
         <div class="card">
@@ -86,9 +87,24 @@
                             <form action="{{ route('toko.destroy', $shop->id) }}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
-                                <button class=" btn btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Menghapus Toko Juga Dapat Menghapus Data Mobil, Yakin Ingin Melanjutkan?')">
-                                    <i class="bi bi-trash-fill"></i> HAPUS
-                                </button>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Confirm</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Yakin Ingin Menghapus Toko?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Hapus</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash-fill" style="color: rgb(0, 0, 0);"></i> HAPUS</a>
                             </form>
                         </div>
                     </div>
@@ -141,9 +157,24 @@
                                     <form action="{{ route('shop.destroy', $car->id) }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button class="btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">
-                                            <i class="bi bi-trash-fill"></i>
-                                        </button>
+                                        <div class="modal fade" id="mobil" tabindex="-1" aria-labelledby="mobilLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="mobilLabel">Confirm</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Yakin Ingin Menghapus Mobil Ini?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                    <button type="submit" class="btn btn-primary">Hapus</button>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#mobil"><i class="bi bi-trash-fill" style="color: rgb(0, 0, 0);"></i></a>
                                     </form>
                                 </td>
                             </tr>
