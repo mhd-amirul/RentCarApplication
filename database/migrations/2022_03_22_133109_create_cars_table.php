@@ -25,7 +25,8 @@ return new class extends Migration
             $table->foreignId('Kapasitas_Mesin_id')->references('id')->on('alternatifs')->onDelete('cascade');
             $table->foreignId('Jenis_BBM_id')->references('id')->on('alternatifs')->onDelete('cascade');
             $table->foreignId('Harga_Sewa_id')->references('id')->on('alternatifs')->onDelete('cascade');
-            $table->integer('stok')->nullable();
+            $table->enum('stok',['standby','onused'])->nullable();
+            $table->string('no_polisi')->nullable();
             $table->text('deskripsi')->nullable();
             $table->string('kata_kunci')->nullable();
             $table->string('gambar1')->nullable();

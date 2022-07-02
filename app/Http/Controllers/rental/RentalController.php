@@ -29,10 +29,19 @@ class RentalController extends Controller
             );
     }
 
-    public function store(CreateMobilRequest $request)
+    public function store(Request $request)
     {
+        $rules = [
+            'stok' => 'required',
+            'no_polisi' => 'required',
+            // 'deskripsi' => 'required',
+            'gambar1' => 'image|file|max:1024',
+            'gambar2' => 'image|file|max:1024',
+            'gambar3' => 'image|file|max:1024',
+            'gambar4' => 'image|file|max:1024',
+            'gambar5' => 'image|file|max:1024',
+        ];
 
-        $data = $request->all();
         if ($request->file('gambar1')) {
             $data['gambar1'] = $request->file('gambar1')->store('gambar1');
         }
@@ -48,6 +57,10 @@ class RentalController extends Controller
         if ($request->file('gambar5')) {
             $data['gambar5'] = $request->file('gambar5')->store('gambar5');
         }
+
+        $request['stok'] = 'standby';
+        $request->validate($rules);
+        $data = $request->all();
 
         $kriteria = kriteria::all();
         $data['kata_kunci'] = '';
@@ -122,9 +135,20 @@ class RentalController extends Controller
                 );
     }
 
-    public function update(MobilUpdateRequest $request, $id)
+    public function update(Request $request, $id)
     {
+        $rules = [
+            'deskripsi' => 'required',
+            'gambar1' => 'image|file|max:1024',
+            'gambar2' => 'image|file|max:1024',
+            'gambar3' => 'image|file|max:1024',
+            'gambar4' => 'image|file|max:1024',
+            'gambar5' => 'image|file|max:1024'
+        ];
+
         $database = car::findOrFail($id);
+
+        $request->validate($rules);
         $data = $request->all();
 
         if ($request->file('gambar1')) {

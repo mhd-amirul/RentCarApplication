@@ -257,7 +257,7 @@ class DatabaseSeeder extends Seeder
             [
                 'user_id' => '3',
                 'shop_id' => '2',
-                'stok' => 2,
+                'stok' => 'standby',
                 'merk_id' => '3',
                 'Tahun_Produksi_id' => '5',
                 'Kondisi_Fisik_id' => '7',
@@ -273,7 +273,7 @@ class DatabaseSeeder extends Seeder
             [
                 'user_id' => '3',
                 'shop_id' => '2',
-                'stok' => 2,
+                'stok' => 'standby',
                 'merk_id' => '1',
                 'Tahun_Produksi_id' => '5',
                 'Kondisi_Fisik_id' => '7',
@@ -289,7 +289,7 @@ class DatabaseSeeder extends Seeder
             [
                 'user_id' => '3',
                 'shop_id' => '2',
-                'stok' => 2,
+                'stok' => 'standby',
                 'merk_id' => '3',
                 'Tahun_Produksi_id' => '4',
                 'Kondisi_Fisik_id' => '7',
@@ -305,7 +305,7 @@ class DatabaseSeeder extends Seeder
             [
                 'user_id' => '3',
                 'shop_id' => '2',
-                'stok' => 2,
+                'stok' => 'standby',
                 'merk_id' => '1',
                 'Tahun_Produksi_id' => '5',
                 'Kondisi_Fisik_id' => '9',
@@ -321,7 +321,7 @@ class DatabaseSeeder extends Seeder
             [
                 'user_id' => '3',
                 'shop_id' => '2',
-                'stok' => 2,
+                'stok' => 'standby',
                 'merk_id' => '3',
                 'Tahun_Produksi_id' => '6',
                 'Kondisi_Fisik_id' => '9',
@@ -338,7 +338,7 @@ class DatabaseSeeder extends Seeder
             [
                 'user_id' => '2',
                 'shop_id' => '1',
-                'stok' => 2,
+                'stok' => 'standby',
                 'merk_id' => '3',
                 'Tahun_Produksi_id' => '5',
                 'Kondisi_Fisik_id' => '7',
@@ -354,7 +354,7 @@ class DatabaseSeeder extends Seeder
             [
                 'user_id' => '2',
                 'shop_id' => '1',
-                'stok' => 2,
+                'stok' => 'standby',
                 'merk_id' => '1',
                 'Tahun_Produksi_id' => '5',
                 'Kondisi_Fisik_id' => '7',
@@ -370,7 +370,7 @@ class DatabaseSeeder extends Seeder
             [
                 'user_id' => '2',
                 'shop_id' => '1',
-                'stok' => 2,
+                'stok' => 'standby',
                 'merk_id' => '3',
                 'Tahun_Produksi_id' => '4',
                 'Kondisi_Fisik_id' => '7',
@@ -386,7 +386,7 @@ class DatabaseSeeder extends Seeder
             [
                 'user_id' => '2',
                 'shop_id' => '1',
-                'stok' => 2,
+                'stok' => 'standby',
                 'merk_id' => '1',
                 'Tahun_Produksi_id' => '5',
                 'Kondisi_Fisik_id' => '9',
@@ -402,7 +402,7 @@ class DatabaseSeeder extends Seeder
             [
                 'user_id' => '2',
                 'shop_id' => '1',
-                'stok' => 2,
+                'stok' => 'standby',
                 'merk_id' => '3',
                 'Tahun_Produksi_id' => '6',
                 'Kondisi_Fisik_id' => '9',

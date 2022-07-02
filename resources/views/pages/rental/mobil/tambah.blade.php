@@ -21,7 +21,7 @@
                                     <select name="{{ $item->nama."_id" }}" class="form-select" aria-label="Floating label select example">
                                         @foreach ($alternatif as $data)
                                             @if ($data->kriteria_id == $item->id)
-                                                @if (old('merk_id') == $data->id)
+                                                @if (old($item->nama."_id") == $data->id)
                                                     <option value="{{ $data->id }}" selected>{{ $data->nama }}</option>
                                                 @else
                                                     <option value="{{ $data->id }}">{{ $data->nama }}</option>
@@ -43,20 +43,9 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-floating">
-                                <input type="text" name="stok" class="form-control rounded-top @error('stok') is-invalid @enderror" id="stok" placeholder="Stok" value="{{ old('stok') }}" required>
-                                <label for="stok">Stok</label>
-                                @error('stok')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" name="plat" class="form-control rounded-top @error('plat') is-invalid @enderror" id="plat" placeholder="Plat Kendaraan" value="{{ old('plat') }}">
-                                <label for="plat">Plat Kendaraan</label>
-                                @error('plat')
+                                <input type="text" name="no_polisi" class="form-control rounded-top @error('no_polisi') is-invalid @enderror" id="no_polisi" placeholder="no_polisi Kendaraan" value="{{ old('no_polisi') }}">
+                                <label for="no_polisi">Plat Kendaraan</label>
+                                @error('no_polisi')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>
@@ -138,7 +127,7 @@
 
                     <div class="row justify-content-center">
                         <div class="col-sm-10 mt-4">
-                            <button class="w-100 btn btn-danger mt-3 text-white" type="submit">TAMBAH MOBIL</button>
+                            <button class="w-100 btn btn-primary mt-3 text-white" type="submit">TAMBAH MOBIL</button>
                         </div>
                     </div>
                 </form>

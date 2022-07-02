@@ -22,7 +22,7 @@
                                 <select name="{{ $item->nama."_id" }}" class="form-select" aria-label="Floating label select example">
                                     @foreach ($alternatif as $data)
                                         @if ($data->kriteria_id == $item->id)
-                                            @if (old('merk_id', $car[str_replace(' ','_',$item->nama.'_id')]) == $data->id)
+                                            @if (old($item->nama."_id", $car[str_replace(' ','_',$item->nama.'_id')]) == $data->id)
                                                 <option value="{{ $data->id }}" selected>{{ $data->nama }}</option>
                                             @else
                                                 <option value="{{ $data->id }}">{{ $data->nama }}</option>
@@ -44,20 +44,9 @@
                     <div class="row px-2">
                         <div class="col-sm-6">
                             <div class="form-floating">
-                                <input type="text" name="stok" class="form-control rounded-top @error('stok') is-invalid @enderror" id="stok" placeholder="Stok" value="{{ old('stok', $car->stok) }}" required>
-                                <label for="stok">Stok</label>
-                                @error('stok')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" name="plat" class="form-control rounded-top @error('plat') is-invalid @enderror" id="plat" placeholder="Plat Kendaraan" value="">
-                                <label for="plat">Plat Kendaraan</label>
-                                @error('plat')
+                                <input type="text" name="no_polisi" class="form-control rounded-top @error('no_polisi') is-invalid @enderror" id="no_polisi" placeholder="no_polisi Kendaraan" value="{{ old('no_polisi', $car->no_polisi) }}">
+                                <label for="no_polisi">Plat Kendaraan</label>
+                                @error('no_polisi')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>
@@ -144,7 +133,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#" class="w-100 btn btn-sm btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#mobil">EDIT MOBIL</a>
+                                <a href="#" class="w-100 btn btn-sm btn-primary text-decoration-none" data-bs-toggle="modal" data-bs-target="#mobil">EDIT MOBIL</a>
                             </div>
                         </div>
                     </div>

@@ -45,7 +45,7 @@ class HomeController extends Controller
             # code...
             $name = str_replace(' ','_',$k->nama.'_id');
             if ($request->filled($name)) {
-                $filterCars->where($name, $request[$name])->where('stok','>','0');
+                $filterCars->where($name, $request[$name])->where('stok','standby');
             }
         }
         $allCars = $filterCars->get();
