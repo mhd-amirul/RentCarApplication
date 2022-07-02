@@ -1,64 +1,70 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="row">
-    <div class="col-sm-12">
-        <div class="card mb-2 mt-2 bg-secondary text-white">
-            <div class="card-body p-2">
-                <h6 class="card-title m-0">Opsi :</h5>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <a href="{{ route('activityAdd',$shop->id) }}" class="btn btn-primary"><i class="bi bi-file-earmark-plus"></i> Add Activity</a>
-        <a target="blank" href="{{ route('activityViewCetak', $shop->id) }}" class="btn btn-success"><i class="bi bi-printer-fill"></i>  Print</a>
-    </div>
-    <div class="col-sm-12">
-        <div class="card mb-3 mt-2 bg-secondary text-white">
-            <div class="card-body p-2">
-                <h6 class="card-title m-0">Aktifitas Toko :</h5>
-            </div>
-        </div>
-    </div>
-    <table class="table table-hover">
-        <thead>
-            <tr >
-                <th scope="col">ID</th>
-                <th scope="col">Nama Peminjam</th>
-                <th scope="col">NIK</th>
-                <th scope="col">Tgl Peminjaman</th>
-                <th scope="col">batas Peminjaman</th>
-                <th scope="col">berkas file</th>
-                <th scope="col">Data Mobil</th>
-                <th scope="col">Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            @forelse ($histories as $h)
-                <tr>
-                    <td>{{ $h->id }}</td>
-                    <td>{{ $h->nama_pinjam }}</td>
-                    <td>{{ $h->nik_pinjam }}</td>
-                    <td>{{ $h->tgl_pinjam }}</td>
-                    <td>{{ $h->batas_pinjam }}</td>
-                    <td>
-                        <a target="blank" href="{{ isset($h->berkas_pinjam) == null ? url('images/notfound.png') : asset('storage/' . $h->berkas_pinjam) }}" class="btn-sm btn-info">
-                            Lihat <i class="bi bi-eye" style="color: rgb(255, 255, 255);"></i>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="{{ route('shop.show', $h->car_id) }}" class="btn-sm btn-info">
-                            Lihat <i class="bi bi-eye" style="color: rgb(255, 255, 255);"></i>
-                        </a>
-                    </td>
+<div class="row justify-content-center">
+    <div class="col-lg-10">
+        <div class="card px-4 py-4 border border-grey-500">
+            <h2 class="m-b-20 p-b-5 b-b-default mt-3 text-center">LAPORAN AKTIFITAS</h2>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="{{ route('toko.index') }}" class="btn btn-primary"><i class="bi bi-arrow-left-circle"></i> Back</a>
+                    <a href="{{ route('activityAdd',$shop->id) }}" class="btn btn-primary"><i class="bi bi-file-earmark-plus"></i> Tambah</a>
+                    <a target="blank" href="{{ route('activityViewCetak', $shop->id) }}" class="btn btn-success"><i class="bi bi-printer-fill"></i>  Print</a>
+                </div>
 
-                </tr>
-            @empty
-                <tr>
-                    <td colspan="8" class="text-center h3">DATA KOSONG</td>
-                </tr>
-            @endforelse
-            </tbody>
-    </table>
+                {{--
+                <div class="col-lg-2">
+                    <div class="card text-white bg-success">
+                        <div class="card-body">
+                            <div class="pt-1">
+                                <a class="text-white fs-6" href="{{ route('allalternatif.index') }}">
+                                    <i class="mr-2 bi bi-blockquote-right"> Alternatif</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
+            </div>
+            <div class="row justify-content-start mt-3">
+                <div class="col-md-12">
+                    <table class="table table-responsive table-hover text-center">
+                        <thead>
+                            <tr >
+                                <th scope="col">ID</th>
+                                <th scope="col">Nama Peminjam</th>
+                                <th scope="col">NIK</th>
+                                <th scope="col">Tgl Peminjaman</th>
+                                <th scope="col">batas Peminjaman</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($histories as $h)
+                                <tr>
+                                    <td>{{ $h->id }}</td>
+                                    <td>{{ $h->nama_pinjam }}</td>
+                                    <td>{{ $h->nik_pinjam }}</td>
+                                    <td>{{ $h->tgl_pinjam }}</td>
+                                    <td>{{ $h->batas_pinjam }}</td>
+                                    <td>ON</td>
+                                    <td>
+                                        <a href="" class="text-dark btn-sm btn-primary">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="8" class="text-center h3">DATA KOSONG</td>
+                                </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

@@ -171,7 +171,7 @@ class TokoController extends Controller
                 [
                     'title' => 'Add Activity',
                     'shop' => shop::find($id),
-                    'cars' => car::where('shop_id', $id)->get()
+                    'cars' => car::where(['shop_id' => $id, 'stok' > 0])->get()
                 ]
             );
     }
