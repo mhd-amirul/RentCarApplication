@@ -138,7 +138,6 @@
                                 <td>{{ $car->harga_sewa->nama }}</td>
                                 <td>
                                     <a href="{{ route('shop.show', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                                    <a href="{{ route('shop.edit', $car->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square" style="color: rgb(0, 0, 0);"></i></a>
                                     <form action="{{ route('shop.destroy', $car->id) }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
