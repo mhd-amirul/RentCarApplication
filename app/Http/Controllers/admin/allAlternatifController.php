@@ -16,7 +16,7 @@ class allAlternatifController extends Controller
             ->with(
                 [
                     'title' => 'Data Kriteria',
-                    'alternatif' => alternatif::orderBy('id')->filterAlternatif(request(['searchA']))->get()
+                    'alternatif' => alternatif::orderBy('kriteria_id')->filterAlternatif(request(['searchA']))->get()
                 ]
             );
     }
@@ -34,12 +34,17 @@ class allAlternatifController extends Controller
 
     public function store(Request $request)
     {
-        $data = $request->all();
-
+        $rules = [
+            'nama' => 'required',
+            'nilai' => 'required|integer',
+            'kriteria_id' => 'required'
+        ];
+        $data = $request->validate($rules);
         alternatif::create($data);
+
+        Alert::success('Success', 'Berhasil menambah alternatif');
         return redirect()
-            ->route('allalternatif.index')
-            ->with('success', 'Data Berhasil di Tambahkan!!!');
+            ->route('allalternatif.index');
     }
 
     public function edit($id)
@@ -74,6 +79,7 @@ class allAlternatifController extends Controller
     public function destroy($id)
     {
         alternatif::findOrFail($id)->delete();
+        Alert::success('Success', 'Berhasil menghapus alternatif');
         return redirect()->back();
     }
 }
