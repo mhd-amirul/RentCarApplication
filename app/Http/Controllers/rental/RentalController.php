@@ -190,7 +190,7 @@ class RentalController extends Controller
 
         Alert::success('success', 'Data Mobil Berhasil di Ubah');
         return redirect()
-            ->route('toko.index');
+            ->route('shop.show', $id);
     }
 
     public function destroy($id)
