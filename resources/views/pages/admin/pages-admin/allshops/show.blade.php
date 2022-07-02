@@ -124,8 +124,7 @@
                                 <td>{{ $car->tahun_produksi->nama }}</td>
                                 <td>{{ $car->harga_sewa->nama }}</td>
                                 <td>
-                                    <a href="{{ route('detailMobil', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                                    <a href="{{ route('editCarAdmin', $car->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square" style="color: rgb(0, 0, 0);"></i></a>
+                                    <a href="{{ route('showCarAdmin', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
                                     <form action="{{ route('carDelete', $car->id) }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf

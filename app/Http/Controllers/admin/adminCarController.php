@@ -10,12 +10,36 @@ use App\Models\car;
 use App\Models\kriteria;
 use App\Models\nilai;
 use App\Models\shop;
+use App\Models\ulasan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class adminCarController extends Controller
 {
+    public function showCarAdmin($id)
+    {
+        # code...
+        $ulasan = ulasan::where('car_id', $id);
+
+        $rate = $ulasan->sum('rating');
+        $jumlah = $ulasan->count();
+        $hasil = 0;
+        if ($rate && $jumlah != null) {
+            $hasil = $rate / $jumlah;
+        }
+        return view('pages.admin.pages-admin.allshops.allcars.show')
+            ->with(
+                [
+                    'title' => 'Detail Mobil',
+                    'car' => car::findorfail($id),
+                    'ulasan' => $ulasan->get(),
+                    'rating' => $hasil,
+                    'review' => $jumlah
+                ]
+            );
+    }
+
     public function addCarAdmin($id)
     {
         # code...
@@ -168,6 +192,6 @@ class adminCarController extends Controller
 
         Alert::success('success', 'Data Mobil Berhasil di Ubah');
         return redirect()
-            ->route('allshops.show',$database->shop_id);
+            ->route('showCarAdmin', $id);
     }
 }

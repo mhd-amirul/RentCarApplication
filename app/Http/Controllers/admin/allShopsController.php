@@ -146,7 +146,7 @@ class allShopsController extends Controller
 
         $db->update($data);
         Alert::success('Success', 'data berhasil diubah');
-        return redirect()->route('allshops.index');
+        return redirect()->route('allshops.show', $id);
     }
 
     public function destroy($id)

@@ -72,6 +72,7 @@ Route::group(['middleware' => 'auth'], function ()
                 Route::get('edit/{id}', [adminCarController::class, 'editCarAdmin'])->name('editCarAdmin');
                 Route::post('tambah/{id}', [adminCarController::class, 'createCarAdmin'])->name('createCarAdmin');
                 Route::put('edit/{id}', [adminCarController::class, 'updateCarAdmin'])->name('updateCarAdmin');
+                Route::get('showCarAdmin/{id}', [adminCarController::class, 'showCarAdmin'])->name('showCarAdmin');
                 Route::delete('car/{id}', [allShopsController::class, 'destroyCar'])->name('carDelete');
 
                 // Konfigurasi Kriteria
