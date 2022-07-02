@@ -63,14 +63,14 @@
                             <a href="{{ route('allshops.index')}}" style="color: rgb(0, 0, 0);" class="btn btn-sm btn-primary">
                                 <i class="bi bi-arrow-left-circle"></i> Back
                             </a>
+                            <a href="{{ route('allshops.edit', $shop->id) }}" class="btn btn-sm btn-warning">
+                                <i class="bi bi-pencil-square"></i> Edit Toko
+                            </a>
                             @if ($shop->longitude != null && $shop->latitude != null)
                                 <a href="{{ route('sharelok', $shop->id) }}" style="color: rgb(0, 0, 0);" class="btn btn-sm btn-success">
                                     <i class="bi bi-house-fill"></i> Lokasi Toko
                                 </a>
                             @endif
-                            <a href="{{ route('allshops.edit', $shop->id) }}" class="btn btn-sm btn-warning">
-                                <i class="bi bi-pencil-square"></i> Edit Toko
-                            </a>
                             <form action="{{ route('allshops.destroy', $shop->id) }}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
