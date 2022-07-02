@@ -70,7 +70,7 @@
         <div class="card px-5 py-5 border border-grey-500">
             <div class="row justify-content-center">
                 <div class="col-sm-12">
-                    <h4 class="m-b-20 p-b-5 b-b-default mt-3">Pendaftar Toko : </h4>
+                    <h4 class="m-b-20 p-b-5 b-b-default mt-3">Users </h4>
                     <form action="{{ route('allusers.index') }}">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="search.." name="searchUser" value="{{ request('searchUser') }}">
@@ -98,7 +98,6 @@
                                     <td>0{{ $user->no_hp }}</td>
                                     <td>
                                         <a href="{{ route('allusers.show',$user->id) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                                        <a href="{{ route('allusers.edit', $user->id) }}" class="btn-sm btn-warning"><i class="bi bi-pencil-square" style="color: rgb(0, 0, 0);"></i></a>
                                         <form action="{{ route('allusers.destroy', $user->id) }}" method="post" class="d-inline">
                                             @method('delete')
                                             @csrf
