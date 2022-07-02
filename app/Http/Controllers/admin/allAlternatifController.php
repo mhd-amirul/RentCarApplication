@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\alternatif;
 use Illuminate\Http\Request;
 use App\Models\kriteria;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class allAlternatifController extends Controller
 {
@@ -34,7 +35,7 @@ class allAlternatifController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        
+
         alternatif::create($data);
         return redirect()
             ->route('allalternatif.index')
@@ -55,10 +56,17 @@ class allAlternatifController extends Controller
 
     public function update(Request $request, $id)
     {
+        $rules = [
+            'nama' => 'required',
+            'nilai' => 'required|integer',
+            'kriteria_id' => 'required'
+        ];
+        $data = $request->validate($rules);
+
         $db = alternatif::findOrFail($id);
-        $data = $request->all();
 
         $db->update($data);
+        Alert::success('Success', 'Berhasil mengubah alternatif');
         return redirect()
             ->route('allalternatif.index');
     }
