@@ -20,7 +20,7 @@ class allUsersController extends Controller
             ->with(
                 [
                     'title' => 'Data Users',
-                    'user' => User::where('role', '<>','admin')->orderBy('username')->filterUser(request(['searchUser']))->get()
+                    'user' => User::where('role', '<>','admin')->orderBy('id')->filterUser(request(['searchUser']))->get()
                 ]
             );
     }
@@ -111,7 +111,7 @@ class allUsersController extends Controller
         $db->update($data);
         Alert::success('success', 'Data User Berhasil di Ubah');
         return redirect()
-            ->route('allusers.index');
+            ->route('allusers.show',$id);
     }
 
     public function destroy($id)
