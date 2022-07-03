@@ -109,24 +109,24 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-sm-6">
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="daftarRental" role="dialog" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Cek apakah data yang anda kirimkan sudah benar?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn btn-primary">Confirm</button>
-                                    </div>
+                                        <div class="modal-body">
+                                            <div class="text-center" style="width:100%; padding:20px; text-align:center;">
+                                                <img style="width:150px; height:auto; margin:0 auto; display:block; margin-bottom:25px;" src="{{ url('images/question.png') }}" alt="">
+                                                <h1 style="font-size: 42px; margin-bottom: 25px; color:#5C5C5C;">Cek apakah data yang anda kirimkan sudah benar?</h1>
+                                                {{-- <p style="font-size: 20px; margin-bottom: 27px; color:#5C5C5C;"></p> --}}
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Confirm</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" class="w-100 btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">SUBMIT</a>
+                            <a href="#" class="w-100 btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#daftarRental">SUBMIT</a>
                         </div>
                     </div>
                 </form>

@@ -137,3 +137,14 @@
 
 </div>
 @endsection
+
+@push('trix')
+    {{-- trix  --}}
+    <link rel="stylesheet" href="/css/trix.css">
+    <script src="/js/trix.js" type="text/javascript"></script>
+    <style>
+        trix-toolbar [data-trix-button-group="file-tools"]{
+            display: none;
+        }
+    </style>
+@endpush

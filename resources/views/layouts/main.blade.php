@@ -6,10 +6,13 @@
 
 
     @include('includes.style')
+    @stack('trix')
+    @stack('mapbox')
     <title>Rental Mobil • {{ $title }}</title>
 </head>
 <body >
     @include('partials.navbar')
+    @include('partials.pop-up')
     <div class="container mt-4">
         @yield('container')
     </div>

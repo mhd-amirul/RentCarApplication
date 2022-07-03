@@ -10,6 +10,7 @@ use App\Http\Controllers\authentikasi\AuthentikasiController;
 use App\Http\Controllers\home\HomeController;
 use App\Http\Controllers\map\mapController;
 use App\Http\Controllers\profile\ProfilController;
+use App\Http\Controllers\rental\activityController;
 use App\Http\Controllers\rental\RentalController;
 use App\Http\Controllers\rental\TokoController;
 use App\Http\Controllers\rental\ulasanController;
@@ -91,16 +92,16 @@ Route::group(['middleware' => 'auth'], function ()
                 Route::resource('shop', RentalController::class)
                     ->except(['index']);
 
-                Route::get('activityView/{id}', [TokoController::class, 'activityView'])->name('activityView');
-                Route::get('activityViewCetak/{id}', [TokoController::class, 'activityViewCetak'])->name('activityViewCetak');
-                Route::get('activityAdd/{id}', [TokoController::class, 'activityAdd'])->name('activityAdd');
-                Route::get('activityShow/{id}', [TokoController::class, 'activityShow'])->name('activityShow');
-                Route::get('activityEdit/{id}', [TokoController::class, 'activityEdit'])->name('activityEdit');
-                Route::get('activityHistory/{id}', [TokoController::class, 'activityHistory'])->name('activityHistory');
-                Route::post('activityStore/{id}', [TokoController::class, 'activityStore'])->name('activityStore');
-                Route::put('activityUpdate/{id}', [TokoController::class, 'activityUpdate'])->name('activityUpdate');
-                Route::put('activityReturn/{id}', [TokoController::class, 'activityReturn'])->name('activityReturn');
-                Route::delete('activityDelete/{id}', [TokoController::class, 'activityDelete'])->name('activityDelete');
+                Route::get('activityView/{id}', [activityController::class, 'activityView'])->name('activityView');
+                Route::get('activityViewCetak/{id}', [activityController::class, 'activityViewCetak'])->name('activityViewCetak');
+                Route::get('activityAdd/{id}', [activityController::class, 'activityAdd'])->name('activityAdd');
+                Route::get('activityShow/{id}', [activityController::class, 'activityShow'])->name('activityShow');
+                Route::get('activityEdit/{id}', [activityController::class, 'activityEdit'])->name('activityEdit');
+                Route::get('activityHistory/{id}', [activityController::class, 'activityHistory'])->name('activityHistory');
+                Route::post('activityStore/{id}', [activityController::class, 'activityStore'])->name('activityStore');
+                Route::put('activityUpdate/{id}', [activityController::class, 'activityUpdate'])->name('activityUpdate');
+                Route::put('activityReturn/{id}', [activityController::class, 'activityReturn'])->name('activityReturn');
+                Route::delete('activityDelete/{id}', [activityController::class, 'activityDelete'])->name('activityDelete');
 
                 Route::get('map/{id}', [mapController::class, 'setLocation'])->name('setLocation');
                 Route::put('map/update/{id}', [mapController::class, 'saveLocation'])->name('saveLocation');

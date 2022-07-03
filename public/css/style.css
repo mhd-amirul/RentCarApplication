@@ -1,3 +1,8 @@
+body {
+    background-color: #eee;
+}
+
+/* Form Kontrol */
 .form-signin .form-floating:focus-within {
     z-index: 2;
 }
@@ -19,10 +24,7 @@
     margin-bottom: -1px;
 }
 
-body {
-    background-color: #eee;
-}
-
+/* Rating Display */
 .pd-rating {
     font-size: 20px;
     display: inline-block;
@@ -30,6 +32,30 @@ body {
     margin-right: -3px;
 }
 
+/* NAVBAR */
+.navbar .navbar-toggler {
+    top: 0.25rem;
+    right: 1rem;
+}
+
+.navbar .form-control {
+    padding: 0.75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+/* FOOTER */
 .footer-basic {
     padding: 40px 0;
     background-color: #43454d;
@@ -88,4 +114,86 @@ body {
     font-size: 16px;
     color: rgb(255, 255, 255);
     margin-bottom: 0;
+}
+
+/* CARD */
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    border: none;
+    margin-bottom: 30px;
+}
+
+.card .card-block p {
+    line-height: 25px;
+}
+
+.card-block {
+    padding: 1.25rem;
+}
+
+/* Other Style */
+@media only screen and (min-width: 1400px) {
+    p {
+        font-size: 14px;
+    }
+}
+
+.m-r-0 {
+    margin-right: 0px;
+}
+
+.m-l-0 {
+    margin-left: 0px;
+}
+
+.m-b-25 {
+    margin-bottom: 25px;
+}
+
+.img-radius {
+    border-radius: 5px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.text-muted {
+    color: #919aa3 !important;
+}
+
+.f-w-600 {
+    font-weight: 600;
+}
+
+.m-t-40 {
+    margin-top: 20px;
+}
+
+.padding {
+    padding: 3rem !important;
+}
+
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
 }

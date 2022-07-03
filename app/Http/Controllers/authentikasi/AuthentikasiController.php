@@ -28,9 +28,9 @@ class AuthentikasiController extends Controller
         $data['password'] = Hash::make($data['password']);
 
         User::create($data);
-        Alert::success('Success', 'Registrasi Berhasil');
         return redirect()
-            ->route('login');
+            ->route('login')
+            ->with('success', 'Registrasi Berhasil');
     }
 
     public function login()
@@ -54,12 +54,10 @@ class AuthentikasiController extends Controller
 
         if (Auth::attempt($data)) {
             $request->session()->regenerate();
-            Alert::success('Success', 'Login Berhasil');
-            return redirect()->intended('profil');
+            return redirect()->intended('profil')->with('success', 'Login Berhasil');
         }
 
-        Alert::error('Login Gagal');
-        return back();
+        return back()->with('failed', 'Login Gagal');
     }
 
     public function logout(Request $request)
@@ -67,7 +65,7 @@ class AuthentikasiController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('login');
+        return redirect()->route('login')->with('success', 'Log Out Berhasil');
     }
 
     public function forgotPass()

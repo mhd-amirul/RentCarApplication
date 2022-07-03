@@ -115,10 +115,6 @@ class HomeController extends Controller
 
         $cars = array_slice($cars, 0, 10);
 
-        if ($cars) { Alert::success('Success'); }
-        elseif ($cars == null){ Alert::error('Failed'); }
-        else { Alert::error('Unknown Error'); }
-
         return view('pages.hasil')
             ->with(
                 [

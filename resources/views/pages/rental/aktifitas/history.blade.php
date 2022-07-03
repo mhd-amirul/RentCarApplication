@@ -4,11 +4,11 @@
 <div class="row justify-content-center">
     <div class="col-lg-10">
         <div class="card px-4 py-4 border border-grey-500">
-            <h2 class="m-b-20 p-b-5 b-b-default mt-3 text-center">HISTORY</h2>
+            <h2 class="m-b-20 p-b-5 b-b-default mt-3 text-center">HISTORIES</h2>
             <div class="row">
                 <div class="col-sm-12">
                     <a href="{{ route('toko.index') }}" class="btn btn-dark"><i class="bi bi-arrow-left-circle"></i> Back</a>
-                    <a href="{{ route('activityView', $shop->id) }}" class="btn btn-secondary"><i class="bi bi-clock-history"></i>  Activity</a>
+                    <a href="{{ route('activityView', $shop->id) }}" class="btn btn-secondary"><i class="bi bi-activity"></i>  Activity</a>
                     <a target="blank" href="{{ route('activityViewCetak', $shop->id) }}" class="btn btn-success"><i class="bi bi-printer-fill"></i>  Print</a>
                 </div>
             </div>

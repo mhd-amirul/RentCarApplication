@@ -63,8 +63,7 @@ class ProfilController extends Controller
         }
 
         $db->update($data);
-        Alert::success('success', 'Profil Berhasil di Ubah');
-        return redirect()->route('profil.index');
+        return redirect()->route('profil.index')->with('success', 'Profil Berhasil di Ubah');
     }
 
     public function create()
@@ -94,8 +93,7 @@ class ProfilController extends Controller
         $data['user_id'] = auth()->user()->id;
 
         makeShop::create($data);
-        Alert::success('Pendaftaran berhasil!', 'Harap menunggu informasi selanjutnya!');
-        return redirect()->route('profil.index');
+        return redirect()->route('profil.index')->with('success', 'Harap menunggu verifikasi admin!');
     }
 
     public function changePass($id)
@@ -122,16 +120,16 @@ class ProfilController extends Controller
 
         if (!Hash::check($request->password, $user->password)) {
             # code...
-            Alert::error('failed', 'Password lama tidak sesuai');
             return redirect()
-                ->route('changePass',$id);
+                ->route('changePass',$id)
+                ->with('failed', 'Password lama tidak sesuai');
         }
 
         $val = $request->validate($rules);
         $val['password'] = Hash::make($val['password']);
         $user->update($val);
-        Alert::success('success', 'Password Berhasil di Ubah');
         return redirect()
-            ->route('profil.index');
+            ->route('profil.index')
+            ->with('success', 'Password Berhasil di Ubah');
     }
 }

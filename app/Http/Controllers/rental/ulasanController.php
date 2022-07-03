@@ -33,7 +33,6 @@ class ulasanController extends Controller
 
         $val['user_id'] = auth()->user()->id;
         ulasan::create($val);
-        Alert::success('success', 'Ulasan berhasil ditambah');
-        return redirect()->route('detailMobil', $id);
+        return redirect()->route('detailMobil', $id)->with('success', 'Ulasan berhasil ditambah');
     }
 }

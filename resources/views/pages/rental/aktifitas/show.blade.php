@@ -53,35 +53,35 @@
                     </div>
                 </div>
             </div>
-            @if ($history->status == 'off')
-                <p></p>
-            @else
-                <h2 class="m-b-20 p-b-5 b-b-default mt-3"></h2>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <a href="{{ route('activityEdit', $history->id) }}" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Edit</a>
-                        <form action="{{ route('activityDelete', $history->id) }}" method="POST" class="d-inline">
-                            @csrf
-                            @method('delete')
-                            <div class="modal fade" id="deleteAct" tabindex="-1" aria-labelledby="deleteActLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="deleteActLabel">Confirmation</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Yakin Ingin Menghapus Aktifitas Ini?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn btn-primary">Confirm</button>
-                                    </div>
-                                    </div>
+            <h2 class="m-b-20 p-b-5 b-b-default mt-3"></h2>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form action="{{ route('activityDelete', $history->id) }}" method="POST" class="d-inline">
+                        @csrf
+                        @method('delete')
+                        <div class="modal fade" id="deleteAct" tabindex="-1" aria-labelledby="deleteActLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="deleteActLabel">Confirmation</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Yakin Ingin Menghapus Aktifitas Ini?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Confirm</button>
+                                </div>
                                 </div>
                             </div>
-                            <a href="#" class="btn btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#deleteAct"><i class="bi bi-trash-fill"></i> Delete</a>
-                        </form>
+                        </div>
+                        <a href="#" class="btn btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#deleteAct"><i class="bi bi-trash-fill"></i> Delete</a>
+                    </form>
+                    @if ($history->status == 'off')
+                        <p></p>
+                    @else
+                        <a href="{{ route('activityEdit', $history->id) }}" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Edit</a>
                         <form action="{{ route('activityReturn', $history->id) }}" method="POST" class="d-inline">
                             @csrf
                             @method('put')
@@ -104,9 +104,9 @@
                             </div>
                             <a href="#" class="btn btn-success text-decoration-none" data-bs-toggle="modal" data-bs-target="#retuenAct"><i class="bi bi-calendar2-check"></i> Returned</a>
                         </form>
-                    </div>
+                    @endif
                 </div>
-            @endif
+            </div>
         </div>
     </div>
 </div>
