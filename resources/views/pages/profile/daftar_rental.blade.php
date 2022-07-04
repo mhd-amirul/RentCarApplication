@@ -5,10 +5,9 @@
     <div class="col-lg-10 mt-4">
         <div class="card py-5 px-5 border border-gray-800">
             <main class="form-registration">
-                <h1 class="h3 mb-3 fw-normal text-center">BUKA TOKO</h1><hr>
-                <form action="{{ route('profil.store') }}" method="post" enctype="multipart/form-data">
+                <h2 class="m-b-20 p-b-5 b-b-default text-center">Buka Toko</h2>
+                <form action="{{ route('profil.store') }}" method="post" enctype="multipart/form-data" id="daftarRental-form">
                     @csrf
-                    {{-- <div class="card mb-2 bg-danger"><h1></h1></div> --}}
                     <div class="row">
                         <div class="col-sm-6 mt-2">
                             <div class="form-floating">
@@ -55,14 +54,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card mt-2 mb-2 bg-secondary text-white text-left">
-                        <div class="card-body p-2">
-                            <h6 class="card-title m-0">Upload Berkas :</h6>
-                        </div>
-                    </div>
-
+                    <h5 class="m-b-20 p-b-5 b-b-default mt-3">Upload Berkas</h5>
                     <div class="row">
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-6">
                             <div class="custom-file">
                                 <label for="img_ktp"><i class="bi bi-file-earmark-image"></i> Scan KTP</label>
                                 <input type="file" name="img_ktp" class="form-control @error('img_ktp') is-invalid @enderror" id="img_ktp">
@@ -73,7 +67,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-6">
                             <div class="custom-file">
                                 <label for="img_siu"><i class="bi bi-file-earmark-image"></i> Surat Izin Usaha</label>
                                 <input type="file" name="img_siu" class="form-control @error('img_siu') is-invalid @enderror" id="img_siu">
@@ -84,7 +78,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-6 mt-3">
                             <div class="custom-file">
                                 <label for="pas_foto"><i class="bi bi-file-earmark-image"></i> Pas Foto</label>
                                 <input type="file" name="pas_foto" class="form-control @error('pas_foto') is-invalid @enderror" id="pas_foto">
@@ -95,7 +89,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-6 mt-3">
                             <div class="custom-file">
                                 <label for="foto_usaha"><i class="bi bi-file-earmark-image"></i> Foto Usaha</label>
                                 <input type="file" name="foto_usaha" class="form-control @error('foto_usaha') is-invalid @enderror" id="foto_usaha">
@@ -109,24 +103,7 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-sm-6">
-                            <div class="modal fade" id="daftarRental" role="dialog" tabindex="-1" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-body">
-                                            <div class="text-center" style="width:100%; padding:20px; text-align:center;">
-                                                <img style="width:150px; height:auto; margin:0 auto; display:block; margin-bottom:25px;" src="{{ url('images/question.png') }}" alt="">
-                                                <h1 style="font-size: 42px; margin-bottom: 25px; color:#5C5C5C;">Cek apakah data yang anda kirimkan sudah benar?</h1>
-                                                {{-- <p style="font-size: 20px; margin-bottom: 27px; color:#5C5C5C;"></p> --}}
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                            <button type="submit" class="btn btn-primary">Confirm</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="w-100 btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#daftarRental">SUBMIT</a>
+                            <button class="w-100 btn btn-sm btn-primary mt-5" id="daftarRental">SUBMIT</button>
                         </div>
                     </div>
                 </form>
@@ -135,3 +112,25 @@
     </div>
 </div>
 @endsection
+
+@push('sweet')
+    <script>
+        $('#daftarRental').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: 'Cek informasi dan berkas sudah benar ?',
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'confirm',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#daftarRental-form').submit();
+                }
+            })
+        });
+    </script>
+@endpush

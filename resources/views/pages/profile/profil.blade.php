@@ -16,7 +16,7 @@
             </div>
 
             <div class="card-body">
-                <h4 class="card-title">INFORMASI AKUN</h4>
+                <h4 class="card-title">Informasi Akun</h4>
                 <hr class="m-0 p-0">
                 <div class="row">
                     <div class="col-sm-6">
@@ -40,27 +40,27 @@
                     <div class="row mt-4 mb-3">
                         <div class="col-sm-10">
                             <a href="{{ route('profil.edit', $data->id) }}" class="btn btn-warning ml-1">
-                                <i class="bi bi-pencil-square"></i></i> EDIT PROFIL
+                                <i class="bi bi-pencil-square"></i></i> Edit Profil
                             </a>
                             <a href="{{ route('changePass', $data->id) }}" class="ml-2 btn btn-warning">
-                                <i class="mr-2 bi bi-key"></i>RESET PASSWORD
+                                <i class="mr-2 bi bi-key"></i>Reset Password
                             </a>
                             @if ($data->role === 'rental')
                                 <a href="{{ route('toko.index') }}" class="ml-2 btn btn-warning">
-                                    <i class="mr-2 bi bi-house-fill"></i>TOKO
+                                    <i class="mr-2 bi bi-house-fill"></i>Toko
                                 </a>
                             @elseif ($data->role === 'admin')
                                 <a href="{{ route('dashboard.index') }}" class="ml-2 btn btn-warning">
-                                    <i class="mr-2 bi bi-shield-fill-exclamation"></i>ADMINISTRATOR
+                                    <i class="mr-2 bi bi-shield-fill-exclamation"></i>Administrator
                                 </a>
                             @elseif ($data->role === 'user')
                                 @if ($makeshop)
                                     <a class="ml-2 btn btn-warning">
-                                        <i class="mr-2 bi bi-house-fill"></i>ON PROCESS
+                                        <i class="mr-2 bi bi-house-fill"></i>Diproses
                                     </a>
                                 @else
                                     <a href="{{ route('profil.create')}}" class="ml-2 btn btn-warning">
-                                        <i class="mr-2 bi bi-house-fill"></i>BUKA TOKO
+                                        <i class="mr-2 bi bi-house-fill"></i>Buka Toko
                                     </a>
                                 @endif
                             @endif

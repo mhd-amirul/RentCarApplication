@@ -8,7 +8,6 @@ use App\Http\Controllers\Controller;
 use App\Models\shop;
 use App\Models\User;
 use Illuminate\Support\Facades\Storage;
-use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminDashboardController extends Controller
 {
@@ -26,17 +25,16 @@ class AdminDashboardController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        shop::create($data);
 
         $user = User::where('id', $request->user_id)->first();
         $user['role'] = 'rental';
         $user->save();
 
         makeShop::where('user_id', $request->user_id)->delete();
-
-        Alert::success('success', 'Permintaan di Terima');
+        shop::create($data);
         return redirect()
-            ->route('dashboard.index');
+            ->route('dashboard.index')
+            ->with('success', 'Permintaan di Terima');
     }
 
     public function show($id)
@@ -70,9 +68,7 @@ class AdminDashboardController extends Controller
         }
 
         $rm->delete();
-
-        Alert::success('success', 'Permintaan di Tolak');
         return redirect()
-            ->route('dashboard.index');
+            ->route('dashboard.index')->with('failed', 'Permintaan di Tolak');
     }
 }

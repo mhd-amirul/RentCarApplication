@@ -62,8 +62,7 @@ class activityController extends Controller
         $car->save();
 
         history::create($data);
-        Alert::success('Success', 'Aktifitas berhasil ditambah');
-        return redirect()->route('activityView',$id);
+        return redirect()->route('activityView',$id)->with('success', 'Aktifitas berhasil ditambahkan');
     }
 
     public function activityShow($id)
@@ -131,8 +130,7 @@ class activityController extends Controller
         }
 
         $db = history::findorfail($id)->update($data);
-        Alert::success('Success', 'Aktifitas berhasil diedit');
-        return redirect()->route('activityShow',$id);
+        return redirect()->route('activityShow',$id)->with('success', 'Aktifitas berhasil diubah');
     }
 
     public function activityReturn($id)
@@ -146,8 +144,7 @@ class activityController extends Controller
         $data->save();
         $car->save();
 
-        Alert::success('Success', 'Mobil dikembalikan');
-        return redirect()->route('activityView', $car->shop_id);
+        return redirect()->route('activityView', $car->shop_id)->with('success', 'Mobil sudah dikembalikan');
     }
 
     public function activityDelete($id)
@@ -165,9 +162,7 @@ class activityController extends Controller
         }
 
         $data->delete();
-
-        Alert::success('Success', 'History dihapus');
-        return redirect()->route('activityView', $car->shop_id);
+        return redirect()->route('activityView', $car->shop_id)->with('success', 'History dihapus');
     }
 
     public function activityHistory($id)

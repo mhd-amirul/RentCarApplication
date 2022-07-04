@@ -11,7 +11,7 @@
                     <div class="card_body border border-dark">
                         <div id='map' style='width: 100%; height: 60vh;'></div>
                     </div>
-                    <form action="{{ route('saveLocation', $shop->id) }}" method="post">
+                    <form action="{{ route('saveLocation', $shop->id) }}" method="post" id="setLok-form">
                     @method('put')
                     @csrf
                     <div class="row">
@@ -24,24 +24,7 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-sm-6">
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Yakin lokasi sudah benar?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn btn-primary">Confirm</button>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="w-100 btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">SET LOCATION</a>
+                            <button class="w-100 btn btn-sm btn-primary mt-3" id="setLok">SET LOCATION</button>
                         </div>
                     </div>
                 </form>
@@ -107,5 +90,26 @@
 
         map.on('click', add_marker);
 
+    </script>
+@endpush
+@push('sweet')
+    <script>
+        $('#setLok').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: 'Lokasi sudah tepat ?',
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'confirm',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#setLok-form').submit();
+                }
+            })
+        });
     </script>
 @endpush

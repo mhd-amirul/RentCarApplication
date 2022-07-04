@@ -6,7 +6,6 @@
         <div class="card user-card-full">
             <div class="col">
                 <div class="card-block">
-                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Toko : <a href="/profileToko" class="text-black">{{ $car->shop->nm_usaha }}</a></h6>
                     <div class="d-flex justify-content-center">
                         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner m-2" style="max-height: 400px; max-width: 400px; overflow: hidden;">
@@ -122,27 +121,27 @@
                                 <a href="{{ route('sharelok', $car->shop->id) }}" style="color: rgb(0, 0, 0);" class=" btn btn-sm btn-success">
                                     <i class="bi bi-house-fill"></i> Lokasi Toko
                                 </a>
-                                <form action="{{ route('shop.destroy', $car->id) }}" method="post" class="d-inline">
+                                <a href="#" class="btn btn-sm btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#deleteCar" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i> Hapus</a>
+                                <form action="{{ route('shop.destroy', $car->id) }}" method="post">
                                     @method('delete')
                                     @csrf
-                                    <div class="modal fade" id="mobil" tabindex="-1" aria-labelledby="mobilLabel" aria-hidden="true">
+                                    <div class="modal fade" id="deleteCar" role="dialog" tabindex="-1" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="mobilLabel">Confirm</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Yakin Ingin Menghapus Mobil Ini?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                <button type="submit" class="btn btn-primary">Hapus</button>
-                                            </div>
+                                                <div class="modal-body">
+                                                    <div class="text-center" style="width:100%; padding:20px; text-align:center;">
+                                                        <img style="width:150px; height:auto; margin:0 auto; display:block; margin-bottom:25px;" src="{{ url('images/question.png') }}" alt="">
+                                                        <h1 style="font-size: 30px; margin-bottom: 25px; color:#5C5C5C;">Yakin ingin menghapus mobil ini?</h1>
+                                                        {{-- <p style="font-size: 20px; margin-bottom: 27px; color:#5C5C5C;"></p> --}}
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                    <button type="submit" class="btn btn-primary">Confirm</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="#" class="btn btn-sm btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#mobil" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i> Hapus</a>
                                 </form>
                             </div>
                         </div>

@@ -5,8 +5,8 @@
     <div class="col-lg-6">
         <div class="card px-5 py-5 border border-gray-800">
             <main class="form-registration">
-                <h1 class="h3 mb-3 fw-normal text-center">EDIT PROFIL</h1>
-                <form action="{{ route('profil.update', $data->id) }}" method="post" enctype="multipart/form-data">
+                <h1 class="h3 mb-3 fw-normal text-center">Edit Profil</h1>
+                <form action="{{ route('profil.update', $data->id) }}" method="post" enctype="multipart/form-data" id="editProfil-form">
                     @method('put')
                     @csrf
                     <div class="form-floating">
@@ -50,27 +50,32 @@
                             </div>
                         @enderror
                     </div>
-                    <div class="modal fade" id="editShop" role="dialog" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="text-center" style="width:100%; padding:20px; text-align:center;">
-                                        <img style="width:150px; height:auto; margin:0 auto; display:block; margin-bottom:25px;" src="{{ url('images/question.png') }}" alt="">
-                                        <h1 style="font-size: 42px; margin-bottom: 25px; color:#5C5C5C;">Yakin Ingin Mengubah Profil?</h1>
-                                        {{-- <p style="font-size: 20px; margin-bottom: 27px; color:#5C5C5C;"></p> --}}
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                    <button type="submit" class="btn btn-primary">Confirm</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="w-100 btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#editShop">SUBMIT</a>
+                    <button class="w-100 btn btn-sm btn-primary mt-3" id="editProfil">SUBMIT</button>
                 </form>
             </main>
         </div>
     </div>
 </div>
 @endsection
+
+@push('sweet')
+    <script>
+        $('#editProfil').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: 'Ubah informasi profil ?',
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'confirm',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#editProfil-form').submit();
+                }
+            })
+        });
+    </script>
+@endpush

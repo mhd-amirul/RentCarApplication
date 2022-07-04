@@ -89,9 +89,8 @@ class TokoController extends Controller
         }
 
         $db->update($data);
-        Alert::success('success', 'Data Toko Berhasil di Ubah');
         return redirect()
-            ->route('toko.index');
+            ->route('toko.index')->with('success', 'Data Toko Berhasil di Ubah');
     }
 
     public function destroy($id)
@@ -148,8 +147,7 @@ class TokoController extends Controller
         $user->save();
 
         $shop->delete();
-        Alert::success('success', 'Toko Berhasil di Hapus');
         return redirect()
-            ->route('profil.index');
+            ->route('profil.index')->with('success', 'Toko Berhasil di Hapus');
     }
 }

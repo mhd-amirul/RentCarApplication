@@ -33,8 +33,7 @@ class mapController extends Controller
 
         $db = shop::findOrFail($id);
         $db->update($val);
-        Alert::success('success', 'Lokasi Toko Berhasil di Atur');
-        return redirect()->route('toko.index');
+        return redirect()->route('toko.index')->with('success', 'Lokasi toko berhasil di atur');
     }
 
     public function shareLocation($id)

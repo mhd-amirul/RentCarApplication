@@ -98,27 +98,27 @@
                                     <td>0{{ $user->no_hp }}</td>
                                     <td>
                                         <a href="{{ route('allusers.show',$user->id) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                                        <a href="#" class="btn-sm btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#DeleteMs" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i></a>
                                         <form action="{{ route('allusers.destroy', $user->id) }}" method="post" class="d-inline">
                                             @method('delete')
                                             @csrf
-                                            <div class="modal fade" id="DeleteMs" tabindex="-1" aria-labelledby="DeleteMsLabel" aria-hidden="true">
+                                            <div class="modal fade" id="deleteUser" role="dialog" tabindex="-1" aria-hidden="true">
                                                 <div class="modal-dialog modal-dialog-centered">
                                                     <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="DeleteMsLabel">Confirmation</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        Yakin Ingin Menghapus user Ini?
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                        <button type="submit" class="btn btn-primary">Confirm</button>
-                                                    </div>
+                                                        <div class="modal-body">
+                                                            <div class="text-center" style="width:100%; padding:20px; text-align:center;">
+                                                                <img style="width:150px; height:auto; margin:0 auto; display:block; margin-bottom:25px;" src="{{ url('images/question.png') }}" alt="">
+                                                                <h1 style="font-size: 30px; margin-bottom: 25px; color:#5C5C5C;">Yakin ingin menghapus user ini?</h1>
+                                                                {{-- <p style="font-size: 20px; margin-bottom: 27px; color:#5C5C5C;"></p> --}}
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="submit" class="btn btn-primary">Confirm</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <a href="#" class="btn-sm btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#deleteUser" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i></a>
                                         </form>
                                     </td>
                                 </tr>

@@ -126,7 +126,7 @@ class ProfilController extends Controller
         }
 
         $val = $request->validate($rules);
-        $val['password'] = Hash::make($val['password']);
+        $val['password'] = Hash::make($val['newpassword']);
         $user->update($val);
         return redirect()
             ->route('profil.index')

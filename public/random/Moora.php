@@ -347,3 +347,21 @@ HOME CONTROLLER =======================================================
 
 
 OTHER    =================================================================
+MODAL DELETE    =================================================================
+{{-- <div class="modal fade" id="hapusMobil" role="dialog" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="text-center" style="width:100%; padding:20px; text-align:center;">
+                <img style="width:150px; height:auto; margin:0 auto; display:block; margin-bottom:25px;" src="{{ url('images/question.png') }}" alt="">
+                <h1 style="font-size: 30px; margin-bottom: 25px; color:#5C5C5C;">Yakin Ingin Menghapus Mobil Ini?</h1>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Confirm</button>
+        </div>
+    </div>
+</div>
+</div>
+<a href="#" class="btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusMobil"><i class="bi bi-trash-fill" style="color: rgb(0, 0, 0);"></i></a> --}}

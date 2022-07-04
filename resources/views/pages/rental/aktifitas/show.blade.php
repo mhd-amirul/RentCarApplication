@@ -78,32 +78,15 @@
                         </div>
                         <a href="#" class="btn btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#deleteAct"><i class="bi bi-trash-fill"></i> Delete</a>
                     </form>
-                    @if ($history->status == 'off')
-                        <p></p>
-                    @else
+                    @if ($history->status == 'on')
                         <a href="{{ route('activityEdit', $history->id) }}" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Edit</a>
-                        <form action="{{ route('activityReturn', $history->id) }}" method="POST" class="d-inline">
+                        <form action="{{ route('activityReturn', $history->id) }}" method="POST" class="d-inline" id="returnAct-form">
                             @csrf
                             @method('put')
-                            <div class="modal fade" id="retuenAct" tabindex="-1" aria-labelledby="retuenActLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="retuenActLabel">Confirmation</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Yakin Mobil sudah dikembalikan?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn btn-primary">Confirm</button>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-success text-decoration-none" data-bs-toggle="modal" data-bs-target="#retuenAct"><i class="bi bi-calendar2-check"></i> Returned</a>
+                            <button class="btn btn-success text-decoration-none" id="returnAct"><i class="bi bi-calendar2-check"></i> Returned</button>
                         </form>
+                    @else
+                        <p></p>
                     @endif
                 </div>
             </div>
@@ -111,3 +94,25 @@
     </div>
 </div>
 @endsection
+
+@push('sweet')
+    <script>
+        $('#returnAct').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: 'Mobil sudah dikembalikan ?',
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'confirm',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#returnAct-form').submit();
+                }
+            })
+        });
+    </script>
+@endpush

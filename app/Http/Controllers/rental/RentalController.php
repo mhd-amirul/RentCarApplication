@@ -94,9 +94,8 @@ class RentalController extends Controller
             }
         }
 
-        Alert::success('success', 'Berhasil Menambah Mobil Baru');
         return redirect()
-            ->route('toko.index');
+            ->route('toko.index')->with('success', 'Berhasil Menambah Mobil Baru');
     }
 
     public function show($id)
@@ -212,9 +211,8 @@ class RentalController extends Controller
         }
         $database->update($data);
 
-        Alert::success('success', 'Data Mobil Berhasil di Ubah');
         return redirect()
-            ->route('shop.show', $id);
+            ->route('shop.show', $id)->with('success', 'Data Mobil Berhasil di Ubah');
     }
 
     public function destroy($id)
@@ -243,9 +241,8 @@ class RentalController extends Controller
         }
 
         $data->delete();
-        Alert::success('success', 'Mobil Berhasil di Hapus!!!');
         return redirect()
-                ->route('toko.index');
+                ->route('toko.index')->with('success', 'Mobil Berhasil di Hapus!!!');
     }
 
 }

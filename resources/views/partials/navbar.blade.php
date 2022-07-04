@@ -46,8 +46,8 @@
             </li>
         @else
             <li class="nav-item {{ Request::is('login') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('login') }}"><i class="mr-2 bi bi-box-arrow-in-right"></i>Login</a>
-            </li>          
+                <a class="nav-link" href="{{ route('login') }}"><i class="mr-2 bi bi-box-arrow-in-right"></i>Login</a>
+            </li>
         @endauth
         </ul>
     </div>

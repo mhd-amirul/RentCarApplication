@@ -6,8 +6,8 @@
     <div class="col-lg-10 mt-4">
         <div class="card py-5 px-5 border border-gray-800">
             <main class="form-registration">
-                <h1 class="h3 mb-3 fw-normal text-center">EDIT TOKO</h1><hr>
-                <form action="{{ route('toko.update', $data->id) }}" method="post" enctype="multipart/form-data">
+                <h2 class="m-b-20 p-b-5 b-b-default f-w-600 text-center">Edit Toko</h2>
+                <form action="{{ route('toko.update', $data->id) }}" method="post" enctype="multipart/form-data" id="editShop-form">
                     @csrf
                     @method('put')
                     <div class="row">
@@ -56,14 +56,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card mt-2 mb-2 bg-secondary text-white text-left">
-                        <div class="card-body p-2">
-                            <h6 class="card-title m-0">Upload Berkas :</h6>
-                        </div>
-                    </div>
-
+                    <h5 class="m-b-20 p-b-5 b-b-default f-w-600 mt-3">Upload Berkas</h5>
                     <div class="row">
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-6">
                             <div class="custom-file">
                                 <label for="img_ktp"><i class="bi bi-file-earmark-image"></i> Scan KTP</label>
                                 <input type="hidden" name="oldgambar1" value="{{ $data->img_ktp }}">
@@ -75,7 +70,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-6">
                             <div class="custom-file">
                                 <label for="img_siu"><i class="bi bi-file-earmark-image"></i> Surat Izin Usaha</label>
                                 <input type="hidden" name="oldgambar2" value="{{ $data->img_siu }}">
@@ -87,7 +82,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-6 mt-3">
                             <div class="custom-file">
                                 <label for="pas_foto"><i class="bi bi-file-earmark-image"></i> Pas Foto</label>
                                 <input type="hidden" name="oldgambar3" value="{{ $data->pas_foto }}">
@@ -99,7 +94,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-sm-6 mt-2">
+                        <div class="col-sm-6 mt-3">
                             <div class="custom-file">
                                 <label for="foto_usaha"><i class="bi bi-file-earmark-image"></i> Foto Usaha</label>
                                 <input type="hidden" name="oldgambar4" value="{{ $data->foto_usaha }}">
@@ -114,24 +109,7 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-sm-6">
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Yakin Ingin Mengubah Informasi Toko?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn btn-primary">Confirm</button>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="w-100 btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">SUBMIT</a>
+                            <button class="w-100 btn btn-sm btn-primary mt-5" id="editShop">SUBMIT</button>
                         </div>
                     </div>
                 </form>
@@ -140,3 +118,25 @@
     </div>
 </div>
 @endsection
+
+@push('sweet')
+    <script>
+        $('#editShop').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: 'Ubah informasi toko ?',
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'confirm',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#editShop-form').submit();
+                }
+            })
+        });
+    </script>
+@endpush

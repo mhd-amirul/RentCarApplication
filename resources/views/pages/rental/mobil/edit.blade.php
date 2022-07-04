@@ -5,16 +5,11 @@
     <div class="col-lg-7">
         <div class="card py-3 px-3 border border-gray-800">
             <main class="form-registration mt-3">
-                <h1 class="h3 mb-4 fw-normal text-center">EDIT MOBIL</h1>
-                <form action="{{ route('shop.update', $car->id) }}" method="post" enctype="multipart/form-data">
+                <h2 class="m-b-20 f-w-600 text-center">Edit Mobil</h2>
+                <form action="{{ route('shop.update', $car->id) }}" method="post" enctype="multipart/form-data" id="editCar-form">
                     @method('put')
                     @csrf
-                    <div class="card mt-2 mb-2 bg-secondary text-white text-left">
-                        <div class="card-body p-2">
-                            <h6 class="card-title m-0">Pilih Kriteria Mobil :</h6>
-                        </div>
-                    </div>
-
+                    <h5 class="m-b-20 p-b-5 b-b-default f-w-600">Pilih Kriteria Mobil</h5>
                     <div class="row px-2">
                         @foreach ($kriteria as $item)
                         <div class="col-sm-6">
@@ -33,14 +28,10 @@
                                 <label for="{{ $item->nama."_id" }}">{{ $item->nama }}</label>
                             </div>
                         </div>
-                    @endforeach
+                        @endforeach
                     </div>
 
-                    <div class="card mt-2 mb-2 bg-secondary text-white text-left">
-                        <div class="card-body p-2">
-                            <h6 class="card-title m-0">Informasi Mobil :</h6>
-                        </div>
-                    </div>
+                    <h5 class="m-b-20 p-b-5 b-b-default f-w-600 mt-3">Informasi Mobil</h5>
                     <div class="row px-2">
                         <div class="col-sm-6">
                             <div class="form-floating">
@@ -63,11 +54,7 @@
                         @enderror
                     </div>
 
-                    <div class="card mt-2 mb-2 bg-secondary text-white text-left">
-                        <div class="card-body p-2">
-                            <h6 class="card-title m-0">Upload Gambar Mobil :</h6>
-                        </div>
-                    </div>
+                    <h5 class="m-b-20 p-b-5 b-b-default f-w-600 mt-4">Upload Gambar Mobil</h5>
                     <div class="row px-2">
                         <div class="col-sm-6 mt-2">
                             <label for="gambar1">Gambar Profil Mobil</label>
@@ -116,24 +103,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-sm-10 mt-4">
-                                <div class="modal fade" id="mobil" tabindex="-1" aria-labelledby="mobilLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="mobilLabel">Confirm</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            Yakin Ingin Mengubah Informasi Mobil?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                            <button type="submit" class="btn btn-primary">Hapus</button>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="#" class="w-100 btn btn-sm btn-primary text-decoration-none" data-bs-toggle="modal" data-bs-target="#mobil">EDIT MOBIL</a>
+                                <button class="w-100 btn btn-sm btn-primary text-decoration-none mt-3" id="editCar">SUBMIT</button>
                             </div>
                         </div>
                     </div>
@@ -153,4 +123,25 @@
             display: none;
         }
     </style>
+@endpush
+@push('sweet')
+    <script>
+        $('#editCar').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: 'Ubah informasi mobil ?',
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'confirm',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#editCar-form').submit();
+                }
+            })
+        });
+    </script>
 @endpush

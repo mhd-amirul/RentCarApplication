@@ -26,7 +26,7 @@
                             </button>
                     </div>
                 </div>
-                <h6 class="m-b-20 p-b-5 b-b-default f-w-600 mt-5">INFORMASI TOKO</h6>
+                <h6 class="m-b-20 p-b-5 b-b-default f-w-600 mt-5">Informasi Toko</h6>
                 <div class="row">
                     <div class="col-sm-6 mb-4">
                         <div class="form-floating">
@@ -67,44 +67,27 @@
                     <div class="row">
                         <div class="col-sm-12 mt-5">
                             <a href="{{ route('toko.edit', $shop->id) }}" class="btn btn-sm btn-warning">
-                                <i class="bi bi-pencil-square"></i> EDIT
+                                <i class="bi bi-pencil-square"></i> Edit
                             </a>
                             @if ($shop->longitude != null && $shop->latitude != null)
                                 <a href="{{ route('sharelok', $shop->id) }}" class="btn btn-sm btn-success" style="color: rgb(0, 0, 0);">
-                                    <i class="bi bi-house-fill"></i> LOKASI
+                                    <i class="bi bi-house-fill"></i> Lokasi
                                 </a>
                                 <a href="{{ route('setLocation', $shop->id) }}" class="btn btn-sm btn-primary" style="color: rgb(0, 0, 0);">
-                                    <i class="bi bi-map-fill"></i> EDIT LOKASI
+                                    <i class="bi bi-map-fill"></i> Edit Lokasi
                                 </a>
                             @else
                                 <a href="{{ route('setLocation', $shop->id) }}" class="btn btn-sm btn-success" style="color: rgb(0, 0, 0);">
-                                    <i class="bi bi-map-fill"></i> SET LOKASI TOKO
+                                    <i class="bi bi-map-fill"></i> Set Lokasi Toko
                                 </a>
                             @endif
                             <a href="{{ route('activityView', $shop->id) }}" class="btn btn-sm btn-dark text-white">
-                                <i class="bi bi-activity"></i> AKTIFITAS
+                                <i class="bi bi-activity"></i> Aktifitas
                             </a>
-                            <form action="{{ route('toko.destroy', $shop->id) }}" method="post" class="d-inline">
+                            <form action="{{ route('toko.destroy', $shop->id) }}" method="post" class="d-inline" id="deleteShop-form">
                                 @method('delete')
                                 @csrf
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Confirm</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            Yakin Ingin Menghapus Toko?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                            <button type="submit" class="btn btn-primary">Hapus</button>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash-fill" style="color: rgb(0, 0, 0);"></i> HAPUS</a>
+                                <button id="deleteShop" class="btn btn-sm btn-danger" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"> Hapus</i></button>
                             </form>
                         </div>
                     </div>
@@ -115,11 +98,11 @@
 
     <div class="col-lg-9">
         <div class="card px-5 py-5">
-            <h4 class="m-b-20 p-b-5 b-b-default ">DAFTAR MOBIL</h4>
+            <h4 class="m-b-20 p-b-5 b-b-default ">Daftar Mobil</h4>
             <div class="row">
                 <div class="col">
                     @if ($shop->longitude != null && $shop->latitude != null)
-                        <a href="{{ route('shop.create') }}" class="btn btn-sm btn-primary mb-2">TAMBAH MOBIL</a>
+                        <a href="{{ route('shop.create') }}" class="btn btn-sm btn-primary mb-2">Tambah Mobil</a>
                     @else
                         <p class="mb-21 mt-2"></p>
                     @endif
@@ -153,28 +136,12 @@
                                 <td>{{ $car->tahun_produksi->nama }}</td>
                                 <td>{{ $car->harga_sewa->nama }}</td>
                                 <td>
-                                    <a href="{{ route('shop.show', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                                    <form action="{{ route('shop.destroy', $car->id) }}" method="post" class="d-inline">
+                                    <a href="{{ route('shop.show', $car->id) }}" class="btn btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                                    {{-- <a href="#" id="deleteCar" class="btn btn-sm btn-danger" style="color: rgb(0, 0, 0);" name="hapus" data-id="{{ $car->id }}"><i class="bi bi-trash"></i></a> --}}
+                                    <form action="{{ route('shop.destroy', $car->id) }}" method="post" class="d-inline" id="deleteCar-form">
                                         @method('delete')
                                         @csrf
-                                        <div class="modal fade" id="mobil" tabindex="-1" aria-labelledby="mobilLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered">
-                                                <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="mobilLabel">Confirm</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    Yakin Ingin Menghapus Mobil Ini?
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                    <button type="submit" class="btn btn-primary">Hapus</button>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#mobil"><i class="bi bi-trash-fill" style="color: rgb(0, 0, 0);"></i></a>
+                                        <button id="deleteCar" class="btn btn-sm btn-danger" style="color: rgb(0, 0, 0);" name="hapus" data-toggle="tooltip" data-placement="top" title="Delete"><i class="bi bi-trash"></i></button>
                                     </form>
                                 </td>
                             </tr>
@@ -191,3 +158,44 @@
     </div>
 </div>
 @endsection
+
+@push('sweet')
+    <script>
+        $('#deleteShop').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: 'Hapus toko ?',
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'confirm',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#deleteShop-form').submit();
+                }
+            })
+        });
+
+        $('#deleteCar').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: 'Hapus toko ?',
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'confirm',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#deleteCar-form').submit();
+                }
+            })
+        });
+    </script>
+@endpush
+
