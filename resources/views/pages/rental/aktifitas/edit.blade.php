@@ -68,14 +68,54 @@
                                 </div>
                             </div>
                             <div class="col-sm-5">
-                                <label for="berkas_pinjam">Upload Berkas (PDF)</label>
+                                <input hidden>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-sm-10">
+                                <h5 class="m-b-20 p-b-5 b-b-default f-w-600 mt-3">Upload Berkas</h5>
+                            </div>
+                            <div class="col-sm-5">
+                                <label for="sim_peminjam">Upload SIM (JPG/PNG)</label>
+                                <input type="hidden" name="oldsim" value="{{ $history->sim_peminjam }}">
+                                <input type="file" class="form-control @error('sim_peminjam') is-invalid @enderror" id="sim_peminjam" name="sim_peminjam">
+                                @error('sim_peminjam')
+                                <div class="invalid-feedback">
+                                        {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                            <div class="col-sm-5">
+                                <label for="ktp_peminjam">Upload KTP (JPG/PNG)</label>
+                                <input type="hidden" name="oldktp" value="{{ $history->ktp_peminjam }}">
+                                <input type="file" class="form-control @error('ktp_peminjam') is-invalid @enderror" id="ktp_peminjam" name="ktp_peminjam">
+                                @error('ktp_peminjam')
+                                <div class="invalid-feedback">
+                                        {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-3">
+                            <div class="col-sm-5">
+                                <label for="foto_peminjam">Upload Pas Foto (JPG/PNG)</label>
+                                <input type="hidden" name="oldfoto" value="{{ $history->foto_peminjam }}">
+                                <input type="file" class="form-control @error('foto_peminjam') is-invalid @enderror" id="foto_peminjam" name="foto_peminjam">
+                                @error('foto_peminjam')
+                                <div class="invalid-feedback">
+                                        {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                            <div class="col-sm-5">
+                                <label for="berkas_pinjam">Upload Berkas Lainnya (PDF/JPG/PNG)</label>
                                 <input type="hidden" name="oldgambar1" value="{{ $history->berkas_pinjam }}">
                                 <input type="file" class="form-control @error('berkas_pinjam') is-invalid @enderror" id="berkas_pinjam" name="berkas_pinjam">
-                                    @error('berkas_pinjam')
-                                    <div class="invalid-feedback">
-                                            {{ $message }}
-                                    </div>
-                                    @enderror
+                                @error('berkas_pinjam')
+                                <div class="invalid-feedback">
+                                        {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="row justify-content-center">

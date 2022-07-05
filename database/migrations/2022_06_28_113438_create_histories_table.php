@@ -20,6 +20,9 @@ return new class extends Migration
             $table->string('nik_pinjam');
             $table->dateTime('tgl_pinjam');
             $table->dateTime('batas_pinjam');
+            $table->string('sim_peminjam')->nullable();
+            $table->string('ktp_peminjam')->nullable();
+            $table->string('foto_peminjam')->nullable();
             $table->string('berkas_pinjam')->nullable();
             $table->enum('status',['on', 'off', 'late']);
             $table->foreignId('car_id')->nullable();

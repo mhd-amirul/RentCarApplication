@@ -17,6 +17,6 @@
     @include('includes.script')
     @stack('script-map')
     @stack('script-map-user')
+    @stack('sweet')
 </body>
-@stack('sweet')
 </html>

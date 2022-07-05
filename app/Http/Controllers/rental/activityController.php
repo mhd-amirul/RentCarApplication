@@ -6,10 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\car;
 use App\Models\history;
 use App\Models\shop;
-use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use RealRashid\SweetAlert\Facades\Alert;
 
 class activityController extends Controller
 {
@@ -45,18 +43,31 @@ class activityController extends Controller
         $rules = [
             'nama_pinjam' => 'required',
             'tgl_pinjam' => 'required',
-            'nik_pinjam' => 'required|int',
+            'nik_pinjam' => 'required|integer|digits:16',
             'batas_pinjam' => 'required',
             'car_id' => 'required',
             'shop_id' => 'required',
             'status' => 'required',
-            'berkas_pinjam' => 'mimes:pdf||max:1024'
+            'sim_peminjam' => 'mimes:jpeg,png|max:300',
+            'ktp_peminjam' => 'mimes:jpeg,png|max:300',
+            'foto_peminjam' => 'mimes:jpeg,png|max:300',
+            'berkas_pinjam' => 'mimes:pdf,jpeg,png|max:1024'
         ];
-        $data = $request->validate($rules);
 
+        $data = $request->validate($rules);
+        if ($request->file('sim_peminjam')) {
+            $data['sim_peminjam'] = $request->file('sim_peminjam')->store('Berkas-Peminjaman');
+        }
+        if ($request->file('ktp_peminjam')) {
+            $data['ktp_peminjam'] = $request->file('ktp_peminjam')->store('Berkas-Peminjaman');
+        }
+        if ($request->file('foto_peminjam')) {
+            $data['foto_peminjam'] = $request->file('foto_peminjam')->store('Berkas-Peminjaman');
+        }
         if ($request->file('berkas_pinjam')) {
             $data['berkas_pinjam'] = $request->file('berkas_pinjam')->store('Berkas-Peminjaman');
         }
+
         $car = car::where('id', $request['car_id'])->first();
         $car['stok'] = 'onused';
         $car->save();
@@ -116,12 +127,37 @@ class activityController extends Controller
         $rules = [
             'nama_pinjam' => 'required',
             'tgl_pinjam' => 'required',
-            'nik_pinjam' => 'required|integer|digits:16',
             'batas_pinjam' => 'required',
-            'berkas_pinjam' => 'mimes:pdf||max:1024'
+            'sim_peminjam' => 'mimes:jpeg,png|max:300',
+            'ktp_peminjam' => 'mimes:jpeg,png|max:300',
+            'foto_peminjam' => 'mimes:jpeg,png|max:300',
+            'berkas_pinjam' => 'mimes:pdf,jpeg,png|max:1024'
         ];
-        $data = $request->validate($rules);
 
+        $db = history::findorfail($id);
+        if ($request->nik_pinjam != $db->nik_pinjam) {
+            $rules['nik_pinjam'] =  'required|integer|digits:16';
+        }
+
+        $data = $request->validate($rules);
+        if ($request->file('sim_peminjam')) {
+            if ($request->oldsim) {
+                Storage::delete($request->oldsim);
+            }
+            $data['sim_peminjam'] = $request->file('sim_peminjam')->store('Berkas-Peminjaman');
+        }
+        if ($request->file('ktp_peminjam')) {
+            if ($request->oldktp) {
+                Storage::delete($request->oldktp);
+            }
+            $data['ktp_peminjam'] = $request->file('ktp_peminjam')->store('Berkas-Peminjaman');
+        }
+        if ($request->file('foto_peminjam')) {
+            if ($request->oldfoto) {
+                Storage::delete($request->oldfoto);
+            }
+            $data['foto_peminjam'] = $request->file('foto_peminjam')->store('Berkas-Peminjaman');
+        }
         if ($request->file('berkas_pinjam')) {
             if ($request->oldgambar1) {
                 Storage::delete($request->oldgambar1);
@@ -129,7 +165,7 @@ class activityController extends Controller
             $data['berkas_pinjam'] = $request->file('berkas_pinjam')->store('Berkas-Peminjaman');
         }
 
-        $db = history::findorfail($id)->update($data);
+        $db->update($data);
         return redirect()->route('activityShow',$id)->with('success', 'Aktifitas berhasil diubah');
     }
 
@@ -156,6 +192,19 @@ class activityController extends Controller
             $car->stok = 'standby';
             $car->save();
         }
+
+        if ($data->sim_peminjam) {
+            # code...
+            Storage::delete($data->sim_peminjam);
+        }
+        if ($data->ktp_peminjam) {
+            # code...
+            Storage::delete($data->ktp_peminjam);
+        }
+        if ($data->foto_peminjam) {
+            # code...
+            Storage::delete($data->foto_peminjam);
+        }
         if ($data->berkas_pinjam) {
             # code...
             Storage::delete($data->berkas_pinjam);
@@ -180,12 +229,19 @@ class activityController extends Controller
 
     public function activityViewCetak($id)
     {
-        $data = [
-            'data_cetak' => history::where('shop_id', $id)->get(),
-            'shop' => shop::findorfail($id)
-        ];
+        $history = history::where('shop_id', $id)
+            ->where('status', 'off')
+            ->get();
+        $cars = car::where('shop_id', $id)->get();
 
-        $pdf = PDF::loadview('pages.rental.aktifitas.cetak_pdf', $data);
-        return $pdf->download('laporan-history-rental.pdf');
+        // $pdf = PDF::loadview('pages.rental.aktifitas.cetak_pdf', ['histories' => $data] );
+        // return $pdf->stream('laporan.pdf');
+        return view('pages.rental.aktifitas.cetak_pdf')
+            ->with(
+                [
+                    'histories' => $history,
+                    'cars' => $cars
+                ]
+            );
     }
 }

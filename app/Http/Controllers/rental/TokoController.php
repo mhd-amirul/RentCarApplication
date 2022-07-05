@@ -9,9 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\history;
 use Barryvdh\DomPDF\Facade as PDF;
-use DateTime;
 use Illuminate\Support\Facades\Storage;
-use RealRashid\SweetAlert\Facades\Alert;
 
 class TokoController extends Controller
 {

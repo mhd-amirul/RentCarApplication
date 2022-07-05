@@ -1,13 +1,6 @@
 @extends('layouts.main')
 
 @section('container')
-{{-- @if (session()->has('success'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        {{ session('success') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-@endif --}}
-
 <div class="row justify-content-center">
     <div class="col-lg-10">
         <div class="card px-4 py-4 border border-grey-500">
@@ -19,19 +12,6 @@
                     <a href="{{ route('activityHistory',$shop->id) }}" class="btn btn-secondary"><i class="bi bi-clock-history"></i>  History</a>
                     {{-- <a target="blank" href="{{ route('activityViewCetak', $shop->id) }}" class="btn btn-success"><i class="bi bi-printer-fill"></i>  Print</a> --}}
                 </div>
-
-                {{--
-                <div class="col-lg-2">
-                    <div class="card text-white bg-success">
-                        <div class="card-body">
-                            <div class="pt-1">
-                                <a class="text-white fs-6" href="{{ route('allalternatif.index') }}">
-                                    <i class="mr-2 bi bi-blockquote-right"> Alternatif</i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
             </div>
             <div class="row justify-content-start mt-3">
                 <div class="col-md-12">
