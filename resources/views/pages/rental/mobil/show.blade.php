@@ -121,27 +121,10 @@
                                 <a href="{{ route('sharelok', $car->shop->id) }}" style="color: rgb(0, 0, 0);" class=" btn btn-sm btn-success">
                                     <i class="bi bi-house-fill"></i> Lokasi Toko
                                 </a>
-                                <a href="#" class="btn btn-sm btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#deleteCar" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i> Hapus</a>
-                                <form action="{{ route('shop.destroy', $car->id) }}" method="post">
+                                <form action="{{ route('shop.destroy', $car->id) }}" method="post" id="deleteCar-form" class="d-inline">
                                     @method('delete')
                                     @csrf
-                                    <div class="modal fade" id="deleteCar" role="dialog" tabindex="-1" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="modal-body">
-                                                    <div class="text-center" style="width:100%; padding:20px; text-align:center;">
-                                                        <img style="width:150px; height:auto; margin:0 auto; display:block; margin-bottom:25px;" src="{{ url('images/question.png') }}" alt="">
-                                                        <h1 style="font-size: 30px; margin-bottom: 25px; color:#5C5C5C;">Yakin ingin menghapus mobil ini?</h1>
-                                                        {{-- <p style="font-size: 20px; margin-bottom: 27px; color:#5C5C5C;"></p> --}}
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                    <button type="submit" class="btn btn-primary">Confirm</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <button id="deleteCar" class="btn btn-sm btn-danger text-decoration-none" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i> Hapus</button>
                                 </form>
                             </div>
                         </div>
@@ -236,3 +219,25 @@
     </div>
 </div>
 @endsection
+
+@push('sweet')
+    <script>
+        $('#deleteCar').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: 'Menghapus mobil ini ?',
+                icon: 'warning',
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#aaa',
+                confirmButtonText: 'Confirm',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#deleteCar-form').submit();
+                }
+            })
+        });
+    </script>
+@endpush

@@ -7,7 +7,7 @@
             Swal.fire({
                 icon: 'success',
                 title: massage,
-                timer: 2000,
+                timer: 1000,
                 showConfirmButton: false,
             })
         }

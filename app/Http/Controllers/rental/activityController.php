@@ -116,7 +116,7 @@ class activityController extends Controller
         $rules = [
             'nama_pinjam' => 'required',
             'tgl_pinjam' => 'required',
-            'nik_pinjam' => 'required|int',
+            'nik_pinjam' => 'required|integer|digits:16',
             'batas_pinjam' => 'required',
             'berkas_pinjam' => 'mimes:pdf||max:1024'
         ];

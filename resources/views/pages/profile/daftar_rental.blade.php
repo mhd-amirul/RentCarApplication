@@ -44,7 +44,7 @@
                         </div>
                         <div class="col-sm-6 mt-2">
                             <div class="form-floating">
-                                <input name="nik" type="number" class="form-control rounded-bottom @error('nik') is-invalid @enderror" id="nik" placeholder="NIK" value="{{ old('nik') }}" required>
+                                <input name="nik" type="text" class="form-control rounded-bottom @error('nik') is-invalid @enderror" id="nik" placeholder="NIK" value="{{ old('nik') }}" required>
                                 <label for="nik">NIK</label>
                                 @error('nik')
                                     <div class="invalid-feedback">
@@ -124,7 +124,7 @@
                 icon: 'warning',
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'confirm',
+                confirmButtonText: 'Confirm',
                 showCancelButton: true,
             }).then((result) => {
                 if (result.isConfirmed) {

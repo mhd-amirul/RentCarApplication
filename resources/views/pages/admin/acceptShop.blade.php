@@ -8,7 +8,7 @@
             <div class="card bg-danger">
                 <h1></h1>
             </div>
-            <form action="{{ route('dashboard.store') }}" method="post" class="d-inline">
+            <form action="{{ route('dashboard.store') }}" method="post" class="d-inline" id="acceptShop-form">
                 @csrf
                 <div class="row">
                     <div class="col-sm-6 mb-4">
@@ -72,50 +72,58 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="modal fade" id="acceptShop" role="dialog" tabindex="-1" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-body">
-                                        <div class="text-center" style="width:100%; padding:20px; text-align:center;">
-                                            <img style="width:150px; height:auto; margin:0 auto; display:block; margin-bottom:25px;" src="{{ url('images/question.png') }}" alt="">
-                                            <h1 style="font-size: 30px; margin-bottom: 25px; color:#5C5C5C;">Yakin ingin menerima toko ini?</h1>
-                                            {{-- <p style="font-size: 20px; margin-bottom: 27px; color:#5C5C5C;"></p> --}}
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn btn-primary">Confirm</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-sm btn-success text-decoration-none" data-bs-toggle="modal" data-bs-target="#acceptShop" style="color: rgb(0, 0, 0);"><i class="bi bi-check-circle"></i> Terima</a>
-                        <a href="#" class="btn btn-sm btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#declineShop" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i> Tolak</a>
+                        <a href="#" class="btn btn-sm btn-success text-decoration-none" id="acceptShop" style="color: rgb(0, 0, 0);"><i class="bi bi-check-circle"></i> Terima</a>
+                        <a href="#" class="btn btn-sm btn-danger text-decoration-none" id="declineShop" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i> Tolak</a>
                     </div>
                 </div>
             </form>
-            <form action="{{ route('dashboard.destroy', $ms->id) }}" method="post" class="d-inline">
+            <form action="{{ route('dashboard.destroy', $ms->id) }}" method="post" class="d-inline" id="declineShop-form">
                 @method('delete')
                 @csrf
-                <div class="modal fade" id="declineShop" role="dialog" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <div class="text-center" style="width:100%; padding:20px; text-align:center;">
-                                    <img style="width:150px; height:auto; margin:0 auto; display:block; margin-bottom:25px;" src="{{ url('images/question.png') }}" alt="">
-                                    <h1 style="font-size: 30px; margin-bottom: 25px; color:#5C5C5C;">Yakin ingin menolak toko ini?</h1>
-                                    {{-- <p style="font-size: 20px; margin-bottom: 27px; color:#5C5C5C;"></p> --}}
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary">Confirm</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </form>
         </div>
     </div>
 </div>
 @endsection
+
+@push('sweet')
+    <script>
+        $('#acceptShop').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: 'Terima toko ?',
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Confirm',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#acceptShop-form').submit();
+                    // console.log(id)
+                }
+            })
+        });
+
+        $('#declineShop').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: 'Terima toko ?',
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Confirm',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#declineShop-form').submit();
+                    // console.log('id')
+                }
+            })
+        });
+    </script>
+@endpush

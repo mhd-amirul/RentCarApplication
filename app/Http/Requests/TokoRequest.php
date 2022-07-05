@@ -27,7 +27,7 @@ class TokoRequest extends FormRequest
             'nm_pu' => 'required',
             'nm_usaha' => 'required',
             'alamat' => 'required',
-            'nik' => 'required|size:16|unique:make_shops',
+            'nik' => 'required|integer|digits:16|unique:make_shops',
             'img_ktp' => 'required|image|file|max:1024',
             'img_siu' => 'required|image|file|max:1024',
             'pas_foto' => 'required|image|file|max:1024',

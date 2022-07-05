@@ -130,25 +130,24 @@
                         </thead>
                         <tbody>
                             @forelse ($car as $car)
-                            <tr class="text-center">
-                                <th scope="row">{{ $loop->iteration }}</th>
-                                <td>{{ $car->merk->nama }}</td>
-                                <td>{{ $car->tahun_produksi->nama }}</td>
-                                <td>{{ $car->harga_sewa->nama }}</td>
-                                <td>
-                                    <a href="{{ route('shop.show', $car->id) }}" class="btn btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                                    {{-- <a href="#" id="deleteCar" class="btn btn-sm btn-danger" style="color: rgb(0, 0, 0);" name="hapus" data-id="{{ $car->id }}"><i class="bi bi-trash"></i></a> --}}
-                                    <form action="{{ route('shop.destroy', $car->id) }}" method="post" class="d-inline" id="deleteCar-form">
-                                        @method('delete')
-                                        @csrf
-                                        <button id="deleteCar" class="btn btn-sm btn-danger" style="color: rgb(0, 0, 0);" name="hapus" data-toggle="tooltip" data-placement="top" title="Delete"><i class="bi bi-trash"></i></button>
-                                    </form>
-                                </td>
-                            </tr>
+                                <tr class="text-center">
+                                    <th scope="row">{{ $loop->iteration }}</th>
+                                    <td>{{ $car->merk->nama }}</td>
+                                    <td>{{ $car->tahun_produksi->nama }}</td>
+                                    <td>{{ $car->harga_sewa->nama }}</td>
+                                    <td>
+                                        <a href="{{ route('shop.show', $car->id) }}" class="btn btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                                        <form action="{{ route('shop.destroy', $car->id) }}" method="post" class="d-inline" id="deleteCar-form">
+                                            @method('delete')
+                                            @csrf
+                                            <button id="deleteCar" class="btn btn-sm btn-danger" style="color: rgb(0, 0, 0);" type="submit" data-id="{{ $car->id }}"><i class="bi bi-trash"></i></button>
+                                        </form>
+                                    </td>
+                                </tr>
                             @empty
-                            <tr>
-                                <td colspan="7" class="text-center h3">data tidak ditemukan!</td>
-                            </tr>
+                                <tr>
+                                    <td colspan="7" class="text-center h3">data tidak ditemukan!</td>
+                                </tr>
                             @endforelse
                         </tbody>
                     </table>
@@ -166,33 +165,15 @@
             let id = $(this).data('id');
             Swal.fire({
                 title: 'Are you sure ?',
-                text: 'Hapus toko ?',
+                text: 'Menghapus toko ?',
                 icon: 'warning',
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#aaa',
                 confirmButtonText: 'confirm',
                 showCancelButton: true,
             }).then((result) => {
                 if (result.isConfirmed) {
                     $('#deleteShop-form').submit();
-                }
-            })
-        });
-
-        $('#deleteCar').on('click', function(e) {
-            e.preventDefault();
-            let id = $(this).data('id');
-            Swal.fire({
-                title: 'Are you sure ?',
-                text: 'Hapus toko ?',
-                icon: 'warning',
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'confirm',
-                showCancelButton: true,
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    $('#deleteCar-form').submit();
                 }
             })
         });
