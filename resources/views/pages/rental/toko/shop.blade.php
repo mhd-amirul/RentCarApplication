@@ -137,7 +137,7 @@
                                     <td>{{ $car->harga_sewa->nama }}</td>
                                     <td>
                                         <a href="{{ route('shop.show', $car->id) }}" class="btn btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                                        <form action="{{ route('shop.destroy', $car->id) }}" method="post" class="d-inline" id="deleteCar-form">
+                                        <form action="{{ route('shop.destroy', $car->id) }}" method="post" class="d-inline" id="deleteCar-form-{{ $car->id }}">
                                             @method('delete')
                                             @csrf
                                             <button id="deleteCar" class="btn btn-sm btn-danger" style="color: rgb(0, 0, 0);" type="submit" data-id="{{ $car->id }}"><i class="bi bi-trash"></i></button>
@@ -165,7 +165,7 @@
             let id = $(this).data('id');
             Swal.fire({
                 title: 'Are you sure ?',
-                text: 'Menghapus toko ?',
+                text: 'Hapus toko ?',
                 icon: 'warning',
                 confirmButtonColor: '#d33',
                 cancelButtonColor: '#aaa',
@@ -174,6 +174,24 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     $('#deleteShop-form').submit();
+                }
+            })
+        });
+
+        $(document).on('click', '#deleteCar', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: "Hapus mobil ?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#deleteCar-form-'+id).submit();
                 }
             })
         });

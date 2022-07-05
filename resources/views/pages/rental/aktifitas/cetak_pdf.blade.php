@@ -41,17 +41,17 @@
                         <td></td>
                         <td colspan="2">
                             <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
-                                <img src="{{ url('images/notfound.png') }}" alt="#" class="img-fluid">
+                                <img src="{{ isset($history->sim_peminjam) == null ? url('images/notfound.png') : asset('storage/' . $history->sim_peminjam) }}" alt="#" class="img-fluid">
                             </div>
                         </td>
                         <td colspan="2">
                             <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
-                                <img src="{{ url('images/notfound.png') }}" alt="#" class="img-fluid">
+                                <img src="{{ isset($history->ktp_peminjam) == null ? url('images/notfound.png') : asset('storage/' . $history->ktp_peminjam) }}" alt="#" class="img-fluid">
                             </div>
                         </td>
                         <td colspan="2">
                             <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
-                                <img src="{{ url('images/notfound.png') }}" alt="#" class="img-fluid">
+                                <img src="{{ isset($history->foto_peminjam) == null ? url('images/notfound.png') : asset('storage/' . $history->foto_peminjam) }}" alt="#" class="img-fluid">
                             </div>
                         </td>
                     </tr>
@@ -67,35 +67,39 @@
                         <th>TOKO</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td>1</td>
-                        <td>wqeqw</td>
-                        <td>empty</td>
-                        <td>empty</td>
-                        <td>empty</td>
-                        <td>Empty</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td colspan="2">
-                            <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
-                                <img src="{{ url('images/notfound.png') }}" alt="#" class="img-fluid">
-                            </div>
-                        </td>
-                        <td colspan="2">
-                            <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
-                                <img src="{{ url('images/notfound.png') }}" alt="#" class="img-fluid">
-                            </div>
-                        </td>
-                        <td colspan="2">
-                            <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
-                                <img src="{{ url('images/notfound.png') }}" alt="#" class="img-fluid">
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
+                @foreach ($cars as $car)
+                    @if ($car->id == $history->car_id)
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>{{ $car->id }}</td>
+                                <td>{{ $car->merk->nama }}</td>
+                                <td>{{ $car->tahun_produksi->nama }}</td>
+                                <td>{{ $car->harga_sewa->nama }}</td>
+                                <td>{{ $car->no_polisi }}</td>
+                                <td>{{ $car->shop->nm_usaha }}</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2">
+                                    <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
+                                        <img src="{{ isset($car->gambar1) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar1) }}" alt="#" class="img-fluid">
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
+                                        <img src="{{ isset($car->gambar2) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar2) }}" alt="#" class="img-fluid">
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
+                                        <img src="{{ isset($car->gambar3) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar3) }}" alt="#" class="img-fluid">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    @endif
+                @endforeach
             </table>
         </section>
     @endforeach

@@ -98,27 +98,10 @@
                                     <td>{{ $shop->nik }}</td>
                                     <td>
                                         <a href="{{ route('allshops.show',$shop->id) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                                        <a href="#" class="btn-sm btn-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#DeleteMs" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i></a>
-                                        <form action="{{ route('allshops.destroy', $shop->id) }}" method="post" class="d-inline">
+                                        <form action="{{ route('allshops.destroy', $shop->id) }}" method="post" class="d-inline" id="deleteShop-form-{{ $shop->id }}">
                                             @method('delete')
                                             @csrf
-                                            <div class="modal fade" id="DeleteMs" tabindex="-1" aria-labelledby="DeleteMsLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered">
-                                                    <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="DeleteMsLabel">Confirmation</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        Yakin Ingin Menghapus Toko Ini?
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                        <button type="submit" class="btn btn-primary">Confirm</button>
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <a href="#" class="btn-sm btn-danger text-decoration-none" data-id="{{ $shop->id }}" id="deleteShop" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i></a>
                                         </form>
                                     </td>
                                 </tr>
@@ -135,3 +118,25 @@
     </div>
 </div>
 @endsection
+
+@push('sweet')
+    <script>
+        $(document).on('click', '#deleteShop', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: "Hapus toko ini ?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#deleteShop-form-'+id).submit();
+                }
+            })
+        });
+    </script>
+@endpush

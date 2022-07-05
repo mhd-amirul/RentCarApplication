@@ -4,9 +4,7 @@
 
 {{-- MENAMPILKAN HASIL REKOMENDASI --}}
 <h2 class="text-center">HASIL REKOMENDASI</h2>
-<div class="card bg-danger">
-    <h1></h1>
-</div>
+<h2 class="m-b-20 p-b-5 b-b-default mt-3"></h2>
 <div class="container">
     <div class="row justify-content-start">
         @forelse( $cars as $car )

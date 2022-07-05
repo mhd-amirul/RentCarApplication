@@ -102,75 +102,74 @@
     </div>
 </div>
 
-<div class="panel">
+{{-- <div class="panel">
     <div id="Chart-admin">
-
     </div>
-</div>
+</div> --}}
 @endsection
 
 {{-- @section('chart-Script')
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script>
 
-    Highcharts.chart('Chart-admin', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Data Rekam Sistem Rekomendasi Rental'
-    },
-    subtitle: {
-        text: 'Source: CarRental.com'
-    },
-    xAxis: {
-        categories: [
-            'Jumlah Data'
-        ],
-        crosshair: true
-    },
-    yAxis: {
-        min: 0,
+        Highcharts.chart('Chart-admin', {
+        chart: {
+            type: 'column'
+        },
         title: {
-            text: 'Jumlah Data'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [{
-        name: 'User',
-        data: [49.9]
+            text: 'Data Rekam Sistem Rekomendasi Rental'
+        },
+        subtitle: {
+            text: 'Source: CarRental.com'
+        },
+        xAxis: {
+            categories: [
+                'Jumlah Data'
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Jumlah Data'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'User',
+            data: [49.9]
 
-    }, {
-        name: 'Shop',
-        data: [83.6]
+        }, {
+            name: 'Shop',
+            data: [83.6]
 
-    }, {
-        name: 'Car',
-        data: [48.9]
+        }, {
+            name: 'Car',
+            data: [48.9]
 
-    },{
-        name: 'Kriteria',
-        data: [48.9]
+        },{
+            name: 'Kriteria',
+            data: [48.9]
 
-    }, {
-        name: 'Alternatif',
-        data: [42.4]
+        }, {
+            name: 'Alternatif',
+            data: [42.4]
 
-    }]
-});
-</script>
+        }]
+    });
+    </script>
 @endsection --}}
 

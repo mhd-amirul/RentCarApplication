@@ -98,10 +98,10 @@
                                     <td>{{ $kriteria->type }}</td>
                                     <td>
                                         <a href="{{ route('allkriteria.edit', $kriteria->id) }}" class="btn-sm btn-warning" style="color: rgb(0, 0, 0);"><i class="bi bi-pencil-square"></i></i></a>
-                                        <form action="{{ route('allkriteria.destroy', $kriteria->id) }}" method="post" class="d-inline">
+                                        <form action="{{ route('allkriteria.destroy', $kriteria->id) }}" method="post" class="d-inline" id="deleteKrit-form-{{ $kriteria->id }}">
                                             @method('delete')
                                             @csrf
-                                            <a href="#" class="btn-sm btn-danger text-decoration-none" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i></a>
+                                            <a href="#" class="btn-sm btn-danger text-decoration-none" style="color: rgb(0, 0, 0);" id="deleteKrit" data-id="{{ $kriteria->id }}"><i class="bi bi-trash-fill"></i></a>
                                         </form>
                                     </td>
                                 </tr>
@@ -119,3 +119,24 @@
 </div>
 @endsection
 
+@push('sweet')
+    <script>
+        $(document).on('click', '#deleteKrit', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: "Hapus kriteria ini ?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#deleteKrit-form-'+id).submit();
+                }
+            })
+        });
+    </script>
+@endpush
