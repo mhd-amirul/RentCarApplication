@@ -42,9 +42,9 @@ class allAlternatifController extends Controller
         $data = $request->validate($rules);
         alternatif::create($data);
 
-        Alert::success('Success', 'Berhasil menambah alternatif');
         return redirect()
-            ->route('allalternatif.index');
+            ->route('allalternatif.index')
+            ->with('success', 'Alternatif berhasil ditambah');
     }
 
     public function edit($id)
@@ -69,17 +69,15 @@ class allAlternatifController extends Controller
         $data = $request->validate($rules);
 
         $db = alternatif::findOrFail($id);
-
         $db->update($data);
-        Alert::success('Success', 'Berhasil mengubah alternatif');
         return redirect()
-            ->route('allalternatif.index');
+            ->route('allalternatif.index')
+            ->with('success', 'Alternatif berhasil diubah');
     }
 
     public function destroy($id)
     {
         alternatif::findOrFail($id)->delete();
-        Alert::success('Success', 'Berhasil menghapus alternatif');
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Alternatif berhasil dihapus');
     }
 }

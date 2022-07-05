@@ -121,15 +121,10 @@
     <div class="col-lg-7">
         <div class="card py-3 px-3 border border-gray-800">
             <main class="form-registration mt-3">
-                <h1 class="h3 mb-4 fw-normal text-center">TAMBAH MOBIL</h1>
+                <h2 class="m-b-20 f-w-600 text-center">Tambah Mobil</h2>
                 <form action="{{ route('createCarAdmin',$shop->id) }}" method="post" enctype="multipart/form-data">
                     @csrf
-                    <div class="card mt-2 mb-2 bg-secondary text-white text-left">
-                        <div class="card-body p-2">
-                            <h6 class="card-title m-0">Pilih Kriteria Mobil :</h6>
-                        </div>
-                    </div>
-
+                    <h5 class="m-b-20 p-b-5 b-b-default f-w-600">Pilih Kriteria Mobil</h5>
                     <div class="row">
                         @foreach ($kriteria as $item)
                             <div class="col-sm-6">
@@ -137,7 +132,7 @@
                                     <select name="{{ $item->nama."_id" }}" class="form-select" aria-label="Floating label select example">
                                         @foreach ($alternatif as $data)
                                             @if ($data->kriteria_id == $item->id)
-                                                @if (old('merk_id') == $data->id)
+                                                @if (old($item->nama."_id") == $data->id)
                                                     <option value="{{ $data->id }}" selected>{{ $data->nama }}</option>
                                                 @else
                                                     <option value="{{ $data->id }}">{{ $data->nama }}</option>
@@ -151,28 +146,13 @@
                         @endforeach
                     </div>
 
-                    <div class="card mt-2 mb-2 bg-secondary text-white text-left">
-                        <div class="card-body p-2">
-                            <h6 class="card-title m-0">Informasi Mobil :</h6>
-                        </div>
-                    </div>
+                    <h5 class="m-b-20 p-b-5 b-b-default f-w-600 mt-3">Informasi Mobil</h5>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-floating">
-                                <input type="text" name="stok" class="form-control rounded-top @error('stok') is-invalid @enderror" id="stok" placeholder="Stok" value="{{ old('stok') }}" required>
-                                <label for="stok">Stok</label>
-                                @error('stok')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" name="plat" class="form-control rounded-top @error('plat') is-invalid @enderror" id="plat" placeholder="Plat Kendaraan" value="{{ old('plat') }}">
-                                <label for="plat">Plat Kendaraan</label>
-                                @error('plat')
+                                <input type="text" name="no_polisi" class="form-control rounded-top @error('no_polisi') is-invalid @enderror" id="no_polisi" placeholder="no_polisi Kendaraan" value="{{ old('no_polisi') }}">
+                                <label for="no_polisi">Plat Kendaraan</label>
+                                @error('no_polisi')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>
@@ -189,11 +169,7 @@
                         @enderror
                     </div>
 
-                    <div class="card mt-2 mb-2 bg-secondary text-white text-left">
-                        <div class="card-deskripsi p-2">
-                            <h6 class="card-title m-0">Upload Gambar Mobil :</h6>
-                        </div>
-                    </div>
+                    <h5 class="m-b-20 p-b-5 b-b-default f-w-600 mt-4">Upload Gambar Mobil</h5>
                     <div class="row">
                         <div class="col-sm-6">
                             <div>
@@ -253,8 +229,8 @@
                     </div>
 
                     <div class="row justify-content-center">
-                        <div class="col-sm-10 mt-4">
-                            <button class="w-100 btn btn-danger mt-3 text-white" type="submit">TAMBAH MOBIL</button>
+                        <div class="col-sm-10 mt-5">
+                            <button class="w-100 btn btn-sm btn-primary text-white" type="submit">SUBMIT</button>
                         </div>
                     </div>
                 </form>
@@ -263,3 +239,14 @@
     </div>
 </div>
 @endsection
+
+@push('trix')
+    {{-- trix  --}}
+    <link rel="stylesheet" href="/css/trix.css">
+    <script src="/js/trix.js" type="text/javascript"></script>
+    <style>
+        trix-toolbar [data-trix-button-group="file-tools"]{
+            display: none;
+        }
+    </style>
+@endpush

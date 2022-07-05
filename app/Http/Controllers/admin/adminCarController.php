@@ -13,7 +13,6 @@ use App\Models\shop;
 use App\Models\ulasan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use RealRashid\SweetAlert\Facades\Alert;
 
 class adminCarController extends Controller
 {
@@ -54,9 +53,19 @@ class adminCarController extends Controller
             );
     }
 
-    public function createCarAdmin(CreateMobilRequest $request, $id)
+    public function createCarAdmin(Request $request, $id)
     {
-        $data = $request->all();
+        $rules = [
+            'stok' => 'required',
+            'no_polisi' => 'required',
+            // 'deskripsi' => 'required',
+            'gambar1' => 'image|file|max:1024',
+            'gambar2' => 'image|file|max:1024',
+            'gambar3' => 'image|file|max:1024',
+            'gambar4' => 'image|file|max:1024',
+            'gambar5' => 'image|file|max:1024',
+        ];
+
         if ($request->file('gambar1')) {
             $data['gambar1'] = $request->file('gambar1')->store('gambar1');
         }
@@ -72,6 +81,10 @@ class adminCarController extends Controller
         if ($request->file('gambar5')) {
             $data['gambar5'] = $request->file('gambar5')->store('gambar5');
         }
+
+        $request['stok'] = 'standby';
+        $request->validate($rules);
+        $data = $request->all();
 
         $kriteria = kriteria::all();
         $data['kata_kunci'] = '';
@@ -104,9 +117,9 @@ class adminCarController extends Controller
             }
         }
 
-        Alert::success('success', 'Berhasil Menambah Mobil Baru');
         return redirect()
-            ->route('allshops.show',$id);
+            ->route('allshops.show',$id)
+            ->with('success', 'Mobil berhasil ditambah');
     }
 
     public function editCarAdmin($id)
@@ -123,12 +136,21 @@ class adminCarController extends Controller
             );
     }
 
-    public function updateCarAdmin(MobilUpdateRequest $request, $id)
+    public function updateCarAdmin(Request $request, $id)
     {
-        # code...
+        $rules = [
+            'deskripsi' => 'required',
+            'gambar1' => 'image|file|max:1024',
+            'gambar2' => 'image|file|max:1024',
+            'gambar3' => 'image|file|max:1024',
+            'gambar4' => 'image|file|max:1024',
+            'gambar5' => 'image|file|max:1024'
+        ];
+
         $database = car::findOrFail($id);
+
+        $request->validate($rules);
         $data = $request->all();
-        // return response()->json($data);
 
         if ($request->file('gambar1')) {
             if ($request->oldgambar1) {
@@ -190,8 +212,8 @@ class adminCarController extends Controller
         }
         $database->update($data);
 
-        Alert::success('success', 'Data Mobil Berhasil di Ubah');
         return redirect()
-            ->route('showCarAdmin', $id);
+            ->route('showCarAdmin', $id)
+            ->with('success', 'Informasi mobil berhasil diubah');
     }
 }

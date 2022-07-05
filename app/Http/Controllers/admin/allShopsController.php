@@ -8,7 +8,6 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
-use RealRashid\SweetAlert\Facades\Alert;
 
 class allShopsController extends Controller
 {
@@ -42,7 +41,7 @@ class allShopsController extends Controller
                 'nm_pu' => 'required',
                 'nm_usaha' => 'required',
                 'alamat' => 'required',
-                'nik' => 'required|size:16|unique:make_shops',
+                'nik' => 'required|integer|digits:16|unique:make_shops',
                 'img_ktp' => 'image|file|max:1024',
                 'img_siu' => 'image|file|max:1024',
                 'pas_foto' => 'image|file|max:1024',
@@ -68,8 +67,7 @@ class allShopsController extends Controller
         $user->save();
 
         shop::create($data);
-        Alert::success('success', 'berhasil membuat toko');
-        return redirect()->route('allshops.index');
+        return redirect()->route('allshops.index')->with('success', 'Toko berhasil dibuat');
     }
 
 
@@ -114,7 +112,7 @@ class allShopsController extends Controller
         ];
 
         if ($request->nik != $db->nik) {
-            $rules['nik'] = 'required|size:16|unique:shops';
+            $rules['nik'] = 'required|integer|digits:16|unique:shops';
         }
 
         $data = $request->validate($rules);
@@ -145,8 +143,7 @@ class allShopsController extends Controller
         }
 
         $db->update($data);
-        Alert::success('Success', 'data berhasil diubah');
-        return redirect()->route('allshops.show', $id);
+        return redirect()->route('allshops.show', $id)->with('success', 'Informasi toko berhasil diubah');
     }
 
     public function destroy($id)
@@ -203,9 +200,9 @@ class allShopsController extends Controller
         $user->save();
 
         $shop->delete();
-        Alert::success('success', 'Toko Berhasil di Hapus');
         return redirect()
-            ->route('allshops.index');
+            ->route('allshops.index')
+            ->with('success', 'Toko berhasil dihapus');
     }
 
     public function destroyCar($id)
@@ -239,6 +236,6 @@ class allShopsController extends Controller
         $data->delete();
         return redirect()
             ->route('allshops.show', $id)
-            ->with('success', 'Data Berhasil di Hapus');
+            ->with('success', 'Mobil berhasil dihapus');
     }
 }

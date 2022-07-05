@@ -122,16 +122,11 @@
     <div class="col-lg-7">
         <div class="card py-3 px-3 border border-gray-800">
             <main class="form-registration mt-3">
-                <h1 class="h3 mb-4 fw-normal text-center">EDIT MOBIL</h1>
-                <form action="{{ route('updateCarAdmin', $car->id) }}" method="post" enctype="multipart/form-data">
+                <h2 class="m-b-20 f-w-600 text-center">Edit Mobil</h2>
+                <form action="{{ route('updateCarAdmin', $car->id) }}" method="post" enctype="multipart/form-data" id="editCar-form">
                     @method('put')
                     @csrf
-                    <div class="card mt-2 mb-2 bg-secondary text-white text-left">
-                        <div class="card-body p-2">
-                            <h6 class="card-title m-0">Pilih Kriteria Mobil :</h6>
-                        </div>
-                    </div>
-
+                    <h5 class="m-b-20 p-b-5 b-b-default f-w-600">Pilih Kriteria Mobil</h5>
                     <div class="row px-2">
                         @foreach ($kriteria as $item)
                         <div class="col-sm-6">
@@ -139,7 +134,7 @@
                                 <select name="{{ $item->nama."_id" }}" class="form-select" aria-label="Floating label select example">
                                     @foreach ($alternatif as $data)
                                         @if ($data->kriteria_id == $item->id)
-                                            @if (old('merk_id', $car[str_replace(' ','_',$item->nama.'_id')]) == $data->id)
+                                            @if (old($item->nama."_id", $car[str_replace(' ','_',$item->nama.'_id')]) == $data->id)
                                                 <option value="{{ $data->id }}" selected>{{ $data->nama }}</option>
                                             @else
                                                 <option value="{{ $data->id }}">{{ $data->nama }}</option>
@@ -150,31 +145,16 @@
                                 <label for="{{ $item->nama."_id" }}">{{ $item->nama }}</label>
                             </div>
                         </div>
-                    @endforeach
+                        @endforeach
                     </div>
 
-                    <div class="card mt-2 mb-2 bg-secondary text-white text-left">
-                        <div class="card-body p-2">
-                            <h6 class="card-title m-0">Informasi Mobil :</h6>
-                        </div>
-                    </div>
+                    <h5 class="m-b-20 p-b-5 b-b-default f-w-600 mt-3">Informasi Mobil</h5>
                     <div class="row px-2">
                         <div class="col-sm-6">
                             <div class="form-floating">
-                                <input type="text" name="stok" class="form-control rounded-top @error('stok') is-invalid @enderror" id="stok" placeholder="Stok" value="{{ old('stok', $car->stok) }}" required>
-                                <label for="stok">Stok</label>
-                                @error('stok')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" name="plat" class="form-control rounded-top @error('plat') is-invalid @enderror" id="plat" placeholder="Plat Kendaraan" value="">
-                                <label for="plat">Plat Kendaraan</label>
-                                @error('plat')
+                                <input type="text" name="no_polisi" class="form-control rounded-top @error('no_polisi') is-invalid @enderror" id="no_polisi" placeholder="no_polisi Kendaraan" value="{{ old('no_polisi', $car->no_polisi) }}">
+                                <label for="no_polisi">Plat Kendaraan</label>
+                                @error('no_polisi')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>
@@ -191,11 +171,7 @@
                         @enderror
                     </div>
 
-                    <div class="card mt-2 mb-2 bg-secondary text-white text-left">
-                        <div class="card-body p-2">
-                            <h6 class="card-title m-0">Upload Gambar Mobil :</h6>
-                        </div>
-                    </div>
+                    <h5 class="m-b-20 p-b-5 b-b-default f-w-600 mt-4">Upload Gambar Mobil</h5>
                     <div class="row px-2">
                         <div class="col-sm-6 mt-2">
                             <label for="gambar1">Gambar Profil Mobil</label>
@@ -244,24 +220,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-sm-10 mt-4">
-                                <div class="modal fade" id="DeleteMs" tabindex="-1" aria-labelledby="DeleteMsLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="DeleteMsLabel">Confirmation</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            Yakin Ingin Mengubah data mobil Ini?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                            <button type="submit" class="btn btn-primary">Confirm</button>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="#" class="w-100 mt-3 btn btn-primary text-decoration-none" data-bs-toggle="modal" data-bs-target="#DeleteMs">EDIT MOBIL</a>
+                                <button class="w-100 btn btn-sm btn-primary text-decoration-none mt-3" id="editCar">SUBMIT</button>
                             </div>
                         </div>
                     </div>
@@ -271,3 +230,35 @@
     </div>
 </div>
 @endsection
+
+@push('trix')
+    {{-- trix  --}}
+    <link rel="stylesheet" href="/css/trix.css">
+    <script src="/js/trix.js" type="text/javascript"></script>
+    <style>
+        trix-toolbar [data-trix-button-group="file-tools"]{
+            display: none;
+        }
+    </style>
+@endpush
+@push('sweet')
+    <script>
+        $('#editCar').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: 'Edit mobil ini ?',
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Confirm',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#editCar-form').submit();
+                }
+            })
+        });
+    </script>
+@endpush

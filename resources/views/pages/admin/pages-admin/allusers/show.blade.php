@@ -45,14 +45,17 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
-                        <a href="{{ route('allusers.edit', $users->id) }}" class="btn btn-warning">
+                        <a href="{{ route('allusers.index') }}" style="color: rgb(0, 0, 0);" class="btn btn-sm btn-primary">
+                            <i class="bi bi-arrow-left-circle"></i> Back
+                        </a>
+                        <a href="{{ route('allusers.edit', $users->id) }}" class="btn btn-sm btn-warning">
                             <i class="bi bi-pencil-square"></i>
                         Edit
                         </a>
-                        <form action="{{ route('allusers.destroy', $users->id) }}" method="post" class="d-inline">
+                        <form action="{{ route('allusers.destroy', $users->id) }}" method="post" class="d-inline" id="deleteUser-form">
                             @method('delete')
                             @csrf
-                            <button class="btn btn-danger border-0" style="color: rgb(0, 0, 0);" onclick="return confirm('Yakin Ingin Menghapus?')">
+                            <button class="btn btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" id="deleteUser">
                                 <i class="bi bi-trash-fill"></i> Hapus
                             </button>
                         </form>
@@ -63,3 +66,25 @@
     </div>
 </div>
 @endsection
+
+@push('sweet')
+    <script>
+        $('#deleteUser').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: 'Hapus user ini ?',
+                icon: 'warning',
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#aaa',
+                confirmButtonText: 'Confirm',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#deleteUser-form').submit();
+                }
+            })
+        });
+    </script>
+@endpush

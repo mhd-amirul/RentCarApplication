@@ -37,18 +37,18 @@ class allKriteriaController extends Controller
         $data = $request->all();
 
         $db->update($data);
-        Alert::success('success', 'Data Berhasi di Ubah');
         return redirect()
-            ->route('allkriteria.index');
+            ->route('allkriteria.index')
+            ->with('success', 'Kriteria Berhasil diubah');
     }
 
     public function destroy($id)
     {
         kriteria::findOrFail($id)->delete();
 
-        Alert::success('success', 'Data Berhasi di Hapus');
         return redirect()
-            ->route('allkriteria.index');
+            ->route('allkriteria.index')
+            ->with('success', 'Kriteria berhasil dihapus');
     }
 
 

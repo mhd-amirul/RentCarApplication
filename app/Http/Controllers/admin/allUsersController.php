@@ -42,9 +42,9 @@ class allUsersController extends Controller
         $data['password'] = Hash::make($data['password']);
         User::create($data);
 
-        Alert::success('success', 'User Berhasil di Tambah');
         return redirect()
-            ->route('allusers.index');
+            ->route('allusers.index')
+            ->with('success', 'User berhasil ditambah');
     }
 
     public function show($id)
@@ -109,9 +109,9 @@ class allUsersController extends Controller
 
 
         $db->update($data);
-        Alert::success('success', 'Data User Berhasil di Ubah');
         return redirect()
-            ->route('allusers.show',$id);
+            ->route('allusers.show',$id)
+            ->with('success', 'Data user berhasil diubah');
     }
 
     public function destroy($id)
@@ -173,8 +173,8 @@ class allUsersController extends Controller
         }
 
         $user->delete();
-        Alert::success('success', 'User Berhasil di Hapus');
         return redirect()
-            ->route('allusers.index');
+            ->route('allusers.index')
+            ->with('success', 'User berhasil dihapus');
     }
 }

@@ -9,7 +9,7 @@
                 <div class="col-sm-7">
                     <main class="form-registration mb-5">
                         <h1 class="h3 mb-3 fw-normal text-center">EDIT USER</h1>
-                        <form action="{{ route('allusers.update', $data->id) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('allusers.update', $data->id) }}" method="post" enctype="multipart/form-data" id="editUser-form">
                             @method('put')
                             @csrf
                             <div class="form-floating">
@@ -91,24 +91,7 @@
                                 @enderror
                             </div>
 
-                            <div class="modal fade" id="DeleteMs" tabindex="-1" aria-labelledby="DeleteMsLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="DeleteMsLabel">Confirm</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Yakin Ingin Mengubah data user Ini?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn btn-primary">Confirm</button>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class=" w-100 mt-4 btn btn-primary text-decoration-none" data-bs-toggle="modal" data-bs-target="#DeleteMs">SUBMIT</a>
+                            <button class=" w-100 mt-4 btn btn-primary text-decoration-none" id="editUser">SUBMIT</button>
                         </form>
                     </main>
                 </div>
@@ -116,5 +99,26 @@
         </div>
     </div>
 </div>
-
 @endsection
+
+@push('sweet')
+    <script>
+        $('#editUser').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: 'Edit user ini ?',
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Confirm',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#editUser-form').submit();
+                }
+            })
+        });
+    </script>
+@endpush
