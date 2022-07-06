@@ -36,6 +36,7 @@ Route::get('/map/{id}', [mapController::class, 'shareLocation'])->name('sharelok
 // Hasil Perhitungan Rekomendasi FrontEnd dan BackEnd
 Route::get('hitung', [HomeController::class, 'hitung'])->name('hitung');
 // Route::get('hitung', [HomeController::class, 'perhitungan'])->name('hitung');
+// Route::get('proses_hitung', [HomeController::class, 'proses_hitung'])->name('hitung');
 
 Route::group(['middleware' => 'guest', 'prefix' => 'guest'], function ()
     {

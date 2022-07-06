@@ -77,96 +77,155 @@ RENTAL CONTROLLER STORE===================================================
 }
 
 HOME CONTROLLER HITUNG ====================================================
-public function hitung(Request $request)
-{
-    $allKriteria = kriteria::all();
-    $kriteria = [];
-    foreach ($allKriteria as $row) {
-        $kriteria[
-            $row->id
-            ] = array(
-                $row->nama,
-                $row->type,
-                $row->bobot
+public function perhitungan(Request $request)
+    {
+        $allKriteria = kriteria::all();
+        $kriteria = [];
+        foreach ($allKriteria as $row) {
+            $kriteria[
+                $row->id
+                ] = array(
+                    $row->nama,
+                    $row->type,
+                    $row->bobot
+                );
+        }
+
+        echo "<br>=========================Data Kriteria====================================<br>";
+        foreach ($kriteria as $id_kriteria => $value) {
+            echo $kriteria[$id_kriteria][0]." [".$kriteria[$id_kriteria][1]."] = ".$kriteria[$id_kriteria][2]."<br>";
+        }
+
+        $filterCars = car::query();
+        foreach ($allKriteria as $k) {
+            # code...
+            $name = str_replace(' ','_',$k->nama.'_id');
+            if ($request->filled($name)) {
+                $filterCars->where($name, $request[$name]);
+            }
+        }
+        $allCars = $filterCars->get();
+
+        $alternatif = [];
+        foreach ($allCars as $row) {
+        $alternatif[$row->id]
+            = array(
+                $row->merk_id,
+                $row->Tahun_Produksi_id,
+                $row->Kondisi_Fisik_id,
+                $row->Kondisi_Mesin_id,
+                $row->Muatan_Penumpang_id,
+                $row->Kapasitas_Mesin_id,
+                $row->Jenis_BBM_id,
+                $row->Harga_Sewa_id,
             );
         }
 
-    $allCars = car::where('merk_id', $request->kritmerk)->where('stok','>','0')->get();
-    $alternatif = [];
-    foreach ($allCars as $row) {
-    $alternatif[$row->id]
-        = array(
-            $row->merk_id,
-            $row->tp_id,
-            $row->kf_id,
-            $row->km_id,
-            $row->mp_id,
-            $row->km2_id,
-            $row->jb_id,
-            $row->hs_id,
-        );
-    }
-
-    // Mengambil data nilai
-    $db = DB::select('SELECT * FROM nilais ORDER BY car_id, kriteria_id');
-    $sample = [];
-    foreach ($db as $row) {
-        if (!isset($sample[$row->car_id])) {
-            $sample[$row->car_id] = [];
+        echo "<br>=========================Data Alternatif====================================<br>";
+        foreach ($alternatif as $id_alt => $value) {
+            for ($i=0; $i <= 7 ; $i++) {
+                echo $alternatif[$id_alt][$i]." | ";
+            }
+            echo "<br>";
         }
-        $sample[$row->car_id][$row->kriteria_id] = $row->nilai;
-    }
 
-    $normal = $sample;
-    foreach($kriteria as $id_kriteria => $k){
-        $pembagi = 0;
-        foreach($alternatif as $id_cars => $a){
-            $pembagi += pow($sample[$id_cars][$id_kriteria], 2);
-        }
-        foreach($alternatif as $id_cars => $a){
-            $normal[$id_cars][$id_kriteria] /= sqrt($pembagi);
-        }
-    }
-
-    //MENGHITUNG NILAI OPTIMASI
-    $optimasi = [];
-    $batas = 0;
-    foreach($alternatif as $id_cars => $a){
-        $optimasi[$id_cars] = 0;
-        foreach($kriteria as $id_kriteria => $k){
-            $data[$id_cars] = $normal[$id_cars][$id_kriteria] * $k[2];
-            if ($k[1] == 'benefit') {
-                $optimasi[$id_cars] += $data[$id_cars];
-            } else {
-                $optimasi[$id_cars] -= $data[$id_cars];
+        // Mengambil data nilai
+        $db = DB::select('SELECT * FROM nilais ORDER BY car_id, kriteria_id');
+        $sample = [];
+        foreach ($db as $row) {
+            if (!isset($sample[$row->car_id])) {
+                $sample[$row->car_id] = [];
+            }
+            foreach ($allCars as $car) {
+                # code...
+                if ($car->id == $row->car_id) {
+                    $sample[$row->car_id][$row->kriteria_id] = $row->nilai;
+                }
             }
         }
-        $batas++;
-    }
 
-    // $index = key($result);
-    arsort($optimasi);
+        echo "<br>=========================Nilai Alternatif====================================<br>";
+        foreach ($sample as $id_car => $value) {
+                foreach ($kriteria as $id_kriteria => $value) {
+                    if (isset($sample[$id_car][$id_kriteria])) {
+                        # code...
+                        echo $sample[$id_car][$id_kriteria]." | ";
+                    }
+                }
+                echo "<br>";
+        }
 
-    foreach ($optimasi as $id_cars => $value) {
-        $result[] = [
-            'nilai_akhir' => $optimasi[$id_cars],
-            'car_id' => $id_cars,
-        ];
-    }
-    // ambil data mobil dari db
-    $cars = [];
-    for ($i=0; $i <= $batas-1; $i++) {
-        $cars[] = car::where('id', $result[$i]['car_id'])->first();
-    }
-    $cars = array_slice($cars, 0, 5);
+        $normal = $sample;
+        foreach($kriteria as $id_kriteria => $k){
+            $pembagi = 0;
+            foreach($alternatif as $id_cars => $a){
+                $pembagi += pow($sample[$id_cars][$id_kriteria], 2);
+            }
+            foreach($alternatif as $id_alternatif => $a){
+                $normal[$id_alternatif][$id_kriteria] /= sqrt($pembagi);
+            }
+        }
 
-    return view('pages.hasil')
-        ->with(
-            [
-                'title' => 'Hasil Rekomendasi',
-                'cars' => $cars
-            ]
-        );
+        // MENAMPILKAN NORMALISASI MATRIX
+        echo "<br>=========================Hasil Normalisasi====================================<br>";
+        foreach ($normal as $id_normal => $value) {
+                foreach ($kriteria as $id_kriteria => $value) {
+
+                    if (isset($normal[$id_normal][$id_kriteria])) {
+                        # code...
+                        echo $normal[$id_normal][$id_kriteria]." | ";
+                    }
+                }
+                echo "<br>";
+        }
+
+        //MENGHITUNG NILAI OPTIMASI
+        $optimasi = [];
+        $batas = 0;
+        foreach($alternatif as $id_cars => $a){
+            $optimasi[$id_cars] = 0;
+            foreach($kriteria as $id_kriteria => $k){
+                $data[$id_cars] = $normal[$id_cars][$id_kriteria] * $k[2];
+                if ($k[1] == 'benefit') {
+                    $optimasi[$id_cars] += $data[$id_cars];
+                } else {
+                    $optimasi[$id_cars] -= $data[$id_cars];
+                }
+            }
+        }
+
+        //menampilkan NILAI OPTIMASI
+        echo "<br>=========================Hasil Optimasi====================================<br>";
+        foreach ($optimasi as $id_optimasi => $value) {
+            echo "[".$id_optimasi."]"." = ".$optimasi[$id_optimasi];
+            echo "<br>";
+        }
+
+        // $index = key($result);
+        arsort($optimasi);
+        $cars = [];
+        foreach ($optimasi as $id_cars => $value) {
+            $result[] = [
+                'nilai_akhir' => $optimasi[$id_cars],
+                'car_id' => $id_cars,
+            ];
+            $cars[] = car::where('id', $id_cars)->first();
+        }
+
+        echo "<br>=========================PERANGKINGAN====================================<br>";
+        foreach ($optimasi as $id_optimasi => $value) {
+            echo "[".$id_optimasi."]"." = ".$optimasi[$id_optimasi];
+            echo "<br>";
+        }
+        $cars = array_slice($cars, 0, 10);
+
+        echo "<br>=========================HASIL REKOMENDASI====================================<br>";
+        foreach ($cars as $car) {
+            echo "===============================================================================<br>
+                    [".$car."]
+                <br>===============================================================================";
+            echo "<br>";
+        }
 }
 
 RENTAL CONTROLLER UPDATE===================================================
