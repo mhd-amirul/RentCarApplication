@@ -3,6 +3,9 @@
         <title>Laporan Rental Mobil</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <style>
+            html {
+                font-size: 8pt !important;
+            }
             body {
                 width: 230mm;
                 height: 100%;
@@ -99,11 +102,11 @@
                             <thead>
                                 <tr>
                                     <th></th>
-                                    <th>ID</th>
                                     <th>MERK</th>
                                     <th>TAHUN PRODUKSI</th>
                                     <th>HARGA SEWA</th>
                                     <th>NO POLISI</th>
+                                    <th>ID</th>
                                     <th>TOKO</th>
                                 </tr>
                             </thead>
@@ -112,11 +115,11 @@
                                     <tbody>
                                         <tr>
                                             <td></td>
-                                            <td>{{ $car->id }}</td>
                                             <td>{{ $car->merk->nama }}</td>
                                             <td>{{ $car->tahun_produksi->nama }}</td>
                                             <td>{{ $car->harga_sewa->nama }}</td>
                                             <td>{{ $car->no_polisi }}</td>
+                                            <td>{{ $car->id }}</td>
                                             <td>{{ $car->shop->nm_usaha }}</td>
                                         </tr>
                                         <tr>
