@@ -64,7 +64,7 @@
                 <div class="col-sm-4 mb-4">
                     <div class="form-floating">
                         <input type="text" class="form-control rounded-top" disabled value="{{ $sisa_waktu }}">
-                        <label>Sisa Waktu</label>
+                        <label>Waktu Peminjaman</label>
                     </div>
                 </div>
                 <div class="col-sm-4 mb-4">

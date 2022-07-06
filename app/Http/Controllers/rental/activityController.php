@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\car;
 use App\Models\history;
 use App\Models\shop;
+use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -79,17 +80,30 @@ class activityController extends Controller
     public function activityShow($id)
     {
         # code...
-        // $data = history::findorfail($id);
+        date_default_timezone_set('Asia/Jakarta');
+        $data = history::findorfail($id);
         // $awal = new DateTime($data->tgl_pinjam);
         // $akhir = new DateTime($data->batas_pinjam);
-        // $diff = $awal->diff($akhir);
-        // $tahun = $diff->y;
-        // $bulan = $diff->m;
-        // $hari = $diff->d;
-        // $jam = $diff->h;
-        // $menit = $diff->i;
+        $akhir = $data->batas_pinjam;
+        $now = new DateTime();
+        $now = $now->format('Y-m-d H:i:s');
 
-        // if ($tahun == 0 && $bulan  == 0 && $hari  == 0 && $jam  == 0 && $menit  == 0) {
+
+        // $waktu_pinjam = date_diff($awal,$akhir);
+        $sisa_waktu = $akhir - $now;
+        $sentence = round($sisa_waktu / (60 * 60 * 24));
+        // $sisa_waktu = strtotime($now) - strtotime($time2);
+        // $tahun = $interval->y.' Tahun';
+        // $bulan = $interval->m.' Bulan';
+        // $hari = $interval->d.' Hari';
+        // $jam = $interval->h.' Jam';
+        // $menit = $interval->i.' Menit';
+        // $detik = $interval->s.' Detik';
+
+        // $sentence = $waktu_pinjam->d . ' days ' . $waktu_pinjam->h . ' hours ' . $waktu_pinjam->i . ' minutes';
+        // return response()->json([$today,$awal, $sentence]);
+
+        // if ($sisa_waktu->m == 0 && $sisa_waktu->d  == 0 && $sisa_waktu->h  == 0 && $sisa_waktu->i  == 0) {
         //     # code...
         //     if ($data['status' == 'on']) {
         //         # code...
@@ -97,13 +111,13 @@ class activityController extends Controller
         //         $data->save();
         //     }
         // }
-
+            return response()->json($sentence);
         return view('pages.rental.aktifitas.show')
             ->with(
                 [
                     'title' => 'Detail Aktifitas',
-                    'history' => history::findorfail($id),
-                    'sisa_waktu' => '0'
+                    'history' => $data,
+                    'sisa_waktu' => $sentence
                     // 'sisa_waktu' => $bulan.' bulan, '.$hari.' hari, '.$jam.' jam, '.$menit.' menit'
                 ]
             );
