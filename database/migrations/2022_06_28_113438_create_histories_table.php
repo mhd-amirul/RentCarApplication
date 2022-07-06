@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('ktp_peminjam')->nullable();
             $table->string('foto_peminjam')->nullable();
             $table->string('berkas_pinjam')->nullable();
-            $table->enum('status',['on', 'off', 'late']);
+            $table->enum('status',['on', 'off']);
             $table->foreignId('car_id')->nullable();
             $table->timestamps();
         });

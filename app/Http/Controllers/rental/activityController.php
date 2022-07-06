@@ -79,46 +79,31 @@ class activityController extends Controller
 
     public function activityShow($id)
     {
-        # code...
         date_default_timezone_set('Asia/Jakarta');
         $data = history::findorfail($id);
-        // $awal = new DateTime($data->tgl_pinjam);
-        // $akhir = new DateTime($data->batas_pinjam);
-        $akhir = $data->batas_pinjam;
+        $awal = new DateTime($data->tgl_pinjam);
+        $akhir = new DateTime($data->batas_pinjam);
         $now = new DateTime();
-        $now = $now->format('Y-m-d H:i:s');
+        $interval = $akhir->diff($now);
 
+        if($now < $akhir && $data->status == 'on'){
+            $sentence = $interval->d . ' days ' . $interval->h . ' hours ' . $interval->i . ' minutes';
+            $color = '';
+        } elseif ($now > $akhir && $data->status == 'on') {
+            $sentence = '-'.$interval->d . ' days ' . '-'.$interval->h . ' hours ' . '-'.$interval->i . ' minutes';
+            $color = 'bg-danger text-white';
+        } else {
+            $sentence = '0 days ' . '0 hours ' . '0 minutes';
+            $color = '';
+        }
 
-        // $waktu_pinjam = date_diff($awal,$akhir);
-        $sisa_waktu = $akhir - $now;
-        $sentence = round($sisa_waktu / (60 * 60 * 24));
-        // $sisa_waktu = strtotime($now) - strtotime($time2);
-        // $tahun = $interval->y.' Tahun';
-        // $bulan = $interval->m.' Bulan';
-        // $hari = $interval->d.' Hari';
-        // $jam = $interval->h.' Jam';
-        // $menit = $interval->i.' Menit';
-        // $detik = $interval->s.' Detik';
-
-        // $sentence = $waktu_pinjam->d . ' days ' . $waktu_pinjam->h . ' hours ' . $waktu_pinjam->i . ' minutes';
-        // return response()->json([$today,$awal, $sentence]);
-
-        // if ($sisa_waktu->m == 0 && $sisa_waktu->d  == 0 && $sisa_waktu->h  == 0 && $sisa_waktu->i  == 0) {
-        //     # code...
-        //     if ($data['status' == 'on']) {
-        //         # code...
-        //         $data['status'] = 'late';
-        //         $data->save();
-        //     }
-        // }
-            return response()->json($sentence);
         return view('pages.rental.aktifitas.show')
             ->with(
                 [
                     'title' => 'Detail Aktifitas',
                     'history' => $data,
-                    'sisa_waktu' => $sentence
-                    // 'sisa_waktu' => $bulan.' bulan, '.$hari.' hari, '.$jam.' jam, '.$menit.' menit'
+                    'sisa_waktu' => $sentence,
+                    'color' => $color
                 ]
             );
     }

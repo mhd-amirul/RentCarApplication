@@ -54,7 +54,7 @@
         <div class="main-page">
             <div class="sub-page">
                 <h3 align='center'>LAPORAN PEMINJAMAN MOBIL RENTAL</h3>
-                <div class="row mt-5 justify-content-center">
+                <div class="row mt-5 justify-content-center my-5">
                     <table class="table table-bordered">
                             <thead>
                                 <tr>
