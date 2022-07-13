@@ -8,7 +8,6 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\history;
-use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Facades\Storage;
 
 class TokoController extends Controller
@@ -16,13 +15,16 @@ class TokoController extends Controller
     public function index()
     {
         $shop = shop::where('user_id', auth()->user()->id)->first();
-
         return view('pages.rental.toko.shop')
                 ->with(
                     [
                         'title' => 'Toko',
-                        'car' => car::where('user_id', auth()->user()->id)->orderBy('merk_id')->filter(request(['search']))->get(),
                         'shop' => $shop,
+                        'cars' => car::where('shop_id', $shop->id)
+                                    ->orderBy('id')
+                                    ->filter(request(['search']))
+                                    ->paginate(8)
+                                    ->withQueryString(),
                     ]
                 );
     }

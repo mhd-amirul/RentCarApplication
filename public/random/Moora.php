@@ -407,20 +407,914 @@ HOME CONTROLLER =======================================================
 
 OTHER    =================================================================
 MODAL DELETE    =================================================================
-{{-- <div class="modal fade" id="hapusMobil" role="dialog" tabindex="-1" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-        <div class="modal-body">
-            <div class="text-center" style="width:100%; padding:20px; text-align:center;">
-                <img style="width:150px; height:auto; margin:0 auto; display:block; margin-bottom:25px;" src="{{ url('images/question.png') }}" alt="">
-                <h1 style="font-size: 30px; margin-bottom: 25px; color:#5C5C5C;">Yakin Ingin Menghapus Mobil Ini?</h1>
+<div class="modal fade" id="hapusMobil" role="dialog" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="text-center" style="width:100%; padding:20px; text-align:center;">
+                    <img style="width:150px; height:auto; margin:0 auto; display:block; margin-bottom:25px;" src="{{ url('images/failed.jpg') }}" alt="">
+                    <h1 style="font-size: 30px; margin-bottom: 25px; color:#5C5C5C;">Error</h1>
+                </div>
             </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-primary">Confirm</button>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary">Confirm</button>
+            </div>
         </div>
     </div>
 </div>
-</div>
-<a href="#" class="btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusMobil"><i class="bi bi-trash-fill" style="color: rgb(0, 0, 0);"></i></a> --}}
+<a href="#" class="btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusMobil">
+    <i class="bi bi-trash-fill" style="color: rgb(0, 0, 0);"></i>
+</a>
+
+Error Massage ==============================================================================
+@error('email')
+    <div class="invalid-feedback">
+        {{ $message }}
+    </div>
+@enderror
+
+SEEDER ==============================================================================
+// Table car====================================================================================
+            // OLD Table Car ==============================================================================
+                // car::create(
+                //     [
+                //         'user_id' => '3',
+                //         'shop_id' => '2',
+                //         'stok' => 'standby',
+                //         'merk_id' => '3',
+                //         'Tahun_Produksi_id' => '5',
+                //         'Kondisi_Fisik_id' => '7',
+                //         'Kondisi_Mesin_id' => '11',
+                //         'Muatan_Penumpang_id' => '13',
+                //         'Kapasitas_Mesin_id' => '18',
+                //         'Jenis_BBM_id' => '21',
+                //         'Harga_Sewa_id' => '23'
+                //     ]
+                // );
+                // car::create(
+                //     [
+                //         'user_id' => '3',
+                //         'shop_id' => '2',
+                //         'stok' => 'standby',
+                //         'merk_id' => '1',
+                //         'Tahun_Produksi_id' => '5',
+                //         'Kondisi_Fisik_id' => '7',
+                //         'Kondisi_Mesin_id' => '12',
+                //         'Muatan_Penumpang_id' => '15',
+                //         'Kapasitas_Mesin_id' => '17',
+                //         'Jenis_BBM_id' => '20',
+                //         'Harga_Sewa_id' => '22'
+                //     ]
+                // );
+                // car::create(
+                //     [
+                //         'user_id' => '3',
+                //         'shop_id' => '2',
+                //         'stok' => 'standby',
+                //         'merk_id' => '3',
+                //         'Tahun_Produksi_id' => '4',
+                //         'Kondisi_Fisik_id' => '7',
+                //         'Kondisi_Mesin_id' => '11',
+                //         'Muatan_Penumpang_id' => '13',
+                //         'Kapasitas_Mesin_id' => '16',
+                //         'Jenis_BBM_id' => '21',
+                //         'Harga_Sewa_id' => '24'
+                //     ]
+                // );
+                // car::create(
+                //     [
+                //         'user_id' => '3',
+                //         'shop_id' => '2',
+                //         'stok' => 'standby',
+                //         'merk_id' => '1',
+                //         'Tahun_Produksi_id' => '5',
+                //         'Kondisi_Fisik_id' => '9',
+                //         'Kondisi_Mesin_id' => '12',
+                //         'Muatan_Penumpang_id' => '15',
+                //         'Kapasitas_Mesin_id' => '17',
+                //         'Jenis_BBM_id' => '19',
+                //         'Harga_Sewa_id' => '23'
+                //     ]
+                // );
+                // car::create(
+                //     [
+                //         'user_id' => '3',
+                //         'shop_id' => '2',
+                //         'stok' => 'standby',
+                //         'merk_id' => '3',
+                //         'Tahun_Produksi_id' => '6',
+                //         'Kondisi_Fisik_id' => '9',
+                //         'Kondisi_Mesin_id' => '12',
+                //         'Muatan_Penumpang_id' => '15',
+                //         'Kapasitas_Mesin_id' => '18',
+                //         'Jenis_BBM_id' => '21',
+                //         'Harga_Sewa_id' => '24'
+                //     ]
+                // );
+                // car::create(
+                //     [
+                //         'user_id' => '2',
+                //         'shop_id' => '1',
+                //         'stok' => 'standby',
+                //         'merk_id' => '3',
+                //         'Tahun_Produksi_id' => '5',
+                //         'Kondisi_Fisik_id' => '7',
+                //         'Kondisi_Mesin_id' => '11',
+                //         'Muatan_Penumpang_id' => '13',
+                //         'Kapasitas_Mesin_id' => '18',
+                //         'Jenis_BBM_id' => '21',
+                //         'Harga_Sewa_id' => '23'
+                //     ]
+                // );
+                // car::create(
+                //     [
+                //         'user_id' => '2',
+                //         'shop_id' => '1',
+                //         'stok' => 'standby',
+                //         'merk_id' => '1',
+                //         'Tahun_Produksi_id' => '5',
+                //         'Kondisi_Fisik_id' => '7',
+                //         'Kondisi_Mesin_id' => '12',
+                //         'Muatan_Penumpang_id' => '15',
+                //         'Kapasitas_Mesin_id' => '17',
+                //         'Jenis_BBM_id' => '20',
+                //         'Harga_Sewa_id' => '22'
+                //     ]
+                // );
+                // car::create(
+                //     [
+                //         'user_id' => '2',
+                //         'shop_id' => '1',
+                //         'stok' => 'standby',
+                //         'merk_id' => '3',
+                //         'Tahun_Produksi_id' => '4',
+                //         'Kondisi_Fisik_id' => '7',
+                //         'Kondisi_Mesin_id' => '11',
+                //         'Muatan_Penumpang_id' => '13',
+                //         'Kapasitas_Mesin_id' => '16',
+                //         'Jenis_BBM_id' => '21',
+                //         'Harga_Sewa_id' => '24'
+                //     ]
+                // );
+                // car::create(
+                //     [
+                //         'user_id' => '2',
+                //         'shop_id' => '1',
+                //         'stok' => 'standby',
+                //         'merk_id' => '1',
+                //         'Tahun_Produksi_id' => '5',
+                //         'Kondisi_Fisik_id' => '9',
+                //         'Kondisi_Mesin_id' => '12',
+                //         'Muatan_Penumpang_id' => '15',
+                //         'Kapasitas_Mesin_id' => '17',
+                //         'Jenis_BBM_id' => '19',
+                //         'Harga_Sewa_id' => '23'
+                //     ]
+                // );
+                // car::create(
+                //     [
+                //         'user_id' => '2',
+                //         'shop_id' => '1',
+                //         'stok' => 'standby',
+                //         'merk_id' => '3',
+                //         'Tahun_Produksi_id' => '6',
+                //         'Kondisi_Fisik_id' => '9',
+                //         'Kondisi_Mesin_id' => '12',
+                //         'Muatan_Penumpang_id' => '15',
+                //         'Kapasitas_Mesin_id' => '18',
+                //         'Jenis_BBM_id' => '21',
+                //         'Harga_Sewa_id' => '24'
+                //     ]
+                // );
+            //
+
+        // Table Nilai====================================================================================
+            // OLD Table Nilali
+                // Car 1
+                    // nilai::create(
+                    //     [
+                    //         'car_id' => 1,
+                    //         'kriteria_id' => 1,
+                    //         'alternatif_id' => 3,
+                    //         'nilai' => 1
+                    //     ]
+                    // );
+                    // nilai::create(
+                    //     [
+                    //         'car_id' => 1,
+                    //         'kriteria_id' => 2,
+                    //         'alternatif_id' => 5,
+                    //         'nilai' => 2
+                    //     ]
+                    // );
+                    // nilai::create(
+                    //     [
+                    //         'car_id' => 1,
+                    //         'kriteria_id' => 3,
+                    //         'alternatif_id' => 7,
+                    //         'nilai' => 1
+                    //     ]
+                    // );
+                    // nilai::create(
+                    //     [
+                    //         'car_id' => 1,
+                    //         'kriteria_id' => 4,
+                    //         'alternatif_id' => 11,
+                    //         'nilai' => 2
+                    //     ]
+                    // );
+                    // nilai::create(
+                    //     [
+                    //         'car_id' => 1,
+                    //         'kriteria_id' => 5,
+                    //         'alternatif_id' => 13,
+                    //         'nilai' => 1
+                    //     ]
+                    // );
+                    // nilai::create(
+                    //     [
+                    //         'car_id' => 1,
+                    //         'kriteria_id' => 6,
+                    //         'alternatif_id' => 18,
+                    //         'nilai' => 3
+                    //     ]
+                    // );
+                    // nilai::create(
+                    //     [
+                    //         'car_id' => 1,
+                    //         'kriteria_id' => 7,
+                    //         'alternatif_id' => 21,
+                    //         'nilai' => 3
+                    //     ]
+                    // );
+                    // nilai::create(
+                    //     [
+                    //         'car_id' => 1,
+                    //         'kriteria_id' => 8,
+                    //         'alternatif_id' => 23,
+                    //         'nilai' => 2
+                    //     ]
+                    // );
+                //
+                // Car 2
+
+            //
+        // Mobil 2 =======================================================================
+        nilai::create(
+            [
+                'car_id' => 2,
+                'kriteria_id' => 1,
+                'alternatif_id' => 1,
+                'nilai' => 1
+            ]
+        );
+        nilai::create(
+            [
+                'car_id' => 2,
+                'kriteria_id' => 2,
+                'alternatif_id' => 5,
+                'nilai' => 2
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 2,
+                'kriteria_id' => 3,
+                'alternatif_id' => 7,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 2,
+                'kriteria_id' => 4,
+                'alternatif_id' => 12,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 2,
+                'kriteria_id' => 5,
+                'alternatif_id' => 15,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 2,
+                'kriteria_id' => 6,
+                'alternatif_id' => 17,
+                'nilai' => 2
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 2,
+                'kriteria_id' => 7,
+                'alternatif_id' => 20,
+                'nilai' => 2
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 2,
+                'kriteria_id' => 8,
+                'alternatif_id' => 22,
+                'nilai' => 1
+            ]
+        );
+
+        // Mobil 3 =======================================================================
+        nilai::create(
+            [
+                'car_id' => 3,
+                'kriteria_id' => 1,
+                'alternatif_id' => 3,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 3,
+                'kriteria_id' => 2,
+                'alternatif_id' => 4,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 3,
+                'kriteria_id' => 3,
+                'alternatif_id' => 7,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 3,
+                'kriteria_id' => 4,
+                'alternatif_id' => 11,
+                'nilai' => 2
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 3,
+                'kriteria_id' => 5,
+                'alternatif_id' => 13,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 3,
+                'kriteria_id' => 6,
+                'alternatif_id' => 16,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 3,
+                'kriteria_id' => 7,
+                'alternatif_id' => 21,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 3,
+                'kriteria_id' => 8,
+                'alternatif_id' => 24,
+                'nilai' => 3
+            ]
+        );
+
+        // Mobil 4 =======================================================================
+        nilai::create(
+            [
+                'car_id' => 4,
+                'kriteria_id' => 1,
+                'alternatif_id' => 1,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 4,
+                'kriteria_id' => 2,
+                'alternatif_id' => 5,
+                'nilai' => 2
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 4,
+                'kriteria_id' => 3,
+                'alternatif_id' => 9,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 4,
+                'kriteria_id' => 4,
+                'alternatif_id' => 12,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 4,
+                'kriteria_id' => 5,
+                'alternatif_id' => 15,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 4,
+                'kriteria_id' => 6,
+                'alternatif_id' => 17,
+                'nilai' => 2
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 4,
+                'kriteria_id' => 7,
+                'alternatif_id' => 19,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 4,
+                'kriteria_id' => 8,
+                'alternatif_id' => 23,
+                'nilai' => 2
+            ]
+        );
+
+        // Mobil 5 =======================================================================
+        nilai::create(
+            [
+                'car_id' => 5,
+                'kriteria_id' => 1,
+                'alternatif_id' => 3,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 5,
+                'kriteria_id' => 2,
+                'alternatif_id' => 6,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 5,
+                'kriteria_id' => 3,
+                'alternatif_id' => 9,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 5,
+                'kriteria_id' => 4,
+                'alternatif_id' => 12,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 5,
+                'kriteria_id' => 5,
+                'alternatif_id' => 15,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 5,
+                'kriteria_id' => 6,
+                'alternatif_id' => 18,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 5,
+                'kriteria_id' => 7,
+                'alternatif_id' => 21,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 5,
+                'kriteria_id' => 8,
+                'alternatif_id' => 24,
+                'nilai' => 3
+            ]
+        );
+
+        // Table Nilai====================================================================================
+        nilai::create(
+            [
+                'car_id' => 6,
+                'kriteria_id' => 1,
+                'alternatif_id' => 3,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 6,
+                'kriteria_id' => 2,
+                'alternatif_id' => 5,
+                'nilai' => 2
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 6,
+                'kriteria_id' => 3,
+                'alternatif_id' => 7,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 6,
+                'kriteria_id' => 4,
+                'alternatif_id' => 11,
+                'nilai' => 2
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 6,
+                'kriteria_id' => 5,
+                'alternatif_id' => 13,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 6,
+                'kriteria_id' => 6,
+                'alternatif_id' => 18,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 6,
+                'kriteria_id' => 7,
+                'alternatif_id' => 21,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 6,
+                'kriteria_id' => 8,
+                'alternatif_id' => 23,
+                'nilai' => 2
+            ]
+        );
+
+        // Mobil 2 =======================================================================
+        nilai::create(
+            [
+                'car_id' => 7,
+                'kriteria_id' => 1,
+                'alternatif_id' => 1,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 7,
+                'kriteria_id' => 2,
+                'alternatif_id' => 5,
+                'nilai' => 2
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 7,
+                'kriteria_id' => 3,
+                'alternatif_id' => 7,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 7,
+                'kriteria_id' => 4,
+                'alternatif_id' => 12,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 7,
+                'kriteria_id' => 5,
+                'alternatif_id' => 15,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 7,
+                'kriteria_id' => 6,
+                'alternatif_id' => 17,
+                'nilai' => 2
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 7,
+                'kriteria_id' => 7,
+                'alternatif_id' => 20,
+                'nilai' => 2
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 7,
+                'kriteria_id' => 8,
+                'alternatif_id' => 22,
+                'nilai' => 1
+            ]
+        );
+
+        // Mobil 3 =======================================================================
+        nilai::create(
+            [
+                'car_id' => 8,
+                'kriteria_id' => 1,
+                'alternatif_id' => 3,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 8,
+                'kriteria_id' => 2,
+                'alternatif_id' => 4,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 8,
+                'kriteria_id' => 3,
+                'alternatif_id' => 7,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 8,
+                'kriteria_id' => 4,
+                'alternatif_id' => 11,
+                'nilai' => 2
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 8,
+                'kriteria_id' => 5,
+                'alternatif_id' => 13,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 8,
+                'kriteria_id' => 6,
+                'alternatif_id' => 16,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 8,
+                'kriteria_id' => 7,
+                'alternatif_id' => 21,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 8,
+                'kriteria_id' => 8,
+                'alternatif_id' => 24,
+                'nilai' => 3
+            ]
+        );
+
+        // Mobil 4 =======================================================================
+        nilai::create(
+            [
+                'car_id' => 9,
+                'kriteria_id' => 1,
+                'alternatif_id' => 1,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 9,
+                'kriteria_id' => 2,
+                'alternatif_id' => 5,
+                'nilai' => 2
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 9,
+                'kriteria_id' => 3,
+                'alternatif_id' => 9,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 9,
+                'kriteria_id' => 4,
+                'alternatif_id' => 12,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 9,
+                'kriteria_id' => 5,
+                'alternatif_id' => 15,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 9,
+                'kriteria_id' => 6,
+                'alternatif_id' => 17,
+                'nilai' => 2
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 9,
+                'kriteria_id' => 7,
+                'alternatif_id' => 19,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 9,
+                'kriteria_id' => 8,
+                'alternatif_id' => 23,
+                'nilai' => 2
+            ]
+        );
+
+        // Mobil 5 =======================================================================
+        nilai::create(
+            [
+                'car_id' => 10,
+                'kriteria_id' => 1,
+                'alternatif_id' => 3,
+                'nilai' => 1
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 10,
+                'kriteria_id' => 2,
+                'alternatif_id' => 6,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 10,
+                'kriteria_id' => 3,
+                'alternatif_id' => 9,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 10,
+                'kriteria_id' => 4,
+                'alternatif_id' => 12,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 10,
+                'kriteria_id' => 5,
+                'alternatif_id' => 15,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 10,
+                'kriteria_id' => 6,
+                'alternatif_id' => 18,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 10,
+                'kriteria_id' => 7,
+                'alternatif_id' => 21,
+                'nilai' => 3
+            ]
+        );
+
+        nilai::create(
+            [
+                'car_id' => 10,
+                'kriteria_id' => 8,
+                'alternatif_id' => 24,
+                'nilai' => 3
+            ]
+        );
+<!--  -->
+
+

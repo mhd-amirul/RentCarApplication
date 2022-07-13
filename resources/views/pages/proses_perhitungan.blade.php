@@ -56,7 +56,7 @@
                                     <td>{{ $alter->nilai }}</td>
                                 </tr>
                             @endforeach
-                            <tr>{{ $alternatif->links() }}</tr>
+                                <tr>{{ $alternatif->links() }}</tr>
                         </tbody>
                     </table>
                 </div>

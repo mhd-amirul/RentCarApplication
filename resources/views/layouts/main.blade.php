@@ -7,10 +7,10 @@
     @stack('mapbox')
     <title>Rental Mobil • {{ $title }}</title>
 </head>
-<body >
+<body>
     @include('partials.navbar')
     @include('partials.pop-up')
-    <div class="container mt-4">
+    <div class="container" style="margin-top: 2cm">
         @yield('container')
     </div>
     @include('partials.footer')

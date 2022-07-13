@@ -1,14 +1,13 @@
 @extends('layouts.main')
 
 @section('container')
-
 <div class="row justify-content-center">
-    <div class="col-lg-9">
+    <div class="col-lg-6">
         <div class="card">
             <div class="card-body">
                 <div class="d-flex justify-content-center">
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner m-2" style="max-height: 450px; max-width: 450px;">
+                        <div class="carousel-inner m-2" style="max-height: 350px; max-width: 350px;">
                             <div class="carousel-item active">
                                 <img src="{{ isset($shop->foto_usaha) == null ? url('images/notfound.png') : asset('storage/' . $shop->foto_usaha) }}" class="d-block w-100" alt="...">
                             </div>
@@ -96,7 +95,7 @@
         </div>
     </div>
 
-    <div class="col-lg-9">
+    <div class="col-lg-6">
         <div class="card px-5 py-5">
             <h4 class="m-b-20 p-b-5 b-b-default ">Daftar Mobil</h4>
             <div class="row">
@@ -116,25 +115,25 @@
                 </div>
             </form>
 
-            <div class="row justify-content-center ml-5">
+            <div class="row justify-content-center">
                 <div class="col-sm-12 ml-2">
                     <table class="table table-responsive table-hover">
                         <thead>
                             <tr class="text-center">
                                 <th scope="col">No</th>
                                 <th scope="col">Merk</th>
-                                <th scope="col">Tahun Produksi</th>
-                                <th scope="col">Harga Sewa</th>
+                                {{-- <th scope="col">Tahun Produksi</th> --}}
+                                {{-- <th scope="col">Harga Sewa</th> --}}
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($car as $car)
+                            @forelse ($cars as $car)
                                 <tr class="text-center">
-                                    <th scope="row">{{ $loop->iteration }}</th>
+                                    <th scope="row">{{ $car->id }}</th>
                                     <td>{{ $car->merk->nama }}</td>
-                                    <td>{{ $car->tahun_produksi->nama }}</td>
-                                    <td>{{ $car->harga_sewa->nama }}</td>
+                                    {{-- <td>{{ $car->tahun_produksi->nama }}</td> --}}
+                                    {{-- <td>{{ $car->harga_sewa->nama }}</td> --}}
                                     <td>
                                         <a href="{{ route('shop.show', $car->id) }}" class="btn btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
                                         <form action="{{ route('shop.destroy', $car->id) }}" method="post" class="d-inline" id="deleteCar-form-{{ $car->id }}">
@@ -151,6 +150,7 @@
                             @endforelse
                         </tbody>
                     </table>
+                    {{ $cars->links() }}
                 </div>
             </div>
         </div>

@@ -37,12 +37,12 @@
                             <label for="nm_pu">Email</label>
                         </div>
                     </div>
-                    <div class="row mt-4 mb-3">
-                        <div class="col-sm-10">
+                    <div class="row mt-4 mb-3 justify-content-start">
+                        <div class="col-sm-7">
                             <a href="{{ route('profil.edit', $data->id) }}" class="btn btn-warning ml-1">
                                 <i class="bi bi-pencil-square"></i></i> Edit Profil
                             </a>
-                            <a href="{{ route('changePass', $data->id) }}" class="ml-2 btn btn-warning">
+                            <a href="{{ route('changePass', $data->id) }}" class="btn btn-warning ml-2">
                                 <i class="mr-2 bi bi-key"></i>Reset Password
                             </a>
                             @if ($data->role === 'rental')
@@ -72,3 +72,5 @@
     </div>
 </div>
 @endsection
+{{--
+ --}}
