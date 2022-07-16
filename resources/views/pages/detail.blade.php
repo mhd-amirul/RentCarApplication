@@ -188,7 +188,22 @@
                             <img class="rounded-circle" src="{{ isset($ulas->user->image) == null ? url('images/notfound.png') : asset('storage/' . $ulas->user->image) }}" width="50">
                             <div class="d-flex flex-column justify-content-start ml-2">
                                 <span class="d-block font-weight-bold name">{{ $ulas->user->username }}</span>
-                                <span class="date text-black-50">{{ $ulas->created_at->diffForHumans() }}</span>
+                                <span class="date text-black-50">{{ $ulas->created_at->diffForHumans() }}
+                                    @if (isset(auth()->user()->id))
+                                        @if (auth()->user()->id == $ulas->user_id)
+                                            <a href="{{ route('editUlasan', $ulas->id) }}" class="text-warning text-decoration-none">
+                                                <i class="bi bi-pencil-square"></i>
+                                            </a>
+                                            <a href="#" id="delUlas" data-id="{{ $ulas->id }}" class="text-danger text-decoration-none">
+                                                <i class="bi bi-trash"></i>
+                                            </a>
+                                            <form action="{{ route('deleteUlasan', $ulas->id) }}" method="post" id="delUlas-form-{{ $ulas->id }}">
+                                                @csrf
+                                                @method('delete')
+                                            </form>
+                                        @endif
+                                    @endif
+                                </span>
                             </div>
                         </div>
                         <div class="mt-2 ml-2">
@@ -209,3 +224,26 @@
     </div>
 </div>
 @endsection
+
+@push('sweet')
+<script>
+    $(document).on('click', '#delUlas', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            console.log(id)
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: "Hapus Ulasan ?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#delUlas-form-'+id).submit();
+                }
+            })
+        });
+</script>
+@endpush

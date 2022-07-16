@@ -56,7 +56,10 @@ Route::group(['middleware' => 'auth'], function ()
     {
         // Home / Daftar mobil / Informasi Mobil / Informasi / map / Ulasan / logOut
         Route::get('ulasan/{id}', [ulasanController::class, 'ulasanView'])->name('ulasan');
+        Route::get('ulasan/edit/{id}', [ulasanController::class, 'editUlasan'])->name('editUlasan');
+        Route::put('ulasan/edit/{id}', [ulasanController::class, 'updateUlasan'])->name('updateUlasan');
         Route::put('ulasan/{id}', [ulasanController::class, 'createUlasan'])->name('ulasanU');
+        Route::delete('ulasan/{id}', [ulasanController::class, 'deleteUlasan'])->name('deleteUlasan');
         Route::post('logout', [AuthentikasiController::class, 'logout'])->name('logout');
         Route::resource('profil', ProfilController::class)
                 ->except(['show', 'destroy']);

@@ -88,7 +88,7 @@
             <div class="row">
                 <div class="col">
                     @if ($shop->longitude != null && $shop->latitude != null)
-                        <a href="{{ route('addCarAdmin',$shop->id) }}" class="btn btn-sm btn-primary mb-2">TAMBAH MOBIL</a>
+                        <a href="{{ route('addCarAdmin',$shop->id) }}" class="btn btn-sm btn-primary mb-2">Tambah Mobil</a>
                     @else
                         <p class="mb-21 mt-2"></p>
                     @endif
