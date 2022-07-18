@@ -8,8 +8,17 @@
                     <div class="card-header bg-dark text-white mt-3 mb-3">
                         Map
                     </div>
-                    <div class="card_body border border-dark">
-                        <div id='map' style='width: 100%; height: 60vh;'></div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-3">
+                            <div class="card_body pl-1 py-3">
+                                <div id='geosearch' style='width: 100%;'></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="card_body border border-dark">
+                                <div id='map' style='width: 100%; height: 60vh;'></div>
+                            </div>
+                        </div>
                     </div>
                     <form action="{{ route('saveLocation', $shop->id) }}" method="post" id="setLok-form">
                     @method('put')
@@ -59,12 +68,12 @@
             zoom: 9
         });
 
-        map.addControl(
-            new MapboxGeocoder({
+        const geosearch = new MapboxGeocoder({
                 accessToken: mapboxgl.accessToken,
                 mapboxgl: mapboxgl
-            })
+            }
         );
+        document.getElementById('geosearch').appendChild(geosearch.onAdd(map));
 
         map.addControl(new mapboxgl.NavigationControl())
 

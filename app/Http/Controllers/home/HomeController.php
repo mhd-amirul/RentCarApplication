@@ -26,6 +26,69 @@ class HomeController extends Controller
             ]);
     }
 
+    public function detailMobil($id)
+    {
+        $ulasan = ulasan::where('car_id', $id);
+
+        $rate = $ulasan->sum('rating');
+        $jumlah = $ulasan->count();
+        $hasil = 0;
+        if ($rate && $jumlah != null) {
+            $hasil = $rate / $jumlah;
+        }
+
+        return view('pages.detail')
+            ->with(
+                [
+                    'title' => 'Detail Mobil',
+                    'car' => car::findOrFail($id),
+                    'ulasan' => $ulasan->get(),
+                    'rating' => $hasil,
+                    'review' => $jumlah,
+                    // 'reviewCheck' => ulasan::where('user_id', auth()->user()->id)->first()
+                ]
+            );
+    }
+
+    public function daftarMobil()
+    {
+        return view('pages.mobil')
+            ->with(
+                [
+                    'title' => 'Daftar Mobil',
+                    'cars' => car::orderBy('merk_id')
+                                    ->filter(request(['search']))
+                                    ->paginate(8)
+                                    ->withQueryString()
+                ]
+            );
+    }
+
+    public function profileToko($id)
+    {
+        # code...
+        return view('pages.profileToko')
+            ->with(
+                [
+                    'title' => 'Informasi Toko',
+                    'shop' => shop::findOrFail($id),
+                    'car' => car::where('shop_id', $id)->get()
+                ]
+            );
+    }
+
+    public function locationForUser($id)
+    {
+        # code...
+        $data = shop::findOrFail($id);
+        return response()->json($data);
+        return view('pages.mapviewuser')
+            ->with([
+                'title' => 'Lokasi',
+                'shop' => shop::findOrFail($id)
+            ]);
+    }
+
     public function hitung(Request $request)
     {
         $allKriteria = kriteria::all();
@@ -132,73 +195,11 @@ class HomeController extends Controller
             );
     }
 
-    public function detailMobil($id)
-    {
-        $ulasan = ulasan::where('car_id', $id);
-
-        $rate = $ulasan->sum('rating');
-        $jumlah = $ulasan->count();
-        $hasil = 0;
-        if ($rate && $jumlah != null) {
-            $hasil = $rate / $jumlah;
-        }
-
-        return view('pages.detail')
-            ->with(
-                [
-                    'title' => 'Detail Mobil',
-                    'car' => car::findOrFail($id),
-                    'ulasan' => $ulasan->get(),
-                    'rating' => $hasil,
-                    'review' => $jumlah,
-                    // 'reviewCheck' => ulasan::where('user_id', auth()->user()->id)->first()
-                ]
-            );
-    }
-
-    public function daftarMobil()
-    {
-        return view('pages.mobil')
-            ->with(
-                [
-                    'title' => 'Daftar Mobil',
-                    'cars' => car::orderBy('merk_id')
-                                    ->filter(request(['search']))
-                                    ->paginate(8)
-                                    ->withQueryString()
-                ]
-            );
-    }
-
-    public function profileToko($id)
-    {
-        # code...
-        return view('pages.profileToko')
-            ->with(
-                [
-                    'title' => 'Informasi Toko',
-                    'shop' => shop::findOrFail($id),
-                    'car' => car::where('shop_id', $id)->get()
-                ]
-            );
-    }
-
-    public function locationForUser($id)
-    {
-        # code...
-        $data = shop::findOrFail($id);
-        return response()->json($data);
-        return view('pages.mapviewuser')
-            ->with([
-                'title' => 'Lokasi',
-                'shop' => shop::findOrFail($id)
-            ]);
-    }
-
-    public function proses_hitung(Request $request)
-    {
+    public function proses_hitung(Request $request){
+        // Mengambil semua data kriteria
         $allKriteria = kriteria::all();
         $kriteria = [];
+        // input data kriteria dalam array
         foreach ($allKriteria as $row) {
             $kriteria[
                 $row->id
@@ -209,7 +210,9 @@ class HomeController extends Controller
                 );
         }
 
+        // buat variabel query untuk menyimpan query
         $filterCars = car::query();
+        // looping data mobil yang sesuai dengan query filter user
         foreach ($allKriteria as $k) {
             # code...
             $name = str_replace(' ','_',$k->nama.'_id');
@@ -217,8 +220,10 @@ class HomeController extends Controller
                 $filterCars->where($name, $request[$name])->where('stok','standby');
             }
         }
+        // ambil semua data sesudah query filter
         $allCars = $filterCars->get();
 
+        // ambil data alternatif dari mobil hasil query
         $alternatif = [];
         foreach ($allCars as $row) {
         $alternatif[$row->id]
@@ -234,9 +239,10 @@ class HomeController extends Controller
             );
         }
 
-        // Mengambil data nilai
+        // Mengambil data nilai yang diurutkan
         $nilai = DB::select('SELECT * FROM nilais ORDER BY car_id, kriteria_id');
         $db = [];
+        // mengambil nilai mobil dari mobil hasil query
         foreach ($nilai as $nilai) {
             foreach ($allCars as $car) {
                 if ($car->id == $nilai->car_id) {
@@ -246,6 +252,7 @@ class HomeController extends Controller
         }
 
         $sample = [];
+        // membuat array sample dengan id dari mobil dan isi nya nilai mobil
         foreach ($db as $row) {
             if (!isset($sample[$row->car_id])) {
                 $sample[$row->car_id] = [];
@@ -258,19 +265,22 @@ class HomeController extends Controller
             }
         }
 
+        // copy to new variable
         $normal = $sample;
+        // Proses Normalisasi Metode MOORA
         foreach($kriteria as $id_kriteria => $k){
             $pembagi = 0;
             foreach($alternatif as $id_cars => $a){
                 $pembagi += pow($sample[$id_cars][$id_kriteria], 2);
+                $data[] = $pembagi;
             }
             foreach($alternatif as $id_cars => $a){
                 $normal[$id_cars][$id_kriteria] /= sqrt($pembagi);
             }
         }
 
-        //MENGHITUNG NILAI OPTIMASI
         $optimasi = [];
+        // Proses Optimasi Metode MOORA
         foreach($alternatif as $id_cars => $a){
             $optimasi[$id_cars] = 0;
             foreach($kriteria as $id_kriteria => $k){

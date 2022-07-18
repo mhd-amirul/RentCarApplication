@@ -65,28 +65,28 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12 mt-5">
-                            <a href="{{ route('toko.edit', $shop->id) }}" class="btn btn-sm btn-warning">
+                            <a href="{{ route('toko.edit', $shop->id) }}" class="ml-1 mt-1 btn btn-sm btn-warning">
                                 <i class="bi bi-pencil-square"></i> Edit
                             </a>
                             @if ($shop->longitude != null && $shop->latitude != null)
-                                <a href="{{ route('sharelok', $shop->id) }}" class="btn btn-sm btn-success" style="color: rgb(0, 0, 0);">
+                                <a href="{{ route('sharelok', $shop->id) }}" class="ml-1 mt-1 btn btn-sm btn-success" style="color: rgb(0, 0, 0);">
                                     <i class="bi bi-house-fill"></i> Lokasi
                                 </a>
-                                <a href="{{ route('setLocation', $shop->id) }}" class="btn btn-sm btn-primary" style="color: rgb(0, 0, 0);">
+                                <a href="{{ route('setLocation', $shop->id) }}" class="ml-1 mt-1 btn btn-sm btn-primary" style="color: rgb(0, 0, 0);">
                                     <i class="bi bi-map-fill"></i> Edit Lokasi
                                 </a>
                             @else
-                                <a href="{{ route('setLocation', $shop->id) }}" class="btn btn-sm btn-success" style="color: rgb(0, 0, 0);">
+                                <a href="{{ route('setLocation', $shop->id) }}" class="ml-1 mt-1 btn btn-sm btn-success" style="color: rgb(0, 0, 0);">
                                     <i class="bi bi-map-fill"></i> Set Lokasi Toko
                                 </a>
                             @endif
-                            <a href="{{ route('activityView', $shop->id) }}" class="btn btn-sm btn-dark text-white">
+                            <a href="{{ route('activityView', $shop->id) }}" class="ml-1 mt-1 btn btn-sm btn-dark text-white">
                                 <i class="bi bi-activity"></i> Aktifitas
                             </a>
                             <form action="{{ route('toko.destroy', $shop->id) }}" method="post" class="d-inline" id="deleteShop-form">
                                 @method('delete')
                                 @csrf
-                                <button id="deleteShop" class="btn btn-sm btn-danger" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"> Hapus</i></button>
+                                <button id="deleteShop" class="ml-1 mt-1 btn btn-sm btn-danger" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"> Hapus</i></button>
                             </form>
                         </div>
                     </div>
@@ -130,7 +130,7 @@
                         <tbody>
                             @forelse ($cars as $car)
                                 <tr class="text-center">
-                                    <th scope="row">{{ $car->id }}</th>
+                                    <th scope="row">{{ $loop->iteration }}</th>
                                     <td>{{ $car->merk->nama }}</td>
                                     {{-- <td>{{ $car->tahun_produksi->nama }}</td> --}}
                                     {{-- <td>{{ $car->harga_sewa->nama }}</td> --}}

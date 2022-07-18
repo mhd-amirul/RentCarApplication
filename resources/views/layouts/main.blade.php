@@ -10,7 +10,7 @@
     <body>
         @include('partials.navbar')
         @include('partials.pop-up')
-            <div class="container" style="margin-top: 0.5cm">
+            <div class="container" style="margin-top: 0.5cm; margin-bottom: 5cm;">
                 @yield('container')
             </div>
         @include('partials.footer')

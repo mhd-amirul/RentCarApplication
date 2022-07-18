@@ -28,11 +28,11 @@
                                 <button class="w-100 btn btn-primary" type="submit">SIGN IN</button>
                             </form>
                             <div class="row">
-                                <div class="col">
+                                {{-- <div class="col">
                                     <small class="d-block text-center mt-3">
                                         Forgot Password?<a href="{{ route('forgotPass') }}"> Click Here!</a>
                                     </small>
-                                </div>
+                                </div> --}}
                                 <div class="col">
                                     <small class="d-block text-center mt-3">
                                         Dont Have Account? <a href="register">Create Now!</a>

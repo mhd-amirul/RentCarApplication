@@ -60,21 +60,21 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-9 mt-5">
-                            <a href="{{ route('allshops.index')}}" style="color: rgb(0, 0, 0);" class="btn btn-sm btn-primary">
+                            <a href="{{ route('allshops.index')}}" style="color: rgb(0, 0, 0);" class="mt-1 btn btn-sm btn-primary">
                                 <i class="bi bi-arrow-left-circle"></i> Back
                             </a>
-                            <a href="{{ route('allshops.edit', $shop->id) }}" class="btn btn-sm btn-warning">
+                            <a href="{{ route('allshops.edit', $shop->id) }}" class="mt-1 btn btn-sm btn-warning">
                                 <i class="bi bi-pencil-square"></i> Edit Toko
                             </a>
                             @if ($shop->longitude != null && $shop->latitude != null)
-                                <a href="{{ route('sharelok', $shop->id) }}" style="color: rgb(0, 0, 0);" class="btn btn-sm btn-success">
+                                <a href="{{ route('sharelok', $shop->id) }}" style="color: rgb(0, 0, 0);" class="mt-1 btn btn-sm btn-success">
                                     <i class="bi bi-house-fill"></i> Lokasi Toko
                                 </a>
                             @endif
                             <form action="{{ route('allshops.destroy', $shop->id) }}" method="post" class="d-inline" id="deleteShop-form">
                                 @method('delete')
                                 @csrf
-                                <a href="#" class="btn btn-sm btn-danger text-decoration-none" id="deleteShop" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i> Hapus</a>
+                                <a href="#" class="mt-1 btn btn-sm btn-danger text-decoration-none" id="deleteShop" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i> Hapus</a>
                             </form>
                         </div>
                     </div>
