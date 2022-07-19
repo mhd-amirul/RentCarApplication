@@ -6,7 +6,7 @@
         <div class="card user-card-full">
             <div class="col">
                 <div class="card-block">
-                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Toko : <a href="{{ route('profileToko', $car->shop->id) }}" class="text-black">{{ $car->shop->nm_usaha }}</a></h6>
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600"><a href="{{ route('profileToko', $car->shop->id) }}" class="text-black">{{ $car->shop->nm_usaha }}</a> , {{ $car->shop->alamat }}</h6>
                     <div class="d-flex justify-content-center">
                         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner m-2" style="max-height: 450px; max-width: 450px; overflow: hidden;">

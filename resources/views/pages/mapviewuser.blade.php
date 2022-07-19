@@ -29,13 +29,21 @@
                             </div>
                         </div>
                         <div class="col-sm-12 mb-3">
-                            <div class="card_body border border-dark" hidden>
-                                <div id='' style='width: 100%; height: 70vh;'></div>
+                            <a href="#" class="arahkan btn btn-sm btn-primary w-100">Arahkan Jalur</a>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="card_body border border-dark pl-1 pr-4 py-4">
+                                <div id='mapEvent' style='width: 100%;'></div>
                             </div>
                         </div>
                         <div class="col-sm-6 mb-3">
-                            <div class="card_body border border-dark pl-1 pr-4 py-4 bg-dark">
-                                <div id='mapEvent' style='width: 100%;'></div>
+                            <div class="card_body px-4 py-4 border border-dark">
+                                <strong>
+                                    <a href='{{ route('profileToko', $shop->id) }}' style='text-decoration: none;'>{{ $shop->nm_usaha }}</a>
+                                </strong>
+                                <p>No Hp : +62 {{ $shop->user->no_hp }}
+                                    <br> Alamat : {{ $shop->alamat }}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -63,14 +71,9 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
     <script>
-        const long = document.getElementById("longitude").value;
-        const lat = document.getElementById("latitude").value;
-        const nm_pu = document.getElementById("nm_pu").value;
-        const nm_usaha = document.getElementById("nm_usaha").value;
-        const alamat = document.getElementById("alamat").value;
-        const no_hp = document.getElementById("no_hp").value;
-
-        const defaultLocation = [long, lat]
+        const longitude = document.getElementById("longitude").value;
+        const latitude = document.getElementById("latitude").value;
+        const defaultLocation = [longitude, latitude]
 
         mapboxgl.accessToken = '{{ env('MAPBOX_KEY') }}';
         const map = new mapboxgl.Map({
@@ -81,26 +84,34 @@
         });
         map.addControl(new mapboxgl.FullscreenControl(),'top-left');
         map.addControl(new mapboxgl.NavigationControl(),'top-left')
-        map.addControl(
-            new mapboxgl.GeolocateControl({
-                positionOptions: {
-                    enableHighAccuracy: true
-                },
-                trackUserLocation: true,
-                showUserHeading: true
-            }),'top-left'
-        );
 
-        let deskripsi = "<strong><a href='{{ route('profileToko', $shop->id) }}' style='text-decoration: none;'>"+nm_usaha+"</a></strong><p>Pemilik : "+nm_pu+", No Hp : +62"+no_hp+", alamat : "+alamat+", LngLat : "+long+", "+lat+"</p>"
+        var geolocate = new mapboxgl.GeolocateControl();
+        // map.addControl(geolocate);
+        geolocate.on('geolocate', function(e) {
+            var lon = e.coords.longitude;
+            var lat = e.coords.latitude
+            var position = [lon, lat];
+            console.log(position);
+        });
+        // map.on('load', function() {
+        //     geolocate.trigger();
+        // });
+
+
         const mark = new mapboxgl.Marker()
-        .setLngLat([long, lat])
-        .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML(deskripsi)).addTo(map);
+        .setLngLat([longitude, latitude])
+        .setPopup().addTo(map);
 
         const direct = new MapboxDirections({
                 accessToken: mapboxgl.accessToken
+
             }
         );
         document.getElementById('mapEvent').appendChild(direct.onAdd(map));
+        map.on('load',  function() {
+            direct.setOrigin([lon, lat]);
+            direct.setDestination([longitude, latitude]);
+        })
 
     </script>
 @endpush

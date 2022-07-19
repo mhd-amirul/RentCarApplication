@@ -1314,4 +1314,19 @@ SEEDER =========================================================================
         );
 <!--  -->
 
+JS MAPBOX =========================================================================================
+// map.addControl(
+            //     new mapboxgl.GeolocateControl({
+            //         positionOptions: {
+            //             enableHighAccuracy: true
+            //         },
+            //         trackUserLocation: true,
+            //         showUserHeading: true
+            //     }),'top-left'
+        // );
 
+        // let deskripsi = "<strong><a href='{{ route('profileToko', $shop->id) }}' style='text-decoration: none;'>"+nm_usaha+"</a></strong><p>Pemilik : "+nm_pu+", No Hp : +62"+no_hp+", alamat : "+alamat+", LngLat : "+long+", "+lat+"</p>"
+        // const nm_pu = document.getElementById("nm_pu").value;
+        // const nm_usaha = document.getElementById("nm_usaha").value;
+        // const alamat = document.getElementById("alamat").value;
+        // const no_hp = document.getElementById("no_hp").value;
