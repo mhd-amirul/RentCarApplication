@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
-@section('container')
+@section('container2')
 <div class="row justify-content-center">
     <div class="col-lg-12">
-        <div class="card border border-gray-800" style="width: 100%;height: 33rem;">
+        <div class="card border border-gray-800" style="width: 100%;height: 40rem;">
             <div style="height:100%; background-color: #424242; background-image: url('images/bgHome.png'); background-repeat: no-repeat; background-size:  100% 100%;">
                 <div class="row justify-content-center my-5">
-                    <div class="col-md-9">
+                    <div class="col-md-5">
                         <form action="{{ route('hitung') }}" method="GET">
                             <h3 class="text-center text-white mt-5">PILIH KRITERIA MOBIL</h3>
                             <hr>

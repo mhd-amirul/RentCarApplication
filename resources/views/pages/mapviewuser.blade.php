@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <div class="col-sm-12 mb-3">
-                            <a href="#" class="arahkan btn btn-sm btn-primary w-100">Arahkan Jalur</a>
+                            <a href="#" id="arahkan" class="btn btn-sm btn-primary w-100">Arahkan Jalur</a>
                         </div>
                         <div class="col-sm-6 mb-3">
                             <div class="card_body border border-dark pl-1 pr-4 py-4">
@@ -86,32 +86,32 @@
         map.addControl(new mapboxgl.NavigationControl(),'top-left')
 
         var geolocate = new mapboxgl.GeolocateControl();
-        // map.addControl(geolocate);
-        geolocate.on('geolocate', function(e) {
-            var lon = e.coords.longitude;
-            var lat = e.coords.latitude
-            var position = [lon, lat];
-            console.log(position);
+        map.addControl(geolocate,'top-left');
+        geolocate.on('geolocate', function(e, position) {
+            let Geolon = e.coords.longitude;
+            let Geolat = e.coords.latitude;
+            return position = [Geolon, Geolat];
         });
-        // map.on('load', function() {
-        //     geolocate.trigger();
-        // });
-
+        console.log(e.position)
+        map.on('load', function() {
+            geolocate._updateCamera = () => {}
+            geolocate.trigger();
+        });
 
         const mark = new mapboxgl.Marker()
-        .setLngLat([longitude, latitude])
-        .setPopup().addTo(map);
+            .setLngLat([longitude, latitude])
+            .setPopup()
+            .addTo(map);
 
         const direct = new MapboxDirections({
                 accessToken: mapboxgl.accessToken
-
             }
         );
         document.getElementById('mapEvent').appendChild(direct.onAdd(map));
-        map.on('load',  function() {
-            direct.setOrigin([lon, lat]);
-            direct.setDestination([longitude, latitude]);
-        })
 
+        $('#arahkan').on('click', function () {
+            direct.setOrigin(geolocate.position);
+            direct.setDestination(defaultLocation);
+        });
     </script>
 @endpush
