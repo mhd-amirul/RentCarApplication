@@ -3,7 +3,7 @@
 @section('container')
 
 {{-- MENAMPILKAN HASIL REKOMENDASI --}}
-<h2 class="text-center">HASIL REKOMENDASI</h2>
+<h2 class="text-center mt-5">HASIL REKOMENDASI</h2>
 <h2 class="m-b-20 p-b-5 b-b-default mt-3"></h2>
 <div class="container">
     <div class="row justify-content-start">

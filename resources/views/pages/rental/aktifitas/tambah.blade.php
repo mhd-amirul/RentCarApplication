@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-5">
     <div class="col-lg-9">
         <div class="card px-4 py-4 border border-grey-500">
             <h2 class="m-b-20 p-b-5 b-b-default mt-3 text-center">TAMBAH AKTIFITAS</h2>

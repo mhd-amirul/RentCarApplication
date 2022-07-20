@@ -10,10 +10,10 @@
     <body>
         @include('partials.navbar')
         @include('partials.pop-up')
+        <div class="container">
+            @yield('container')
+        </div>
         @yield('container2')
-            <div class="container">
-                @yield('container')
-            </div>
         @include('partials.footer')
         @include('includes.script')
         @stack('script-map')

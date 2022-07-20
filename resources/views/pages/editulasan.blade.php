@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-    <div class="row justify-content-center" style="margin-top: 2cm">
+    <div class="row justify-content-center" style="margin-top: 2cm;margin-bottom: 4cm">
         <div class="col-lg-6">
             <main class="form-signin">
                 <div class="card py-5 px-5 border border-gray-800">

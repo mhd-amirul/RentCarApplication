@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-5">
         <div class="col-lg-12">
             <div class="card px-2 pt-2 pb-2 border border-gray-800">
                 <div class="col-sm-12">
@@ -13,6 +13,8 @@
                             <input type="text" hidden name="nm_usaha" id="nm_usaha" value="{{ isset($shop->nm_usaha) ? $shop->nm_usaha : 'Empty...' }}" >
                             <input type="text" hidden name="alamat" id="alamat" value="{{ isset($shop->alamat) ? $shop->alamat : 'Empty...' }}" >
                             <input type="text" hidden name="no_hp" id="no_hp" value="{{ isset($shop->user->no_hp) ? $shop->user->no_hp : 'Empty...' }}" >
+                            <input type="text" hidden id="Geolon" value="">
+                            <input type="text" hidden id="Geolat" value="">
                         </div>
                     </div>
 
@@ -32,11 +34,6 @@
                             <a href="#" id="arahkan" class="btn btn-sm btn-primary w-100">Arahkan Jalur</a>
                         </div>
                         <div class="col-sm-6 mb-3">
-                            <div class="card_body border border-dark pl-1 pr-4 py-4">
-                                <div id='mapEvent' style='width: 100%;'></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 mb-3">
                             <div class="card_body px-4 py-4 border border-dark">
                                 <strong>
                                     <a href='{{ route('profileToko', $shop->id) }}' style='text-decoration: none;'>{{ $shop->nm_usaha }}</a>
@@ -44,6 +41,11 @@
                                 <p>No Hp : +62 {{ $shop->user->no_hp }}
                                     <br> Alamat : {{ $shop->alamat }}
                                 </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="card_body border border-dark pl-1 pr-4 py-4">
+                                <div id='mapEvent' style='width: 100%;'></div>
                             </div>
                         </div>
                     </div>
@@ -85,14 +87,18 @@
         map.addControl(new mapboxgl.FullscreenControl(),'top-left');
         map.addControl(new mapboxgl.NavigationControl(),'top-left')
 
-        var geolocate = new mapboxgl.GeolocateControl();
-        map.addControl(geolocate,'top-left');
-        geolocate.on('geolocate', function(e, position) {
-            let Geolon = e.coords.longitude;
-            let Geolat = e.coords.latitude;
-            return position = [Geolon, Geolat];
+        let geolocate = new mapboxgl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+            trackUserLocation: true
         });
-        console.log(e.position)
+        map.addControl(geolocate,'top-left');
+        geolocate.on('geolocate', function(e) {
+            document.getElementById('Geolon').value = e.coords.longitude;
+            document.getElementById('Geolat').value = e.coords.latitude;
+        });
+
         map.on('load', function() {
             geolocate._updateCamera = () => {}
             geolocate.trigger();
@@ -110,7 +116,9 @@
         document.getElementById('mapEvent').appendChild(direct.onAdd(map));
 
         $('#arahkan').on('click', function () {
-            direct.setOrigin(geolocate.position);
+            let Geolon = document.getElementById('Geolon').value;
+            let Geolat = document.getElementById('Geolat').value;
+            direct.setOrigin([Geolon, Geolat]);
             direct.setDestination(defaultLocation);
         });
     </script>

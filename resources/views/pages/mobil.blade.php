@@ -41,7 +41,7 @@
         </div>
     </div>
     @else
-        <p class="text-center fs-4 mt-5">Ops!!! Pencarian Tidak Ditemukan</p>
+        <p class="text-center fs-4" style="margin-bottom: 7cm;margin-top: 2cm">Ops!!! Pencarian Tidak Ditemukan</p>
     @endif
 
     <div class="d-flex justify-content-center">

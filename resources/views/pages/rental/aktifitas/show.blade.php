@@ -1,31 +1,31 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-5">
     <div class="col-lg-8">
         <div class="card px-4 py-4 border border-grey-500">
             <h2 class="m-b-20 p-b-5 b-b-default mt-3 text-center">DETAIL AKTIFITAS</h2>
             <div class="row">
                 <div class="col-sm-12">
                     @if ($history->status == 'on')
-                        <a href="{{ route('activityView', $history->shop_id) }}" class="btn btn-dark">
+                        <a href="{{ route('activityView', $history->shop_id) }}" class="mt-1 btn btn-dark">
                             <i class="bi bi-arrow-left-circle"></i> Back
                         </a>
-                        <a href="{{ route('activityEdit', $history->id) }}" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Edit</a>
+                        <a href="{{ route('activityEdit', $history->id) }}" class="mt-1 btn btn-warning"><i class="bi bi-pencil-square"></i> Edit</a>
                         <form action="{{ route('activityReturn', $history->id) }}" method="POST" class="d-inline" id="returnAct-form">
                             @csrf
                             @method('put')
-                            <button class="btn btn-success text-decoration-none" id="returnAct"><i class="bi bi-calendar2-check"></i> Returned</button>
+                            <button class="mt-1 btn btn-success text-decoration-none" id="returnAct"><i class="bi bi-calendar2-check"></i> Returned</button>
                         </form>
                     @else
-                        <a href="{{ route('activityHistory', $history->shop_id) }}" style="color: rgb(0, 0, 0);" class="btn btn-dark">
+                        <a href="{{ route('activityHistory', $history->shop_id) }}" style="color: rgb(0, 0, 0);" class="mt-1 btn btn-dark">
                             <i class="bi bi-arrow-left-circle"></i> Back
                         </a>
                     @endif
                     <form action="{{ route('activityDelete', $history->id) }}" method="POST" class="d-inline" id="deleteAct-form">
                         @csrf
                         @method('delete')
-                        <a href="#" class="btn btn-danger text-decoration-none" id="deleteAct"><i class="bi bi-trash-fill"></i> Delete</a>
+                        <a href="#" class="mt-1 btn btn-danger text-decoration-none" id="deleteAct"><i class="bi bi-trash-fill"></i> Delete</a>
                     </form>
                 </div>
             </div>
@@ -89,10 +89,10 @@
             <h2 class="m-b-20 p-b-5 b-b-default mt-3"></h2>
             <div class="row">
                 <div class="col-sm-12 mb-4">
-                    <a href="{{ route('shop.show', $history->car_id) }}" class="text-dark btn btn-primary">
+                    <a href="{{ route('shop.show', $history->car_id) }}" class="text-dark mt-1 btn btn-primary">
                         <i class="bi bi-eye-fill"> Detail Mobil</i>
                     </a>
-                    <a target="blank" href="{{ isset($history->berkas_pinjam) ?  asset('storage/' . $history->berkas_pinjam) : url('images/notfound.png') }}" class="text-dark btn btn-primary">
+                    <a target="blank" href="{{ isset($history->berkas_pinjam) ?  asset('storage/' . $history->berkas_pinjam) : url('images/notfound.png') }}" class="text-dark mt-1 btn btn-primary">
                         <i class="bi bi-eye-fill"> Berkas Peminjaman</i>
                     </a>
                 </div>

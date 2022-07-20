@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-5" style="margin-bottom: 7cm">
     <div class="col-lg-10">
         <div class="card px-4 py-4 border border-grey-500">
             <h2 class="m-b-20 p-b-5 b-b-default mt-3 text-center">HISTORIES</h2>
@@ -44,7 +44,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="8" class="text-center h3">DATA KOSONG</td>
+                                    <td colspan="8" class="text-center h3 mb-5">DATA KOSONG</td>
                                 </tr>
                             @endforelse
                         </tbody>

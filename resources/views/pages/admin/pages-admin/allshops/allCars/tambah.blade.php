@@ -117,7 +117,7 @@
     </div>
 </div> --}}
 
-<div class="row justify-content-center mb-5">
+<div class="row justify-content-center mt-5">
     <div class="col-lg-7">
         <div class="card py-3 px-3 border border-gray-800">
             <main class="form-registration mt-3">

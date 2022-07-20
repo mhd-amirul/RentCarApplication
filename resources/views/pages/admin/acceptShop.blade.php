@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-5">
     <div class="col-lg-8">
         <div class="card py-3 px-3 border border-gray-800">
             <h5 class="textde">INFROMASI PENDAFTAR</h5>

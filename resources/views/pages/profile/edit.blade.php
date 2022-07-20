@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="row justify-content-center mt-5">
+<div class="row justify-content-center mt-5 mb-5">
     <div class="col-lg-6">
         <div class="card px-5 py-5 border border-gray-800">
             <main class="form-registration">
