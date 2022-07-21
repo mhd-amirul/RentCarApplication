@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-5">
     <div class="col-lg-12">
         <div class="card px-5 pt-4 pb-5 border border-gray-800">
             <main class="form-registration mt-3">
@@ -63,7 +63,7 @@
         mapboxgl.accessToken = '{{ env('MAPBOX_KEY') }}';
         const map = new mapboxgl.Map({
             container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11', // light-v10, outdoors-v11, satellite-v9, streets-v11, dark-v10
+            style: 'mapbox://styles/mapbox/satellite-v9', // light-v10, outdoors-v11, satellite-v9, streets-v11, dark-v10
             center: defaultLocation,
             zoom: 9
         });
