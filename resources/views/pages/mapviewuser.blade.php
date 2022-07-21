@@ -36,7 +36,7 @@
                         <div class="col-sm-6 mb-3">
                             <div class="card_body px-4 py-4 border border-dark">
                                 <strong>
-                                    <a href='{{ route('profileToko', $shop->id) }}' style='text-decoration: none;'>{{ $shop->nm_usaha }}</a>
+                                    <a href="{{ route('profileToko', $shop->id) }}" style='text-decoration: none;'>{{ $shop->nm_usaha }}</a>
                                 </strong>
                                 <p>No Hp : +62 {{ $shop->user->no_hp }}
                                     <br> Alamat : {{ $shop->alamat }}
