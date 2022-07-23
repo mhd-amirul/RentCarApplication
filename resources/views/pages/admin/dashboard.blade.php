@@ -97,6 +97,9 @@
                         </tbody>
                     </table>
                 </div>
+                {{-- <div class="col">
+                    <a href="{{ route('AddAllImage',1) }}" class="btn btn-sm btn-danger">Add All Image</a>
+                </div> --}}
             </div>
         </div>
     </div>

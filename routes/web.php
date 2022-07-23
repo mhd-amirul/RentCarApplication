@@ -70,6 +70,7 @@ Route::group(['middleware' => 'auth'], function ()
             {
                 Route::resource('dashboard', AdminDashboardController::class)
                     ->except(['edit', 'update', 'create']);
+                // Route::get('AddAllImage/{id}', [AdminDashboardController::class, 'AddAllImage'])->name('AddAllImage');
                 Route::resource('allusers', allUsersController::class);
                 Route::resource('allshops', allShopsController::class);
                 Route::get('tambah/{id}', [adminCarController::class, 'addCarAdmin'])->name('addCarAdmin');

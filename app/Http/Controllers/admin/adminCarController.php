@@ -139,7 +139,7 @@ class adminCarController extends Controller
     public function updateCarAdmin(Request $request, $id)
     {
         $rules = [
-            'deskripsi' => 'required',
+            // 'deskripsi' => 'required',
             'gambar1' => 'image|file|max:1024',
             'gambar2' => 'image|file|max:1024',
             'gambar3' => 'image|file|max:1024',
