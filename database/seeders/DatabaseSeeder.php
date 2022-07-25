@@ -63,6 +63,17 @@ class DatabaseSeeder extends Seeder
                 'bobot' => 0.2,
                 'type' => 'cost'
             ]);
+            // 14.5
+            // 0.10  TP
+            // 0.15  KF
+            // 0.20 KM
+            // 0.15 MP
+            // 0.1  CC
+            // 0.1 JB
+            // 0.20 HS
+            // 9
+
+
         //
 
         // Table Alternatif  Merk====================================================================================

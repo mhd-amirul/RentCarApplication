@@ -5,7 +5,9 @@ namespace App\Http\Controllers\admin;
 use App\Models\makeShop;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\alternatif;
 use App\Models\car;
+use App\Models\nilai;
 use App\Models\shop;
 use App\Models\User;
 use Illuminate\Support\Facades\Storage;
@@ -74,14 +76,19 @@ class AdminDashboardController extends Controller
     }
 
     // public function AddAllImage($id)
-        // {
+    //     {
         //     $db = shop::findorfail($id);
-
         //     $car = car::where('id', 40)->first();
-        //     $dbcar = car::all();
-        //     foreach ($dbcar as $db) {
-        //         # code...
-        //         if ($db->merk_id == $car->merk_id && $db->Tahun_Produksi_id == $car->Tahun_Produksi_id ) {
+            // $dbcar = car::all();
+            // $dbcar = alternatif::all();
+            // $nilaimerk = 1;
+            // foreach ($dbcar as $db) {
+            //     if ($db->kriteria_id == 1) {
+            //         # code...
+            //         $db->nilai = $nilaimerk;
+            //         $db->save();
+            //     }
+                // if ($db->merk_id == $car->merk_id && $db->Tahun_Produksi_id == $car->Tahun_Produksi_id ) {
         //             # code...
         //             $db->gambar1 = $car->gambar1;
         //             $db->gambar2 = $car->gambar2;
@@ -89,9 +96,8 @@ class AdminDashboardController extends Controller
         //             $db->gambar4 = $car->gambar4;
         //             $db->gambar5 = $car->gambar5;
         //             $db->save();
-        //         }
-        //     }
+                // }
+            // }
         //     return redirect()->back();
-
     // }
 }

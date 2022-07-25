@@ -43,9 +43,9 @@
                     <table class="table table-responsive table-hover">
                         <thead>
                             <tr>
-                                <th>Nama</th>
-                                <th>Bobot</th>
-                                <th>Type</th>
+                                <th>Kriteria</th>
+                                <th>Alternatif</th>
+                                <th>Nilai</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -202,11 +202,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($rank as $id => $value)
+                            @foreach ($cars as $id)
                                 <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $id }}</td>
-                                    <td>{{ $rank[$id] }}</td>
+                                    <td>{{ $id->ranking }}</td>
+                                    <td>{{ $id->id }}</td>
+                                    <td>{{ $id->nilai }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -238,7 +238,7 @@
                         <tbody>
                             @foreach ($cars as $car)
                                 <tr>
-                                    <th scope="row">{{ $loop->iteration }}</th>
+                                    <th scope="row">{{ $car->ranking }}</th>
                                     <td>{{ $car->merk->nama }}</td>
                                     <td>{{ $car->tahun_produksi->nama }}</td>
                                     <td>{{ $car->muatan_penumpang->nama }}</td>
