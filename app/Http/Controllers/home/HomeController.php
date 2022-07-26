@@ -297,9 +297,17 @@ class HomeController extends Controller
         $rank = $optimasi;
         arsort($rank);
 
+        $i = 0;
         $cars = [];
         foreach ($rank as $id_cars => $value) {
+            $i += 1;
             $cars[] = car::where('id', $id_cars)->first();
+            foreach ($cars as $car) {
+                if ($car->id == $id_cars) {
+                    $car->nilai = $value;
+                    $car->ranking = $i;
+                }
+            }
         }
 
         $cars = array_slice($cars, 0, 10);
@@ -315,7 +323,6 @@ class HomeController extends Controller
                     'sample' => $sample,
                     'normal' => $normal,
                     'optimasi' => $optimasi,
-                    'rank' => $rank
                 ]
             );
     }

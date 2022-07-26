@@ -77,7 +77,8 @@ class allShopsController extends Controller
             ->with(
                 [
                     'title' => 'Detail Toko',
-                    'car' => car::where('shop_id', $id)->filter(request(['search']))->get(),
+                    // 'car' => car::where('shop_id', $id)->filter(request(['search']))->get(),
+                    'car' => car::where('shop_id', $id)->OrderBy('merk_id')->get(),
                     'shop' => shop::where('id', $id)->first(),
 
                 ]
