@@ -122,7 +122,7 @@
                             <tr class="text-center">
                                 <th scope="col">No</th>
                                 <th scope="col">Merk</th>
-                                {{-- <th scope="col">Tahun Produksi</th> --}}
+                                <th scope="col">No Polisi</th>
                                 {{-- <th scope="col">Harga Sewa</th> --}}
                                 <th scope="col">Action</th>
                             </tr>
@@ -132,7 +132,8 @@
                                 <tr class="text-center">
                                     <th scope="row">{{ $loop->iteration }}</th>
                                     <td>{{ $car->merk->nama }}</td>
-                                    {{-- <td>{{ $car->tahun_produksi->nama }}</td> --}}
+                                    <td>{{ $car->no_polisi }}</td>
+                                    {{--  <td>{{ $car->tahun_produksi->nama }}</td>  --}}
                                     {{-- <td>{{ $car->harga_sewa->nama }}</td> --}}
                                     <td>
                                         <a href="{{ route('shop.show', $car->id) }}" class="btn btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>

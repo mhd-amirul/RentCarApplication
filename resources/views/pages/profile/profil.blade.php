@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="row mt-4 mb-3 justify-content-start">
-                        <div class="col-sm-7">
+                        <div class="col-sm-12">
                             <a href="{{ route('profil.edit', $data->id) }}" class="mt-1 btn btn-warning ml-1">
                                 <i class="bi bi-pencil-square"></i></i> Edit Profil
                             </a>
@@ -55,9 +55,10 @@
                                 </a>
                             @elseif ($data->role === 'user')
                                 @if ($makeshop)
-                                    <a class="ml-1 mt-1 btn btn-warning">
+                                    {{--  <a class="ml-1 mt-1 btn btn-warning">
                                         <i class="mr-2 bi bi-house-fill"></i>Diproses
-                                    </a>
+                                    </a>  --}}
+                                    <h5 class="text-success ml-1 mt-2">Harap Menunggu! Pemintaan anda sedang diproses Admin</h5>
                                 @else
                                     <a href="{{ route('profil.create')}}" class="ml-1 mt-1 btn btn-warning">
                                         <i class="mr-2 bi bi-house-fill"></i>Buka Toko
