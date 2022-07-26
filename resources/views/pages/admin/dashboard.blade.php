@@ -75,6 +75,7 @@
                                 <th scope="col">Nama Pemilik</th>
                                 <th scope="col">Nama Usaha</th>
                                 <th scope="col">NIK</th>
+                                <th scope="col">Waktu daftar</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -85,6 +86,7 @@
                                     <td>{{ $ms->nm_pu }}</td>
                                     <td>{{ $ms->nm_usaha }}</td>
                                     <td>{{ $ms->nik }}</td>
+                                    <td>{{ $ms->created_at }}</td>
                                     <td>
                                         <a href="{{ route('dashboard.show',$ms->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
                                     </td>

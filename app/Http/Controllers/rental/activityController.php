@@ -49,10 +49,10 @@ class activityController extends Controller
             'car_id' => 'required',
             'shop_id' => 'required',
             'status' => 'required',
-            'sim_peminjam' => 'mimes:jpeg,png|max:300',
-            'ktp_peminjam' => 'mimes:jpeg,png|max:300',
-            'foto_peminjam' => 'mimes:jpeg,png|max:300',
-            'berkas_pinjam' => 'mimes:pdf,jpeg,png|max:1024'
+            // 'sim_peminjam' => 'mimes:jpeg,png,jpg|max:300',
+            // 'ktp_peminjam' => 'mimes:jpeg,png,jpg|max:300',
+            // 'foto_peminjam' => 'mimes:jpeg,png,jpg|max:300',
+            // 'berkas_pinjam' => 'mimes:pdf,jpeg,jpg,png|max:1024'
         ];
 
         $data = $request->validate($rules);

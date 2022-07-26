@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container2')
-{{-- <div class="row justify-content-center" style="background-color: #43454d">
+<div class="row justify-content-center" style="background-color: #43454d">
     <div class="col-lg-12">
         <div class="card border border-gray-800 rounded-0" style="width: 100%;height: 40rem;">
             <div style="height:100%; background-color: #424242; background-image: url('images/bgHome.png'); background-repeat: no-repeat; background-size:  100% 100%;">
@@ -36,9 +36,9 @@
             </div>
         </div>
     </div>
-</div> --}}
+</div>
 
-<div class="row justify-content-center mt-5" style="margin-bottom: 2cm">
+<!-- <div class="row justify-content-center mt-5" style="margin-bottom: 2cm">
     <div class="col-lg-8">
         <div class="card border border-gray-800 mx-3">
             <div class="row justify-content-center my-5">
@@ -71,6 +71,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 @endsection
 
