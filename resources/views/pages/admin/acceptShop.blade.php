@@ -72,15 +72,40 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
+
                         <a href="#" class="btn btn-sm btn-success text-decoration-none" id="acceptShop" style="color: rgb(0, 0, 0);"><i class="bi bi-check-circle"></i> Terima</a>
-                        <a href="#" class="btn btn-sm btn-danger text-decoration-none" id="declineShop" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i> Tolak</a>
+                        <a href="#" class="btn btn-sm btn-danger text-decoration-none" id="declineShop" style="color: rgb(0, 0, 0);" data-toggle="modal" data-target="#exampleModal">
+                            <i class="bi bi-trash-fill"></i> Tolak
+                        </a>
                     </div>
                 </div>
             </form>
-            <form action="{{ route('dashboard.destroy', $ms->id) }}" method="post" class="d-inline" id="declineShop-form">
+            <form action="#" target="blank" method="post" class="d-inline" id="declineShop-form">
                 @method('delete')
                 @csrf
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                            <label for="message-text" class="col-form-label">Keterangan :</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="confirm">Send message</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </form>
+            {{-- <form action="{{ route('dashboard.destroy', $ms->id) }}" method="post" class="d-inline" id="declineShop-form">
+                @method('delete')
+                @csrf
+            </form> --}}
         </div>
     </div>
 </div>
@@ -107,23 +132,23 @@
             })
         });
 
-        $('#declineShop').on('click', function(e) {
-            e.preventDefault();
-            let id = $(this).data('id');
-            Swal.fire({
-                title: 'Are you sure ?',
-                text: 'Terima toko ?',
-                icon: 'warning',
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Confirm',
-                showCancelButton: true,
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    $('#declineShop-form').submit();
-                    // console.log('id')
-                }
-            })
-        });
+        // $('#declineShop').on('click', function(e) {
+            //     e.preventDefault();
+            //     let id = $(this).data('id');
+            //     Swal.fire({
+            //         title: 'Are you sure ?',
+            //         text: 'Terima toko ?',
+            //         icon: 'warning',
+            //         confirmButtonColor: '#3085d6',
+            //         cancelButtonColor: '#d33',
+            //         confirmButtonText: 'Confirm',
+            //         showCancelButton: true,
+            //     }).then((result) => {
+            //         if (result.isConfirmed) {
+            //             $('#declineShop-form').submit();
+            //             // console.log('id')
+            //         }
+            //     })
+        // });
     </script>
 @endpush

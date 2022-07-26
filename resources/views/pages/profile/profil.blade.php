@@ -12,6 +12,12 @@
     <div class="col-sm-10">
         <div class="card mb-3">
             <div class="bg-dark text-center">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10">
+        <div class="card mb-3">
+            <div class="bg-dark text-center">
                 <img src="{{ isset($data->image) == null ? url('images/person.png') : asset('storage/' . $data->image) }}" width="300" class="my-3" style="clip-path: circle()">
             </div>
 
@@ -29,6 +35,12 @@
                         <div class="form-floating mt-3">
                             <input type="text" class="form-control rounded-top" id="nm_pu" value="+62 {{ $data->no_hp }}">
                             <label for="nm_pu">No Hp</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-floating mt-3">
+                            <input type="text" class="form-control rounded-top" id="nm_pu" value="{{ $data->email }}">
+                            <label for="nm_pu">Email</label>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -58,7 +70,9 @@
                                     {{--  <a class="ml-1 mt-1 btn btn-warning">
                                         <i class="mr-2 bi bi-house-fill"></i>Diproses
                                     </a>  --}}
-                                    <h5 class="text-success ml-1 mt-2">Harap Menunggu! Pemintaan anda sedang diproses Admin</h5>
+                                    <a class="ml-1 mt-1 btn btn-sm">
+                                        <marquee class="text-success" scrollamount="11"><h5>Harap menunggu! Pemintaan anda sedang diproses Admin!</h5></marquee>
+                                    </a>
                                 @else
                                     <a href="{{ route('profil.create')}}" class="ml-1 mt-1 btn btn-warning">
                                         <i class="mr-2 bi bi-house-fill"></i>Buka Toko
