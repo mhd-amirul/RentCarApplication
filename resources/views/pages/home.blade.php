@@ -38,10 +38,10 @@
     </div>
 </div> --}}
 
-<div class="row justify-content-center mt-5" style="margin-bottom: 2cm">
+<div class="row justify-content-center" style="margin-bottom: 2cm; margin-top: 2cm">
     <div class="col-lg-8">
-        <div class="card border border-gray-800 mx-3">
-            <div class="row justify-content-center my-5">
+        <div class="card border border-gray-800 mx-3 shadow-lg">
+            <div class="row justify-content-center mb-5">
                 <div class="col-sm-9">
                     <form action="{{ route('hitung') }}" method="GET">
                         <h3 class="text-center mt-5">PILIH KRITERIA MOBIL</h3>

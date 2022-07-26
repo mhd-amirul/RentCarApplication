@@ -8,7 +8,7 @@
     </div>
 @endif --}}
 
-<div class="row justify-content-center mt-5">
+<div class="row justify-content-center mt-5 mb-5">
     <div class="col-sm-10">
         <div class="card mb-3">
             <div class="bg-dark text-center">

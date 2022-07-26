@@ -77,7 +77,7 @@
         const latitude = document.getElementById("latitude").value;
         const defaultLocation = [longitude, latitude]
 
-        mapboxgl.accessToken = '{{ env('MAPBOX_KEY') }}';
+        mapboxgl.accessToken = "{{ env('MAPBOX_KEY') }}";
         const map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v11', // light-v10, outdoors-v11, satellite-v9, streets-v11, dark-v10
