@@ -72,36 +72,36 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-
                         <a href="#" class="btn btn-sm btn-success text-decoration-none" id="acceptShop" style="color: rgb(0, 0, 0);"><i class="bi bi-check-circle"></i> Terima</a>
-                        <a href="#" class="btn btn-sm btn-danger text-decoration-none" id="declineShop" style="color: rgb(0, 0, 0);" data-toggle="modal" data-target="#exampleModal">
+                        <a href="#" class="btn btn-sm btn-danger text-decoration-none" style="color: rgb(0, 0, 0);" data-toggle="modal" data-target="#exampleModal">
                             <i class="bi bi-trash-fill"></i> Tolak
                         </a>
                     </div>
                 </div>
             </form>
-            <form action="#" target="blank" method="post" class="d-inline" id="declineShop-form">
-                @method('delete')
-                @csrf
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                            <label for="message-text" class="col-form-label">Keterangan :</label>
-                            <textarea class="form-control" id="message-text"></textarea>
+
+                <div id="MODAL">
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <form action="{{ route('declineShop') }}" method="get" class="d-inline" id="declineShop-form">
+                                    @csrf
+                                    <div class="form-group">
+                                        <input type="text" name="id" hidden value="{{ $ms->id }}">
+                                        <label for="message-text" class="col-form-label">Keterangan :</label>
+                                        <textarea class="form-control" id="message-text" name="keterangan"></textarea>
+                                    </div>
+                                </form>
                             </div>
-                        </form>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" id="declineShop">Send message</button>
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="confirm">Send message</button>
                         </div>
-                    </div>
                     </div>
                 </div>
-            </form>
             {{-- <form action="{{ route('dashboard.destroy', $ms->id) }}" method="post" class="d-inline" id="declineShop-form">
                 @method('delete')
                 @csrf
@@ -131,6 +131,10 @@
                 }
             })
         });
+
+        $('#declineShop').on('click', function() {
+            $('#declineShop-form').submit();
+        })
 
         // $('#declineShop').on('click', function(e) {
             //     e.preventDefault();

@@ -197,3 +197,74 @@ h6 {
     height: 16px;
     vertical-align: text-bottom;
 }
+
+/* Term and Condition */
+.terms-box {
+    max-width: 460px;
+    background-color: #111;
+    color: #fff;
+    font-family: "Montserrat";
+    padding: 60px 30px;
+}
+
+.terms-text {
+    padding: 0 20px;
+    height: 360px;
+    overflow-y: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: #f1f1f1;
+}
+
+.terms-text::-webkit-scrollbar {
+    width: 2px;
+    background-color: #282828;
+}
+
+.terms-text::-webkit-scrollbar-thumb {
+    background-color: #d13639;
+}
+
+.terms-text h2 {
+    text-transform: uppercase;
+}
+
+.terms-box h4 {
+    font-size: 13px;
+    text-align: center;
+    padding: 0 40px;
+}
+
+.terms-box h4 span {
+    color: #d13639;
+}
+
+.buttons {
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.btn2 {
+    height: 50px;
+    width: calc(50% - 6px);
+    border: 0;
+    border-radius: 6px;
+    font-size: 19px;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.red-btn2 {
+    background-color: #d13639;
+}
+
+.gray-btn2 {
+    background-color: #282828;
+}
+
+.btn2:hover {
+    opacity: 0.6;
+}

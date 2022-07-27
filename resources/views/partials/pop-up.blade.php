@@ -6,6 +6,7 @@
         if (massage) {
             Swal.fire({
                 icon: 'success',
+                position: 'top-end',
                 title: massage,
                 timer: 1000,
                 showConfirmButton: false,
@@ -45,6 +46,7 @@
         if (massage) {
             Swal.fire({
                 icon: 'error',
+                position: 'top-end',
                 title: massage,
                 timer: 2000,
                 showConfirmButton: false,

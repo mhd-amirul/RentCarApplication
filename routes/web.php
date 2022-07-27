@@ -64,12 +64,15 @@ Route::group(['middleware' => 'auth'], function ()
         Route::resource('profil', ProfilController::class)
                 ->except(['show', 'destroy']);
         Route::get('/changePass/{id}', [ProfilController::class, 'changePass'])->name('changePass');
+        Route::get('/profile', [ProfilController::class, 'updaterole'])->name('updaterole');
+        Route::delete('profile/{id}', [ProfilController::class, 'declinems'])->name('declinems');
         Route::put('/changePass/{id}', [ProfilController::class, 'updatePass'])->name('updatePass');
 
         Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function ()
             {
                 Route::resource('dashboard', AdminDashboardController::class)
                     ->except(['edit', 'update', 'create']);
+                Route::get('/declineShop', [AdminDashboardController::class, 'declineShop'])->name('declineShop');
                 // Route::get('AddAllImage/{id}', [AdminDashboardController::class, 'AddAllImage'])->name('AddAllImage');
                 Route::resource('allusers', allUsersController::class);
                 Route::resource('allshops', allShopsController::class);

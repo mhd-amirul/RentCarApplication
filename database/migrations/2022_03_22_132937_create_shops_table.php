@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('nm_usaha');
             $table->string('alamat');
             $table->bigInteger('nik');
+            $table->string('status')->default('nonactive');
             $table->string('longitude')->nullable();
             $table->string('latitude')->nullable();
             $table->string('img_ktp')->nullable();

@@ -133,4 +133,42 @@ class ProfilController extends Controller
             ->route('profil.index')
             ->with('success', 'Password Berhasil di Ubah');
     }
+
+    public function updaterole()
+    {
+        # code...
+        $user = User::where('id', auth()->user()->id)->first();
+        $user->role = 'rental';
+        $shop = shop::where('user_id', $user->id)->first();
+        $shop->status = 'active';
+
+        $shop->save();
+        $user->save();
+        makeShop::where('user_id', $user)->delete();
+        return redirect()->route('profil.index')->with('success', 'Selamat Bergabung di RentCar');
+    }
+
+    public function declinems($id)
+    {
+        $rm = makeShop::findOrFail($id);
+        if ($rm->img_ktp) {
+            # code...
+            Storage::delete($rm->img_ktp);
+        }
+        if ($rm->img_siu) {
+            # code...
+            Storage::delete($rm->img_siu);
+        }
+        if ($rm->pas_foto) {
+            # code...
+            Storage::delete($rm->pas_foto);
+        }
+        if ($rm->foto_usaha) {
+            # code...
+            Storage::delete($rm->foto_usaha);
+        }
+
+        $rm->delete();
+        return redirect()->route('profil.index');
+    }
 }

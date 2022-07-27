@@ -62,6 +62,17 @@
                                     </div>
                                 </div>
                             @endforeach
+                            <div class="col-sm-6">
+                                <div class="form-floating mb-1 mx-3">
+                                    <select name="shop_id" class="form-select" aria-label="Floating label select example">
+                                        <option value="" hidden>Pilih Toko...</option>
+                                        @foreach ($shop as $item)
+                                            <option value="{{ $item->id }}">{{ $item->nm_usaha }}</option>
+                                        @endforeach
+                                    </select>
+                                    <label for="shop_id">Toko</label>
+                                </div>
+                            </div>
                         </div>
                         <div class="d-flex justify-content-center">
                             <button class="w-50 btn btn-sm btn-primary mt-2" type="submit">Search</button>

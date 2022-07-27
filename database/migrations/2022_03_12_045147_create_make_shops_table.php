@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('img_siu');
             $table->string('pas_foto');
             $table->string('foto_usaha')->nullable();
+            $table->string('status')->default('review');
             $table->string('keterangan')->nullable();
             $table->timestamps();
         });

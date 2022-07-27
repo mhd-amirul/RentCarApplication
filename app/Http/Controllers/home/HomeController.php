@@ -22,7 +22,8 @@ class HomeController extends Controller
                 'title' => 'Home',
                 // 'merk' => alternatif::where('kriteria_id', 1)->get(),
                 'kriteria' => kriteria::whereNotIn('id', [3,4])->get(),
-                'alternatif' => alternatif::all()
+                'alternatif' => alternatif::all(),
+                'shop' => shop::where('status', 'active')->get()
             ]);
     }
 
@@ -109,6 +110,9 @@ class HomeController extends Controller
             $name = str_replace(' ','_',$k->nama.'_id');
             if ($request->filled($name)) {
                 $filterCars->where($name, $request[$name])->where('stok','standby');
+            }
+            if ($request->filled('shop_id')) {
+                $filterCars->where('shop_id', $request['shop_id']);
             }
         }
         $allCars = $filterCars->get();
@@ -218,6 +222,9 @@ class HomeController extends Controller
             $name = str_replace(' ','_',$k->nama.'_id');
             if ($request->filled($name)) {
                 $filterCars->where($name, $request[$name])->where('stok','standby');
+            }
+            if ($request->filled('shop_id')) {
+                $filterCars->where('shop_id', $request['shop_id']);
             }
         }
         // ambil semua data sesudah query filter
