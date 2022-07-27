@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('container2')
+@section('container')
 {{-- <div class="row justify-content-center" style="background-color: #43454d">
     <div class="col-lg-12">
         <div class="card border border-gray-800 rounded-0" style="width: 100%;height: 40rem;">
@@ -39,7 +39,46 @@
 </div> --}}
 
 <div class="row justify-content-center mt-5" style="margin-bottom: 2cm">
-    <div class="col-lg-8">
+    <div class="col-lg-10">
+        <div class="card border border-gray-800 mx-3 shadow-lg">
+            <h1>KATA KATA</h1>
+        </div>
+    </div>
+    <div class="col-lg-10">
+        <div class="card border border-gray-800 mx-3 shadow-lg">
+            <section class="ftco-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3 class="text-center text-dark mt-3">Rekomendasi Mobil Rental Berdasarkan Rating</h3>
+                            <hr>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="featured-carousel owl-carousel">
+                                @forelse ($cars as $car)
+                                    <div class="item">
+                                        <div class="work">
+                                            <div class="img d-flex align-items-center justify-content-center rounded">
+                                                <img src="{{ asset('storage/' . $car->gambar1) }}" alt="" width="200" height="200" class="mt-2">
+                                            </div>
+                                            <div class="text pt-3 w-100 text-center">
+                                                <h5><a href="{{ route('detailMobil', $car->id) }}" class="text-dark">{{ $car->merk->nama }}</a></h5>
+                                                <span>{{ $car->shop->nm_usaha }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @empty
+                                    <h4 class="text-center mx-3 my-3"> - </h4>
+                                @endforelse
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+    <div class="col-lg-10">
         <div class="card border border-gray-800 mx-3 shadow-lg">
             <div class="row justify-content-center mb-5">
                 <div class="col-sm-9">
@@ -85,3 +124,11 @@
 </div>
 @endsection
 
+@push('trix')
+    <link rel="stylesheet" href="{{ url('css/owl.carousel.min.css') }}">
+@endpush
+@push('script-map')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ url('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url('js/main.js') }}"></script>
+@endpush

@@ -109,12 +109,6 @@
                             <label for="nm_pu">Email</label>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="form-floating mt-3">
-                            <input type="text" class="form-control rounded-top" id="nm_pu" value="{{ $data->email }}">
-                            <label for="nm_pu">Email</label>
-                        </div>
-                    </div>
                     <div class="row mt-4 mb-3 justify-content-start">
                         <div class="col-sm-12">
                             <a href="{{ route('profil.edit', $data->id) }}" class="mt-1 btn btn-warning ml-1">

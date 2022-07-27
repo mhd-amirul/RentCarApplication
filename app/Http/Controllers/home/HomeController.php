@@ -17,13 +17,23 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $rate = ulasan::where('rating', '5')->get();
+        $i = 0;
+        foreach ($rate as $r) {
+            # code...
+            if ($i < 10) {
+                $cars[] = car::where('id', $r->car_id)->first();
+                $i++;
+            }
+        }
         return view('pages.home')
             ->with([
                 'title' => 'Home',
                 // 'merk' => alternatif::where('kriteria_id', 1)->get(),
                 'kriteria' => kriteria::whereNotIn('id', [3,4])->get(),
                 'alternatif' => alternatif::all(),
-                'shop' => shop::where('status', 'active')->get()
+                'shop' => shop::where('status', 'active')->get(),
+                'cars' => $cars
             ]);
     }
 

@@ -13,7 +13,6 @@
         <div class="container">
             @yield('container')
         </div>
-        @yield('container2')
         @include('partials.footer')
         @include('includes.script')
         @stack('script-map')
