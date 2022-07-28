@@ -6,7 +6,7 @@
             <main class="form-signin">
                 <div class="card py-5 px-5 border border-gray-800">
                     <h1 class="h3 mb-3 fw-normal text-center">Rating Dan Ulasan</h1>
-                <form action="{{ route('updateUlasan', $ulasan->id) }}" method="post" id="updateUlasan-form">
+                <form action="{{ route('updateUlasan', $ulasan->slug) }}" method="post" id="updateUlasan-form">
                     @method('put')
                     @csrf
                     <div class="form-floating mb-1">

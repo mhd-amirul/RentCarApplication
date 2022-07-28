@@ -27,20 +27,20 @@ class ProfilController extends Controller
                 );
     }
 
-    public function edit($id)
+    public function edit(User $profil)
     {
         return view('pages.profile.edit')
                 ->with(
                     [
                         'title' => 'Edit Profile',
-                        'data' => User::findOrFail($id)
+                        'data' => User::findOrFail($profil->id)
                     ]
                 );
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, User $profil)
     {
-        $db = User::findOrFail($id);
+        $db = User::findOrFail($profil->id);
 
         $rules = [
             'username' => 'required|min:5',
@@ -97,21 +97,21 @@ class ProfilController extends Controller
         return redirect()->route('profil.index')->with('success', 'Harap menunggu verifikasi admin!');
     }
 
-    public function changePass($id)
+    public function changePass(User $profil)
     {
         # code...
         return view('pages.profile.changepass')
             ->with(
                 [
                     'title' => 'Change Password',
-                    'user' => User::findOrFail($id)
+                    'user' => User::findOrFail($profil->id)
                 ]
             );
     }
 
-    public function updatePass(Request $request, $id)
+    public function updatePass(Request $request, User $profil)
     {
-        $user = User::findOrFail($id);
+        $user = User::findOrFail($profil->id);
 
         $rules = [
                 'password' => 'required',
@@ -119,10 +119,10 @@ class ProfilController extends Controller
                 'confirmPassword' => 'required|same:newpassword'
             ];
 
-        if (!Hash::check($request->password, $user->password)) {
+            if (!Hash::check($request->password, $user->password)) {
             # code...
             return redirect()
-                ->route('changePass',$id)
+                ->route('changePass',$profil->slug)
                 ->with('failed', 'Password lama tidak sesuai');
         }
 

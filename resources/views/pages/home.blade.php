@@ -39,22 +39,22 @@
 </div> --}}
 
 <div class="row justify-content-center mt-5" style="margin-bottom: 2cm">
-    <div class="col-lg-10">
+    {{-- <div class="col-lg-10">
         <div class="card border border-gray-800 mx-3 shadow-lg">
             <h1>KATA KATA</h1>
         </div>
-    </div>
+    </div> --}}
     <div class="col-lg-10">
         <div class="card border border-gray-800 mx-3 shadow-lg">
             <section class="ftco-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
-                            <h3 class="text-center text-dark mt-3">Rekomendasi Mobil Rental Berdasarkan Rating</h3>
+                            <h3 class="text-dark mt-3">Top Rated :</h3>
                             <hr>
                         </div>
                         <div class="col-md-12">
-                            <div class="featured-carousel owl-carousel">
+                            <div class="featured-carousel owl-carousel mb-4">
                                 @forelse ($cars as $car)
                                     <div class="item">
                                         <div class="work">

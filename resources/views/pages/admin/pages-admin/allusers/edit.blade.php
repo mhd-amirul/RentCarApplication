@@ -9,7 +9,7 @@
                 <div class="col-sm-7">
                     <main class="form-registration mb-5">
                         <h1 class="h3 mb-3 fw-normal text-center">EDIT USER</h1>
-                        <form action="{{ route('allusers.update', $data->id) }}" method="post" enctype="multipart/form-data" id="editUser-form">
+                        <form action="{{ route('allusers.update', $data->slug) }}" method="post" enctype="multipart/form-data" id="editUser-form">
                             @method('put')
                             @csrf
                             <div class="form-floating">

@@ -111,10 +111,10 @@
                     </div>
                     <div class="row mt-4 mb-3 justify-content-start">
                         <div class="col-sm-12">
-                            <a href="{{ route('profil.edit', $data->id) }}" class="mt-1 btn btn-warning ml-1">
+                            <a href="{{ route('profil.edit', $data->slug) }}" class="mt-1 btn btn-warning ml-1">
                                 <i class="bi bi-pencil-square"></i></i> Edit Profil
                             </a>
-                            <a href="{{ route('changePass', $data->id) }}" class="ml-1 mt-1 btn btn-warning">
+                            <a href="{{ route('changePass', $data->slug) }}" class="ml-1 mt-1 btn btn-warning">
                                 <i class="mr-2 bi bi-key"></i>Reset Password
                             </a>
                             @if ($data->role === 'rental')

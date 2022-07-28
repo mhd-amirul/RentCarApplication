@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('ulasans', function (Blueprint $table) {
             $table->id();
+            $table->string('slug')->unique();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('car_id')->references('id')->on('cars')->onDelete('cascade');
             $table->integer('rating');

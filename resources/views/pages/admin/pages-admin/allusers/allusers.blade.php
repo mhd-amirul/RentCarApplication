@@ -78,7 +78,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <table class="table table-responsive table-hover">
                         <thead>
                             <tr class="text-center">
@@ -86,6 +86,7 @@
                                 <th scope="col">Email</th>
                                 <th scope="col">Role</th>
                                 <th scope="col">No Hp</th>
+                                <th scope="col">Created At</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -96,9 +97,10 @@
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->role }}</td>
                                     <td>0{{ $user->no_hp }}</td>
+                                    <td>0{{ $user->created_at }}</td>
                                     <td>
-                                        <a href="{{ route('allusers.show',$user->id) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                                        <form action="{{ route('allusers.destroy', $user->id) }}" method="post" class="d-inline" id="deleteUser-form-{{ $user->id }}">
+                                        <a href="{{ route('allusers.show',$user->slug) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                                        <form action="{{ route('allusers.destroy', $user->slug) }}" method="post" class="d-inline" id="deleteUser-form-{{ $user->id }}">
                                             @method('delete')
                                             @csrf
                                             <a href="#" class="btn-sm btn-danger text-decoration-none" data-id="{{ $user->id }}" id="deleteUser" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i></a>

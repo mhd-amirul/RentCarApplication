@@ -50,4 +50,9 @@ class User extends Authenticatable
                         ->orWhere('email', 'LIKE', '%' . $filterUsers['searchUser'] . '%');
         }
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

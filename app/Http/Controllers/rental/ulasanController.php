@@ -21,7 +21,7 @@ class ulasanController extends Controller
             );
     }
 
-    public function createUlasan(Request $request, $id)
+    public function createUlasan(Request $request, ulasan $ulasan)
     {
         $val = $request->validate(
             [
@@ -36,29 +36,29 @@ class ulasanController extends Controller
         return redirect()->route('detailMobil', $id)->with('success', 'Ulasan berhasil ditambah');
     }
 
-    public function deleteUlasan($id)
+    public function deleteUlasan(ulasan $ulasan)
     {
         # code...
-        ulasan::findorfail($id)->delete();
+        ulasan::findorfail($ulasan->id)->delete();
         return redirect()->back()->with('success', 'Berhasil menghapus komentar');
     }
 
-    public function editUlasan($id)
+    public function editUlasan(ulasan $ulasan)
     {
         # code...
         return view('pages.editulasan')
             ->with(
                 [
                     'title' => 'edit ulasan',
-                    'ulasan' => ulasan::findorfail($id)
+                    'ulasan' => ulasan::findorfail($ulasan->id)
                 ]
             );
     }
 
-    public function updateUlasan(Request $request, $id)
+    public function updateUlasan(Request $request, ulasan $ulasan)
     {
         # code...
-        $db = ulasan::findorfail($id);
+        $db = ulasan::findorfail($ulasan->id);
         $rules = [
             'rating' => 'required',
             'komentar' => 'required|max:500'

@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
+            $table->string('slug')->unique();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('shop_id')->references('id')->on('shops')->onDelete('cascade');
             $table->foreignId('merk_id')->references('id')->on('alternatifs')->onDelete('cascade');

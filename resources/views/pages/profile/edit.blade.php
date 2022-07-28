@@ -6,7 +6,7 @@
         <div class="card px-5 py-5 border border-gray-800">
             <main class="form-registration">
                 <h1 class="h3 mb-3 fw-normal text-center">Edit Profil</h1>
-                <form action="{{ route('profil.update', $data->id) }}" method="post" enctype="multipart/form-data" id="editProfil-form">
+                <form action="{{ route('profil.update', $data->slug) }}" method="post" enctype="multipart/form-data" id="editProfil-form">
                     @method('put')
                     @csrf
                     <div class="form-floating">

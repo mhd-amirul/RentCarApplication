@@ -4,13 +4,12 @@ namespace App\Http\Controllers\admin;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Http\Requests\akunRequest;
+use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use App\Models\car;
 use App\Models\shop;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
-use RealRashid\SweetAlert\Facades\Alert;
 
 class allUsersController extends Controller
 {
@@ -35,10 +34,20 @@ class allUsersController extends Controller
             );
     }
 
-    public function store(akunRequest $request)
+    public function store(Request $request)
     {
+        $rules = [
+            'email' => 'required|email|unique:users',
+            'no_hp' => 'required|min:3|unique:users',
+            'slug' => 'required|unique:users',
+            'role' => '',
+            'password' => 'required|min:5',
+            'confirmpassword' => 'same:password',
+        ];
+        $request['slug'] = Str::random(50);
+        $request['role'] = 'user';
+        $request->validate($rules);
         $data = $request->all();
-        $data['role'] = 'user';
         $data['password'] = Hash::make($data['password']);
         User::create($data);
 
@@ -47,30 +56,30 @@ class allUsersController extends Controller
             ->with('success', 'User berhasil ditambah');
     }
 
-    public function show($id)
+    public function show(User $user)
     {
         return view('pages.admin.pages-admin.allusers.show',
             [
                 'title' => 'Detail User',
-                'users' => user::findOrFail($id)
+                'users' => user::findOrFail($user->id)
             ]
         );
     }
 
-    public function edit($id)
+    public function edit(User $user)
     {
         return view('pages.admin.pages-admin.allusers.edit')
             ->with(
                 [
                     'title' => 'Edit User',
-                    'data' => User::findOrFail($id)
+                    'data' => User::findOrFail($user->id)
                 ]
             );
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        $db = User::findOrFail($id);
+        $db = User::findOrFail($user->id);
         $rules = [
             'username' => 'required|min:5',
             'image' => 'image|file|max:1024',
@@ -86,9 +95,9 @@ class allUsersController extends Controller
         if ($request->oldpassword != null) {
             if (!Hash::check($request->oldpassword, $db->password)) {
                 # code...
-                Alert::error('failed', 'Password lama tidak sesuai');
                 return redirect()
-                    ->back();
+                    ->back()
+                    ->with('failed', 'Password lama tidak sesuai');
             }
             $rules['password'] = 'min:5';
             $rules['ConfirmPassword'] = 'same:password';
@@ -110,21 +119,21 @@ class allUsersController extends Controller
 
         $db->update($data);
         return redirect()
-            ->route('allusers.show',$id)
+            ->route('allusers.show',$user->slug)
             ->with('success', 'Data user berhasil diubah');
     }
 
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        $user = User::findOrFail($id);
-        if ($user->image) {
+        $db = User::findOrFail($user->id);
+        if ($db->image) {
             # code...
-            Storage::delete($user->image);
+            Storage::delete($db->image);
         }
 
-        if ($user->role == 'rental') {
+        if ($db->role == 'rental') {
             # code...
-            $shop = shop::where('user_id', $id)->first();
+            $shop = shop::where('user_id', $user->id)->first();
             $cars = car::where('shop_id', $shop->id)->get();
 
             if ($shop->img_ktp) {
@@ -172,7 +181,7 @@ class allUsersController extends Controller
             }
         }
 
-        $user->delete();
+        $db->delete();
         return redirect()
             ->route('allusers.index')
             ->with('success', 'User berhasil dihapus');

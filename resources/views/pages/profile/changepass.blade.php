@@ -6,7 +6,7 @@
         <div class="card py-5 px-5 border border-gray-800">
             <main class="form-signin">
                 <h1 class="h3 mb-3 fw-normal text-center">Reset Password</h1>
-                <form action="{{ route('updatePass', $user->id) }}" method="post" id="changePass-form">
+                <form action="{{ route('updatePass', $user->slug) }}" method="post" id="changePass-form">
                     @method('put')
                     @csrf
                     <div class="form-floating">

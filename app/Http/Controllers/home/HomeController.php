@@ -18,6 +18,8 @@ class HomeController extends Controller
     public function index()
     {
         $rate = ulasan::where('rating', '5')->get();
+        // return response()->json($rate);
+
         $i = 0;
         foreach ($rate as $r) {
             # code...
@@ -75,15 +77,15 @@ class HomeController extends Controller
             );
     }
 
-    public function profileToko($id)
+    public function profileToko(shop $shop)
     {
         # code...
         return view('pages.profileToko')
             ->with(
                 [
                     'title' => 'Informasi Toko',
-                    'shop' => shop::findOrFail($id),
-                    'car' => car::where('shop_id', $id)->get()
+                    'shop' => shop::findOrFail($shop->id),
+                    'car' => car::where('shop_id', $shop->id)->get()
                 ]
             );
     }

@@ -4,11 +4,10 @@ namespace App\Http\Controllers\authentikasi;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Http\Requests\akunRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Str;
 
 class AuthentikasiController extends Controller
 {
@@ -22,8 +21,18 @@ class AuthentikasiController extends Controller
             );
     }
 
-    public function store(akunRequest $request)
+    public function store(Request $request)
     {
+        $rules = [
+            'email' => 'required|email|unique:users',
+            'no_hp' => 'required|min:3|unique:users',
+            'slug' => 'required|unique:users',
+            'role' => '',
+            'password' => 'required|min:5',
+            'confirmpassword' => 'same:password',
+        ];
+        $request['slug'] = Str::random(50);
+        $request->validate($rules);
         $data = $request->all();
         $data['password'] = Hash::make($data['password']);
 

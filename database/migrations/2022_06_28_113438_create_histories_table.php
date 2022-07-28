@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('histories', function (Blueprint $table) {
             $table->id();
+            $table->string('slug')->unique();
             $table->foreignId('shop_id')->references('id')->on('shops')->onDelete('cascade');
             $table->string('nama_pinjam');
             $table->string('nik_pinjam');

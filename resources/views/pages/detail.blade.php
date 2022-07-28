@@ -6,7 +6,7 @@
         <div class="card user-card-full">
             <div class="col">
                 <div class="card-block">
-                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600"><a href="{{ route('profileToko', $car->shop->id) }}" class="text-black">{{ $car->shop->nm_usaha }}</a> , {{ $car->shop->alamat }}</h6>
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600"><a href="{{ route('profileToko', $car->shop->slug) }}" class="text-black">{{ $car->shop->nm_usaha }}</a> , {{ $car->shop->alamat }}</h6>
                     <div class="d-flex justify-content-center">
                         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner m-2" style="max-height: 450px; max-width: 450px; overflow: hidden;">
@@ -191,13 +191,13 @@
                                 <span class="date text-black-50">{{ $ulas->created_at->diffForHumans() }}
                                     @if (isset(auth()->user()->id))
                                         @if (auth()->user()->id == $ulas->user_id)
-                                            <a href="{{ route('editUlasan', $ulas->id) }}" class="text-warning text-decoration-none">
+                                            <a href="{{ route('editUlasan', $ulas->slug) }}" class="text-warning text-decoration-none">
                                                 <i class="bi bi-pencil-square"></i>
                                             </a>
-                                            <a href="#" id="delUlas" data-id="{{ $ulas->id }}" class="text-danger text-decoration-none">
+                                            <a href="#" id="delUlas" data-id="{{ $ulas->slug }}" class="text-danger text-decoration-none">
                                                 <i class="bi bi-trash"></i>
                                             </a>
-                                            <form action="{{ route('deleteUlasan', $ulas->id) }}" method="post" id="delUlas-form-{{ $ulas->id }}">
+                                            <form action="{{ route('deleteUlasan', $ulas->slug) }}" method="post" id="{{ $ulas->slug }}">
                                                 @csrf
                                                 @method('delete')
                                             </form>
@@ -230,7 +230,6 @@
     $(document).on('click', '#delUlas', function(e) {
             e.preventDefault();
             let id = $(this).data('id');
-            console.log(id)
             Swal.fire({
                 title: 'Are you sure ?',
                 text: "Hapus Ulasan ?",
@@ -241,7 +240,7 @@
                 confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    $('#delUlas-form-'+id).submit();
+                    $('#'+id).submit();
                 }
             })
         });

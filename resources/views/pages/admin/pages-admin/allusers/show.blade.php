@@ -48,11 +48,11 @@
                         <a href="{{ route('allusers.index') }}" style="color: rgb(0, 0, 0);" class="btn btn-sm btn-primary">
                             <i class="bi bi-arrow-left-circle"></i> Back
                         </a>
-                        <a href="{{ route('allusers.edit', $users->id) }}" class="btn btn-sm btn-warning">
+                        <a href="{{ route('allusers.edit', $users->slug) }}" class="btn btn-sm btn-warning">
                             <i class="bi bi-pencil-square"></i>
                         Edit
                         </a>
-                        <form action="{{ route('allusers.destroy', $users->id) }}" method="post" class="d-inline" id="deleteUser-form">
+                        <form action="{{ route('allusers.destroy', $users->slug) }}" method="post" class="d-inline" id="deleteUser-form">
                             @method('delete')
                             @csrf
                             <button class="btn btn-sm btn-danger border-0" style="color: rgb(0, 0, 0);" id="deleteUser">

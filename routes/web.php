@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('/');
 Route::get('daftar', [HomeController::class, 'daftarMobil'])->name('daftar');
 Route::get('detail/{id}', [HomeController::class, 'detailMobil'])->name('detailMobil');
-Route::get('profileToko/{id}', [HomeController::class, 'profileToko'])->name('profileToko');
+Route::get('profileToko/{shop:slug}', [HomeController::class, 'profileToko'])->name('profileToko');
 Route::get('/map/{id}', [mapController::class, 'shareLocation'])->name('sharelok');
 
 // Hasil Perhitungan Rekomendasi FrontEnd dan BackEnd
@@ -54,27 +54,35 @@ Route::group(['middleware' => 'guest', 'prefix' => 'guest'], function ()
 
 Route::group(['middleware' => 'auth'], function ()
     {
-        // Home / Daftar mobil / Informasi Mobil / Informasi / map / Ulasan / logOut
+        // Route Ulasan
         Route::get('ulasan/{id}', [ulasanController::class, 'ulasanView'])->name('ulasan');
-        Route::get('ulasan/edit/{id}', [ulasanController::class, 'editUlasan'])->name('editUlasan');
-        Route::put('ulasan/edit/{id}', [ulasanController::class, 'updateUlasan'])->name('updateUlasan');
-        Route::put('ulasan/{id}', [ulasanController::class, 'createUlasan'])->name('ulasanU');
-        Route::delete('ulasan/{id}', [ulasanController::class, 'deleteUlasan'])->name('deleteUlasan');
+        Route::get('ulasan/edit/{ulasan:slug}', [ulasanController::class, 'editUlasan'])->name('editUlasan');
+        Route::put('ulasan/edit/{ulasan:slug}', [ulasanController::class, 'updateUlasan'])->name('updateUlasan');
+        Route::put('ulasan/{ulasan:slug}', [ulasanController::class, 'createUlasan'])->name('ulasanU');
+        Route::delete('ulasan/{ulasan:slug}', [ulasanController::class, 'deleteUlasan'])->name('deleteUlasan');
+        // Route Log Out
         Route::post('logout', [AuthentikasiController::class, 'logout'])->name('logout');
+        // Route Profil
         Route::resource('profil', ProfilController::class)
+                ->parameters(['profil' => 'profil',])
                 ->except(['show', 'destroy']);
-        Route::get('/changePass/{id}', [ProfilController::class, 'changePass'])->name('changePass');
+        Route::get('/changePass/{profil}', [ProfilController::class, 'changePass'])->name('changePass');
+        Route::put('/changePass/{profil}', [ProfilController::class, 'updatePass'])->name('updatePass');
+        // Route next Buka Toko
         Route::get('/profile', [ProfilController::class, 'updaterole'])->name('updaterole');
         Route::delete('profile/{id}', [ProfilController::class, 'declinems'])->name('declinems');
-        Route::put('/changePass/{id}', [ProfilController::class, 'updatePass'])->name('updatePass');
 
         Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function ()
             {
+                // Route function auto add data
+                Route::get('AddAllImage/{id}', [AdminDashboardController::class, 'AddAllImage'])->name('AddAllImage');
+                // Route Dashboard
                 Route::resource('dashboard', AdminDashboardController::class)
                     ->except(['edit', 'update', 'create']);
                 Route::get('/declineShop', [AdminDashboardController::class, 'declineShop'])->name('declineShop');
-                // Route::get('AddAllImage/{id}', [AdminDashboardController::class, 'AddAllImage'])->name('AddAllImage');
-                Route::resource('allusers', allUsersController::class);
+                // Route All User Config
+                Route::resource('allusers', allUsersController::class)
+                        ->parameters(['allusers' => 'user']);
                 Route::resource('allshops', allShopsController::class);
                 Route::get('tambah/{id}', [adminCarController::class, 'addCarAdmin'])->name('addCarAdmin');
                 Route::get('edit/{id}', [adminCarController::class, 'editCarAdmin'])->name('editCarAdmin');
