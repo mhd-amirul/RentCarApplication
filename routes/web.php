@@ -111,15 +111,15 @@ Route::group(['middleware' => 'auth'], function ()
                     ->except(['index']);
 
                 Route::get('activityView/{shop}', [activityController::class, 'activityView'])->name('activityView');
-                Route::get('activityViewCetak/{id}', [activityController::class, 'activityViewCetak'])->name('activityViewCetak');
+                Route::get('activityViewCetak/{shop}', [activityController::class, 'activityViewCetak'])->name('activityViewCetak');
                 Route::get('activityAdd/{shop}', [activityController::class, 'activityAdd'])->name('activityAdd');
-                Route::get('activityShow/{id}', [activityController::class, 'activityShow'])->name('activityShow');
-                Route::get('activityEdit/{id}', [activityController::class, 'activityEdit'])->name('activityEdit');
-                Route::get('activityHistory/{id}', [activityController::class, 'activityHistory'])->name('activityHistory');
+                Route::get('activityShow/{history}', [activityController::class, 'activityShow'])->name('activityShow');
+                Route::get('activityEdit/{history}', [activityController::class, 'activityEdit'])->name('activityEdit');
+                Route::get('activityHistory/{shop}', [activityController::class, 'activityHistory'])->name('activityHistory');
                 Route::post('activityStore/{shop}', [activityController::class, 'activityStore'])->name('activityStore');
-                Route::put('activityUpdate/{id}', [activityController::class, 'activityUpdate'])->name('activityUpdate');
-                Route::put('activityReturn/{id}', [activityController::class, 'activityReturn'])->name('activityReturn');
-                Route::delete('activityDelete/{id}', [activityController::class, 'activityDelete'])->name('activityDelete');
+                Route::put('activityUpdate/{history}', [activityController::class, 'activityUpdate'])->name('activityUpdate');
+                Route::put('activityReturn/{history}', [activityController::class, 'activityReturn'])->name('activityReturn');
+                Route::delete('activityDelete/{history}', [activityController::class, 'activityDelete'])->name('activityDelete');
 
                 Route::get('map/{map}', [mapController::class, 'setLocation'])->name('setLocation');
                 Route::put('map/update/{map}', [mapController::class, 'saveLocation'])->name('saveLocation');

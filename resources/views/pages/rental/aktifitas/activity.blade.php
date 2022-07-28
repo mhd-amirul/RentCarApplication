@@ -9,7 +9,7 @@
                 <div class="col-sm-12">
                     <a href="{{ route('toko.index') }}" class="btn btn-dark"><i class="bi bi-arrow-left-circle"></i> Back</a>
                     <a href="{{ route('activityAdd',$shop->slug) }}" class="btn btn-primary"><i class="bi bi-file-earmark-plus"></i> Tambah</a>
-                    <a href="{{ route('activityHistory',$shop->id) }}" class="btn btn-secondary"><i class="bi bi-clock-history"></i>  History</a>
+                    <a href="{{ route('activityHistory',$shop->slug) }}" class="btn btn-secondary"><i class="bi bi-clock-history"></i>  History</a>
                     {{-- <a target="blank" href="{{ route('activityViewCetak', $shop->id) }}" class="btn btn-success"><i class="bi bi-printer-fill"></i>  Print</a> --}}
                 </div>
             </div>
@@ -37,7 +37,7 @@
                                     <td>{{ $h->batas_pinjam }}</td>
                                     <td class="{{ $h->status == 'late' ? 'text-danger' : 'text-success' }} text-uppercase">{{ $h->status }}</td>
                                     <td>
-                                        <a href="{{ route('activityShow', $h->id) }}" class="text-dark btn-sm btn-primary">
+                                        <a href="{{ route('activityShow', $h->slug) }}" class="text-dark btn-sm btn-primary">
                                             <i class="bi bi-eye-fill"></i>
                                         </a>
                                     </td>

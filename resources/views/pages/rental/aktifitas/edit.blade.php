@@ -7,7 +7,7 @@
             <h2 class="m-b-20 p-b-5 b-b-default mt-3 text-center">EDIT AKTIFITAS</h2>
             <div class="row justify-content-center">
                 <div class="col-sm-12">
-                    <form action="{{ route('activityUpdate', $history->id) }}" method="post" enctype="multipart/form-data" id="editAktifitas-form">
+                    <form action="{{ route('activityUpdate', $history->slug) }}" method="post" enctype="multipart/form-data" id="editAktifitas-form">
                         @csrf
                         @method('put')
                         <div class="row justify-content-center">

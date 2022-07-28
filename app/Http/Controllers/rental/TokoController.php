@@ -7,7 +7,6 @@ use App\Models\shop;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\history;
 use DateTime;
 use Illuminate\Support\Facades\Storage;
 
