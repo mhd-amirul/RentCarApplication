@@ -67,7 +67,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <table class="table table-responsive table-hover">
                         <thead>
                             <tr class="text-center">
@@ -76,6 +76,7 @@
                                 <th scope="col">Nama Usaha</th>
                                 <th scope="col">NIK</th>
                                 <th scope="col">Waktu daftar</th>
+                                <th scope="col">Status</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -87,8 +88,9 @@
                                     <td>{{ $ms->nm_usaha }}</td>
                                     <td>{{ $ms->nik }}</td>
                                     <td>{{ $ms->created_at }}</td>
+                                    <td>{{ $ms->status }}</td>
                                     <td>
-                                        <a href="{{ route('dashboard.show',$ms->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                                        <a href="{{ route('dashboard.show',$ms->slug) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
                                     </td>
                                 </tr>
                             @empty
@@ -99,9 +101,9 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="col">
+                {{-- <div class="col">
                     <a href="{{ route('AddAllImage',1) }}" class="btn btn-sm btn-danger">Add All Image</a>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

@@ -30,8 +30,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('/');
 Route::get('daftar', [HomeController::class, 'daftarMobil'])->name('daftar');
 Route::get('detail/{id}', [HomeController::class, 'detailMobil'])->name('detailMobil');
-Route::get('profileToko/{shop:slug}', [HomeController::class, 'profileToko'])->name('profileToko');
-Route::get('/map/{id}', [mapController::class, 'shareLocation'])->name('sharelok');
+Route::get('profileToko/{shop}', [HomeController::class, 'profileToko'])->name('profileToko');
+Route::get('/map/{shop}', [mapController::class, 'shareLocation'])->name('sharelok');
 
 // Hasil Perhitungan Rekomendasi FrontEnd dan BackEnd
 Route::get('hitung', [HomeController::class, 'hitung'])->name('hitung');
@@ -56,10 +56,10 @@ Route::group(['middleware' => 'auth'], function ()
     {
         // Route Ulasan
         Route::get('ulasan/{id}', [ulasanController::class, 'ulasanView'])->name('ulasan');
-        Route::get('ulasan/edit/{ulasan:slug}', [ulasanController::class, 'editUlasan'])->name('editUlasan');
-        Route::put('ulasan/edit/{ulasan:slug}', [ulasanController::class, 'updateUlasan'])->name('updateUlasan');
-        Route::put('ulasan/{ulasan:slug}', [ulasanController::class, 'createUlasan'])->name('ulasanU');
-        Route::delete('ulasan/{ulasan:slug}', [ulasanController::class, 'deleteUlasan'])->name('deleteUlasan');
+        Route::get('ulasan/edit/{ulasan}', [ulasanController::class, 'editUlasan'])->name('editUlasan');
+        Route::put('ulasan/edit/{ulasan}', [ulasanController::class, 'updateUlasan'])->name('updateUlasan');
+        Route::put('ulasan/{ulasan}', [ulasanController::class, 'createUlasan'])->name('ulasanU');
+        Route::delete('ulasan/{ulasan}', [ulasanController::class, 'deleteUlasan'])->name('deleteUlasan');
         // Route Log Out
         Route::post('logout', [AuthentikasiController::class, 'logout'])->name('logout');
         // Route Profil
@@ -78,15 +78,18 @@ Route::group(['middleware' => 'auth'], function ()
                 Route::get('AddAllImage/{id}', [AdminDashboardController::class, 'AddAllImage'])->name('AddAllImage');
                 // Route Dashboard
                 Route::resource('dashboard', AdminDashboardController::class)
+                    ->parameters(['dashboard' => 'dashboard'])
                     ->except(['edit', 'update', 'create']);
                 Route::get('/declineShop', [AdminDashboardController::class, 'declineShop'])->name('declineShop');
                 // Route All User Config
                 Route::resource('allusers', allUsersController::class)
                         ->parameters(['allusers' => 'user']);
-                Route::resource('allshops', allShopsController::class);
-                Route::get('tambah/{id}', [adminCarController::class, 'addCarAdmin'])->name('addCarAdmin');
+                // Route All Shop Config
+                Route::resource('allshops', allShopsController::class)
+                        ->parameters(['allshops' => 'shop']);
+                Route::get('tambah/{shop}', [adminCarController::class, 'addCarAdmin'])->name('addCarAdmin');
                 Route::get('edit/{id}', [adminCarController::class, 'editCarAdmin'])->name('editCarAdmin');
-                Route::post('tambah/{id}', [adminCarController::class, 'createCarAdmin'])->name('createCarAdmin');
+                Route::post('tambah/{shop}', [adminCarController::class, 'createCarAdmin'])->name('createCarAdmin');
                 Route::put('edit/{id}', [adminCarController::class, 'updateCarAdmin'])->name('updateCarAdmin');
                 Route::get('showCarAdmin/{id}', [adminCarController::class, 'showCarAdmin'])->name('showCarAdmin');
                 Route::delete('car/{id}', [allShopsController::class, 'destroyCar'])->name('carDelete');
@@ -107,20 +110,21 @@ Route::group(['middleware' => 'auth'], function ()
                 Route::resource('shop', RentalController::class)
                     ->except(['index']);
 
-                Route::get('activityView/{id}', [activityController::class, 'activityView'])->name('activityView');
+                Route::get('activityView/{shop}', [activityController::class, 'activityView'])->name('activityView');
                 Route::get('activityViewCetak/{id}', [activityController::class, 'activityViewCetak'])->name('activityViewCetak');
-                Route::get('activityAdd/{id}', [activityController::class, 'activityAdd'])->name('activityAdd');
+                Route::get('activityAdd/{shop}', [activityController::class, 'activityAdd'])->name('activityAdd');
                 Route::get('activityShow/{id}', [activityController::class, 'activityShow'])->name('activityShow');
                 Route::get('activityEdit/{id}', [activityController::class, 'activityEdit'])->name('activityEdit');
                 Route::get('activityHistory/{id}', [activityController::class, 'activityHistory'])->name('activityHistory');
-                Route::post('activityStore/{id}', [activityController::class, 'activityStore'])->name('activityStore');
+                Route::post('activityStore/{shop}', [activityController::class, 'activityStore'])->name('activityStore');
                 Route::put('activityUpdate/{id}', [activityController::class, 'activityUpdate'])->name('activityUpdate');
                 Route::put('activityReturn/{id}', [activityController::class, 'activityReturn'])->name('activityReturn');
                 Route::delete('activityDelete/{id}', [activityController::class, 'activityDelete'])->name('activityDelete');
 
-                Route::get('map/{id}', [mapController::class, 'setLocation'])->name('setLocation');
-                Route::put('map/update/{id}', [mapController::class, 'saveLocation'])->name('saveLocation');
+                Route::get('map/{map}', [mapController::class, 'setLocation'])->name('setLocation');
+                Route::put('map/update/{map}', [mapController::class, 'saveLocation'])->name('saveLocation');
                 Route::resource('/toko', TokoController::class)
+                    ->parameters(['toko' => 'toko'])
                     ->except(['show', 'create', 'store']);
             }
         );

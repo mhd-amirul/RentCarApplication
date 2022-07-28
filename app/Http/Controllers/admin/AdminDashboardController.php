@@ -5,14 +5,8 @@ namespace App\Http\Controllers\admin;
 use App\Models\makeShop;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\alternatif;
-use App\Models\car;
-use App\Models\nilai;
 use App\Models\shop;
-use App\Models\ulasan;
 use Illuminate\Support\Str;
-use App\Models\User;
-use Illuminate\Support\Facades\Storage;
 
 class AdminDashboardController extends Controller
 {
@@ -30,6 +24,7 @@ class AdminDashboardController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        $data['slug'] = Str::random(50);
         $ms = makeShop::where('user_id', $request->user_id)->first();
         $ms->status = 'accept';
         $ms->save();
@@ -40,12 +35,12 @@ class AdminDashboardController extends Controller
             ->with('success', 'Permintaan di Terima');
     }
 
-    public function show($id)
+    public function show(makeShop $dashboard)
     {
         return view('pages.admin.acceptShop',
             [
                 'title' => 'Konfirmasi Toko',
-                'ms' => makeShop::findOrFail($id)
+                'ms' => $dashboard
             ]
         );
     }
@@ -86,35 +81,35 @@ class AdminDashboardController extends Controller
         //         ->route('dashboard.index')->with('failed', 'Permintaan di Tolak');
     // }
 
-    public function AddAllImage($id)
-        {
-            // $db = shop::findorfail($id);
-            // $car = car::where('id', 40)->first();
-            // $dbcar = car::all();
-            // $dbcar = alternatif::all();
-            // $nilaimerk = 1;
-            // foreach ($dbcar as $db) {
-            //     if ($db->kriteria_id == 1) {
-            //         # code...
-            //         $db->nilai = $nilaimerk;
-            //         $db->save();
-            //     }
-            //     if ($db->merk_id == $car->merk_id && $db->Tahun_Produksi_id == $car->Tahun_Produksi_id ) {
-            //         # code...
-            //         $db->gambar1 = $car->gambar1;
-            //         $db->gambar2 = $car->gambar2;
-            //         $db->gambar3 = $car->gambar3;
-            //         $db->gambar4 = $car->gambar4;
-            //         $db->gambar5 = $car->gambar5;
-            //         $db->save();
-            //     }
-            // }
-            $db = shop::where('slug', null)->get();
-            foreach ($db as $db) {
-                $db['slug'] = Str::random(50);
-                $db->save();
-            }
+    // public function AddAllImage($id)
+    //     {
+    //         // $db = shop::findorfail($id);
+    //         // $car = car::where('id', 40)->first();
+    //         // $dbcar = car::all();
+    //         // $dbcar = alternatif::all();
+    //         // $nilaimerk = 1;
+    //         // foreach ($dbcar as $db) {
+    //         //     if ($db->kriteria_id == 1) {
+    //         //         # code...
+    //         //         $db->nilai = $nilaimerk;
+    //         //         $db->save();
+    //         //     }
+    //         //     if ($db->merk_id == $car->merk_id && $db->Tahun_Produksi_id == $car->Tahun_Produksi_id ) {
+    //         //         # code...
+    //         //         $db->gambar1 = $car->gambar1;
+    //         //         $db->gambar2 = $car->gambar2;
+    //         //         $db->gambar3 = $car->gambar3;
+    //         //         $db->gambar4 = $car->gambar4;
+    //         //         $db->gambar5 = $car->gambar5;
+    //         //         $db->save();
+    //         //     }
+    //         // }
+    //         $db = shop::where('slug', null)->get();
+    //         foreach ($db as $db) {
+    //             $db['slug'] = Str::random(50);
+    //             $db->save();
+    //         }
 
-            return redirect()->back();
-    }
+    //         return redirect()->back();
+    // }
 }

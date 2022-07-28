@@ -59,7 +59,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-6 ">
-                            <a href="{{ route('sharelok', $shop->id) }}" class="btn btn-success text-white">
+                            <a href="{{ route('sharelok', $shop->slug) }}" class="btn btn-success text-white">
                                 <i class="mr-2 bi bi-house-fill"></i> Cek Lokasi Toko
                             </a>
                         </div>

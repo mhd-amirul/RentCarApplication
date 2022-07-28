@@ -79,7 +79,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <table class="table table-responsive table-hover">
                         <thead>
                             <tr class="text-center">
@@ -87,6 +87,8 @@
                                 <th scope="col">Nama Pemilik</th>
                                 <th scope="col">Nama Usaha</th>
                                 <th scope="col">NIK</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Created At</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -97,12 +99,14 @@
                                     <td>{{ $shop->nm_pu }}</td>
                                     <td>{{ $shop->nm_usaha }}</td>
                                     <td>{{ $shop->nik }}</td>
+                                    <td>{{ $shop->status }}</td>
+                                    <td>{{ $shop->created_at }}</td>
                                     <td>
-                                        <a href="{{ route('allshops.show',$shop->id) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                                        <form action="{{ route('allshops.destroy', $shop->id) }}" method="post" class="d-inline" id="deleteShop-form-{{ $shop->id }}">
+                                        <a href="{{ route('allshops.show',$shop->slug) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                                        <form action="{{ route('allshops.destroy', $shop->slug) }}" method="post" class="d-inline" id="{{ $shop->slug }}">
                                             @method('delete')
                                             @csrf
-                                            <a href="#" class="btn-sm btn-danger text-decoration-none" data-id="{{ $shop->id }}" id="deleteShop" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i></a>
+                                            <a href="#" class="btn-sm btn-danger text-decoration-none" data-id="{{ $shop->slug }}" id="deleteShop" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i></a>
                                         </form>
                                     </td>
                                 </tr>
@@ -135,7 +139,7 @@
                 confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    $('#deleteShop-form-'+id).submit();
+                    $('#'+id).submit();
                 }
             })
         });

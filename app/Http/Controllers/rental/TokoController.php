@@ -36,22 +36,19 @@ class TokoController extends Controller
                 );
     }
 
-    public function edit($id)
+    public function edit(shop $toko)
     {
-        $data = shop::findOrFail($id);
         return view('pages.rental.toko.editToko')
             ->with(
                 [
                     'title' => 'Edit Toko',
-                    'data' => $data
+                    'data' => $toko
                 ]
             );
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, shop $toko)
     {
-        $db = shop::findOrFail($id);
-
         $rules =
         [
             'nm_pu' => 'required',
@@ -63,7 +60,7 @@ class TokoController extends Controller
             'foto_usaha' => 'image|file|max:1024'
         ];
 
-        if ($request->nik != $db->nik) {
+        if ($request->nik != $toko->nik) {
             $rules['nik'] = 'required|size:16|unique:make_shops';
         }
 
@@ -95,31 +92,30 @@ class TokoController extends Controller
             $data['foto_usaha'] = $request->file('foto_usaha')->store('foto_usaha');
         }
 
-        $db->update($data);
+        $toko->update($data);
         return redirect()
             ->route('toko.index')->with('success', 'Data Toko Berhasil di Ubah');
     }
 
-    public function destroy($id)
+    public function destroy(shop $toko)
     {
-        $shop = shop::findOrFail($id);
-        $cars = car::where('shop_id', $shop->id)->get();
+        $cars = car::where('shop_id', $toko->id)->get();
 
-        if ($shop->img_ktp) {
+        if ($toko->img_ktp) {
             # code...
-            Storage::delete($shop->img_ktp);
+            Storage::delete($toko->img_ktp);
         }
-        if ($shop->img_siu) {
+        if ($toko->img_siu) {
             # code...
-            Storage::delete($shop->img_siu);
+            Storage::delete($toko->img_siu);
         }
-        if ($shop->pas_foto) {
+        if ($toko->pas_foto) {
             # code...
-            Storage::delete($shop->pas_foto);
+            Storage::delete($toko->pas_foto);
         }
-        if ($shop->foto_usaha) {
+        if ($toko->foto_usaha) {
             # code...
-            Storage::delete($shop->foto_usaha);
+            Storage::delete($toko->foto_usaha);
         }
 
         if ($cars != null) {
@@ -149,11 +145,11 @@ class TokoController extends Controller
             }
         }
 
-        $user = User::where('id', $shop->user_id)->first();
+        $user = User::where('id', $toko->user_id)->first();
         $user['role'] = 'user';
         $user->save();
 
-        $shop->delete();
+        $toko->delete();
         return redirect()
             ->route('profil.index')->with('success', 'Toko Berhasil di Hapus');
     }

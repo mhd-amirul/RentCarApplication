@@ -5,8 +5,8 @@ namespace App\Http\Controllers\rental;
 use App\Http\Controllers\Controller;
 use App\Models\car;
 use App\Models\ulasan;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use RealRashid\SweetAlert\Facades\Alert;
 
 class ulasanController extends Controller
 {
@@ -21,29 +21,32 @@ class ulasanController extends Controller
             );
     }
 
-    public function createUlasan(Request $request, ulasan $ulasan)
+    public function createUlasan(Request $request, $id)
     {
-        $val = $request->validate(
-            [
-                'car_id' => 'required',
-                'rating' => 'required',
-                'komentar' => 'required|max:500'
-            ]
-        );
+        $rules = [
+            'car_id' => 'required',
+            'user_id' => 'required',
+            'rating' => 'required',
+            'slug' => 'required|unique:ulasans',
+            'komentar' => 'required|max:500'
+        ];
 
-        $val['user_id'] = auth()->user()->id;
+        $request['slug'] = Str::random(50);
+        $request['user_id'] = auth()->user()->id;
+        $val = $request->validate($rules);
+
         ulasan::create($val);
         return redirect()->route('detailMobil', $id)->with('success', 'Ulasan berhasil ditambah');
     }
 
-    public function deleteUlasan(ulasan $ulasan)
+    public function deleteUlasan(Ulasan $ulasan)
     {
         # code...
         ulasan::findorfail($ulasan->id)->delete();
         return redirect()->back()->with('success', 'Berhasil menghapus komentar');
     }
 
-    public function editUlasan(ulasan $ulasan)
+    public function editUlasan(Ulasan $ulasan)
     {
         # code...
         return view('pages.editulasan')
@@ -55,7 +58,7 @@ class ulasanController extends Controller
             );
     }
 
-    public function updateUlasan(Request $request, ulasan $ulasan)
+    public function updateUlasan(Request $request, Ulasan $ulasan)
     {
         # code...
         $db = ulasan::findorfail($ulasan->id);

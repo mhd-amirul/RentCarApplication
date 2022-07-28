@@ -25,4 +25,9 @@ class makeShop extends Model
                             ->orWhere('created_at', 'LIKE', '%' . $filters['searchms'] . '%');
         }
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

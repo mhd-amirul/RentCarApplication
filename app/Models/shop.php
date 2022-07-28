@@ -28,4 +28,9 @@ class shop extends Model
                         ->orWhere('created_at', 'LIKE', '%' . $filterShops['searchShop'] . '%');
         }
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

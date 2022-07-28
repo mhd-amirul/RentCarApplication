@@ -7,7 +7,7 @@
             <h2 class="m-b-20 p-b-5 b-b-default mt-3 text-center">TAMBAH AKTIFITAS</h2>
             <div class="row justify-content-center">
                 <div class="col-sm-12">
-                    <form action="{{ route('activityStore', $shop->id) }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('activityStore', $shop->slug) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row justify-content-center">
                             <div class="col-sm-5">

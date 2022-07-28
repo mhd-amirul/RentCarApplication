@@ -6,7 +6,7 @@
         <div class="card py-5 px-5 border border-gray-800">
             <main class="form-registration">
                 <h1 class="h3 mb-3 fw-normal text-center">EDIT TOKO</h1><hr>
-                <form action="{{ route('allshops.update', $data->id) }}" method="post" enctype="multipart/form-data" id="editToko-form">
+                <form action="{{ route('allshops.update', $data->slug) }}" method="post" enctype="multipart/form-data" id="editToko-form">
                     @csrf
                     @method('put')
                     <div class="row">

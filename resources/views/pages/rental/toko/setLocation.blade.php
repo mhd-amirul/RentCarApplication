@@ -20,7 +20,7 @@
                             </div>
                         </div>
                     </div>
-                    <form action="{{ route('saveLocation', $shop->id) }}" method="post" id="setLok-form">
+                    <form action="{{ route('saveLocation', $shop->slug) }}" method="post" id="setLok-form">
                     @method('put')
                     @csrf
                     <div class="row">

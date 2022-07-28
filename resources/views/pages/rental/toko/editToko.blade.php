@@ -7,7 +7,7 @@
         <div class="card py-5 px-5 border border-gray-800">
             <main class="form-registration">
                 <h2 class="m-b-20 p-b-5 b-b-default f-w-600 text-center">Edit Toko</h2>
-                <form action="{{ route('toko.update', $data->id) }}" method="post" enctype="multipart/form-data" id="editShop-form">
+                <form action="{{ route('toko.update', $data->slug) }}" method="post" enctype="multipart/form-data" id="editShop-form">
                     @csrf
                     @method('put')
                     <div class="row">

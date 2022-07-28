@@ -9,11 +9,8 @@ use App\Models\ulasan;
 use App\Models\alternatif;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\CreateMobilRequest;
-use App\Http\Requests\MobilUpdateRequest;
 use App\Models\kriteria;
 use Illuminate\Http\Request;
-use RealRashid\SweetAlert\Facades\Alert;
 
 class RentalController extends Controller
 {

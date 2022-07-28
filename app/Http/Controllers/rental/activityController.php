@@ -13,33 +13,33 @@ use Illuminate\Support\Facades\Storage;
 class activityController extends Controller
 {
 
-    public function activityView($id)
+    public function activityView(shop $shop)
     {
         return view('pages.rental.aktifitas.activity')
             ->with(
                 [
                     'title' => 'Aktifitas Toko',
-                    'histories' => history::where('shop_id', $id)->where('status', 'on')->get(),
-                    'shop' => shop::where('id', $id)->first()
+                    'histories' => history::where('shop_id', $shop->id)->where('status', 'on')->get(),
+                    'shop' => $shop
                 ]
             );
     }
 
-    public function activityAdd($id)
+    public function activityAdd(shop $shop)
     {
         return view('pages.rental.aktifitas.tambah')
             ->with(
                 [
                     'title' => 'Add Activity',
-                    'shop' => shop::find($id),
-                    'cars' => car::where('shop_id', $id)->where('stok','standby')->get()
+                    'shop' => $shop,
+                    'cars' => car::where('shop_id', $shop->id)->where('stok','standby')->get()
                 ]
             );
     }
 
-    public function activityStore(Request $request, $id)
+    public function activityStore(Request $request, shop $shop)
     {
-        $request['shop_id'] = $id;
+        $request['shop_id'] = $shop->id;
         $request['status'] = 'on';
         $rules = [
             'nama_pinjam' => 'required',
@@ -74,7 +74,7 @@ class activityController extends Controller
         $car->save();
 
         history::create($data);
-        return redirect()->route('activityView',$id)->with('success', 'Aktifitas berhasil ditambahkan');
+        return redirect()->route('activityView',$shop->id)->with('success', 'Aktifitas berhasil ditambahkan');
     }
 
     public function activityShow($id)

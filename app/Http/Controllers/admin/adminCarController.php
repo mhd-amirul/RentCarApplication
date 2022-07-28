@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CreateMobilRequest;
-use App\Http\Requests\MobilUpdateRequest;
 use App\Models\alternatif;
 use App\Models\car;
 use App\Models\kriteria;
@@ -39,13 +37,13 @@ class adminCarController extends Controller
             );
     }
 
-    public function addCarAdmin($id)
+    public function addCarAdmin(shop $shop)
     {
         # code...
         return view('pages.admin.pages-admin.allshops.allcars.tambah')
             ->with(
                 [
-                    'shop' => shop::findorfail($id),
+                    'shop' => $shop,
                     'title' => 'Tambah Mobil',
                     'kriteria' => kriteria::all(),
                     'alternatif' => alternatif::all()
@@ -53,7 +51,7 @@ class adminCarController extends Controller
             );
     }
 
-    public function createCarAdmin(Request $request, $id)
+    public function createCarAdmin(Request $request, shop $shop)
     {
         $rules = [
             'stok' => 'required',
@@ -96,8 +94,8 @@ class adminCarController extends Controller
                 $data['kata_kunci'] .= $db->nama.', ';
             }
         }
-        $shop = shop::where('id', $id)->first();
-        $data['shop_id'] = $id;
+
+        $data['shop_id'] = $shop->id;
         $data['user_id'] = $shop->user_id;
         $car = car::create($data);
 
@@ -118,7 +116,7 @@ class adminCarController extends Controller
         }
 
         return redirect()
-            ->route('allshops.show',$id)
+            ->route('allshops.show',$shop->slug)
             ->with('success', 'Mobil berhasil ditambah');
     }
 

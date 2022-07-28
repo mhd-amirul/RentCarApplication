@@ -82,7 +82,7 @@
                                 <span class="fa fa-globe"></span>
                             </div>
                             <div class="text">
-                                <p><span>Rental: </span> <a href="{{ route('profileToko', $shop->id) }}">{{ $shop->nm_usaha }}</a></p>
+                                <p><span>Rental: </span> <a href="{{ route('profileToko', $shop->slug) }}">{{ $shop->nm_usaha }}</a></p>
                             </div>
                         </div>
                     </div>

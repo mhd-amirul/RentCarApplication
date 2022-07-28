@@ -63,15 +63,15 @@
                             <a href="{{ route('allshops.index')}}" style="color: rgb(0, 0, 0);" class="mt-1 btn btn-sm btn-primary">
                                 <i class="bi bi-arrow-left-circle"></i> Back
                             </a>
-                            <a href="{{ route('allshops.edit', $shop->id) }}" class="mt-1 btn btn-sm btn-warning">
+                            <a href="{{ route('allshops.edit', $shop->slug) }}" class="mt-1 btn btn-sm btn-warning">
                                 <i class="bi bi-pencil-square"></i> Edit Toko
                             </a>
                             @if ($shop->longitude != null && $shop->latitude != null)
-                                <a href="{{ route('sharelok', $shop->id) }}" style="color: rgb(0, 0, 0);" class="mt-1 btn btn-sm btn-success">
+                                <a href="{{ route('sharelok', $shop->slug) }}" style="color: rgb(0, 0, 0);" class="mt-1 btn btn-sm btn-success">
                                     <i class="bi bi-house-fill"></i> Lokasi Toko
                                 </a>
                             @endif
-                            <form action="{{ route('allshops.destroy', $shop->id) }}" method="post" class="d-inline" id="deleteShop-form">
+                            <form action="{{ route('allshops.destroy', $shop->slug) }}" method="post" class="d-inline" id="deleteShop-form">
                                 @method('delete')
                                 @csrf
                                 <a href="#" class="mt-1 btn btn-sm btn-danger text-decoration-none" id="deleteShop" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i> Hapus</a>
@@ -88,7 +88,7 @@
             <div class="row">
                 <div class="col">
                     @if ($shop->longitude != null && $shop->latitude != null)
-                        <a href="{{ route('addCarAdmin',$shop->id) }}" class="btn btn-sm btn-primary mb-2">Tambah Mobil</a>
+                        <a href="{{ route('addCarAdmin',$shop->slug) }}" class="btn btn-sm btn-primary mb-2">Tambah Mobil</a>
                     @else
                         <p class="mb-21 mt-2"></p>
                     @endif
@@ -102,15 +102,16 @@
                 </div>
             </form>
 
-            <div class="row justify-content-center ml-5">
-                <div class="col-sm-12 ml-2">
+            <div class="row justify-content-center">
+                <div class="col-sm-12">
                     <table class="table table-responsive table-hover">
                         <thead>
                             <tr class="text-center">
                                 <th scope="col">No</th>
                                 <th scope="col">Merk</th>
+                                <th scope="col">No Polisi</th>
                                 <th scope="col">Tahun Produksi</th>
-                                <th scope="col">Harga Sewa</th>
+                                <th scope="col">Stok</th>
                                 <th scope="col">Action</th>
                             </tr>
                             </thead>
@@ -119,8 +120,9 @@
                             <tr class="text-center">
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td>{{ $car->merk->nama }}</td>
+                                <td>{{ $car->no_polisi }}</td>
                                 <td>{{ $car->tahun_produksi->nama }}</td>
-                                <td>{{ $car->harga_sewa->nama }}</td>
+                                <td>{{ $car->stok }}</td>
                                 <td>
                                     <a href="{{ route('showCarAdmin', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
                                     <form action="{{ route('carDelete', $car->id) }}" method="post" class="d-inline" id="deleteCar-form-{{ $car->id }}">

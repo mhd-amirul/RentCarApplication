@@ -122,7 +122,7 @@
         <div class="card py-3 px-3 border border-gray-800">
             <main class="form-registration mt-3">
                 <h2 class="m-b-20 f-w-600 text-center">Tambah Mobil</h2>
-                <form action="{{ route('createCarAdmin',$shop->id) }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('createCarAdmin',$shop->slug) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <h5 class="m-b-20 p-b-5 b-b-default f-w-600">Pilih Kriteria Mobil</h5>
                     <div class="row">

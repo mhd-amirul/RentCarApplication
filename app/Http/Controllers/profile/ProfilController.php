@@ -10,7 +10,7 @@ use App\Models\makeShop;
 use App\Models\shop;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
-use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Str;
 
 class ProfilController extends Controller
 {
@@ -92,6 +92,7 @@ class ProfilController extends Controller
         }
 
         $data['user_id'] = auth()->user()->id;
+        $data['slug'] = Str::random(50);
 
         makeShop::create($data);
         return redirect()->route('profil.index')->with('success', 'Harap menunggu verifikasi admin!');
@@ -144,7 +145,7 @@ class ProfilController extends Controller
 
         $shop->save();
         $user->save();
-        makeShop::where('user_id', $user)->delete();
+        makeShop::where('user_id', $user->id)->delete();
         return redirect()->route('profil.index')->with('success', 'Selamat Bergabung di RentCar');
     }
 

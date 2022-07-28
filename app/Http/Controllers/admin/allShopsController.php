@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class allShopsController extends Controller
 {
@@ -35,19 +36,23 @@ class allShopsController extends Controller
 
     public function store(Request $request)
     {
-        $data = $request->validate(
-            [
-                'user_id' => 'required',
-                'nm_pu' => 'required',
-                'nm_usaha' => 'required',
-                'alamat' => 'required',
-                'nik' => 'required|integer|digits:16|unique:make_shops',
-                'img_ktp' => 'image|file|max:1024',
-                'img_siu' => 'image|file|max:1024',
-                'pas_foto' => 'image|file|max:1024',
-                'foto_usaha' => 'image|file|max:1024'
-            ]
-        );
+        $rules = [
+            'user_id' => 'required',
+            'status' => 'required',
+            'slug' => 'required|unique:shops',
+            'nm_pu' => 'required',
+            'nm_usaha' => 'required',
+            'alamat' => 'required',
+            'nik' => 'required|integer|digits:16|unique:shops',
+            'img_ktp' => 'image|file|max:1024',
+            'img_siu' => 'image|file|max:1024',
+            'pas_foto' => 'image|file|max:1024',
+            'foto_usaha' => 'image|file|max:1024'
+        ];
+
+        $request['slug'] = Str::random(50);
+        $request['status'] = 'active';
+        $data = $request->validate($rules);
 
         if ($request->file('img_ktp')) {
             $data['img_ktp'] = $request->file('img_ktp')->store('ktp');
@@ -71,37 +76,36 @@ class allShopsController extends Controller
     }
 
 
-    public function show($id)
+    public function show(shop $shop)
     {
         return view('pages.admin.pages-admin.allshops.show')
             ->with(
                 [
                     'title' => 'Detail Toko',
                     // 'car' => car::where('shop_id', $id)->filter(request(['search']))->get(),
-                    'car' => car::where('shop_id', $id)->OrderBy('merk_id')->get(),
-                    'shop' => shop::where('id', $id)->first(),
+                    'car' => car::where('shop_id', $shop->id)->OrderBy('merk_id')->get(),
+                    'shop' => shop::where('id', $shop->id)->first(),
 
                 ]
             );
     }
 
-    public function edit($id)
+    public function edit(shop $shop)
     {
         return view('pages.admin.pages-admin.allshops.edit')
             ->with(
                 [
-                    'data' => shop::findOrFail($id),
+                    'data' => shop::findOrFail($shop->id),
                     'title' => 'Edit Toko'
                 ]
             );
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, shop $shop)
     {
-        $db = shop::findOrFail($id);
+        $db = shop::findOrFail($shop->id);
 
-        $rules =
-        [
+        $rules = [
             'user_id' => '',
             'nm_pu' => 'required',
             'nm_usaha' => 'required',
@@ -144,29 +148,29 @@ class allShopsController extends Controller
         }
 
         $db->update($data);
-        return redirect()->route('allshops.show', $id)->with('success', 'Informasi toko berhasil diubah');
+        return redirect()->route('allshops.show', $shop->slug)->with('success', 'Informasi toko berhasil diubah');
     }
 
-    public function destroy($id)
+    public function destroy(shop $shop)
     {
-        $shop = shop::findOrFail($id);
-        $cars = car::where('shop_id', $shop->id)->get();
+        $db = shop::findOrFail($shop->id);
+        $cars = car::where('shop_id', $db->id)->get();
 
-        if ($shop->img_ktp) {
+        if ($db->img_ktp) {
             # code...
-            Storage::delete($shop->img_ktp);
+            Storage::delete($db->img_ktp);
         }
-        if ($shop->img_siu) {
+        if ($db->img_siu) {
             # code...
-            Storage::delete($shop->img_siu);
+            Storage::delete($db->img_siu);
         }
-        if ($shop->pas_foto) {
+        if ($db->pas_foto) {
             # code...
-            Storage::delete($shop->pas_foto);
+            Storage::delete($db->pas_foto);
         }
-        if ($shop->foto_usaha) {
+        if ($db->foto_usaha) {
             # code...
-            Storage::delete($shop->foto_usaha);
+            Storage::delete($db->foto_usaha);
         }
 
         if ($cars != null) {
@@ -196,7 +200,7 @@ class allShopsController extends Controller
             }
         }
 
-        $user = User::where('id', $shop->user_id)->first();
+        $user = User::where('id', $db->user_id)->first();
         $user['role'] = 'user';
         $user->save();
 
@@ -210,6 +214,7 @@ class allShopsController extends Controller
     {
         # code...
         $data = car::findOrFail($id);
+        $shop = shop::where('id', $data->shop_id)->first();
 
         if ($data->gambar1) {
             # code...
@@ -232,11 +237,9 @@ class allShopsController extends Controller
             Storage::delete($data->gambar5);
         }
 
-        $id = $data['shop_id'];
-
         $data->delete();
         return redirect()
-            ->route('allshops.show', $id)
+            ->route('allshops.show', $shop->slug)
             ->with('success', 'Mobil berhasil dihapus');
     }
 }
