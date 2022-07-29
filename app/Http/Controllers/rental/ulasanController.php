@@ -10,18 +10,18 @@ use Illuminate\Http\Request;
 
 class ulasanController extends Controller
 {
-    public function ulasanView($id)
+    public function ulasanView(car $car)
     {
         return view('pages.ulasan')
             ->with(
                 [
                     'title' => 'Ulasan',
-                    'car' => car::findOrFail($id)
+                    'car' => $car
                 ]
             );
     }
 
-    public function createUlasan(Request $request, $id)
+    public function createUlasan(Request $request, car $car)
     {
         $rules = [
             'car_id' => 'required',
@@ -36,13 +36,13 @@ class ulasanController extends Controller
         $val = $request->validate($rules);
 
         ulasan::create($val);
-        return redirect()->route('detailMobil', $id)->with('success', 'Ulasan berhasil ditambah');
+        return redirect()->route('detailMobil', $car->slug)->with('success', 'Ulasan berhasil ditambah');
     }
 
     public function deleteUlasan(Ulasan $ulasan)
     {
         # code...
-        ulasan::findorfail($ulasan->id)->delete();
+        $ulasan->delete();
         return redirect()->back()->with('success', 'Berhasil menghapus komentar');
     }
 
@@ -53,24 +53,24 @@ class ulasanController extends Controller
             ->with(
                 [
                     'title' => 'edit ulasan',
-                    'ulasan' => ulasan::findorfail($ulasan->id)
+                    'ulasan' => $ulasan
                 ]
             );
     }
 
     public function updateUlasan(Request $request, Ulasan $ulasan)
     {
-        # code...
-        $db = ulasan::findorfail($ulasan->id);
         $rules = [
             'rating' => 'required',
             'komentar' => 'required|max:500'
         ];
 
         $data = $request->validate($rules);
-        $db->update($data);
+        $car = car::where('id', $ulasan->car_id)->first();
+
+        $ulasan->update($data);
         return redirect()
-            ->route('detailMobil',$db->car_id)
+            ->route('detailMobil',$car->slug)
             ->with('success', 'ulasan berhasil diubah');
     }
 }

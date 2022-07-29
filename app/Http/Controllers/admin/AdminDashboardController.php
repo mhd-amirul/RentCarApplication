@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Models\makeShop;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\car;
 use App\Models\shop;
 use Illuminate\Support\Str;
 
@@ -104,11 +105,14 @@ class AdminDashboardController extends Controller
     //         //         $db->save();
     //         //     }
     //         // }
-    //         $db = shop::where('slug', null)->get();
+    //         $db = car::where('slug', '')->get();
+
     //         foreach ($db as $db) {
     //             $db['slug'] = Str::random(50);
     //             $db->save();
     //         }
+    //         return response()->json($db);
+
 
     //         return redirect()->back();
     // }

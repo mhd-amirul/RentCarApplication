@@ -107,7 +107,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-9 mt-5">
-                                <a href="{{ route('sharelok', $car->shop->id) }}" class="btn btn-success" style="color: rgb(0, 0, 0);">
+                                <a href="{{ route('sharelok', $car->shop->slug) }}" class="btn btn-success" style="color: rgb(0, 0, 0);">
                                     <i class="mr-2 bi bi-house-fill"></i> Cek Lokasi Toko
                                 </a>
                             </div>
@@ -215,7 +215,7 @@
                         </div>
                     @endforelse
                     <h6 class="b-b-default"></h6>
-                    <a href="{{ route('ulasan', $car->id) }}" style="color: rgb(0, 0, 0);" class="btn btn-primary">
+                    <a href="{{ route('ulasan', $car->slug) }}" style="color: rgb(0, 0, 0);" class="btn btn-primary">
                         <i class="mr-2 bi bi-pencil-square"></i> Ulasan
                     </a>
                 </div>

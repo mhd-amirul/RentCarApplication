@@ -6,7 +6,7 @@
             <main class="form-signin">
                 <div class="card py-5 px-5 border border-gray-800">
                     <h1 class="h3 mb-3 fw-normal text-center">Rating Dan Ulasan</h1>
-                <form action="{{ route('ulasanU', $car->id) }}" method="post" id="createUlasan-form">
+                <form action="{{ route('ulasanU', $car->slug) }}" method="post" id="createUlasan-form">
                     @method('put')
                     @csrf
                     <input name="car_id" type="hidden" value="{{ $car->id }}">

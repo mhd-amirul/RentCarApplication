@@ -29,7 +29,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('/');
 Route::get('daftar', [HomeController::class, 'daftarMobil'])->name('daftar');
-Route::get('detail/{id}', [HomeController::class, 'detailMobil'])->name('detailMobil');
+Route::get('detail/{car}', [HomeController::class, 'detailMobil'])->name('detailMobil');
 Route::get('profileToko/{shop}', [HomeController::class, 'profileToko'])->name('profileToko');
 Route::get('/map/{shop}', [mapController::class, 'shareLocation'])->name('sharelok');
 
@@ -55,10 +55,10 @@ Route::group(['middleware' => 'guest', 'prefix' => 'guest'], function ()
 Route::group(['middleware' => 'auth'], function ()
     {
         // Route Ulasan
-        Route::get('ulasan/{id}', [ulasanController::class, 'ulasanView'])->name('ulasan');
+        Route::get('ulasan/{car}', [ulasanController::class, 'ulasanView'])->name('ulasan');
         Route::get('ulasan/edit/{ulasan}', [ulasanController::class, 'editUlasan'])->name('editUlasan');
         Route::put('ulasan/edit/{ulasan}', [ulasanController::class, 'updateUlasan'])->name('updateUlasan');
-        Route::put('ulasan/{ulasan}', [ulasanController::class, 'createUlasan'])->name('ulasanU');
+        Route::put('ulasan/{car}', [ulasanController::class, 'createUlasan'])->name('ulasanU');
         Route::delete('ulasan/{ulasan}', [ulasanController::class, 'deleteUlasan'])->name('deleteUlasan');
         // Route Log Out
         Route::post('logout', [AuthentikasiController::class, 'logout'])->name('logout');
@@ -75,7 +75,7 @@ Route::group(['middleware' => 'auth'], function ()
         Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function ()
             {
                 // Route function auto add data
-                Route::get('AddAllImage/{id}', [AdminDashboardController::class, 'AddAllImage'])->name('AddAllImage');
+                // Route::get('AddAllImage/{id}', [AdminDashboardController::class, 'AddAllImage'])->name('AddAllImage');
                 // Route Dashboard
                 Route::resource('dashboard', AdminDashboardController::class)
                     ->parameters(['dashboard' => 'dashboard'])
@@ -108,6 +108,7 @@ Route::group(['middleware' => 'auth'], function ()
             {
                 // Route Khusus Toko Rental
                 Route::resource('shop', RentalController::class)
+                    ->parameters(['shop' => 'car'])
                     ->except(['index']);
 
                 Route::get('activityView/{shop}', [activityController::class, 'activityView'])->name('activityView');

@@ -39,9 +39,9 @@ class HomeController extends Controller
             ]);
     }
 
-    public function detailMobil($id)
+    public function detailMobil(car $car)
     {
-        $ulasan = ulasan::where('car_id', $id);
+        $ulasan = ulasan::where('car_id', $car->id);
 
         $rate = $ulasan->sum('rating');
         $jumlah = $ulasan->count();
@@ -54,7 +54,7 @@ class HomeController extends Controller
             ->with(
                 [
                     'title' => 'Detail Mobil',
-                    'car' => car::findOrFail($id),
+                    'car' => $car,
                     'ulasan' => $ulasan->get(),
                     'rating' => $hasil,
                     'review' => $jumlah,
@@ -88,18 +88,6 @@ class HomeController extends Controller
                     'car' => car::where('shop_id', $shop->id)->get()
                 ]
             );
-    }
-
-    public function locationForUser($id)
-    {
-        # code...
-        $data = shop::findOrFail($id);
-        return response()->json($data);
-        return view('pages.mapviewuser')
-            ->with([
-                'title' => 'Lokasi',
-                'shop' => shop::findOrFail($id)
-            ]);
     }
 
     public function hitung(Request $request)
@@ -211,7 +199,8 @@ class HomeController extends Controller
             );
     }
 
-    public function proses_hitung(Request $request){
+    public function proses_hitung(Request $request)
+    {
         // Mengambil semua data kriteria
         $allKriteria = kriteria::all();
         $kriteria = [];

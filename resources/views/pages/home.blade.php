@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-{{-- <div class="row justify-content-center" style="background-color: #43454d">
+{{--  <div class="row justify-content-center" style="background-color: #43454d">
     <div class="col-lg-12">
         <div class="card border border-gray-800 rounded-0" style="width: 100%;height: 40rem;">
             <div style="height:100%; background-color: #424242; background-image: url('images/bgHome.png'); background-repeat: no-repeat; background-size:  100% 100%;">
@@ -36,7 +36,7 @@
             </div>
         </div>
     </div>
-</div> --}}
+</div>  --}}
 
 <div class="row justify-content-center mt-5" style="margin-bottom: 2cm">
     {{-- <div class="col-lg-10">
@@ -62,7 +62,7 @@
                                                 <img src="{{ asset('storage/' . $car->gambar1) }}" alt="" width="200" height="200" class="mt-2">
                                             </div>
                                             <div class="text pt-3 w-100 text-center">
-                                                <h5><a href="{{ route('detailMobil', $car->id) }}" class="text-dark">{{ $car->merk->nama }}</a></h5>
+                                                <h5><a href="{{ route('detailMobil', $car->slug) }}" class="text-dark">{{ $car->merk->nama }}</a></h5>
                                                 <span>{{ $car->shop->nm_usaha }}</span>
                                             </div>
                                         </div>

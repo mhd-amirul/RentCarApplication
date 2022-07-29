@@ -59,4 +59,8 @@ class car extends Model
         }
     }
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

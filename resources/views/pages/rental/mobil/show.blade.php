@@ -115,13 +115,13 @@
                                 <a href="{{ route('toko.index') }}" style="color: rgb(0, 0, 0);" class="mt-1 btn btn-sm btn-primary">
                                     <i class="bi bi-arrow-left-circle"></i> Back
                                 </a>
-                                <a href="{{ route('shop.edit', $car->id) }}" style="color: rgb(0, 0, 0);" class=" mt-1 btn btn-sm btn-warning">
+                                <a href="{{ route('shop.edit', $car->slug) }}" style="color: rgb(0, 0, 0);" class=" mt-1 btn btn-sm btn-warning">
                                     <i class="bi bi-pencil-square"></i> Edit
                                 </a>
-                                <a href="{{ route('sharelok', $car->shop->id) }}" style="color: rgb(0, 0, 0);" class=" mt-1 btn btn-sm btn-success">
+                                <a href="{{ route('sharelok', $car->shop->slug) }}" style="color: rgb(0, 0, 0);" class=" mt-1 btn btn-sm btn-success">
                                     <i class="bi bi-house-fill"></i> Lokasi Toko
                                 </a>
-                                <form action="{{ route('shop.destroy', $car->id) }}" method="post" id="deleteCar-form" class="d-inline">
+                                <form action="{{ route('shop.destroy', $car->slug) }}" method="post" id="deleteCar-form" class="d-inline">
                                     @method('delete')
                                     @csrf
                                     <button id="deleteCar" class="mt-1 btn btn-sm btn-danger text-decoration-none" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i> Hapus</button>

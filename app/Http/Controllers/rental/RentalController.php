@@ -95,9 +95,9 @@ class RentalController extends Controller
             ->route('toko.index')->with('success', 'Berhasil Menambah Mobil Baru');
     }
 
-    public function show($id)
+    public function show(car $car)
     {
-        $ulasan = ulasan::where('car_id', $id);
+        $ulasan = ulasan::where('car_id', $car->id);
 
         $rate = $ulasan->sum('rating');
         $jumlah = $ulasan->count();
@@ -110,7 +110,7 @@ class RentalController extends Controller
             ->with(
                 [
                     'title' => 'Detail Mobil',
-                    'car' => car::findOrFail($id),
+                    'car' => $car,
                     'ulasan' => $ulasan->get(),
                     'rating' => $hasil,
                     'review' => $jumlah
@@ -118,7 +118,7 @@ class RentalController extends Controller
             );
     }
 
-    public function edit($id)
+    public function edit(car $car)
     {
         return view('pages.rental.mobil.edit')
                 ->with(
@@ -126,12 +126,12 @@ class RentalController extends Controller
                         'title' => 'Tambah Mobil',
                         'kriteria' => kriteria::all(),
                         'alternatif' => alternatif::all(),
-                        'car' => car::findOrFail($id)
+                        'car' => $car
                     ]
                 );
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, car $car)
     {
         $rules = [
             'deskripsi' => 'required',
@@ -141,8 +141,6 @@ class RentalController extends Controller
             'gambar4' => 'image|file|max:1024',
             'gambar5' => 'image|file|max:1024'
         ];
-
-        $database = car::findOrFail($id);
 
         $request->validate($rules);
         $data = $request->all();
@@ -189,7 +187,7 @@ class RentalController extends Controller
             # code...
             $name = str_replace(' ','_',$k->nama.'_id');
             $db = alternatif::where('id', $data[$name])->first();
-            $dbNilai = nilai::where(['car_id' => $id, 'kriteria_id' => $k->id])->first();
+            $dbNilai = nilai::where(['car_id' => $car->id, 'kriteria_id' => $k->id])->first();
 
             if ($db->kriteria_id == $k->id) {
                 $data['kata_kunci'] .= $db->nama.', ';
@@ -198,7 +196,7 @@ class RentalController extends Controller
             if ($dbNilai) {
                 # code...
                 $nilai = [
-                    'car_id' => $id,
+                    'car_id' => $car->id,
                     'kriteria_id' => $k->id,
                     'alternatif_id' => $data[$name],
                     'nilai' => $db->nilai
@@ -206,38 +204,36 @@ class RentalController extends Controller
                 $dbNilai->update($nilai);
             }
         }
-        $database->update($data);
+        $car->update($data);
 
         return redirect()
-            ->route('shop.show', $id)->with('success', 'Data Mobil Berhasil di Ubah');
+            ->route('shop.show', $car->slug)->with('success', 'Data Mobil Berhasil di Ubah');
     }
 
-    public function destroy($id)
+    public function destroy(car $car)
     {
-        $data = car::findOrFail($id);
-
-        if ($data->gambar1) {
+        if ($car->gambar1) {
             # code...
-            Storage::delete($data->gambar1);
+            Storage::delete($car->gambar1);
         }
-        if ($data->gambar2) {
+        if ($car->gambar2) {
             # code...
-            Storage::delete($data->gambar2);
+            Storage::delete($car->gambar2);
         }
-        if ($data->gambar3) {
+        if ($car->gambar3) {
             # code...
-            Storage::delete($data->gambar3);
+            Storage::delete($car->gambar3);
         }
-        if ($data->gambar4) {
+        if ($car->gambar4) {
             # code...
-            Storage::delete($data->gambar4);
+            Storage::delete($car->gambar4);
         }
-        if ($data->gambar5) {
+        if ($car->gambar5) {
             # code...
-            Storage::delete($data->gambar5);
+            Storage::delete($car->gambar5);
         }
 
-        $data->delete();
+        $car->delete();
         return redirect()
                 ->route('toko.index')->with('success', 'Mobil Berhasil di Hapus!!!');
     }
