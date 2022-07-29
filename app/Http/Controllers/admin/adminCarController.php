@@ -11,13 +11,14 @@ use App\Models\shop;
 use App\Models\ulasan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class adminCarController extends Controller
 {
-    public function showCarAdmin($id)
+    public function showCarAdmin(car $car)
     {
         # code...
-        $ulasan = ulasan::where('car_id', $id);
+        $ulasan = ulasan::where('car_id', $car->id);
 
         $rate = $ulasan->sum('rating');
         $jumlah = $ulasan->count();
@@ -29,7 +30,7 @@ class adminCarController extends Controller
             ->with(
                 [
                     'title' => 'Detail Mobil',
-                    'car' => car::findorfail($id),
+                    'car' => $car,
                     'ulasan' => $ulasan->get(),
                     'rating' => $hasil,
                     'review' => $jumlah
@@ -81,6 +82,7 @@ class adminCarController extends Controller
         }
 
         $request['stok'] = 'standby';
+        $request['slug'] = Str::random(50);
         $request->validate($rules);
         $data = $request->all();
 
@@ -120,13 +122,13 @@ class adminCarController extends Controller
             ->with('success', 'Mobil berhasil ditambah');
     }
 
-    public function editCarAdmin($id)
+    public function editCarAdmin(car $car)
     {
         # code...
         return view('pages.admin.pages-admin.allshops.allcars.edit')
             ->with(
                 [
-                    'car' => car::findorfail($id),
+                    'car' => $car,
                     'title' => 'Edit Mobil',
                     'kriteria' => kriteria::all(),
                     'alternatif' => alternatif::all()
@@ -134,7 +136,7 @@ class adminCarController extends Controller
             );
     }
 
-    public function updateCarAdmin(Request $request, $id)
+    public function updateCarAdmin(Request $request, car $car)
     {
         $rules = [
             // 'deskripsi' => 'required',
@@ -144,8 +146,6 @@ class adminCarController extends Controller
             'gambar4' => 'image|file|max:1024',
             'gambar5' => 'image|file|max:1024'
         ];
-
-        $database = car::findOrFail($id);
 
         $request->validate($rules);
         $data = $request->all();
@@ -191,7 +191,7 @@ class adminCarController extends Controller
             # code...
             $name = str_replace(' ','_',$k->nama.'_id');
             $db = alternatif::where('id', $data[$name])->first();
-            $dbNilai = nilai::where(['car_id' => $id, 'kriteria_id' => $k->id])->first();
+            $dbNilai = nilai::where(['car_id' => $car->id, 'kriteria_id' => $k->id])->first();
 
             if ($db->kriteria_id == $k->id) {
                 $data['kata_kunci'] .= $db->nama.', ';
@@ -200,7 +200,7 @@ class adminCarController extends Controller
             if ($dbNilai) {
                 # code...
                 $nilai = [
-                    'car_id' => $id,
+                    'car_id' => $car->id,
                     'kriteria_id' => $k->id,
                     'alternatif_id' => $data[$name],
                     'nilai' => $db->nilai
@@ -208,10 +208,10 @@ class adminCarController extends Controller
                 $dbNilai->update($nilai);
             }
         }
-        $database->update($data);
+        $car->update($data);
 
         return redirect()
-            ->route('showCarAdmin', $id)
+            ->route('showCarAdmin', $car->slug)
             ->with('success', 'Informasi mobil berhasil diubah');
     }
 }

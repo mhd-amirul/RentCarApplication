@@ -124,11 +124,11 @@
                                 <td>{{ $car->tahun_produksi->nama }}</td>
                                 <td>{{ $car->stok }}</td>
                                 <td>
-                                    <a href="{{ route('showCarAdmin', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                                    <form action="{{ route('carDelete', $car->id) }}" method="post" class="d-inline" id="deleteCar-form-{{ $car->id }}">
+                                    <a href="{{ route('showCarAdmin', $car->slug) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                                    <form action="{{ route('carDelete', $car->slug) }}" method="post" class="d-inline" id="{{ $car->slug }}">
                                         @method('delete')
                                         @csrf
-                                        <a href="#" style="color: rgb(0, 0, 0);" class="btn-sm btn-danger text-decoration-none" data-id="{{ $car->id }}" id="deleteCar"><i class="bi bi-trash-fill"></i></a>
+                                        <a href="#" style="color: rgb(0, 0, 0);" class="btn-sm btn-danger text-decoration-none" data-id="{{ $car->slug }}" id="deleteCar"><i class="bi bi-trash-fill"></i></a>
                                     </form>
                                 </td>
                             </tr>
@@ -179,7 +179,7 @@
                 confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    $('#deleteCar-form-'+id).submit();
+                    $('#'+id).submit();
                 }
             })
         });

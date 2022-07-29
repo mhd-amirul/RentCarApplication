@@ -143,7 +143,7 @@
                                     {{-- <td>{{ $car->harga_sewa->nama }}</td> --}}
                                     <td>
                                         <a href="{{ route('shop.show', $car->slug) }}" class="btn btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
-                                        <form action="{{ route('shop.destroy', $car->id) }}" method="post" class="d-inline" id="deleteCar-form-{{ $car->id }}">
+                                        <form action="{{ route('shop.destroy', $car->slug) }}" method="post" class="d-inline" id="deleteCar-form-{{ $car->id }}">
                                             @method('delete')
                                             @csrf
                                             <button id="deleteCar" class="btn btn-sm btn-danger" style="color: rgb(0, 0, 0);" type="submit" data-id="{{ $car->id }}"><i class="bi bi-trash"></i></button>

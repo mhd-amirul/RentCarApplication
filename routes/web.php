@@ -87,12 +87,13 @@ Route::group(['middleware' => 'auth'], function ()
                 // Route All Shop Config
                 Route::resource('allshops', allShopsController::class)
                         ->parameters(['allshops' => 'shop']);
+                // Route All Car Config
                 Route::get('tambah/{shop}', [adminCarController::class, 'addCarAdmin'])->name('addCarAdmin');
-                Route::get('edit/{id}', [adminCarController::class, 'editCarAdmin'])->name('editCarAdmin');
+                Route::get('edit/{car}', [adminCarController::class, 'editCarAdmin'])->name('editCarAdmin');
                 Route::post('tambah/{shop}', [adminCarController::class, 'createCarAdmin'])->name('createCarAdmin');
-                Route::put('edit/{id}', [adminCarController::class, 'updateCarAdmin'])->name('updateCarAdmin');
-                Route::get('showCarAdmin/{id}', [adminCarController::class, 'showCarAdmin'])->name('showCarAdmin');
-                Route::delete('car/{id}', [allShopsController::class, 'destroyCar'])->name('carDelete');
+                Route::put('edit/{car}', [adminCarController::class, 'updateCarAdmin'])->name('updateCarAdmin');
+                Route::get('showCarAdmin/{car}', [adminCarController::class, 'showCarAdmin'])->name('showCarAdmin');
+                Route::delete('car/{car}', [allShopsController::class, 'destroyCar'])->name('carDelete');
 
                 // Konfigurasi Kriteria
                 Route::resource('allkriteria', allKriteriaController::class)

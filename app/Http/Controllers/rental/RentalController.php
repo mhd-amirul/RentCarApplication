@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use App\Models\kriteria;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class RentalController extends Controller
 {
@@ -30,6 +31,7 @@ class RentalController extends Controller
     {
         $rules = [
             'stok' => 'required',
+            'slug' => 'required',
             'no_polisi' => 'required',
             // 'deskripsi' => 'required',
             'gambar1' => 'image|file|max:1024',
@@ -56,6 +58,7 @@ class RentalController extends Controller
         }
 
         $request['stok'] = 'standby';
+        $request['slug'] = Str::random(50);
         $request->validate($rules);
         $data = $request->all();
 

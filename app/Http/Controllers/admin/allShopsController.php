@@ -84,7 +84,7 @@ class allShopsController extends Controller
                     'title' => 'Detail Toko',
                     // 'car' => car::where('shop_id', $id)->filter(request(['search']))->get(),
                     'car' => car::where('shop_id', $shop->id)->OrderBy('merk_id')->get(),
-                    'shop' => shop::where('id', $shop->id)->first(),
+                    'shop' => $shop,
 
                 ]
             );
@@ -95,7 +95,7 @@ class allShopsController extends Controller
         return view('pages.admin.pages-admin.allshops.edit')
             ->with(
                 [
-                    'data' => shop::findOrFail($shop->id),
+                    'data' => $shop,
                     'title' => 'Edit Toko'
                 ]
             );
@@ -103,8 +103,6 @@ class allShopsController extends Controller
 
     public function update(Request $request, shop $shop)
     {
-        $db = shop::findOrFail($shop->id);
-
         $rules = [
             'user_id' => '',
             'nm_pu' => 'required',
@@ -116,7 +114,7 @@ class allShopsController extends Controller
             'foto_usaha' => 'image|file|max:1024'
         ];
 
-        if ($request->nik != $db->nik) {
+        if ($request->nik != $shop->nik) {
             $rules['nik'] = 'required|integer|digits:16|unique:shops';
         }
 
@@ -147,30 +145,29 @@ class allShopsController extends Controller
             $data['foto_usaha'] = $request->file('foto_usaha')->store('foto_usaha');
         }
 
-        $db->update($data);
+        $shop->update($data);
         return redirect()->route('allshops.show', $shop->slug)->with('success', 'Informasi toko berhasil diubah');
     }
 
     public function destroy(shop $shop)
     {
-        $db = shop::findOrFail($shop->id);
-        $cars = car::where('shop_id', $db->id)->get();
+        $cars = car::where('shop_id', $shop->id)->get();
 
-        if ($db->img_ktp) {
+        if ($shop->img_ktp) {
             # code...
-            Storage::delete($db->img_ktp);
+            Storage::delete($shop->img_ktp);
         }
-        if ($db->img_siu) {
+        if ($shop->img_siu) {
             # code...
-            Storage::delete($db->img_siu);
+            Storage::delete($shop->img_siu);
         }
-        if ($db->pas_foto) {
+        if ($shop->pas_foto) {
             # code...
-            Storage::delete($db->pas_foto);
+            Storage::delete($shop->pas_foto);
         }
-        if ($db->foto_usaha) {
+        if ($shop->foto_usaha) {
             # code...
-            Storage::delete($db->foto_usaha);
+            Storage::delete($shop->foto_usaha);
         }
 
         if ($cars != null) {
@@ -200,7 +197,7 @@ class allShopsController extends Controller
             }
         }
 
-        $user = User::where('id', $db->user_id)->first();
+        $user = User::where('id', $shop->user_id)->first();
         $user['role'] = 'user';
         $user->save();
 
@@ -210,36 +207,32 @@ class allShopsController extends Controller
             ->with('success', 'Toko berhasil dihapus');
     }
 
-    public function destroyCar($id)
+    public function destroyCar(car $car)
     {
-        # code...
-        $data = car::findOrFail($id);
-        $shop = shop::where('id', $data->shop_id)->first();
-
-        if ($data->gambar1) {
+        if ($car->gambar1) {
             # code...
-            Storage::delete($data->gambar1);
+            Storage::delete($car->gambar1);
         }
-        if ($data->gambar2) {
+        if ($car->gambar2) {
             # code...
-            Storage::delete($data->gambar2);
+            Storage::delete($car->gambar2);
         }
-        if ($data->gambar3) {
+        if ($car->gambar3) {
             # code...
-            Storage::delete($data->gambar3);
+            Storage::delete($car->gambar3);
         }
-        if ($data->gambar4) {
+        if ($car->gambar4) {
             # code...
-            Storage::delete($data->gambar4);
+            Storage::delete($car->gambar4);
         }
-        if ($data->gambar5) {
+        if ($car->gambar5) {
             # code...
-            Storage::delete($data->gambar5);
+            Storage::delete($car->gambar5);
         }
 
-        $data->delete();
+        $car->delete();
         return redirect()
-            ->route('allshops.show', $shop->slug)
+            ->route('allshops.show', $car->shop->slug)
             ->with('success', 'Mobil berhasil dihapus');
     }
 }

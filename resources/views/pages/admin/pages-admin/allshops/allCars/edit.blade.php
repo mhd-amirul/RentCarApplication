@@ -123,7 +123,7 @@
         <div class="card py-3 px-3 border border-gray-800">
             <main class="form-registration mt-3">
                 <h2 class="m-b-20 f-w-600 text-center">Edit Mobil</h2>
-                <form action="{{ route('updateCarAdmin', $car->id) }}" method="post" enctype="multipart/form-data" id="editCar-form">
+                <form action="{{ route('updateCarAdmin', $car->slug) }}" method="post" enctype="multipart/form-data" id="editCar-form">
                     @method('put')
                     @csrf
                     <h5 class="m-b-20 p-b-5 b-b-default f-w-600">Pilih Kriteria Mobil</h5>

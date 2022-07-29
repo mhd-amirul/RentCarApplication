@@ -107,13 +107,13 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-9 mt-5">
-                                <a href="{{ route('allshops.show', $car->shop_id) }}" style="color: rgb(0, 0, 0);" class="btn btn-sm btn-primary">
+                                <a href="{{ route('allshops.show', $car->shop->slug) }}" style="color: rgb(0, 0, 0);" class="btn btn-sm btn-primary">
                                     <i class="bi bi-arrow-left-circle"></i> Back
                                 </a>
-                                <a href="{{ route('editCarAdmin', $car->id) }}" style="color: rgb(0, 0, 0);" class=" btn btn-sm btn-warning">
+                                <a href="{{ route('editCarAdmin', $car->slug) }}" style="color: rgb(0, 0, 0);" class=" btn btn-sm btn-warning">
                                     <i class="bi bi-pencil-square"></i> Edit
                                 </a>
-                                <form action="{{ route('carDelete', $car->id) }}" method="post" class="d-inline" id="deleteCar-form">
+                                <form action="{{ route('carDelete', $car->slug) }}" method="post" class="d-inline" id="deleteCar-form">
                                     @method('delete')
                                     @csrf
                                     <a href="#" class="btn btn-sm btn-danger text-decoration-none" id="deleteCar" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i> Hapus</a>
