@@ -175,8 +175,10 @@ class HomeController extends Controller
                 $data[$id_cars] = $normal[$id_cars][$id_kriteria] * $k[2];
                 if ($k[1] == 'benefit') {
                     $optimasi[$id_cars] += $data[$id_cars];
-                } else {
+                } elseif ($k[1] == 'cost') {
                     $optimasi[$id_cars] -= $data[$id_cars];
+                } else {
+                    continue;
                 }
             }
         }

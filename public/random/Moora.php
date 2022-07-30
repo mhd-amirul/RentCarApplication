@@ -1314,6 +1314,9 @@ SEEDER =========================================================================
         );
 <!--  -->
 
+Kirim Text WA ======================================================================================
+https://web.whatsapp.com/send?phone=62816915337&text=Hi%2C%20Saya%20lihat%20iklan%20kendaraan%20Anda%20di%20Mobil123.com%20dan%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%202018%20Mitsubishi%20Xpander%201.5%20SPORT%20Wagon%20%28Rp%20230.000.000%29.%20Terima%20kasih%21%20https%3A%2F%2Fwww.mobil123.com%2Fdijual%2Fmitsubishi-xpander-sport-jawa-barat-jaka-permai%2F9863106
+
 JS MAPBOX =========================================================================================
 // map.addControl(
             //     new mapboxgl.GeolocateControl({

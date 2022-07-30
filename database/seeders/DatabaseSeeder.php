@@ -217,35 +217,35 @@ class DatabaseSeeder extends Seeder
             alternatif::create([
                 'kriteria_id' => '8',
                 'nama' => 'diatas 600rb/hari',
-                'nilai' => '1',]);
+                'nilai' => '8',]);
             alternatif::create([
                 'kriteria_id' => '8',
                 'nama' => '551rb sampai 600rb/hari',
-                'nilai' => '2',]);
-            alternatif::create([
-                'kriteria_id' => '8',
-                'nama' => '501rb sampai 550rb/hari',
-                'nilai' => '3',]);
-            alternatif::create([
-                'kriteria_id' => '8',
-                'nama' => '451rb sampai 500rb/hari',
-                'nilai' => '4',]);
-            alternatif::create([
-                'kriteria_id' => '8',
-                'nama' => '401rb sampai 450rb/hari',
-                'nilai' => '5',]);
-            alternatif::create([
-                'kriteria_id' => '8',
-                'nama' => '351rb sampai 400rb/hari',
-                'nilai' => '6',]);
-            alternatif::create([
-                'kriteria_id' => '8',
-                'nama' => '300rb sampai 350rb/hari',
                 'nilai' => '7',]);
             alternatif::create([
                 'kriteria_id' => '8',
+                'nama' => '501rb sampai 550rb/hari',
+                'nilai' => '6',]);
+            alternatif::create([
+                'kriteria_id' => '8',
+                'nama' => '451rb sampai 500rb/hari',
+                'nilai' => '5',]);
+            alternatif::create([
+                'kriteria_id' => '8',
+                'nama' => '401rb sampai 450rb/hari',
+                'nilai' => '4',]);
+            alternatif::create([
+                'kriteria_id' => '8',
+                'nama' => '351rb sampai 400rb/hari',
+                'nilai' => '3',]);
+            alternatif::create([
+                'kriteria_id' => '8',
+                'nama' => '300rb sampai 350rb/hari',
+                'nilai' => '2',]);
+            alternatif::create([
+                'kriteria_id' => '8',
                 'nama' => 'dibawah 300rb/hari',
-                'nilai' => '8',]);
+                'nilai' => '1',]);
         //
 
         // Table User====================================================================================
