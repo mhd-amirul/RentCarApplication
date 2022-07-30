@@ -91,7 +91,7 @@
                         <td>{{ $car->muatan_penumpang->nama }}</td>
                         <td>{{ $car->harga_sewa->nama }}</td>
                         <td>
-                            <a href="{{ route('detailMobil', $car->id) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                            <a href="{{ route('detailMobil', $car->slug) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
                         </td>
                     </tr>
                     @empty

@@ -33,7 +33,7 @@
                                 </small>
                             </p>
                             {{-- <p class="card-text">Merk : {{ $car->merk->nama }}, Tahun Produksi : {{ $car->tahun_produksi->nama }}, Muatan Penumpang : {{ $car->muatan_penumpang->nama }}, Harga Sewa : {{ $car->harga_sewa->nama }}</p> --}}
-                            <a href="{{ route('detailMobil', $car->id) }}" class="btn btn-sm btn-primary">Detail</a>
+                            <a href="{{ route('detailMobil', $car->slug) }}" class="btn btn-sm btn-primary">Detail</a>
                         </div>
                     </div>
                 </div>

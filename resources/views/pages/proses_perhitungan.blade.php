@@ -246,7 +246,7 @@
                                     <td>{{ $car->jenis_bbm->nama }}</td>
                                     <td>{{ $car->harga_sewa->nama }}</td>
                                     <td>
-                                        <a href="{{ route('detailMobil', $car->id) }}" class="btn btn-sm btn-info">
+                                        <a href="{{ route('detailMobil', $car->slug) }}" class="btn btn-sm btn-info">
                                             <i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i>
                                         </a>
                                     </td>
