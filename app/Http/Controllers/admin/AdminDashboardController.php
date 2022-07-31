@@ -82,38 +82,38 @@ class AdminDashboardController extends Controller
         //         ->route('dashboard.index')->with('failed', 'Permintaan di Tolak');
     // }
 
-    // public function AddAllImage($id)
-    //     {
-    //         // $db = shop::findorfail($id);
-    //         // $car = car::where('id', 40)->first();
-    //         // $dbcar = car::all();
-    //         // $dbcar = alternatif::all();
-    //         // $nilaimerk = 1;
-    //         // foreach ($dbcar as $db) {
-    //         //     if ($db->kriteria_id == 1) {
-    //         //         # code...
-    //         //         $db->nilai = $nilaimerk;
-    //         //         $db->save();
-    //         //     }
-    //         //     if ($db->merk_id == $car->merk_id && $db->Tahun_Produksi_id == $car->Tahun_Produksi_id ) {
-    //         //         # code...
-    //         //         $db->gambar1 = $car->gambar1;
-    //         //         $db->gambar2 = $car->gambar2;
-    //         //         $db->gambar3 = $car->gambar3;
-    //         //         $db->gambar4 = $car->gambar4;
-    //         //         $db->gambar5 = $car->gambar5;
-    //         //         $db->save();
-    //         //     }
-    //         // }
-    //         $db = car::where('slug', '')->get();
+    public function AddAllImage($id)
+        {
+            // $db = shop::findorfail($id);
+            // $car = car::where('id', 40)->first();
+            // $dbcar = car::all();
+            // $dbcar = alternatif::all();
+            // $nilaimerk = 1;
+            // foreach ($dbcar as $db) {
+            //     if ($db->kriteria_id == 1) {
+            //         # code...
+            //         $db->nilai = $nilaimerk;
+            //         $db->save();
+            //     }
+            //     if ($db->merk_id == $car->merk_id && $db->Tahun_Produksi_id == $car->Tahun_Produksi_id ) {
+            //         # code...
+            //         $db->gambar1 = $car->gambar1;
+            //         $db->gambar2 = $car->gambar2;
+            //         $db->gambar3 = $car->gambar3;
+            //         $db->gambar4 = $car->gambar4;
+            //         $db->gambar5 = $car->gambar5;
+            //         $db->save();
+            //     }
+            // }
+            $db = car::where('slug', Null)->get();
 
-    //         foreach ($db as $db) {
-    //             $db['slug'] = Str::random(50);
-    //             $db->save();
-    //         }
-    //         return response()->json($db);
+            foreach ($db as $db) {
+                $db['slug'] = Str::random(50);
+                $db->save();
+            }
+            return response()->json($db);
 
 
     //         return redirect()->back();
-    // }
+    }
 }
