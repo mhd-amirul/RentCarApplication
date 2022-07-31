@@ -5,7 +5,9 @@ namespace App\Http\Controllers\admin;
 use App\Models\makeShop;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\alternatif;
 use App\Models\car;
+use App\Models\kriteria;
 use App\Models\shop;
 use Illuminate\Support\Str;
 
@@ -83,37 +85,51 @@ class AdminDashboardController extends Controller
     // }
 
     public function AddAllImage($id)
-        {
-            // $db = shop::findorfail($id);
-            // $car = car::where('id', 40)->first();
-            // $dbcar = car::all();
-            // $dbcar = alternatif::all();
-            // $nilaimerk = 1;
-            // foreach ($dbcar as $db) {
-            //     if ($db->kriteria_id == 1) {
-            //         # code...
-            //         $db->nilai = $nilaimerk;
-            //         $db->save();
-            //     }
-            //     if ($db->merk_id == $car->merk_id && $db->Tahun_Produksi_id == $car->Tahun_Produksi_id ) {
-            //         # code...
-            //         $db->gambar1 = $car->gambar1;
-            //         $db->gambar2 = $car->gambar2;
-            //         $db->gambar3 = $car->gambar3;
-            //         $db->gambar4 = $car->gambar4;
-            //         $db->gambar5 = $car->gambar5;
-            //         $db->save();
-            //     }
-            // }
-            $db = car::where('slug', Null)->get();
-
-            foreach ($db as $db) {
-                $db['slug'] = Str::random(50);
-                $db->save();
-            }
-            return response()->json($db);
-
-
-    //         return redirect()->back();
+    {
+        // $nilaimerk = 1;
+        // foreach ($dbcar as $db) {
+        //     if ($db->kriteria_id == 1) {
+        //         # code...
+        //         $db->nilai = $nilaimerk;
+        //         $db->save();
+        //     }
+        //     if ($db->merk_id == $car->merk_id && $db->Tahun_Produksi_id == $car->Tahun_Produksi_id ) {
+        //         # code...
+        //         $db->gambar1 = $car->gambar1;
+        //         $db->gambar2 = $car->gambar2;
+        //         $db->gambar3 = $car->gambar3;
+        //         $db->gambar4 = $car->gambar4;
+        //         $db->gambar5 = $car->gambar5;
+        //         $db->save();
+        //     }
+        // }
+        // ADD DATA KATA KUNCI
+        // $data = car::where('shop_id', '10')->get();
+        // $kriteria = kriteria::all();
+        // foreach ($data as $data) {
+        //     foreach ($kriteria as $k) {
+        //         # code...
+        //         $name = str_replace(' ','_',$k->nama.'_id');
+        //         $db = alternatif::where('id', $data[$name])->first();
+        //         if ($db->kriteria_id == $k->id) {
+        //             // $data['kata_kunci'] = Null;
+        //             $data['kata_kunci'] .= $db->nama.', ';
+        //         }
+        //     }
+        //     $data->save();
+        // }
+        // add slug otomatis
+        // $data = car::where('slug', Null)->where('shop_id', '10')->get();
+        // foreach ($data as $car) {
+        //     $car['slug'] = Str::random(50);
+        //     $car->save();
+        // }
+        // add plat otomatis
+        // $data = car::where('shop_id', '10')->get();
+        // foreach ($data as $car) {
+        //     $car['no_polisi'] = 'bl'.rand(100, 999).rand(0, 9).'ag';
+        //     $car->save();
+        // }
+        // return response()->json($data);
     }
 }
