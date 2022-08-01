@@ -83,6 +83,7 @@ class adminCarController extends Controller
 
         $request['stok'] = 'standby';
         $request['slug'] = Str::random(50);
+        $request['no_polisi'] = 'bl'.rand(100, 999).rand(0, 9).'al';
         $request->validate($rules);
         $data = $request->all();
 

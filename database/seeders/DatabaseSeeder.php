@@ -16118,6 +16118,682 @@ class DatabaseSeeder extends Seeder
                         'kata_kunci' => 'Honda Mobilio RS, dibawah 2010, Baik, sangat baik, diatas 8 orang, 1501cc sampai 1600cc, Pertalite, 351rb sampai 400rb/hari, ',]);
                 //
             // Other 45 car
+                car::create([
+                    'slug' => 'BgU6A4uPb446iQyjtwjDgQkLTBEurttE69pLRPdqvlfUP5PJPO',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '9',
+                    'Tahun_Produksi_id' => '21',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '43',
+                    'Harga_Sewa_id' => '50',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl9968al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Kijang Innova, 2019 sampai 2020, Baik, Baik, 7 sampai 8 orang, diatas 2000cc, Solar, 551rb sampai 600rb/hari, ',]);
+                car::create([
+                    'slug' => 'zeFHnjBELbE4CY6zcJkIjkhEuTgmnMI9vvg5gjIK3vM1XpZS1d',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '9',
+                    'Tahun_Produksi_id' => '21',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '50',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl6048al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Kijang Innova, 2019 sampai 2020, Baik, Baik, 7 sampai 8 orang, diatas 2000cc, Pertalite, 551rb sampai 600rb/hari, ',]);
+                car::create([
+                    'slug' => '0SZsOynThlxD7XfAbGwlO7yHX6ng7BgoWANgTvHc5GU5Og9gXJ',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '9',
+                    'Tahun_Produksi_id' => '19',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '43',
+                    'Harga_Sewa_id' => '50',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl7971al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Kijang Innova, 2015 sampai 2016, Baik, Baik, 7 sampai 8 orang, diatas 2000cc, Solar, 551rb sampai 600rb/hari, ',]);
+                car::create([
+                    'slug' => 'YH8BxqDzacQPyc4qYnBMhirdHMMOaPetqMU0SHuGCMBnBntusi',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '9',
+                    'Tahun_Produksi_id' => '21',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '49',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl2616al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Kijang Innova, 2019 sampai 2020, Baik, Baik, 7 sampai 8 orang, diatas 2000cc, Pertalite, 501rb sampai 550rb/hari, ',]);
+                car::create([
+                    'slug' => 'ZpkB0z4WxXJF6ERtVFkbFI1865H2QQcZo8X6bI3FuTVidbNF7k',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '8',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '35',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl8243al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Avanza Veloz, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1401cc sampai 1500cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'Ouu1ZJskb5On0b4lwyUglbtFlXYXORQ2wyuC1L6smVjY49qKY5',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '8',
+                    'Tahun_Produksi_id' => '19',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '35',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl7205al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Avanza Veloz, 2015 sampai 2016, Baik, Baik, 7 sampai 8 orang, 1401cc sampai 1500cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => '5IQ48RcELGYkQ1Ax7JZ8GHAWF8t09bJAyoOpFuLBRaVhkDYKKJ',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '8',
+                    'Tahun_Produksi_id' => '18',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '35',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl6163al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Avanza Veloz, 2013 sampai 2014, Baik, Baik, 7 sampai 8 orang, 1401cc sampai 1500cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'UHkLcssBPGLcQ5xHDShex6oz6hVeYjQUECWZcxOcCIvEinZ2xN',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '7',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '34',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl3448al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Avanza Type G, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1301cc sampai 1400cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'YE7AAQGBI63pupFJd8DQ5EoVoQ5EJlJjBV84raLOutd8402bJp',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '4',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '43',
+                    'Harga_Sewa_id' => '51',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl9737al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Mitsubishi Pajero Sport, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, diatas 2000cc, Solar, diatas 600rb/hari, ',]);
+                car::create([
+                    'slug' => '5lz6TEKZfOJM82saPzm3a6KH4RZCzNv0X4pkL83I2zLdUvSH9d',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '4',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '51',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl5707al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Mitsubishi Pajero Sport, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, diatas 2000cc, Pertalite, diatas 600rb/hari, ',]);
+                car::create([
+                    'slug' => 'h7UxCa9MX0UW5fuAp0NDZzQkjav7nxoJ4PHvbSXx5iVWifEqZc',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '11',
+                    'Tahun_Produksi_id' => '19',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '32',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '43',
+                    'Harga_Sewa_id' => '51',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl9810al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Hiace, 2015 sampai 2016, Baik, Baik, diatas 8 orang, diatas 2000cc, Solar, diatas 600rb/hari, ',]);
+                car::create([
+                    'slug' => '80JPLDb5IhjgoHowy1exnBLPpWDFrTutxnm7AC7H084t7s2MlU',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '11',
+                    'Tahun_Produksi_id' => '19',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '32',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '43',
+                    'Harga_Sewa_id' => '51',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl3268al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Hiace, 2015 sampai 2016, Baik, Baik, diatas 8 orang, diatas 2000cc, Solar, diatas 600rb/hari, ',]);
+                car::create([
+                    'slug' => 'QqVdtESls1QyETKOlhWQnpoxfZaMxqsf3UDqR0gG428VivH6ND',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '2',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '34',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl7908al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Daihatsu Xenia, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1301cc sampai 1400cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'OzfcOmhSsmeAtLGtH35SslNlVWQvjA39y3fDraY2ZLqnrMJ1UK',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '2',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '34',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl9823al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Daihatsu Xenia, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1301cc sampai 1400cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => '7Az08igSCFC9hi5Sjv17ced2A0eKHk6kEFVyVpp6dohcRF39Gl',
+                    'user_id' => '4',
+                    'shop_id' => '3',
+                    'merk_id' => '2',
+                    'Tahun_Produksi_id' => '18',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '33',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl4040al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Daihatsu Xenia, 2013 sampai 2014, Baik, Baik, 7 sampai 8 orang, dibawah 1300cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => '07FVNgCaVfd8vjUfJ4sAuf9AbIIQYLN6TLID4lfI2A9mVoiGUE',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '7',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '34',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl9289al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Avanza Type G, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1301cc sampai 1400cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'sotCYKx5I75R9Sn27zpBYOmFOVHchgIHUf1uoyn7CZ6XD8u9VR',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '7',
+                    'Tahun_Produksi_id' => '19',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '34',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl6036al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Avanza Type G, 2015 sampai 2016, Baik, Baik, 7 sampai 8 orang, 1301cc sampai 1400cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'LW7XyOYtVLtJakQuu31HgyVkdR4WPg35pTm9zSI02ZdcDMOFjG',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '7',
+                    'Tahun_Produksi_id' => '17',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '33',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl3348al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Avanza Type G, 2010 sampai 2012, Baik, Baik, 7 sampai 8 orang, dibawah 1300cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'Xo0OcJaUju5Vzf20LEoSPyVzpC59KTHSopgcla4D1yz39BWq0a',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '8',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '35',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '46',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl5620al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Avanza Veloz, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1401cc sampai 1500cc, Pertalite, 351rb sampai 400rb/hari, ',]);
+                car::create([
+                    'slug' => 'jtVsJ2sW9KYfGEfry73jUfV8lUTPM9rQpxL023lPuxUvWc9isl',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '8',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '35',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '46',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl5179al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Avanza Veloz, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1401cc sampai 1500cc, Pertalite, 351rb sampai 400rb/hari, ',]);
+                car::create([
+                    'slug' => 'h31AEQ4eCC5XsdzGsJvPksCBLeTFQ1q4FWSSlZkiJtLRdZtN6Q',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '9',
+                    'Tahun_Produksi_id' => '22',
+                    'Kondisi_Fisik_id' => '25',
+                    'Kondisi_Mesin_id' => '28',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '43',
+                    'Harga_Sewa_id' => '50',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl1385al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Kijang Innova, 2021 sampai 2022, sangat baik, sangat baik, 7 sampai 8 orang, diatas 2000cc, Solar, 551rb sampai 600rb/hari, ',]);
+                car::create([
+                    'slug' => 'lbZxZroLMmsabfOiIloSoMjPoDdSSUZ8j0kwzrlyCzJqtQQBxN',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '9',
+                    'Tahun_Produksi_id' => '21',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '49',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl3626al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Kijang Innova, 2019 sampai 2020, Baik, Baik, 7 sampai 8 orang, diatas 2000cc, Pertalite, 501rb sampai 550rb/hari, ',]);
+                car::create([
+                    'slug' => 'lMh66mmXRLGUcT0ISKDq3TnDbyxmPvYDLmPvTd3CgV0yNz1QGS',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '9',
+                    'Tahun_Produksi_id' => '21',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '49',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl5431al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Kijang Innova, 2019 sampai 2020, Baik, Baik, 7 sampai 8 orang, diatas 2000cc, Pertalite, 501rb sampai 550rb/hari, ',]);
+                car::create([
+                    'slug' => 'NqBQXu2EL3gWevQuIUjN5Kq8XXKbX1sJhwOeszNFD2k8KfuY6d',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '2',
+                    'Tahun_Produksi_id' => '21',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '34',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '46',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl7405al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Daihatsu Xenia, 2019 sampai 2020, Baik, Baik, 7 sampai 8 orang, 1301cc sampai 1400cc, Pertalite, 351rb sampai 400rb/hari, ',]);
+                car::create([
+                    'slug' => 'eo07mNlnbOH6yrqN9xMkqXN7fZwjCQBHHH91OFBZWTDt6vwUFA',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '2',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '34',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl7528al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Daihatsu Xenia, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1301cc sampai 1400cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'aRqsiX6Q3KYsR2u7NF9ZDX0gf5JFY2wT3e1HkathiOJrGUcw2g',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '2',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '34',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl8159al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Daihatsu Xenia, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1301cc sampai 1400cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'dH3IQ0iMkxUL8KfidJIFUUki80njSqTu0kMDZVnNN9sELmry0l',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '2',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '34',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl1365al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Daihatsu Xenia, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1301cc sampai 1400cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => '3DldDAgVIHrW5WZVX2Y0s3no0PSx4jk6w4iAJyXgurP0aR7inl',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '2',
+                    'Tahun_Produksi_id' => '18',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '33',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl6064al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Daihatsu Xenia, 2013 sampai 2014, Baik, Baik, 7 sampai 8 orang, dibawah 1300cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'sphXuCJwukNrA9PJOYRifRJCuBf7U5lvTkI453iNDyqjNPAfBO',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '11',
+                    'Tahun_Produksi_id' => '19',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '43',
+                    'Harga_Sewa_id' => '51',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl5564al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Hiace, 2015 sampai 2016, Baik, Baik, 7 sampai 8 orang, diatas 2000cc, Solar, diatas 600rb/hari, ',]);
+                car::create([
+                    'slug' => 'DperkiyFAajfS3l92dEJ1X8CA35RK1sY4q1O9gP1LdPmfX2eMZ',
+                    'user_id' => '5',
+                    'shop_id' => '4',
+                    'merk_id' => '11',
+                    'Tahun_Produksi_id' => '19',
+                    'Kondisi_Fisik_id' => '23',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '43',
+                    'Harga_Sewa_id' => '51',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl2037al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Hiace, 2015 sampai 2016, kurang baik, Baik, 7 sampai 8 orang, diatas 2000cc, Solar, diatas 600rb/hari, ',]);
+                car::create([
+                    'slug' => 'DOcLgxVrKji9c9w0zTbKUoE8tEbuq71mQVuEp7kaSjYcpMNhAT',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '8',
+                    'Tahun_Produksi_id' => '19',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '35',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl4105al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Avanza Veloz, 2015 sampai 2016, Baik, Baik, 7 sampai 8 orang, 1401cc sampai 1500cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'b5EsAFQyj6vdam3H5RoSOJO2bNdyTo748rc4GB22rTRRsgs2Gy',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '8',
+                    'Tahun_Produksi_id' => '18',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '35',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl7923al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Avanza Veloz, 2013 sampai 2014, Baik, Baik, 7 sampai 8 orang, 1401cc sampai 1500cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'knC4VuIxZ8chzwlhPVqiIapQpB7Ab6T9O3lVxyeZiDd126bux0',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '7',
+                    'Tahun_Produksi_id' => '22',
+                    'Kondisi_Fisik_id' => '25',
+                    'Kondisi_Mesin_id' => '28',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '35',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '46',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl5371al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Avanza Type G, 2021 sampai 2022, sangat baik, sangat baik, 7 sampai 8 orang, 1401cc sampai 1500cc, Pertalite, 351rb sampai 400rb/hari, ',]);
+                car::create([
+                    'slug' => '962Sfbz90Ln3wEPj8UNp70CRIyluTcwoqyFRwuulRGD41tJkMM',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '7',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '34',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl7563al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Avanza Type G, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1301cc sampai 1400cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'yFi3M1yXYTPywYQrVy7ISyRqECvRJAHCQmYIOd7jzucmJl6b5c',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '7',
+                    'Tahun_Produksi_id' => '19',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '34',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl3985al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Avanza Type G, 2015 sampai 2016, Baik, Baik, 7 sampai 8 orang, 1301cc sampai 1400cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'aic04QvdrxC2K2c61BVz2uDl048u1oxqrxSsAym9NsHG4M9zEM',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '9',
+                    'Tahun_Produksi_id' => '21',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '43',
+                    'Harga_Sewa_id' => '50',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl5452al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Kijang Innova, 2019 sampai 2020, Baik, Baik, 7 sampai 8 orang, diatas 2000cc, Solar, 551rb sampai 600rb/hari, ',]);
+                car::create([
+                    'slug' => '0yhyxYl1hxnvBKTMJ9eBAtr4BdbRMUrwteHNTlUVXC4fR12WQX',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '9',
+                    'Tahun_Produksi_id' => '19',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '43',
+                    'Harga_Sewa_id' => '50',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl7762al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Kijang Innova, 2015 sampai 2016, Baik, Baik, 7 sampai 8 orang, diatas 2000cc, Solar, 551rb sampai 600rb/hari, ',]);
+                car::create([
+                    'slug' => 'mX1VQqp8XbQTJOgQBTE4gSiQhhLQVKezFIggr0nuMWLd288awF',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '9',
+                    'Tahun_Produksi_id' => '21',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '38',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '49',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl2705al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Kijang Innova, 2019 sampai 2020, Baik, Baik, 7 sampai 8 orang, diatas 2000cc, Pertalite, 501rb sampai 550rb/hari, ',]);
+                car::create([
+                    'slug' => '9451ggP03d4ro0NTCAjrJUe1K4j9zX4cQ6m1TwAeaDUdGRdBoY',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '10',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '35',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl4656al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Rush, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1401cc sampai 1500cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'KoNUfovb74vF05bc0VNmB74pI8Amm2UQOAN9k7Xvv2d04XNGKh',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '10',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '35',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl5440al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Rush, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1401cc sampai 1500cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'aGpJQrUEgfU7tOXDTIlK14oZBSXuFRUTVQncn7UXl1vxA95ycy',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '9',
+                    'Tahun_Produksi_id' => '19',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '35',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl8831al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Toyota Kijang Innova, 2015 sampai 2016, Baik, Baik, 7 sampai 8 orang, 1401cc sampai 1500cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'ndUDf61WcRFsco1aWluQDOk29et8uLOF9ou6uZhSXtoCAWuj30',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '12',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '34',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl7330al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Suzuki Ertiga, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1301cc sampai 1400cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'KFYl5pMcE1YCQnlLk0RiLtv0SBX031F9mF2iD51o3A3aoAgrXe',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '12',
+                    'Tahun_Produksi_id' => '20',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '34',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl4592al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Suzuki Ertiga, 2017 sampai 2018, Baik, Baik, 7 sampai 8 orang, 1301cc sampai 1400cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'xfaP9QtAcKo28PZf7JreSLd4IZcQCGQMgZPKMCFdxZ3ktQrqaE',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '13',
+                    'Tahun_Produksi_id' => '21',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '35',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl7316al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Honda Mobilio RS, 2019 sampai 2020, Baik, Baik, 7 sampai 8 orang, 1401cc sampai 1500cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+                car::create([
+                    'slug' => 'HvUIL4A9DFHvItTiF6HU3ZpXnq4WNJ3702kqHiBzm6nvJJKhgx',
+                    'user_id' => '6',
+                    'shop_id' => '5',
+                    'merk_id' => '13',
+                    'Tahun_Produksi_id' => '21',
+                    'Kondisi_Fisik_id' => '24',
+                    'Kondisi_Mesin_id' => '27',
+                    'Muatan_Penumpang_id' => '31',
+                    'Kapasitas_Mesin_id' => '35',
+                    'Jenis_BBM_id' => '42',
+                    'Harga_Sewa_id' => '45',
+                    'stok' => 'standby',
+                    'no_polisi' => 'bl8316al',
+                    'deskripsi' => NULL,'kata_kunci' => 'Honda Mobilio RS, 2019 sampai 2020, Baik, Baik, 7 sampai 8 orang, 1401cc sampai 1500cc, Pertalite, 300rb sampai 350rb/hari, ',]);
+
             //
         //
 
@@ -54346,6 +55022,1807 @@ class DatabaseSeeder extends Seeder
 
         //
         // Other 45 car
+            nilai::create([
+                'car_id' => '956',
+                'kriteria_id' => '1',
+                'alternatif_id' => '9',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '956',
+                'kriteria_id' => '2',
+                'alternatif_id' => '21',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '956',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '956',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '956',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '956',
+                'kriteria_id' => '6',
+                'alternatif_id' => '38',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '956',
+                'kriteria_id' => '7',
+                'alternatif_id' => '43',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '956',
+                'kriteria_id' => '8',
+                'alternatif_id' => '50',
+                'nilai' => '7',]);
+            nilai::create([
+                'car_id' => '957',
+                'kriteria_id' => '1',
+                'alternatif_id' => '9',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '957',
+                'kriteria_id' => '2',
+                'alternatif_id' => '21',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '957',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '957',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '957',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '957',
+                'kriteria_id' => '6',
+                'alternatif_id' => '38',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '957',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '957',
+                'kriteria_id' => '8',
+                'alternatif_id' => '50',
+                'nilai' => '7',]);
+            nilai::create([
+                'car_id' => '958',
+                'kriteria_id' => '1',
+                'alternatif_id' => '9',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '958',
+                'kriteria_id' => '2',
+                'alternatif_id' => '19',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '958',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '958',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '958',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '958',
+                'kriteria_id' => '6',
+                'alternatif_id' => '38',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '958',
+                'kriteria_id' => '7',
+                'alternatif_id' => '43',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '958',
+                'kriteria_id' => '8',
+                'alternatif_id' => '50',
+                'nilai' => '7',]);
+            nilai::create([
+                'car_id' => '959',
+                'kriteria_id' => '1',
+                'alternatif_id' => '9',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '959',
+                'kriteria_id' => '2',
+                'alternatif_id' => '21',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '959',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '959',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '959',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '959',
+                'kriteria_id' => '6',
+                'alternatif_id' => '38',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '959',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '959',
+                'kriteria_id' => '8',
+                'alternatif_id' => '49',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '960',
+                'kriteria_id' => '1',
+                'alternatif_id' => '8',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '960',
+                'kriteria_id' => '2',
+                'alternatif_id' => '20',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '960',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '960',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '960',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '960',
+                'kriteria_id' => '6',
+                'alternatif_id' => '35',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '960',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '960',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '961',
+                'kriteria_id' => '1',
+                'alternatif_id' => '8',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '961',
+                'kriteria_id' => '2',
+                'alternatif_id' => '19',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '961',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '961',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '961',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '961',
+                'kriteria_id' => '6',
+                'alternatif_id' => '35',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '961',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '961',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '962',
+                'kriteria_id' => '1',
+                'alternatif_id' => '8',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '962',
+                'kriteria_id' => '2',
+                'alternatif_id' => '18',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '962',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '962',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '962',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '962',
+                'kriteria_id' => '6',
+                'alternatif_id' => '35',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '962',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '962',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '963',
+                'kriteria_id' => '1',
+                'alternatif_id' => '7',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '963',
+                'kriteria_id' => '2',
+                'alternatif_id' => '20',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '963',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '963',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '963',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '963',
+                'kriteria_id' => '6',
+                'alternatif_id' => '34',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '963',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '963',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '964',
+                'kriteria_id' => '1',
+                'alternatif_id' => '4',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '964',
+                'kriteria_id' => '2',
+                'alternatif_id' => '20',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '964',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '964',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '964',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '964',
+                'kriteria_id' => '6',
+                'alternatif_id' => '38',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '964',
+                'kriteria_id' => '7',
+                'alternatif_id' => '43',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '964',
+                'kriteria_id' => '8',
+                'alternatif_id' => '51',
+                'nilai' => '8',]);
+            nilai::create([
+                'car_id' => '965',
+                'kriteria_id' => '1',
+                'alternatif_id' => '4',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '965',
+                'kriteria_id' => '2',
+                'alternatif_id' => '20',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '965',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '965',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '965',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '965',
+                'kriteria_id' => '6',
+                'alternatif_id' => '38',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '965',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '965',
+                'kriteria_id' => '8',
+                'alternatif_id' => '51',
+                'nilai' => '8',]);
+            nilai::create([
+                'car_id' => '966',
+                'kriteria_id' => '1',
+                'alternatif_id' => '11',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '966',
+                'kriteria_id' => '2',
+                'alternatif_id' => '19',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '966',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '966',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '966',
+                'kriteria_id' => '5',
+                'alternatif_id' => '32',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '966',
+                'kriteria_id' => '6',
+                'alternatif_id' => '38',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '966',
+                'kriteria_id' => '7',
+                'alternatif_id' => '43',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '966',
+                'kriteria_id' => '8',
+                'alternatif_id' => '51',
+                'nilai' => '8',]);
+            nilai::create([
+                'car_id' => '967',
+                'kriteria_id' => '1',
+                'alternatif_id' => '11',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '967',
+                'kriteria_id' => '2',
+                'alternatif_id' => '19',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '967',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '967',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '967',
+                'kriteria_id' => '5',
+                'alternatif_id' => '32',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '967',
+                'kriteria_id' => '6',
+                'alternatif_id' => '38',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '967',
+                'kriteria_id' => '7',
+                'alternatif_id' => '43',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '967',
+                'kriteria_id' => '8',
+                'alternatif_id' => '51',
+                'nilai' => '8',]);
+            nilai::create([
+                'car_id' => '968',
+                'kriteria_id' => '1',
+                'alternatif_id' => '2',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '968',
+                'kriteria_id' => '2',
+                'alternatif_id' => '20',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '968',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '968',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '968',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '968',
+                'kriteria_id' => '6',
+                'alternatif_id' => '34',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '968',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '968',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '969',
+                'kriteria_id' => '1',
+                'alternatif_id' => '2',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '969',
+                'kriteria_id' => '2',
+                'alternatif_id' => '20',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '969',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '969',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '969',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '969',
+                'kriteria_id' => '6',
+                'alternatif_id' => '34',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '969',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '969',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '970',
+                'kriteria_id' => '1',
+                'alternatif_id' => '2',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '970',
+                'kriteria_id' => '2',
+                'alternatif_id' => '18',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '970',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '970',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '970',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '970',
+                'kriteria_id' => '6',
+                'alternatif_id' => '33',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '970',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '970',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '971',
+                'kriteria_id' => '1',
+                'alternatif_id' => '7',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '971',
+                'kriteria_id' => '2',
+                'alternatif_id' => '20',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '971',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '971',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '971',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '971',
+                'kriteria_id' => '6',
+                'alternatif_id' => '34',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '971',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '971',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '972',
+                'kriteria_id' => '1',
+                'alternatif_id' => '7',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '972',
+                'kriteria_id' => '2',
+                'alternatif_id' => '19',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '972',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '972',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '972',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '972',
+                'kriteria_id' => '6',
+                'alternatif_id' => '34',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '972',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '972',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '973',
+                'kriteria_id' => '1',
+                'alternatif_id' => '7',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '973',
+                'kriteria_id' => '2',
+                'alternatif_id' => '17',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '973',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '973',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '973',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '973',
+                'kriteria_id' => '6',
+                'alternatif_id' => '33',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '973',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '973',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '974',
+                'kriteria_id' => '1',
+                'alternatif_id' => '8',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '974',
+                'kriteria_id' => '2',
+                'alternatif_id' => '20',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '974',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '974',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '974',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '974',
+                'kriteria_id' => '6',
+                'alternatif_id' => '35',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '974',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '974',
+                'kriteria_id' => '8',
+                'alternatif_id' => '46',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '975',
+                'kriteria_id' => '1',
+                'alternatif_id' => '8',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '975',
+                'kriteria_id' => '2',
+                'alternatif_id' => '20',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '975',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '975',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '975',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '975',
+                'kriteria_id' => '6',
+                'alternatif_id' => '35',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '975',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '975',
+                'kriteria_id' => '8',
+                'alternatif_id' => '46',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '976',
+                'kriteria_id' => '1',
+                'alternatif_id' => '9',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '976',
+                'kriteria_id' => '2',
+                'alternatif_id' => '22',
+                'nilai' => '7',]);
+            nilai::create([
+                'car_id' => '976',
+                'kriteria_id' => '3',
+                'alternatif_id' => '25',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '976',
+                'kriteria_id' => '4',
+                'alternatif_id' => '28',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '976',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '976',
+                'kriteria_id' => '6',
+                'alternatif_id' => '38',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '976',
+                'kriteria_id' => '7',
+                'alternatif_id' => '43',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '976',
+                'kriteria_id' => '8',
+                'alternatif_id' => '50',
+                'nilai' => '7',]);
+            nilai::create([
+                'car_id' => '977',
+                'kriteria_id' => '1',
+                'alternatif_id' => '9',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '977',
+                'kriteria_id' => '2',
+                'alternatif_id' => '21',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '977',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '977',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '977',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '977',
+                'kriteria_id' => '6',
+                'alternatif_id' => '38',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '977',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '977',
+                'kriteria_id' => '8',
+                'alternatif_id' => '49',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '978',
+                'kriteria_id' => '1',
+                'alternatif_id' => '9',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '978',
+                'kriteria_id' => '2',
+                'alternatif_id' => '21',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '978',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '978',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '978',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '978',
+                'kriteria_id' => '6',
+                'alternatif_id' => '38',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '978',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '978',
+                'kriteria_id' => '8',
+                'alternatif_id' => '49',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '979',
+                'kriteria_id' => '1',
+                'alternatif_id' => '2',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '979',
+                'kriteria_id' => '2',
+                'alternatif_id' => '21',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '979',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '979',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '979',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '979',
+                'kriteria_id' => '6',
+                'alternatif_id' => '34',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '979',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '979',
+                'kriteria_id' => '8',
+                'alternatif_id' => '46',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '980',
+                'kriteria_id' => '1',
+                'alternatif_id' => '2',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '980',
+                'kriteria_id' => '2',
+                'alternatif_id' => '20',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '980',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '980',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '980',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '980',
+                'kriteria_id' => '6',
+                'alternatif_id' => '34',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '980',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '980',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '981',
+                'kriteria_id' => '1',
+                'alternatif_id' => '2',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '981',
+                'kriteria_id' => '2',
+                'alternatif_id' => '20',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '981',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '981',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '981',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '981',
+                'kriteria_id' => '6',
+                'alternatif_id' => '34',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '981',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '981',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '982',
+                'kriteria_id' => '1',
+                'alternatif_id' => '2',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '982',
+                'kriteria_id' => '2',
+                'alternatif_id' => '20',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '982',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '982',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '982',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '982',
+                'kriteria_id' => '6',
+                'alternatif_id' => '34',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '982',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '982',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '983',
+                'kriteria_id' => '1',
+                'alternatif_id' => '2',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '983',
+                'kriteria_id' => '2',
+                'alternatif_id' => '18',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '983',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '983',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '983',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '983',
+                'kriteria_id' => '6',
+                'alternatif_id' => '33',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '983',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '983',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '984',
+                'kriteria_id' => '1',
+                'alternatif_id' => '11',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '984',
+                'kriteria_id' => '2',
+                'alternatif_id' => '19',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '984',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '984',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '984',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '984',
+                'kriteria_id' => '6',
+                'alternatif_id' => '38',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '984',
+                'kriteria_id' => '7',
+                'alternatif_id' => '43',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '984',
+                'kriteria_id' => '8',
+                'alternatif_id' => '51',
+                'nilai' => '8',]);
+            nilai::create([
+                'car_id' => '985',
+                'kriteria_id' => '1',
+                'alternatif_id' => '11',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '985',
+                'kriteria_id' => '2',
+                'alternatif_id' => '19',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '985',
+                'kriteria_id' => '3',
+                'alternatif_id' => '23',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '985',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '985',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '985',
+                'kriteria_id' => '6',
+                'alternatif_id' => '38',
+                'nilai' => '6',]);
+            nilai::create([
+                'car_id' => '985',
+                'kriteria_id' => '7',
+                'alternatif_id' => '43',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '985',
+                'kriteria_id' => '8',
+                'alternatif_id' => '51',
+                'nilai' => '8',]);
+            nilai::create([
+                'car_id' => '986',
+                'kriteria_id' => '1',
+                'alternatif_id' => '8',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '986',
+                'kriteria_id' => '2',
+                'alternatif_id' => '19',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '986',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '986',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '986',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '986',
+                'kriteria_id' => '6',
+                'alternatif_id' => '35',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '986',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '986',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '987',
+                'kriteria_id' => '1',
+                'alternatif_id' => '8',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '987',
+                'kriteria_id' => '2',
+                'alternatif_id' => '18',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '987',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '987',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '987',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '987',
+                'kriteria_id' => '6',
+                'alternatif_id' => '35',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '987',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '987',
+                'kriteria_id' => '8',
+                'alternatif_id' => '45',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '988',
+                'kriteria_id' => '1',
+                'alternatif_id' => '7',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '988',
+                'kriteria_id' => '2',
+                'alternatif_id' => '22',
+                'nilai' => '7',]);
+            nilai::create([
+                'car_id' => '988',
+                'kriteria_id' => '3',
+                'alternatif_id' => '25',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '988',
+                'kriteria_id' => '4',
+                'alternatif_id' => '28',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '988',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '988',
+                'kriteria_id' => '6',
+                'alternatif_id' => '35',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '988',
+                'kriteria_id' => '7',
+                'alternatif_id' => '42',
+                'nilai' => '4',]);
+            nilai::create([
+                'car_id' => '988',
+                'kriteria_id' => '8',
+                'alternatif_id' => '46',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '989',
+                'kriteria_id' => '1',
+                'alternatif_id' => '7',
+                'nilai' => '1',]);
+            nilai::create([
+                'car_id' => '989',
+                'kriteria_id' => '2',
+                'alternatif_id' => '20',
+                'nilai' => '5',]);
+            nilai::create([
+                'car_id' => '989',
+                'kriteria_id' => '3',
+                'alternatif_id' => '24',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '989',
+                'kriteria_id' => '4',
+                'alternatif_id' => '27',
+                'nilai' => '2',]);
+            nilai::create([
+                'car_id' => '989',
+                'kriteria_id' => '5',
+                'alternatif_id' => '31',
+                'nilai' => '3',]);
+            nilai::create([
+                'car_id' => '989',
+                'kriteria_id' => '6',
+            'alternatif_id' => '34',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '989',
+            'kriteria_id' => '7',
+            'alternatif_id' => '42',
+            'nilai' => '4',]);
+          nilai::create([
+            'car_id' => '989',
+            'kriteria_id' => '8',
+            'alternatif_id' => '45',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '990',
+            'kriteria_id' => '1',
+            'alternatif_id' => '7',
+            'nilai' => '1',]);
+          nilai::create([
+            'car_id' => '990',
+            'kriteria_id' => '2',
+            'alternatif_id' => '19',
+            'nilai' => '4',]);
+          nilai::create([
+            'car_id' => '990',
+            'kriteria_id' => '3',
+            'alternatif_id' => '24',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '990',
+            'kriteria_id' => '4',
+            'alternatif_id' => '27',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '990',
+            'kriteria_id' => '5',
+            'alternatif_id' => '31',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '990',
+            'kriteria_id' => '6',
+            'alternatif_id' => '34',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '990',
+            'kriteria_id' => '7',
+            'alternatif_id' => '42',
+            'nilai' => '4',]);
+          nilai::create([
+            'car_id' => '990',
+            'kriteria_id' => '8',
+            'alternatif_id' => '45',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '991',
+            'kriteria_id' => '1',
+            'alternatif_id' => '9',
+            'nilai' => '1',]);
+          nilai::create([
+            'car_id' => '991',
+            'kriteria_id' => '2',
+            'alternatif_id' => '21',
+            'nilai' => '6',]);
+          nilai::create([
+            'car_id' => '991',
+            'kriteria_id' => '3',
+            'alternatif_id' => '24',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '991',
+            'kriteria_id' => '4',
+            'alternatif_id' => '27',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '991',
+            'kriteria_id' => '5',
+            'alternatif_id' => '31',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '991',
+            'kriteria_id' => '6',
+            'alternatif_id' => '38',
+            'nilai' => '6',]);
+          nilai::create([
+            'car_id' => '991',
+            'kriteria_id' => '7',
+            'alternatif_id' => '43',
+            'nilai' => '5',]);
+          nilai::create([
+            'car_id' => '991',
+            'kriteria_id' => '8',
+            'alternatif_id' => '50',
+            'nilai' => '7',]);
+          nilai::create([
+            'car_id' => '992',
+            'kriteria_id' => '1',
+            'alternatif_id' => '9',
+            'nilai' => '1',]);
+          nilai::create([
+            'car_id' => '992',
+            'kriteria_id' => '2',
+            'alternatif_id' => '19',
+            'nilai' => '4',]);
+          nilai::create([
+            'car_id' => '992',
+            'kriteria_id' => '3',
+            'alternatif_id' => '24',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '992',
+            'kriteria_id' => '4',
+            'alternatif_id' => '27',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '992',
+            'kriteria_id' => '5',
+            'alternatif_id' => '31',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '992',
+            'kriteria_id' => '6',
+            'alternatif_id' => '38',
+            'nilai' => '6',]);
+          nilai::create([
+            'car_id' => '992',
+            'kriteria_id' => '7',
+            'alternatif_id' => '43',
+            'nilai' => '5',]);
+          nilai::create([
+            'car_id' => '992',
+            'kriteria_id' => '8',
+            'alternatif_id' => '50',
+            'nilai' => '7',]);
+          nilai::create([
+            'car_id' => '993',
+            'kriteria_id' => '1',
+            'alternatif_id' => '9',
+            'nilai' => '1',]);
+          nilai::create([
+            'car_id' => '993',
+            'kriteria_id' => '2',
+            'alternatif_id' => '21',
+            'nilai' => '6',]);
+          nilai::create([
+            'car_id' => '993',
+            'kriteria_id' => '3',
+            'alternatif_id' => '24',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '993',
+            'kriteria_id' => '4',
+            'alternatif_id' => '27',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '993',
+            'kriteria_id' => '5',
+            'alternatif_id' => '31',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '993',
+            'kriteria_id' => '6',
+            'alternatif_id' => '38',
+            'nilai' => '6',]);
+          nilai::create([
+            'car_id' => '993',
+            'kriteria_id' => '7',
+            'alternatif_id' => '42',
+            'nilai' => '4',]);
+          nilai::create([
+            'car_id' => '993',
+            'kriteria_id' => '8',
+            'alternatif_id' => '49',
+            'nilai' => '6',]);
+          nilai::create([
+            'car_id' => '994',
+            'kriteria_id' => '1',
+            'alternatif_id' => '10',
+            'nilai' => '1',]);
+          nilai::create([
+            'car_id' => '994',
+            'kriteria_id' => '2',
+            'alternatif_id' => '20',
+            'nilai' => '5',]);
+          nilai::create([
+            'car_id' => '994',
+            'kriteria_id' => '3',
+            'alternatif_id' => '24',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '994',
+            'kriteria_id' => '4',
+            'alternatif_id' => '27',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '994',
+            'kriteria_id' => '5',
+            'alternatif_id' => '31',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '994',
+            'kriteria_id' => '6',
+            'alternatif_id' => '35',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '994',
+            'kriteria_id' => '7',
+            'alternatif_id' => '42',
+            'nilai' => '4',]);
+          nilai::create([
+            'car_id' => '994',
+            'kriteria_id' => '8',
+            'alternatif_id' => '45',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '995',
+            'kriteria_id' => '1',
+            'alternatif_id' => '10',
+            'nilai' => '1',]);
+          nilai::create([
+            'car_id' => '995',
+            'kriteria_id' => '2',
+            'alternatif_id' => '20',
+            'nilai' => '5',]);
+          nilai::create([
+            'car_id' => '995',
+            'kriteria_id' => '3',
+            'alternatif_id' => '24',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '995',
+            'kriteria_id' => '4',
+            'alternatif_id' => '27',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '995',
+            'kriteria_id' => '5',
+            'alternatif_id' => '31',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '995',
+            'kriteria_id' => '6',
+            'alternatif_id' => '35',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '995',
+            'kriteria_id' => '7',
+            'alternatif_id' => '42',
+            'nilai' => '4',]);
+          nilai::create([
+            'car_id' => '995',
+            'kriteria_id' => '8',
+            'alternatif_id' => '45',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '996',
+            'kriteria_id' => '1',
+            'alternatif_id' => '9',
+            'nilai' => '1',]);
+          nilai::create([
+            'car_id' => '996',
+            'kriteria_id' => '2',
+            'alternatif_id' => '19',
+            'nilai' => '4',]);
+          nilai::create([
+            'car_id' => '996',
+            'kriteria_id' => '3',
+            'alternatif_id' => '24',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '996',
+            'kriteria_id' => '4',
+            'alternatif_id' => '27',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '996',
+            'kriteria_id' => '5',
+            'alternatif_id' => '31',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '996',
+            'kriteria_id' => '6',
+            'alternatif_id' => '35',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '996',
+            'kriteria_id' => '7',
+            'alternatif_id' => '42',
+            'nilai' => '4',]);
+          nilai::create([
+            'car_id' => '996',
+            'kriteria_id' => '8',
+            'alternatif_id' => '45',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '997',
+            'kriteria_id' => '1',
+            'alternatif_id' => '12',
+            'nilai' => '1',]);
+          nilai::create([
+            'car_id' => '997',
+            'kriteria_id' => '2',
+            'alternatif_id' => '20',
+            'nilai' => '5',]);
+          nilai::create([
+            'car_id' => '997',
+            'kriteria_id' => '3',
+            'alternatif_id' => '24',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '997',
+            'kriteria_id' => '4',
+            'alternatif_id' => '27',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '997',
+            'kriteria_id' => '5',
+            'alternatif_id' => '31',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '997',
+            'kriteria_id' => '6',
+            'alternatif_id' => '34',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '997',
+            'kriteria_id' => '7',
+            'alternatif_id' => '42',
+            'nilai' => '4',]);
+          nilai::create([
+            'car_id' => '997',
+            'kriteria_id' => '8',
+            'alternatif_id' => '45',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '998',
+            'kriteria_id' => '1',
+            'alternatif_id' => '12',
+            'nilai' => '1',]);
+          nilai::create([
+            'car_id' => '998',
+            'kriteria_id' => '2',
+            'alternatif_id' => '20',
+            'nilai' => '5',]);
+          nilai::create([
+            'car_id' => '998',
+            'kriteria_id' => '3',
+            'alternatif_id' => '24',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '998',
+            'kriteria_id' => '4',
+            'alternatif_id' => '27',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '998',
+            'kriteria_id' => '5',
+            'alternatif_id' => '31',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '998',
+            'kriteria_id' => '6',
+            'alternatif_id' => '34',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '998',
+            'kriteria_id' => '7',
+            'alternatif_id' => '42',
+            'nilai' => '4',]);
+          nilai::create([
+            'car_id' => '998',
+            'kriteria_id' => '8',
+            'alternatif_id' => '45',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '999',
+            'kriteria_id' => '1',
+            'alternatif_id' => '13',
+            'nilai' => '1',]);
+          nilai::create([
+            'car_id' => '999',
+            'kriteria_id' => '2',
+            'alternatif_id' => '21',
+            'nilai' => '6',]);
+          nilai::create([
+            'car_id' => '999',
+            'kriteria_id' => '3',
+            'alternatif_id' => '24',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '999',
+            'kriteria_id' => '4',
+            'alternatif_id' => '27',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '999',
+            'kriteria_id' => '5',
+            'alternatif_id' => '31',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '999',
+            'kriteria_id' => '6',
+            'alternatif_id' => '35',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '999',
+            'kriteria_id' => '7',
+            'alternatif_id' => '42',
+            'nilai' => '4',]);
+          nilai::create([
+            'car_id' => '999',
+            'kriteria_id' => '8',
+            'alternatif_id' => '45',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '1000',
+            'kriteria_id' => '1',
+            'alternatif_id' => '13',
+            'nilai' => '1',]);
+          nilai::create([
+            'car_id' => '1000',
+            'kriteria_id' => '2',
+            'alternatif_id' => '21',
+            'nilai' => '6',]);
+          nilai::create([
+            'car_id' => '1000',
+            'kriteria_id' => '3',
+            'alternatif_id' => '24',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '1000',
+            'kriteria_id' => '4',
+            'alternatif_id' => '27',
+            'nilai' => '2',]);
+          nilai::create([
+            'car_id' => '1000',
+            'kriteria_id' => '5',
+            'alternatif_id' => '31',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '1000',
+            'kriteria_id' => '6',
+            'alternatif_id' => '35',
+            'nilai' => '3',]);
+          nilai::create([
+            'car_id' => '1000',
+            'kriteria_id' => '7',
+            'alternatif_id' => '42',
+            'nilai' => '4',]);
+          nilai::create([
+            'car_id' => '1000',
+            'kriteria_id' => '8',
+            'alternatif_id' => '45',
+            'nilai' => '2',]);
+        
         //
 
         // Table Ulasan
