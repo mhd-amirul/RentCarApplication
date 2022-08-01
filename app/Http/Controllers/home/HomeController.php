@@ -142,7 +142,7 @@ class HomeController extends Controller
                 }
             }
         }
-
+        // return response()->json($db);
         $sample = [];
         foreach ($db as $row) {
             if (!isset($sample[$row->car_id])) {

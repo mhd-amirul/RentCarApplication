@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\alternatif;
 use App\Models\car;
 use App\Models\kriteria;
+use App\Models\nilai;
 use App\Models\shop;
 use Illuminate\Support\Str;
 
@@ -103,6 +104,30 @@ class AdminDashboardController extends Controller
         //         $db->save();
         //     }
         // }
+        $kriteria = kriteria::all();
+        // $cars = car::where('shop_id', '5')->get();
+        // $cars = nilai::where('shop_id', '5')->get();
+        // $cars = nilai::whereBetween('id', [1081, 2047])->get();
+
+        $cars = car::whereBetween('id', [337, 370])->get();
+        // return response()->json($cars);
+        foreach ($cars as $data) {
+            foreach ($kriteria as $k) {
+                $name = str_replace(' ','_',$k->nama.'_id');
+                $db = alternatif::where('id', $data[$name])->first();
+                if ($db['kriteria_id'] == $k->id) {
+                    # code...
+                    $nilai = [
+                        'car_id' => $data->id,
+                        'kriteria_id' => $k->id,
+                        'alternatif_id' => $data[$name],
+                        'nilai' => $db->nilai
+                    ];
+                    nilai::create($nilai);
+                }
+            }
+        }
+        return response()->json($nilai);
         // ADD DATA KATA KUNCI
         // $data = car::where('shop_id', '10')->get();
         // $kriteria = kriteria::all();
@@ -118,13 +143,13 @@ class AdminDashboardController extends Controller
         //     }
         //     $data->save();
         // }
-        // add slug otomatis
+        // ADD SLUG OTOMATIS
         // $data = car::where('slug', Null)->where('shop_id', '10')->get();
         // foreach ($data as $car) {
         //     $car['slug'] = Str::random(50);
         //     $car->save();
         // }
-        // add plat otomatis
+        // ADD PLAT OTOMATIS
         // $data = car::where('shop_id', '10')->get();
         // foreach ($data as $car) {
         //     $car['no_polisi'] = 'bl'.rand(100, 999).rand(0, 9).'ag';
