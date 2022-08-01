@@ -2,7 +2,7 @@
 
 @section('container')
 <div class="row justify-content-center mt-5">
-    <div class="col-lg-6">
+    <div class="col-lg-10">
         <div class="card">
             <div class="card-body">
                 <div class="d-flex justify-content-center">
@@ -101,7 +101,7 @@
         </div>
     </div>
 
-    <div class="col-lg-6">
+    <div class="col-lg-10">
         <div class="card px-5 py-5">
             <h4 class="m-b-20 p-b-5 b-b-default ">Daftar Mobil</h4>
             <div class="row">
@@ -157,6 +157,8 @@
                             @endforelse
                         </tbody>
                     </table>
+                </div>
+                <div class="d-flex justify-content-center">
                     {{ $cars->links() }}
                 </div>
             </div>

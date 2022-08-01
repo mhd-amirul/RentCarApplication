@@ -18,7 +18,7 @@ class allShopsController extends Controller
             ->with(
                 [
                     'title' => 'Data Toko',
-                    'shop' => shop::latest()->filterShop(request(['searchShop']))->get()
+                    'shop' => shop::orderBy('id')->filterShop(request(['searchShop']))->get()
                 ]
             );
     }

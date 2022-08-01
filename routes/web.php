@@ -75,7 +75,7 @@ Route::group(['middleware' => 'auth'], function ()
         Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function ()
             {
                 // Route function auto add data
-                Route::get('AddAllImage/{id}', [AdminDashboardController::class, 'AddAllImage'])->name('AddAllImage');
+                // Route::get('AddAllImage/{id}', [AdminDashboardController::class, 'AddAllImage'])->name('AddAllImage');
                 // Route Dashboard
                 Route::resource('dashboard', AdminDashboardController::class)
                     ->parameters(['dashboard' => 'dashboard'])

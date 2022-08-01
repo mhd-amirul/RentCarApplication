@@ -104,30 +104,27 @@ class AdminDashboardController extends Controller
         //         $db->save();
         //     }
         // }
-        $kriteria = kriteria::all();
+        // ADD DATA NILAI UNTUK CAR
+        // $kriteria = kriteria::all();
         // $cars = car::where('shop_id', '5')->get();
-        // $cars = nilai::where('shop_id', '5')->get();
-        // $cars = nilai::whereBetween('id', [1081, 2047])->get();
-
-        $cars = car::whereBetween('id', [337, 370])->get();
+        // $cars = car::whereBetween('id', [907, 955])->get();
         // return response()->json($cars);
-        foreach ($cars as $data) {
-            foreach ($kriteria as $k) {
-                $name = str_replace(' ','_',$k->nama.'_id');
-                $db = alternatif::where('id', $data[$name])->first();
-                if ($db['kriteria_id'] == $k->id) {
-                    # code...
-                    $nilai = [
-                        'car_id' => $data->id,
-                        'kriteria_id' => $k->id,
-                        'alternatif_id' => $data[$name],
-                        'nilai' => $db->nilai
-                    ];
-                    nilai::create($nilai);
-                }
-            }
-        }
-        return response()->json($nilai);
+        // foreach ($cars as $data) {
+        //     foreach ($kriteria as $k) {
+        //         $name = str_replace(' ','_',$k->nama.'_id');
+        //         $db = alternatif::where('id', $data[$name])->first();
+        //         if ($db['kriteria_id'] == $k->id) {
+        //             # code...
+        //             $nilai = [
+        //                 'car_id' => $data->id,
+        //                 'kriteria_id' => $k->id,
+        //                 'alternatif_id' => $data[$name],
+        //                 'nilai' => $db->nilai
+        //             ];
+        //             nilai::create($nilai);
+        //         }
+        //     }
+        // }
         // ADD DATA KATA KUNCI
         // $data = car::where('shop_id', '10')->get();
         // $kriteria = kriteria::all();

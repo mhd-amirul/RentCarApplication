@@ -137,7 +137,7 @@ class RentalController extends Controller
     public function update(Request $request, car $car)
     {
         $rules = [
-            'deskripsi' => 'required',
+            // 'deskripsi' => 'required',
             'gambar1' => 'image|file|max:1024',
             'gambar2' => 'image|file|max:1024',
             'gambar3' => 'image|file|max:1024',
