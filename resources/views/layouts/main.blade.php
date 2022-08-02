@@ -7,7 +7,7 @@
         @stack('mapbox')
         <title>Rental Mobil • {{ $title }}</title>
     </head>
-    <body style="background: radial-gradient(circle at top left, #ead6ee, #ccfbff);">
+    <body style="background: radial-gradient(circle at top left,#B0A8B9, #008CCC);">
         @include('partials.navbar')
         @include('partials.pop-up')
         <div class="container">
