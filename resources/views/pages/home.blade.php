@@ -44,7 +44,7 @@
             <h1>KATA KATA</h1>
         </div>
     </div> --}}
-    <div class="col-lg-10">
+    {{-- <div class="col-lg-10">
         <div class="card border border-gray-800 mx-3 shadow-lg">
             <section class="ftco-section">
                 <div class="container">
@@ -77,7 +77,7 @@
             </section>
         </div>
 
-    </div>
+    </div> --}}
     <div class="col-lg-10">
         <div class="card border border-gray-800 mx-3 shadow-lg">
             <div class="row justify-content-center mb-5">
@@ -92,8 +92,16 @@
                                         <select name="{{ str_replace(' ', '_',$item->nama.'_id') }}" class="form-select" aria-label="Floating label select example">
                                             @foreach ($alternatif as $data)
                                                 @if ($data->kriteria_id == $item->id)
-                                                    <option value="" hidden>Pilih Kriteria...</option>
-                                                    <option value="{{ $data->id }}">{{ $data->nama }}</option>
+                                                    @if ($item->id == 1)
+                                                        <option value="{{ $data->id }}">{{ $data->nama }}</option>
+                                                    @else
+                                                        <option value="" hidden>Pilih Kriteria...</option>
+                                                        @if ($item->id == 8)
+                                                            <option value="{{ $data->id }}">{{ "Rp " . number_format($data->nama,2,',','.') }}</option>
+                                                        @else
+                                                            <option value="{{ $data->id }}">{{ $data->nama }}</option>
+                                                        @endif
+                                                    @endif
                                                 @endif
                                             @endforeach
                                         </select>

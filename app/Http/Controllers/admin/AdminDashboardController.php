@@ -141,17 +141,17 @@ class AdminDashboardController extends Controller
         //     $data->save();
         // }
         // ADD SLUG OTOMATIS
-        // $data = car::where('slug', Null)->where('shop_id', '10')->get();
-        // foreach ($data as $car) {
-        //     $car['slug'] = Str::random(50);
-        //     $car->save();
-        // }
+        $data = car::where('slug', Null)->get();
+        foreach ($data as $car) {
+            $car['slug'] = sha1(Str::random(10).time().microtime());
+            $car->save();
+        }
         // ADD PLAT OTOMATIS
         // $data = car::where('shop_id', '10')->get();
         // foreach ($data as $car) {
         //     $car['no_polisi'] = 'bl'.rand(100, 999).rand(0, 9).'ag';
         //     $car->save();
         // }
-        // return response()->json($data);
+        return response()->json($data);
     }
 }

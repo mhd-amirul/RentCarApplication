@@ -126,23 +126,22 @@
                     <table class="table table-responsive table-hover">
                         <thead>
                             <tr class="text-center">
-                                <th scope="col">No</th>
-                                <th scope="col">Merk</th>
                                 <th scope="col">No Polisi</th>
-                                {{-- <th scope="col">Harga Sewa</th> --}}
+                                <th scope="col">Merk</th>
+                                <th scope="col">Harga Sewa</th>
+                                <th scope="col">Stok</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @forelse ($cars as $car)
                                 <tr class="text-center">
-                                    <th scope="row">{{ $loop->iteration }}</th>
+                                    <th scope="row" style="text-transform: uppercase;">{{ $car->no_polisi }}</th>
                                     <td>{{ $car->merk->nama }}</td>
-                                    <td>{{ $car->no_polisi }}</td>
-                                    {{--  <td>{{ $car->tahun_produksi->nama }}</td>  --}}
-                                    {{-- <td>{{ $car->harga_sewa->nama }}</td> --}}
+                                    <td>{{ $car->harga_sewa->nama }}</td>
+                                    <td>{{ $car->stok }}</td>
                                     <td>
-                                        <a href="{{ route('shop.show', $car->slug) }}" class="btn btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
+                                        <a href="{{ route('shop.show', $car->slug) }}" class="btn btn-sm btn-info my-1"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
                                         <form action="{{ route('shop.destroy', $car->slug) }}" method="post" class="d-inline" id="deleteCar-form-{{ $car->id }}">
                                             @method('delete')
                                             @csrf
