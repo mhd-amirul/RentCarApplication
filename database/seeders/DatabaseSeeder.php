@@ -56822,7 +56822,7 @@ class DatabaseSeeder extends Seeder
             'kriteria_id' => '8',
             'alternatif_id' => '45',
             'nilai' => '2',]);
-        
+
         //
 
         // Table Ulasan

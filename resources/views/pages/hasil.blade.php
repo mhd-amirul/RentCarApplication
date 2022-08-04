@@ -21,13 +21,13 @@
                             <h3 class="card-title">Merk : {{ $car->merk->nama }}</h3>
                             <p>
                                 <small>
-                                    <a href="{{ route('profileToko', $car->shop->id) }}" class="text-decoration-none">{{ $car->shop->nm_usaha }}</a> {{ $car->created_at->diffForHumans() }}
+                                    <a href="{{ route('profileToko', $car->shop->slug) }}" class="text-decoration-none">{{ $car->shop->nm_usaha }}</a> {{ $car->created_at->diffForHumans() }}
                                 </small>
                             </p>
                             <div class="row justify-content-center">
                                 <div class="col-sm-5">
                                     <p class="card-text">Tahun Produksi : {{ $car->tahun_produksi->nama }}, Muatan Penumpang : {{ $car->muatan_penumpang->nama }}, Harga Sewa : {{ $car->harga_sewa->nama }}</p>
-                                    <a href="{{ route('detailMobil', $car->id) }}" class="btn btn-sm btn-primary w-100">Detail</a>
+                                    <a href="{{ route('detailMobil', $car->slug) }}" class="btn btn-sm btn-primary w-100">Detail</a>
                                 </div>
                             </div>
                         </div>

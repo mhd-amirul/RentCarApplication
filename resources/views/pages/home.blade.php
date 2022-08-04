@@ -92,7 +92,11 @@
                                         <select name="{{ str_replace(' ', '_',$item->nama.'_id') }}" class="form-select" aria-label="Floating label select example">
                                             @foreach ($alternatif as $data)
                                                 @if ($data->kriteria_id == $item->id)
-                                                    <option value="" hidden>Pilih Kriteria...</option>
+                                                    @if ($item->id == 1)
+
+                                                    @else
+                                                        <option value="" hidden>Pilih Kriteria...</option>
+                                                    @endif
                                                     <option value="{{ $data->id }}">{{ $data->nama }}</option>
                                                 @endif
                                             @endforeach
