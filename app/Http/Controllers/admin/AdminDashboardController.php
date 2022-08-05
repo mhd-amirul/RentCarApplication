@@ -11,6 +11,7 @@ use App\Models\kriteria;
 use App\Models\nilai;
 use App\Models\shop;
 use Illuminate\Support\Str;
+use phpDocumentor\Reflection\Types\Null_;
 
 class AdminDashboardController extends Controller
 {
@@ -106,9 +107,10 @@ class AdminDashboardController extends Controller
         // }
         // ADD DATA NILAI UNTUK CAR
         // $kriteria = kriteria::all();
-        // $cars = car::where('shop_id', '5')->get();
-        // $cars = car::whereBetween('id', [907, 955])->get();
-        // return response()->json($cars);
+        // // $cars = car::where('shop_id', '5')->get();
+        // // $cars = car::all();
+        // $cars = car::whereBetween('id', [51, 100])->get();
+        // // return response()->json($cars);
         // foreach ($cars as $data) {
         //     foreach ($kriteria as $k) {
         //         $name = str_replace(' ','_',$k->nama.'_id');
@@ -126,7 +128,7 @@ class AdminDashboardController extends Controller
         //     }
         // }
         // ADD DATA KATA KUNCI
-        // $data = car::where('shop_id', '10')->get();
+        // $data = car::where('kata_kunci', Null)->get();
         // $kriteria = kriteria::all();
         // foreach ($data as $data) {
         //     foreach ($kriteria as $k) {
@@ -141,17 +143,25 @@ class AdminDashboardController extends Controller
         //     $data->save();
         // }
         // ADD SLUG OTOMATIS
-        $data = car::where('slug', Null)->get();
-        foreach ($data as $car) {
-            $car['slug'] = sha1(Str::random(10).time().microtime());
-            $car->save();
-        }
-        // ADD PLAT OTOMATIS
-        // $data = car::where('shop_id', '10')->get();
+        // $data = car::where('slug', Null)->get();
         // foreach ($data as $car) {
-        //     $car['no_polisi'] = 'bl'.rand(100, 999).rand(0, 9).'ag';
+        //     $car['slug'] = sha1(Str::random(10).time().microtime());
         //     $car->save();
         // }
-        return response()->json($data);
+        // ADD PLAT OTOMATIS
+        // $data = car::where('no_polisi', Null)->get();
+        // foreach ($data as $car) {
+        //     $item = [
+        //         'a' => 'a',
+        //         'g' => 'a',
+        //         'z' => 'a',
+        //         'd' => 'a',
+        //         'b' => 'a',
+        //         's' => 'a',
+        //         'l' => 'a'];
+        //     $car['no_polisi'] = 'BL'.rand(100, 999).rand(0, 9).array_rand($item, 1).array_rand($item, 1);
+        //     $car->save();
+        // }
+        // return response()->json($data);
     }
 }
