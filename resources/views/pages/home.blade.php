@@ -102,6 +102,10 @@
                                                             <option value="{{ $data->id }}">{{ $data->nama }}</option>
                                                         @endif
                                                     @endif
+                                                    @else
+                                                        <option value="" hidden>Pilih Kriteria...</option>
+                                                    @endif
+                                                    <option value="{{ $data->id }}">{{ $data->nama }}</option>
                                                 @endif
                                             @endforeach
                                         </select>

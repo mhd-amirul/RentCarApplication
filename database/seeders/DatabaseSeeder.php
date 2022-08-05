@@ -1786,20 +1786,5 @@ class DatabaseSeeder extends Seeder
                 // BOY CAR//
             // Other 45 car//
         //
-
-        // Table Nilai Pasee dan Adam Real ================================================================//
-        // Table Nilai dummy Pasee ================================================================//
-        // Table Nilai dummy AFG//
-        // KMJ//
-        // Oto Car//
-        // Benseupakat Rentcar//
-        // AFG//
-        // Pangeran rental//
-        // Jeumpa Puteh//
-        // Galery Rental//
-        // BOY CAR//
-        // Other 45 car//
-
-        // Table Ulasan//
     }
 }

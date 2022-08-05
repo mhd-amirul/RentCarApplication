@@ -8,7 +8,7 @@
                 <a href="#"><i class="bi bi-twitter"></i></a>
                 <a href="#"><i class="bi bi-github"></i></a>
             </div>
-            <p class="copyright">CarRental © 2022</p>
+            <p class="copyright">RentCar.com © 2022</p>
         </footer>
     </div>
 </div>
