@@ -61,7 +61,7 @@
                                 <span class="fa fa-phone"></span>
                             </div>
                             <div class="text">
-                                <p><span>Phone: </span> <a target="_blank" href="https://web.whatsapp.com/send?phone={{ '62'.$shop->user_no_hp }}&text=Hi%2C%20Saya%20lihat%20iklan%20kendaraan%20Anda%20di%20RentCar.com%20dan%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20Mobil%20tersebut%20Terima%20kasih%20">+62{{ $shop->user->no_hp }}</a></p>
+                                <p><span>Phone: </span> <a target="_blank" href="tel:{{ '62'.$shop->user->no_hp }}">+62{{ $shop->user->no_hp }}</a></p>
                             </div>
                         </div>
                     </div>

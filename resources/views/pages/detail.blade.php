@@ -106,9 +106,15 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-9 mt-5">
-                                <a href="{{ route('sharelok', $car->shop->slug) }}" class="btn btn-success" style="color: rgb(0, 0, 0);">
+                            <div class="col-sm-10 mt-5">
+                                <a href="{{ route('sharelok', $car->shop->slug) }}" class="mr-1 mt-1 btn btn-primary">
                                     <i class="mr-2 bi bi-house-fill"></i> Cek Lokasi Toko
+                                </a>
+                                <a href="tel:{{ '+62'.$car->user->no_hp }}" class="mr-1 mt-1 btn btn-primary">
+                                    <i class="mr-2 bi bi-telephone-fill"></i> Telpon
+                                </a>
+                                <a href="https://web.whatsapp.com/send?phone={{ '62'.$car->user->no_hp }}&text=Hi%2C%20Saya%20lihat%20iklan%20kendaraan%20Anda%20di%20RentCar.com%20dan%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20Mobil%20tersebut%20Terima%20kasih%20" target="_blank" class="mr-1 mt-1 btn btn-success">
+                                    <i class="mr-2 bi bi-whatsapp"></i> WhatsApp
                                 </a>
                             </div>
                         </div>

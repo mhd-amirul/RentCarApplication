@@ -128,17 +128,21 @@
                             <tr class="text-center">
                                 <th scope="col">No Polisi</th>
                                 <th scope="col">Merk</th>
-                                <th scope="col">Harga Sewa</th>
+                                <th scope="col">Tahun</th>
+                                <th scope="col">Seater</th>
+                                <th scope="col">Harga</th>
                                 <th scope="col">Stok</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @forelse ($cars as $car)
-                                <tr class="text-center">
+                                <tr class="text-left">
                                     <th scope="row" style="text-transform: uppercase;">{{ $car->no_polisi }}</th>
                                     <td>{{ $car->merk->nama }}</td>
-                                    <td>{{ $car->harga_sewa->nama }}</td>
+                                    <td>{{ $car->tahun_produksi->nama }}</td>
+                                    <td>{{ $car->muatan_penumpang->nama }}</td>
+                                    <td>{{ "Rp. " . number_format($car->harga_sewa->nama,2,',','.') }}/hari</td>
                                     <td>{{ $car->stok }}</td>
                                     <td>
                                         <a href="{{ route('shop.show', $car->slug) }}" class="btn btn-sm btn-info my-1"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>

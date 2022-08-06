@@ -58,9 +58,15 @@
                         </div>
                     </div> --}}
                     <div class="row">
-                        <div class="col-sm-6 ">
-                            <a href="{{ route('sharelok', $shop->slug) }}" class="btn btn-success text-white">
+                        <div class="col-sm-10 mt-5">
+                            <a href="{{ route('sharelok', $shop->slug) }}" class="mr-1 mt-1 btn btn-primary">
                                 <i class="mr-2 bi bi-house-fill"></i> Cek Lokasi Toko
+                            </a>
+                            <a href="tel:{{ '+62'.$shop->user->no_hp }}" class="mr-1 mt-1 btn btn-primary">
+                                <i class="mr-2 bi bi-telephone-fill"></i> Telpon
+                            </a>
+                            <a href="https://web.whatsapp.com/send?phone={{ '62'.$shop->user->no_hp }}&text=Hi%2C%20Saya%20lihat%20iklan%20kendaraan%20Anda%20di%20RentCar.com%20dan%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20Mobil%20tersebut%20Terima%20kasih%20" target="_blank" class="mr-1 mt-1 btn btn-success">
+                                <i class="mr-2 bi bi-whatsapp"></i> WA Pemilik
                             </a>
                         </div>
                     </div>
@@ -76,8 +82,9 @@
                     <tr class="text-center">
                         <th scope="col">No</th>
                         <th scope="col">Merk</th>
-                        <th scope="col">Tahun Produksi</th>
-                        <th scope="col">Muatan Penumpang</th>
+                        <th scope="col">Tahun</th>
+                        <th scope="col">Seater</th>
+                        <th scope="col">Stok</th>
                         <th scope="col">Harga Sewa</th>
                         <th scope="col">Action</th>
                     </tr>
@@ -89,6 +96,7 @@
                         <td>{{ $car->merk->nama }}</td>
                         <td>{{ $car->tahun_produksi->nama }}</td>
                         <td>{{ $car->muatan_penumpang->nama }}</td>
+                        <td>{{ $car->stok }}</td>
                         <td>{{ "Rp. " . number_format($car->harga_sewa->nama,2,',','.') }}/hari</td>
                         <td>
                             <a href="{{ route('detailMobil', $car->slug) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>

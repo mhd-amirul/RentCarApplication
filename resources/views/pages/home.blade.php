@@ -63,7 +63,7 @@
                                             </div>
                                             <div class="text pt-3 w-100 text-center">
                                                 <h5><a href="{{ route('detailMobil', $car->slug) }}" class="text-dark">{{ $car->merk->nama }}</a></h5>
-                                                <span>{{ $car->shop->nm_usaha }}</span>
+                                                <span><a href="{{ route('profileToko', $car->shop->slug) }}" class="text-decoration-none text-dark">{{ $car->shop->nm_usaha }}</a></span>
                                             </div>
                                         </div>
                                     </div>
