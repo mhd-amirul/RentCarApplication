@@ -17,17 +17,17 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // $rate = ulasan::where('rating', '5')->get();
-        // // return response()->json($rate);
+        $rate = ulasan::where('rating', '5')->get();
+        // return response()->json($rate);
 
-        // $i = 0;
-        // foreach ($rate as $r) {
-        //     # code...
-        //     if ($i < 10) {
-        //         $cars[] = car::where('id', $r->car_id)->first();
-        //         $i++;
-        //     }
-        // }
+        $i = 0;
+        foreach ($rate as $r) {
+            # code...
+            if ($i < 10) {
+                $cars[] = car::where('id', $r->car_id)->first();
+                $i++;
+            }
+        }
         return view('pages.home')
             ->with([
                 'title' => 'Home',
@@ -35,7 +35,7 @@ class HomeController extends Controller
                 'kriteria' => kriteria::whereNotIn('id', [3,4])->get(),
                 'alternatif' => alternatif::all(),
                 'shop' => shop::where('status', 'active')->get(),
-                // 'cars' => $cars
+                'cars' => $cars
             ]);
     }
 
@@ -69,9 +69,9 @@ class HomeController extends Controller
             ->with(
                 [
                     'title' => 'Daftar Mobil',
-                    'cars' => car::orderBy('merk_id')
+                    'cars' => car::orderBy('Tahun_Produksi_id')
                                     ->filter(request(['search']))
-                                    ->paginate(8)
+                                    ->paginate(20)
                                     ->withQueryString()
                 ]
             );

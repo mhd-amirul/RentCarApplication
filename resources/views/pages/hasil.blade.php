@@ -26,7 +26,7 @@
                             </p>
                             <div class="row justify-content-center">
                                 <div class="col-sm-5">
-                                    <p class="card-text">Tahun Produksi : {{ $car->tahun_produksi->nama }}, Muatan Penumpang : {{ $car->muatan_penumpang->nama }}, Harga Sewa : {{ $car->harga_sewa->nama }}</p>
+                                    <p class="card-text">Tahun Produksi : {{ $car->tahun_produksi->nama }}, Muatan Penumpang : {{ $car->muatan_penumpang->nama }}, Harga Sewa : {{ "Rp. " . number_format($car->harga_sewa->nama,2,',','.') }}/hari</p>
                                     <a href="{{ route('detailMobil', $car->slug) }}" class="btn btn-sm btn-primary w-100">Detail</a>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@
                                     {{ $car->created_at->diffForHumans() }}
                                 </small>
                             </p>
-                            <p class="card-text">Tahun Produksi : {{ $car->tahun_produksi->nama }}, Muatan Penumpang : {{ $car->muatan_penumpang->nama }}, Harga Sewa : {{ $car->harga_sewa->nama }}</p>
+                            <p class="card-text">Tahun Produksi : {{ $car->tahun_produksi->nama }}, Muatan Penumpang : {{ $car->muatan_penumpang->nama }}, Harga Sewa : {{ "Rp. " . number_format($car->harga_sewa->nama,2,',','.') }}</p>
                             <a href="{{ route('detailMobil', $car->slug) }}" class="btn btn-sm btn-primary">Detail</a>
                         </div>
                     </div>

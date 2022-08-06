@@ -71,6 +71,8 @@
             <div class="row justify-content-center">
                 <div class="col-sm-12">
                     <h4 class="m-b-20 p-b-5 b-b-default mt-3">Users </h4>
+                </div>
+                <div class="col-sm-12">
                     <form action="{{ route('allusers.index') }}">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="search.." name="searchUser" value="{{ request('searchUser') }}">
@@ -78,6 +80,7 @@
                         </div>
                     </form>
                 </div>
+
                 <div class="col-lg-12">
                     <table class="table table-responsive table-hover">
                         <thead>

@@ -75,11 +75,12 @@ Route::group(['middleware' => 'auth'], function ()
         Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function ()
             {
                 // Route function auto add data
-                // Route::get('AddAllImage/{id}', [AdminDashboardController::class, 'AddAllImage'])->name('AddAllImage');
+                Route::get('AddAllImage/{id}', [AdminDashboardController::class, 'AddAllImage'])->name('AddAllImage');
                 // Route Dashboard
                 Route::resource('dashboard', AdminDashboardController::class)
                     ->parameters(['dashboard' => 'dashboard'])
                     ->except(['edit', 'update', 'create']);
+                Route::get('/laporan', [AdminDashboardController::class, 'laporan_admin'])->name('laporan');
                 Route::get('/declineShop', [AdminDashboardController::class, 'declineShop'])->name('declineShop');
                 // Route All User Config
                 Route::resource('allusers', allUsersController::class)

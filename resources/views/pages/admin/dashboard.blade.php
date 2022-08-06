@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="row justify-content-center mt-5">
+{{-- <div class="row justify-content-center mt-5">
     <div class="col-lg-12">
         <div class="card px-5 py-5 border border-grey-500">
             <h2 class="m-b-20 p-b-5 b-b-default mt-3 text-center">DASHBOARD ADMIN</h2>
         <div class="row">
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-sm-5 col-lg-3">
                 <div class="card text-white bg-primary">
                     <div class="card-body">
                         <div class="pt-1">
@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-sm-5 col-lg-3">
                 <div class="card text-white bg-danger">
                     <div class="card-body">
                         <div class="pt-1">
@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-sm-5 col-lg-3">
                 <div class="card text-white bg-warning">
                     <div class="card-body">
                         <div class="pt-1">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-sm-5 col-lg-3">
                 <div class="card text-white bg-success">
                     <div class="card-body">
                         <div class="pt-1">
@@ -51,6 +51,70 @@
                 </div>
             </div>
         </div>
+        </div>
+    </div>
+</div> --}}
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-12">
+        <div class="card px-4 py-4 border border-grey-500">
+            <h2 class="m-b-20 p-b-5 b-b-default mt-3 text-center">DASHBOARD ADMIN</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-2">
+                    <div class="card text-white bg-dark">
+                        <div class="card-body">
+                            <div class="pt-1">
+                                <a class="text-white fs-6" href="{{ route('allusers.index') }}">
+                                    <i class="mr-2 bi bi-person-fill"> Pengguna</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="card text-white bg-secondary">
+                        <div class="card-body">
+                            <div class="pt-1">
+                                <a class="text-white fs-6" href="{{ route('allshops.index') }}">
+                                    <i class="mr-2 bi bi-house-fill"> Toko</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="card text-white bg-danger">
+                        <div class="card-body">
+                            <div class="pt-1">
+                                <a class="text-white fs-6" href="{{ route('allkriteria.index') }}">
+                                    <i class="mr-2 bi bi-card-list"> Kriteria</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="card text-white bg-warning">
+                        <div class="card-body">
+                            <div class="pt-1">
+                                <a class="text-white fs-6" href="{{ route('allalternatif.index') }}">
+                                    <i class="mr-2 bi bi-blockquote-right"> Alternatif</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="card text-white bg-primary">
+                        <div class="card-body">
+                            <div class="pt-1">
+                                <a class="text-white fs-6" href="{{ route('laporan') }}">
+                                    <i class="mr-2 bi bi-blockquote-right"> Laporan</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
