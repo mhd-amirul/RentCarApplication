@@ -8,6 +8,9 @@
         <title>Rental Mobil • {{ $title }}</title>
     </head>
     <body style="background: radial-gradient(circle at top left,#B0A8B9, #008CCC);">
+        <div id="preloder">
+            <div class="loader"></div>
+        </div>
         @include('partials.navbar')
         @include('partials.pop-up')
         <div class="container">

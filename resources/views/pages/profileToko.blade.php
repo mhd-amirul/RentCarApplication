@@ -89,7 +89,7 @@
                         <td>{{ $car->merk->nama }}</td>
                         <td>{{ $car->tahun_produksi->nama }}</td>
                         <td>{{ $car->muatan_penumpang->nama }}</td>
-                        <td>{{ $car->harga_sewa->nama }}</td>
+                        <td>{{ "Rp. " . number_format($car->harga_sewa->nama,2,',','.') }}/hari</td>
                         <td>
                             <a href="{{ route('detailMobil', $car->slug) }}" class="btn-sm btn-info"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
                         </td>

@@ -8,7 +8,11 @@
             <div class="row">
                 <div class="col-sm-12">
                     <a href="{{ route('dashboard.index') }}" class="btn btn-dark"><i class="bi bi-arrow-left-circle"></i> Back to Dashboard</a>
-                    {{-- <a href="{{ route('activityAdd',$shop->slug) }}" class="btn btn-primary"><i class="bi bi-file-earmark-plus"></i> Tambah</a> --}}
+                    <a href="" class="btn btn-primary"><i class="bi bi-person-fill"></i> User</a>
+                    <a href="" class="btn btn-primary"><i class="bi bi-house-fill"> Toko</i></a>
+                    <a href="" class="btn btn-primary"><i class="bi bi-card-list"> Mobil</i></a>
+                    <a class="btn btn-primary" href=""><i class="mr-2 bi bi-card-list"> Kriteria</i></a>
+                    <a class="btn btn-primary" href=""><i class="mr-2 bi bi-blockquote-right"> Alternatif</i></a>
                     {{-- <a href="{{ route('activityHistory',$shop->slug) }}" class="btn btn-secondary"><i class="bi bi-clock-history"></i>  History</a> --}}
                     {{-- <a target="blank" href="{{ route('activityViewCetak', $shop->id) }}" class="btn btn-success"><i class="bi bi-printer-fill"></i>  Print</a> --}}
                 </div>

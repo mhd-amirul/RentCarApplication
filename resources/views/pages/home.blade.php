@@ -89,20 +89,14 @@
                             @foreach ($kriteria as $item)
                                 <div class="col-sm-6">
                                     <div class="form-floating mb-1 mx-3">
-                                        <select name="{{ str_replace(' ', '_',$item->nama.'_id') }}" class="form-select" aria-label="Floating label select example">
+                                        <select name="{{ str_replace(' ', '_',$item->nama.'_id') }}" class="form-select" aria-label="Floating label select example" {{ $item->id == 1 ? 'required' : '' }}>
                                             @foreach ($alternatif as $data)
                                                 @if ($data->kriteria_id == $item->id)
-                                                    @if ($item->id == 1)
-                                                        <option value="" hidden>Pilih Kriteria...</option>
-
-                                                        <option value="{{ $data->id }}">{{ $data->nama }}</option>
+                                                    <option value="" hidden>Pilih Kriteria...</option>
+                                                    @if ($item->id == 8)
+                                                        <option value="{{ $data->id }}">{{ "Rp. " . number_format($data->nama,2,',','.') }}/hari</option>
                                                     @else
-                                                        <option value="" hidden>Pilih Kriteria...</option>
-                                                        @if ($item->id == 8)
-                                                            <option value="{{ $data->id }}">{{ "Rp. " . number_format($data->nama,2,',','.') }}/hari</option>
-                                                        @else
-                                                            <option value="{{ $data->id }}">{{ $data->nama }}</option>
-                                                        @endif
+                                                        <option value="{{ $data->id }}">{{ $data->nama }}</option>
                                                     @endif
                                                 @endif
                                             @endforeach
