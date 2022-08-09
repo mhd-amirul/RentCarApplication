@@ -4,7 +4,7 @@
 <div class="row justify-content-center mt-5">
     <div class="col-lg-8">
         <div class="card px-4 py-4 border border-grey-500">
-            <h2 class="m-b-20 p-b-5 b-b-default mt-3 text-center">DETAIL AKTIFITAS</h2>
+            <h2 class="m-b-20 p-b-5 b-b-default mt-3 text-center">{{ $history->status == 'on' ? 'DETAIL AKTIFITAS' : 'DETAIL HISTORY' }}</h2>
             <div class="row">
                 <div class="col-sm-12">
                     @if ($history->status == 'on')
@@ -15,10 +15,11 @@
                         <form action="{{ route('activityReturn', $history->slug) }}" method="POST" class="d-inline" id="returnAct-form">
                             @csrf
                             @method('put')
+                            <input type="text" name="sisa_waktu" value="{{ $sisa_waktu }}" hidden>
                             <button class="mt-1 btn btn-success text-decoration-none" id="returnAct"><i class="bi bi-calendar2-check"></i> Returned</button>
                         </form>
                     @else
-                        <a href="{{ route('activityHistory', $shop->slug) }}" style="color: rgb(0, 0, 0);" class="mt-1 btn btn-dark">
+                        <a href="{{ route('activityHistory', $shop->slug) }}" class="mt-1 btn btn-dark">
                             <i class="bi bi-arrow-left-circle"></i> Back
                         </a>
                     @endif
@@ -27,6 +28,7 @@
                         @method('delete')
                         <a href="#" class="mt-1 btn btn-danger text-decoration-none" id="deleteAct"><i class="bi bi-trash-fill"></i> Delete</a>
                     </form>
+                    <a href="" class="mt-1 btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak</a>
                 </div>
             </div>
             <h2 class="m-b-20 p-b-5 b-b-default mt-3"></h2>
@@ -63,7 +65,7 @@
                 </div>
                 <div class="col-sm-4 mb-4">
                     <div class="form-floating">
-                        <input type="text" class="form-control rounded-top {{ $color }}" disabled value="{{ $sisa_waktu }}">
+                        <input type="text" class="form-control rounded-top {{ $color }}" disabled value="{{ $history->sisa_waktu != null ? $history->sisa_waktu : $sisa_waktu }}">
                         <label>Sisa Waktu</label>
                     </div>
                 </div>
@@ -89,7 +91,7 @@
             <h2 class="m-b-20 p-b-5 b-b-default mt-3"></h2>
             <div class="row">
                 <div class="col-sm-12 mb-4">
-                    <a href="{{ route('shop.show', $history->car_id) }}" class="text-dark mt-1 btn btn-primary">
+                    <a href="{{ route('shop.show', $history->car->slug) }}" class="text-dark mt-1 btn btn-primary">
                         <i class="bi bi-eye-fill"> Detail Mobil</i>
                     </a>
                     <a target="blank" href="{{ isset($history->berkas_pinjam) ?  asset('storage/' . $history->berkas_pinjam) : url('images/notfound.png') }}" class="text-dark mt-1 btn btn-primary">

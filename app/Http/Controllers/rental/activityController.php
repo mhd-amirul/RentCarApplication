@@ -89,10 +89,10 @@ class activityController extends Controller
         $interval = $akhir->diff($now);
 
         if($now < $akhir && $history->status == 'on'){
-            $sentence = $interval->d . ' days ' . $interval->h . ' hours ' . $interval->i . ' minutes';
+            $sentence = 'sisa : ' . $interval->m . ' months ' . $interval->d . ' days ' . $interval->h . ' hours';
             $color = '';
         } elseif ($now > $akhir && $history->status == 'on') {
-            $sentence = '-'.$interval->d . ' days ' . '-'.$interval->h . ' hours ' . '-'.$interval->i . ' minutes';
+            $sentence = 'Terlambat : '.$interval->m . ' months ' . $interval->d . ' days ' .$interval->h . ' hours';
             $color = 'bg-danger text-white';
         } else {
             $sentence = '0 days ' . '0 hours ' . '0 minutes';
@@ -169,10 +169,12 @@ class activityController extends Controller
         return redirect()->route('activityShow',$history->slug)->with('success', 'Aktifitas berhasil diubah');
     }
 
-    public function activityReturn(history $history)
+    public function activityReturn(Request $request ,history $history)
     {
-        # code...
+
+
         $history->status = 'off';
+        $history->sisa_waktu = $request->sisa_waktu;
         $shop = shop::where('id', $history->shop_id)->first();
         $car = car::where('id', $history->car_id)->first();
         $car->stok = 'standby';
@@ -228,21 +230,37 @@ class activityController extends Controller
                 );
     }
 
-    public function activityViewCetak(shop $shop)
+    public function activityViewCetak(Request $request ,shop $shop)
     {
-        $history = history::where('shop_id', $shop->id)
-            ->where('status', 'off')
-            ->get();
-        $cars = car::where('shop_id', $shop->id)->get();
+        if ($request->type == 'histories') {
+            $history = history::where('shop_id', $shop->id)
+                ->where('status', 'off')
+                ->get();
+            $cars = car::where('shop_id', $shop->id)->get();
 
-        // $pdf = PDF::loadview('pages.rental.aktifitas.cetak_pdf', ['histories' => $data] );
-        // return $pdf->stream('laporan.pdf');
-        return view('pages.rental.aktifitas.cetak_pdf')
-            ->with(
-                [
-                    'histories' => $history,
-                    'cars' => $cars
-                ]
-            );
+            // $pdf = PDF::loadview('pages.rental.aktifitas.cetak_pdf', ['histories' => $data] );
+            // return $pdf->stream('laporan.pdf');
+            return view('pages.rental.aktifitas.cetak_pdf_history')
+                ->with(
+                    [
+                        'histories' => $history,
+                        'cars' => $cars
+                    ]);
+        } elseif ($request->type == 'activities') {
+            $history = history::where('shop_id', $shop->id)
+                ->where('status', 'on')
+                ->get();
+            $cars = car::where('shop_id', $shop->id)->get();
+
+            return view('pages.rental.aktifitas.cetak_pdf_activity')
+                ->with(
+                    [
+                        'histories' => $history,
+                        'cars' => $cars
+                    ]);
+        } else {
+
+        }
+
     }
 }

@@ -10,6 +10,11 @@
                     <a href="{{ route('toko.index') }}" class="btn btn-dark"><i class="bi bi-arrow-left-circle"></i> Back</a>
                     <a href="{{ route('activityAdd',$shop->slug) }}" class="btn btn-primary"><i class="bi bi-file-earmark-plus"></i> Tambah</a>
                     <a href="{{ route('activityHistory',$shop->slug) }}" class="btn btn-secondary"><i class="bi bi-clock-history"></i>  History</a>
+                    <form action="{{ route('activityViewCetak', $shop->slug) }}" method="GET" class="d-inline">
+                        @csrf
+                        <input type="text" name="type" value="activities" hidden>
+                        <button class="btn btn-success text-decoration-none"><i class="bi bi-printer-fill"></i> Print</button>
+                    </form>
                     {{-- <a target="blank" href="{{ route('activityViewCetak', $shop->id) }}" class="btn btn-success"><i class="bi bi-printer-fill"></i>  Print</a> --}}
                 </div>
             </div>

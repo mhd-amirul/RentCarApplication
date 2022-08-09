@@ -11,6 +11,11 @@ class history extends Model
 
     protected $guarded = ['id'];
 
+    public function car()
+    {
+        return $this->belongsTo(car::class, 'car_id', 'id');
+    }
+
     public function getRouteKeyName()
     {
         return 'slug';

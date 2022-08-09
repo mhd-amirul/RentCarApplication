@@ -9,7 +9,11 @@
                 <div class="col-sm-12">
                     <a href="{{ route('toko.index') }}" class="btn btn-dark"><i class="bi bi-arrow-left-circle"></i> Back</a>
                     <a href="{{ route('activityView', $shop->slug) }}" class="btn btn-secondary"><i class="bi bi-activity"></i>  Activity</a>
-                    <a target="blank" href="{{ route('activityViewCetak', $shop->slug) }}" class="btn btn-success"><i class="bi bi-printer-fill"></i>  Print</a>
+                    <form action="{{ route('activityViewCetak', $shop->slug) }}" method="GET" class="d-inline">
+                        @csrf
+                        <input type="text" name="type" value="histories" hidden>
+                        <button class="btn btn-success text-decoration-none"><i class="bi bi-printer-fill"></i> Print</button>
+                    </form>
                 </div>
             </div>
             <div class="row justify-content-start mt-3">
