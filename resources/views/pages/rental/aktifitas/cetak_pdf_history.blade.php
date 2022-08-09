@@ -3,6 +3,9 @@
         <title>Laporan Rental Mobil</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <style>
+            html {
+                background: rgb(204,204,204);
+            }
             h3 {
                 font-size: 14pt;
             }
@@ -24,9 +27,9 @@
 
             .main-page {
                 width: 100%;
-                min-height: 100%;
+                height: 100%;
                 background: white;
-                box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+                /* box-shadow: 0 0 0.5cm rgba(0,0,0,0.5); */
             }
             .sub-page {
                 padding: 0.3cm;
@@ -58,10 +61,10 @@
             }
         </style>
     </head>
-    <body style="background: rgb(204,204,204);">
+    <body>
         <div class="main-page">
             <div class="sub-page">
-                <h3 align='center'>LAPORAN PEMINJAMAN MOBIL RENTAL</h3>
+                <h3 align='center'>LAPORAN PEMINJAMAN MOBIL {{ $shop->nm_usaha }}</h3>
 
                 <div class="row mt-3">
                     <table class="table table-bordered">
@@ -73,28 +76,24 @@
                                     <th>NO. POL</th>
                                     <th>MERK</th>
                                     <th>TAHUN</th>
-                                    <th>CC</th>
                                     <th>HARGA</th>
-                                    <th>TOKO</th>
                                     <th>TGL PINJAM</th>
                                     <th>TGL BATAS</th>
                                     <th>SISA WAKTU</th>
                                 </tr>
                             </thead>
-                            @foreach ($histories as $history)
-                            <tbody class="text-left">
+                            <tbody>
+                                @foreach ($histories as $history)
                                 <tr>
                                     <th>{{ $loop->iteration }}</th>
                                     <td>{{ $history->nama_pinjam }}</td>
                                     <td>{{ $history->nik_pinjam }}</td>
                                     @foreach ($cars as $car)
                                         @if ($car->id == $history->car_id)
-                                        <td>{{ $car->no_polisi }}</td>
+                                            <td>{{ $car->no_polisi }}</td>
                                             <td>{{ $car->merk->nama }}</td>
                                             <td>{{ $car->tahun_produksi->nama }}</td>
-                                            <td>{{ $car->kapasitas_mesin->nama }}</td>
                                             <td>{{ number_format($car->harga_sewa->nama,2,',','.') }}</td>
-                                            <td>{{ $car->shop->nm_usaha }}</td>
                                         @endif
                                     @endforeach
                                     <td>{{ $history->tgl_pinjam }}</td>
@@ -103,7 +102,7 @@
                                 </tr>
                                 @endforeach
                             </tbody>
-                    </table>
+                        </table>
                 </div>
 
             </div>

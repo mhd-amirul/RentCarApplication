@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\car;
 use App\Models\history;
 use App\Models\shop;
+use Barryvdh\DomPDF\Facade as PDF;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -233,34 +234,23 @@ class activityController extends Controller
     public function activityViewCetak(Request $request ,shop $shop)
     {
         if ($request->type == 'histories') {
-            $history = history::where('shop_id', $shop->id)
+            $histories = history::where('shop_id', $shop->id)
                 ->where('status', 'off')
                 ->get();
-            $cars = car::where('shop_id', $shop->id)->get();
-
-            // $pdf = PDF::loadview('pages.rental.aktifitas.cetak_pdf', ['histories' => $data] );
-            // return $pdf->stream('laporan.pdf');
-            return view('pages.rental.aktifitas.cetak_pdf_history')
-                ->with(
-                    [
-                        'histories' => $history,
-                        'cars' => $cars
-                    ]);
         } elseif ($request->type == 'activities') {
-            $history = history::where('shop_id', $shop->id)
+            $histories = history::where('shop_id', $shop->id)
                 ->where('status', 'on')
                 ->get();
-            $cars = car::where('shop_id', $shop->id)->get();
-
-            return view('pages.rental.aktifitas.cetak_pdf_activity')
-                ->with(
-                    [
-                        'histories' => $history,
-                        'cars' => $cars
-                    ]);
+        } elseif ($request->type == 'show') {
+            $histories = history::where('slug', $request->slug)->first();
+            $cars = car::where('id', $histories->car_id)->first();
+            // return response()->json($histories);
+            return view('pages.rental.aktifitas.cetak_pdf_show', compact(['histories', 'cars', 'shop']));
         } else {
-
+            return false;
         }
 
+        $cars = car::where('shop_id', $shop->id)->get();
+        return view('pages.rental.aktifitas.cetak_pdf_history', compact(['histories', 'cars', 'shop']));
     }
 }

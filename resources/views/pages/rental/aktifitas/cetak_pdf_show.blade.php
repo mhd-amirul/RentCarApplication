@@ -3,20 +3,25 @@
         <title>Laporan Rental Mobil</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <style>
-            html {
-                font-size: 8pt !important;
+            h3 {
+                font-size: 23pt !important;
             }
             body {
                 width: 230mm;
                 height: 100%;
                 margin: 0 auto;
                 padding: 0;
-                font-size: 12pt;
                 background: rgb(204,204,204);
             }
             * {
                 box-sizing: border-box;
                 -moz-box-sizing: border-box;
+            }
+            table {
+                font-size: 16pt;
+            }
+            td, h3, h4, p {
+                font-family: 'Times New Roman', Times, serif;
             }
 
             .main-page {
@@ -53,102 +58,77 @@
         </style>
     </head>
     <body>
-        @foreach ($histories as $history)
         <div class="main-page">
             <div class="sub-page">
-                <h3 align='center'>LAPORAN PEMINJAMAN MOBIL RENTAL</h3>
-                <div class="row mt-5 justify-content-center my-5">
-                    <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>NO.</th>
-                                    <th>NAMA PEMINJAM</th>
-                                    <th>NIK PEMINJAM</th>
-                                    <th>TANGGAL PEMINJAMAN</th>
-                                    <th>BATAS TANGGAL</th>
-                                    <th>STATUS</th>
-                                    <th>WAKTU PEMINAJAMAN</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>{{ $loop->iteration }}</th>
-                                    <td>{{ $history->nama_pinjam }}</td>
-                                    <td>{{ $history->nik_pinjam }}</td>
-                                    <td>{{ $history->tgl_pinjam }}</td>
-                                    <td>{{ $history->batas_pinjam }}</td>
-                                    <td>{{ $history->status }}</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td colspan="2">
-                                        <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
-                                            <img src="{{ isset($history->sim_peminjam) == null ? url('images/notfound.png') : asset('storage/' . $history->sim_peminjam) }}" alt="#" class="img-fluid">
-                                        </div>
-                                    </td>
-                                    <td colspan="2">
-                                        <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
-                                            <img src="{{ isset($history->ktp_peminjam) == null ? url('images/notfound.png') : asset('storage/' . $history->ktp_peminjam) }}" alt="#" class="img-fluid">
-                                        </div>
-                                    </td>
-                                    <td colspan="2">
-                                        <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
-                                            <img src="{{ isset($history->foto_peminjam) == null ? url('images/notfound.png') : asset('storage/' . $history->foto_peminjam) }}" alt="#" class="img-fluid">
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>MERK</th>
-                                    <th>TAHUN PRODUKSI</th>
-                                    <th>HARGA SEWA</th>
-                                    <th>NO POLISI</th>
-                                    <th>ID</th>
-                                    <th>TOKO</th>
-                                </tr>
-                            </thead>
-                            @foreach ($cars as $car)
-                                @if ($car->id == $history->car_id)
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td>{{ $car->merk->nama }}</td>
-                                            <td>{{ $car->tahun_produksi->nama }}</td>
-                                            <td>{{ $car->harga_sewa->nama }}</td>
-                                            <td>{{ $car->no_polisi }}</td>
-                                            <td>{{ $car->id }}</td>
-                                            <td>{{ $car->shop->nm_usaha }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td colspan="2">
-                                                <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
-                                                    <img src="{{ isset($car->gambar1) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar1) }}" alt="#" class="img-fluid">
-                                                </div>
-                                            </td>
-                                            <td colspan="2">
-                                                <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
-                                                    <img src="{{ isset($car->gambar2) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar2) }}" alt="#" class="img-fluid">
-                                                </div>
-                                            </td>
-                                            <td colspan="2">
-                                                <div style="max-height: 200px; max-width: 300px; overflow: hidden;" class="border border-dark">
-                                                    <img src="{{ isset($car->gambar3) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar3) }}" alt="#" class="img-fluid">
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                @endif
-                            @endforeach
+                <h3 align='center' class="mt-3">LAPORAN PERSONAL PEMINJAMAN MOBIL {{ $shop->nm_usaha }}</h3>
+                    <table class="mt-5" style="margin-left: 1cm;">
+                        <tr class="mb-5">
+                            <td style="width: 40%;">Nama Peminjam</td>
+                            <td style="width: 10%;">&nbsp;&nbsp;&nbsp;:</td>
+                            <td style="width: 50%;">{{ $histories->nama_pinjam }}</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 40%;">NIK Peminjam</td>
+                            <td style="width: 10%;">&nbsp;&nbsp;&nbsp;:</td>
+                            <td style="width: 50%;">{{ $histories->nik_pinjam }}</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 40%;">No Polisi</td>
+                            <td style="width: 10%;">&nbsp;&nbsp;&nbsp;:</td>
+                            <td style="width: 50%;">{{ $cars->no_polisi }}</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 40%;">Merk Mobil</td>
+                            <td style="width: 10%;">&nbsp;&nbsp;&nbsp;:</td>
+                            <td style="width: 50%;">{{ $cars->merk->nama }}</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 40%;">Tahun Mobil</td>
+                            <td style="width: 10%;">&nbsp;&nbsp;&nbsp;:</td>
+                            <td style="width: 50%;">{{ $cars->tahun_produksi->nama }}</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 40%;">CC Mobil</td>
+                            <td style="width: 10%;">&nbsp;&nbsp;&nbsp;:</td>
+                            <td style="width: 50%;">{{ $cars->kapasitas_mesin->nama }}</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 40%;">Harga Mobil</td>
+                            <td style="width: 10%;">&nbsp;&nbsp;&nbsp;:</td>
+                            <td style="width: 50%;">{{ "Rp. " . number_format($cars->harga_sewa->nama,2,',','.') }}/hari</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 40%;">Tanggal Peminjaman</td>
+                            <td style="width: 10%;">&nbsp;&nbsp;&nbsp;:</td>
+                            <td style="width: 50%;">{{ $histories->tgl_pinjam }}</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 40%;">Batas Peminjaman</td>
+                            <td style="width: 10%;">&nbsp;&nbsp;&nbsp;:</td>
+                            <td style="width: 50%;">{{ $histories->batas_pinjam }}</td>
+                        </tr>
                     </table>
-                </div>
+                    <h4 style="margin-top: 2cm; margin-left: 0.5cm">Berkas Pemijaman Mobil Rental :</h4>
+                    <div class="row">
+                        <div class="col-sm-6 mb-4">
+                            <p class="m-b-10 f-w-600">KTP</p>
+                            <img src="{{ isset($histories->ktp_peminjam) == null ? url('images/notfound.png') : asset('storage/' . $histories->ktp_peminjam) }}" alt="#" class="img-fluid">
+                        </div>
+                        <div class="col-sm-6 mb-4">
+                            <p class="m-b-10 f-w-600">SIM</p>
+                            <img src="{{ isset($histories->sim_peminjam) == null ? url('images/notfound.png') : asset('storage/' . $histories->sim_peminjam) }}" alt="#" class="img-fluid">
+                        </div>
+                        <div class="col-sm-6 mb-4">
+                            <p class="m-b-10 f-w-600">PAS PHOTO</p>
+                            <img src="{{ isset($histories->foto_peminjam) == null ? url('images/notfound.png') : asset('storage/' . $histories->foto_peminjam) }}" alt="#" class="img-fluid">
+                        </div>
+                        <div class="col-sm-6 mb-4">
+                            <img src="" alt="#" class="img-fluid" hidden>
+                        </div>
+                    </div>
+                    </div>
             </div>
         </div>
-        @endforeach
-
         <script>
             window.print();
         </script>

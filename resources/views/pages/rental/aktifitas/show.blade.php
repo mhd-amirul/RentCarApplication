@@ -28,7 +28,12 @@
                         @method('delete')
                         <a href="#" class="mt-1 btn btn-danger text-decoration-none" id="deleteAct"><i class="bi bi-trash-fill"></i> Delete</a>
                     </form>
-                    <a href="" class="mt-1 btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak</a>
+                    <form action="{{ route('activityViewCetak', $shop->slug) }}" method="GET" class="d-inline">
+                        @csrf
+                        <input type="text" name="type" value="show" hidden>
+                        <input type="text" name="slug" value="{{ $history->slug }}" hidden>
+                        <button class="btn btn-primary text-decoration-none"><i class="bi bi-printer-fill"></i> Print</button>
+                    </form>
                 </div>
             </div>
             <h2 class="m-b-20 p-b-5 b-b-default mt-3"></h2>
