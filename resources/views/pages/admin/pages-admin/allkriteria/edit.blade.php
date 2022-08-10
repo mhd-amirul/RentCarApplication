@@ -10,7 +10,7 @@
                     @method('put')
                     @csrf
                     <div class="form-floating">
-                        <input type="text" name="nama" class="form-control rounded-top @error('nama') is-invalid @enderror" id="nama" placeholder="Kriteria" value="{{ old('nama', $kriteria->nama) }}" required>
+                        <input type="text" name="nama" class="form-control rounded-top @error('nama') is-invalid @enderror" id="nama" placeholder="Kriteria" value="{{ old('nama', $kriteria->nama) }}" required disabled>
                         <label for="nama">Kriteria</label>
                         @error('nama')
                             <div class="invalid-feedback">

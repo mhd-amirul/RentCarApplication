@@ -97,12 +97,15 @@
                                     <td>{{ $kriteria->bobot }}</td>
                                     <td>{{ $kriteria->type }}</td>
                                     <td>
-                                        <a href="{{ route('allkriteria.edit', $kriteria->id) }}" class="btn-sm btn-warning" style="color: rgb(0, 0, 0);"><i class="bi bi-pencil-square"></i></i></a>
-                                        <form action="{{ route('allkriteria.destroy', $kriteria->id) }}" method="post" class="d-inline" id="deleteKrit-form-{{ $kriteria->id }}">
+                                        {{-- @if ($kriteria->id == 1)
+                                        @else --}}
+                                            <a href="{{ route('allkriteria.edit', $kriteria->id) }}" class="btn-sm btn-warning" style="color: rgb(0, 0, 0);"><i class="bi bi-pencil-square"></i></i></a>
+                                        {{-- @endif --}}
+                                        {{-- <form action="{{ route('allkriteria.destroy', $kriteria->id) }}" method="post" class="d-inline" id="deleteKrit-form-{{ $kriteria->id }}">
                                             @method('delete')
                                             @csrf
                                             <a href="#" class="btn-sm btn-danger text-decoration-none" style="color: rgb(0, 0, 0);" id="deleteKrit" data-id="{{ $kriteria->id }}"><i class="bi bi-trash-fill"></i></a>
-                                        </form>
+                                        </form> --}}
                                     </td>
                                 </tr>
                             @empty
