@@ -218,25 +218,50 @@ class activityController extends Controller
         return redirect()->route('activityView', $shop->slug)->with('success', 'History dihapus');
     }
 
-    public function activityHistory(shop $shop)
+    public function activityHistory(Request $request,shop $shop)
     {
-        # code...
-        return view('pages.rental.aktifitas.history')
-                ->with(
-                    [
-                        'title' => 'History',
-                        'histories' => history::where('shop_id', $shop->id)->where('status', 'off')->get(),
-                        'shop' => $shop
-                    ]
-                );
+        if ($request->type == 'filter') {
+            $filter = history::query();
+            $filter->where('status', 'off');
+            $filter->whereBetween('tgl_pinjam', [$request->date_from, $request->date_to]);
+            return view('pages.rental.aktifitas.history')
+            ->with(
+                [
+                    'title' => 'History',
+                    'histories' => $filter->get(),
+                    'shop' => $shop,
+                    'date_from' => $request->date_from,
+                    'date_to' => $request->date_to
+                ]
+            );
+        } else {
+            return view('pages.rental.aktifitas.history')
+            ->with(
+                [
+                    'title' => 'History',
+                    'histories' => history::where('shop_id', $shop->id)->where('status', 'off')->get(),
+                    'shop' => $shop,
+                    'date_from' => '',
+                    'date_to' => ''
+                ]
+            );
+        }
     }
 
     public function activityViewCetak(Request $request ,shop $shop)
     {
         if ($request->type == 'histories') {
-            $histories = history::where('shop_id', $shop->id)
-                ->where('status', 'off')
-                ->get();
+            if ($request->date_form || $request->date_to) {
+                $filter = history::query();
+                $filter->where('shop_id', $shop->id);
+                $filter->where('status', 'off');
+                $filter->whereBetween('tgl_pinjam', [$request->date_from, $request->date_to]);
+                $histories = $filter->get();
+            } else {
+                $histories = history::where('shop_id', $shop->id)
+                    ->where('status', 'off')
+                    ->get();
+            }
         } elseif ($request->type == 'activities') {
             $histories = history::where('shop_id', $shop->id)
                 ->where('status', 'on')

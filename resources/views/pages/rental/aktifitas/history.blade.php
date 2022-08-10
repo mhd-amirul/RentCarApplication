@@ -12,7 +12,45 @@
                     <form action="{{ route('activityViewCetak', $shop->slug) }}" method="GET" class="d-inline">
                         @csrf
                         <input type="text" name="type" value="histories" hidden>
+                        <input type="datetime-local" name="date_from" value="{{ $date_from != null ? $date_from : '' }}" hidden>
+                        <input type="datetime-local" name="date_to" value="{{ $date_to != null ? $date_to : '' }}" hidden>
                         <button class="btn btn-success text-decoration-none"><i class="bi bi-printer-fill"></i> Print</button>
+                    </form>
+                </div>
+                <div class="col-sm-12">
+                    <h2 class="m-b-20 p-b-5 b-b-default mt-3 text-center"></h2>
+                </div>
+                <div class="col-sm-12">
+                    <form action="" method="GET" class="d-inline">
+                        @csrf
+                        <input type="text" name="type" value="filter" hidden>
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="form-floating">
+                                    <input type="datetime-local" name="date_from" class="form-control rounded-top" id="date_from">
+                                    <label for="date_from">Date From</label>
+                                    @error('batas_pinjam')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="form-floating">
+                                    <input type="datetime-local" name="date_to" class="form-control rounded-top" id="date_to">
+                                    <label for="date_to">Date To</label>
+                                    @error('batas_pinjam')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <button class="btn btn-lg btn-success text-decoration-none"><i class="bi bi-printer-fill"></i> Filter</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
