@@ -94,7 +94,7 @@
                                                 @if ($data->kriteria_id == $item->id)
                                                     <option value="" hidden>Pilih Kriteria...</option>
                                                     @if ($item->id == 8)
-                                                        <option value="{{ $data->id }}">{{ "Rp. " . number_format($data->nama,2,',','.') }}/hari</option>
+                                                        <option value="{{ $data->id }}">{{ "Rp. " . number_format($data->nama,2,',','.') . '\hari' }}</option>
                                                     @else
                                                         <option value="{{ $data->id }}">{{ $data->nama }}</option>
                                                     @endif

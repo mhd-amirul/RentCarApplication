@@ -225,13 +225,15 @@
                     <table class="table table-responsive table-hover text-center">
                         <thead>
                             <tr>
-                                <th scope="col">rank</th>
+                                <th scope="col">Ranking</th>
+                                <th scope="col">No Polisi</th>
                                 <th scope="col">Merk</th>
-                                <th scope="col">Tahun Produksi</th>
-                                <th scope="col">Muatan Penumpang</th>
-                                <th scope="col">Kapasitas Mesin</th>
+                                <th scope="col">Tahun</th>
+                                <th scope="col">Seater</th>
+                                <th scope="col">CC</th>
                                 <th scope="col">Jenis BBM</th>
                                 <th scope="col">Harga Sewa</th>
+                                <th scope="col">Stok</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -239,12 +241,14 @@
                             @foreach ($cars as $car)
                                 <tr>
                                     <th scope="row">{{ $car->ranking }}</th>
+                                    <td>{{ $car->no_polisi }}</td>
                                     <td>{{ $car->merk->nama }}</td>
                                     <td>{{ $car->tahun_produksi->nama }}</td>
                                     <td>{{ $car->muatan_penumpang->nama }}</td>
                                     <td>{{ $car->kapasitas_mesin->nama }}</td>
                                     <td>{{ $car->jenis_bbm->nama }}</td>
-                                    <td>{{ $car->harga_sewa->nama }}</td>
+                                    <td>{{ $car->stok }}</td>
+                                    <td>{{ "Rp. " . number_format($car->harga_sewa->nama,2,',','.') . '\hari' }}</td>
                                     <td>
                                         <a href="{{ route('detailMobil', $car->slug) }}" class="btn btn-sm btn-info">
                                             <i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i>

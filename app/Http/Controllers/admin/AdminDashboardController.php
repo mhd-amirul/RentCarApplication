@@ -96,9 +96,9 @@ class AdminDashboardController extends Controller
     {
         // ADD IMAGE
             // $car = car::where('slug', 'a804840c9b48138b31bea0bdc15a9175d9e49040')->first();
-            // $dbcar = car::where('merk_id', 10)->where('gambar1', null)->get();
-            // // $dbcar = car::where('merk_id', 2)->whereNotIn('shop_id', [1,2])->get();
-            // foreach ($dbcar as $db) {
+            // $data = car::where('merk_id', 10)->where('gambar1', null)->get();
+            // // // $dbcar = car::where('merk_id', 2)->whereNotIn('shop_id', [1,2])->get();
+            // foreach ($data as $db) {
             //     // if ($db->kriteria_id == 1) {
             //     //     # code...
             //     //     $db->nilai = $nilaimerk;
@@ -155,7 +155,7 @@ class AdminDashboardController extends Controller
             // }
         //
         // ADD DATA KATA KUNCI
-            // $data = car::whereBetween('id', [501, 1000])->where('kata_kunci', Null)->get();
+            // $data = car::where('kata_kunci', Null)->get();
             // $kriteria = kriteria::all();
             // foreach ($data as $data) {
             //     foreach ($kriteria as $k) {
@@ -171,7 +171,7 @@ class AdminDashboardController extends Controller
             // }
         //
         // ADD SLUG OTOMATIS
-            // $data = car::whereBetween('id', [501, 1000])->where('slug', Null)->get();
+            // $data = car::where('slug', Null)->get();
             // foreach ($data as $car) {
             //     $car['slug'] = sha1(Str::random(10).time().microtime());
             //     $car->save();
@@ -210,6 +210,6 @@ class AdminDashboardController extends Controller
             //     $car->save();
             // }
         //
-        // return response()->json($nilai);
+        // return response()->json($data);
     }
 }

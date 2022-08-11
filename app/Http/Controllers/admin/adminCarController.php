@@ -100,23 +100,7 @@ class adminCarController extends Controller
 
         $data['shop_id'] = $shop->id;
         $data['user_id'] = $shop->user_id;
-        $car = car::create($data);
-
-        foreach ($kriteria as $k) {
-            # code...
-            $name = str_replace(' ','_',$k->nama.'_id');
-            $db = alternatif::where('id', $data[$name])->first();
-            if ($db['kriteria_id'] == $k->id) {
-                # code...
-                $nilai = [
-                    'car_id' => $car->id,
-                    'kriteria_id' => $k->id,
-                    'alternatif_id' => $data[$name],
-                    'nilai' => $db->nilai
-                ];
-                nilai::create($nilai);
-            }
-        }
+        car::create($data);
 
         return redirect()
             ->route('allshops.show',$shop->slug)
@@ -192,21 +176,9 @@ class adminCarController extends Controller
             # code...
             $name = str_replace(' ','_',$k->nama.'_id');
             $db = alternatif::where('id', $data[$name])->first();
-            $dbNilai = nilai::where(['car_id' => $car->id, 'kriteria_id' => $k->id])->first();
 
             if ($db->kriteria_id == $k->id) {
                 $data['kata_kunci'] .= $db->nama.', ';
-            }
-
-            if ($dbNilai) {
-                # code...
-                $nilai = [
-                    'car_id' => $car->id,
-                    'kriteria_id' => $k->id,
-                    'alternatif_id' => $data[$name],
-                    'nilai' => $db->nilai
-                ];
-                $dbNilai->update($nilai);
             }
         }
         $car->update($data);

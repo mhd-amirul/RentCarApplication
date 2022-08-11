@@ -4,7 +4,6 @@ namespace App\Http\Controllers\rental;
 
 use App\Models\car;
 use App\Models\shop;
-use App\Models\nilai;
 use App\Models\ulasan;
 use App\Models\alternatif;
 use App\Http\Controllers\Controller;
@@ -76,23 +75,7 @@ class RentalController extends Controller
 
         $data['user_id'] = auth()->user()->id;
         $data['shop_id'] = shop::where('user_id', $data['user_id'])->value('id');
-        $car = car::create($data);
-
-        foreach ($kriteria as $k) {
-            # code...
-            $name = str_replace(' ','_',$k->nama.'_id');
-            $db = alternatif::where('id', $data[$name])->first();
-            if ($db['kriteria_id'] == $k->id) {
-                # code...
-                $nilai = [
-                    'car_id' => $car->id,
-                    'kriteria_id' => $k->id,
-                    'alternatif_id' => $data[$name],
-                    'nilai' => $db->nilai
-                ];
-                nilai::create($nilai);
-            }
-        }
+        car::create($data);
 
         return redirect()
             ->route('toko.index')->with('success', 'Berhasil Menambah Mobil Baru');
@@ -190,21 +173,9 @@ class RentalController extends Controller
             # code...
             $name = str_replace(' ','_',$k->nama.'_id');
             $db = alternatif::where('id', $data[$name])->first();
-            $dbNilai = nilai::where(['car_id' => $car->id, 'kriteria_id' => $k->id])->first();
 
             if ($db->kriteria_id == $k->id) {
                 $data['kata_kunci'] .= $db->nama.', ';
-            }
-
-            if ($dbNilai) {
-                # code...
-                $nilai = [
-                    'car_id' => $car->id,
-                    'kriteria_id' => $k->id,
-                    'alternatif_id' => $data[$name],
-                    'nilai' => $db->nilai
-                ];
-                $dbNilai->update($nilai);
             }
         }
         $car->update($data);
