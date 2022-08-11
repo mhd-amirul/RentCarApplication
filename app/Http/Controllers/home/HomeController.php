@@ -117,45 +117,120 @@ class HomeController extends Controller
         }
         $allCars = $filterCars->get();
 
-        $alternatif = [];
-        foreach ($allCars as $row) {
-        $alternatif[$row->id]
-            = array(
-                $row->merk_id,
-                $row->Tahun_Produksi_id,
-                $row->Kondisi_Fisik_id,
-                $row->Kondisi_Mesin_id,
-                $row->Muatan_Penumpang_id,
-                $row->Kapasitas_Mesin_id,
-                $row->Jenis_BBM_id,
-                $row->Harga_Sewa_id,
-            );
-        }
+        // $alternatif = [];
+        // foreach ($allCars as $row) {
+        // $alternatif[$row->id]
+        //     = array(
+        //         $row->merk_id,
+        //         $row->Tahun_Produksi_id,
+        //         $row->Kondisi_Fisik_id,
+        //         $row->Kondisi_Mesin_id,
+        //         $row->Muatan_Penumpang_id,
+        //         $row->Kapasitas_Mesin_id,
+        //         $row->Jenis_BBM_id,
+        //         $row->Harga_Sewa_id,
+        //     );
+        // }
 
-        // Mengambil data nilai
-        $nilai = DB::select('SELECT * FROM nilais ORDER BY car_id, kriteria_id');
+        // // Mengambil data nilai
+        // $nilai = DB::select('SELECT * FROM nilais ORDER BY car_id, kriteria_id');
+        // $db = [];
+        // foreach ($nilai as $nilai) {
+        //     foreach ($allCars as $car) {
+        //         if ($car->id == $nilai->car_id) {
+        //             $db[] = $nilai;
+        //         }
+        //     }
+        // }
+
+
+        $alternatif = alternatif::all();
         $db = [];
-        foreach ($nilai as $nilai) {
-            foreach ($allCars as $car) {
-                if ($car->id == $nilai->car_id) {
-                    $db[] = $nilai;
+        foreach ($allCars as $car) {
+            foreach ($alternatif as $all) {
+                if ($all->id == $car->merk_id) {
+                    $db[] = [
+                        "car_id" => $car->id,
+                        "kriteria_id" => $all->kriteria_id,
+                        "alternatif_id" => $all->id,
+                        "nilai" => $all->nilai,
+                    ];
+                }
+                if ($all->id == $car->Tahun_Produksi_id) {
+                    $db[] = [
+                        "car_id" => $car->id,
+                        "kriteria_id" => $all->kriteria_id,
+                        "alternatif_id" => $all->id,
+                        "nilai" => $all->nilai,
+                    ];
+                }
+                if ($all->id == $car->Kondisi_Fisik_id) {
+                    $db[] = [
+                        "car_id" => $car->id,
+                        "kriteria_id" => $all->kriteria_id,
+                        "alternatif_id" => $all->id,
+                        "nilai" => $all->nilai,
+                    ];
+                }
+                if ($all->id == $car->Kondisi_Mesin_id) {
+                    $db[] = [
+                        "car_id" => $car->id,
+                        "kriteria_id" => $all->kriteria_id,
+                        "alternatif_id" => $all->id,
+                        "nilai" => $all->nilai,
+                    ];
+                }
+                if ($all->id == $car->Muatan_Penumpang_id) {
+                    $db[] = [
+                        "car_id" => $car->id,
+                        "kriteria_id" => $all->kriteria_id,
+                        "alternatif_id" => $all->id,
+                        "nilai" => $all->nilai,
+                    ];
+                }
+                if ($all->id == $car->Kapasitas_Mesin_id) {
+                    $db[] = [
+                        "car_id" => $car->id,
+                        "kriteria_id" => $all->kriteria_id,
+                        "alternatif_id" => $all->id,
+                        "nilai" => $all->nilai,
+                    ];
+                }
+                if ($all->id == $car->Jenis_BBM_id) {
+                    $db[] = [
+                        "car_id" => $car->id,
+                        "kriteria_id" => $all->kriteria_id,
+                        "alternatif_id" => $all->id,
+                        "nilai" => $all->nilai,
+                    ];
+                }
+                if ($all->id == $car->Harga_Sewa_id) {
+                    $db[] = [
+                        "car_id" => $car->id,
+                        "kriteria_id" => $all->kriteria_id,
+                        "alternatif_id" => $all->id,
+                        "nilai" => $all->nilai,
+                    ];
                 }
             }
         }
         // return response()->json($db);
+
+
+
         $sample = [];
         foreach ($db as $row) {
-            if (!isset($sample[$row->car_id])) {
-                $sample[$row->car_id] = [];
+            if (!isset($sample[$row['car_id']])) {
+                $sample[$row['car_id']] = [];
             }
             foreach ($allCars as $car) {
                 # code...
-                if ($car->id == $row->car_id) {
-                    $sample[$row->car_id][$row->kriteria_id] = $row->nilai;
+                if ($car->id == $row['car_id']) {
+                    $sample[$row['car_id']][$row['kriteria_id']] = $row['nilai'];
                 }
             }
         }
-
+        return response()->json($sample);
         $normal = $sample;
         foreach($kriteria as $id_kriteria => $k){
             $pembagi = 0;
