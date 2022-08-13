@@ -48,8 +48,7 @@ class TokoController extends Controller
 
     public function update(Request $request, shop $toko)
     {
-        $rules =
-        [
+        $rules = [
             'nm_pu' => 'required',
             'nm_usaha' => 'required',
             'alamat' => 'required',

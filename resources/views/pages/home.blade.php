@@ -89,7 +89,7 @@
                             @foreach ($kriteria as $item)
                                 <div class="col-sm-6">
                                     <div class="form-floating mb-1 mx-3">
-                                        <select name="{{ str_replace(' ', '_',$item->nama.'_id') }}" class="form-select" aria-label="Floating label select example" {{ $item->id == 1 ? 'required' : '' }}>
+                                        <select name="{{ str_replace(' ', '_',$item->nama.'_id') }}" class="form-select" aria-label="Floating label select example" >
                                             @foreach ($alternatif as $data)
                                                 @if ($data->kriteria_id == $item->id)
                                                     <option value="" hidden>Pilih Kriteria...</option>

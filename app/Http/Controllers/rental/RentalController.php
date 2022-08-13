@@ -137,28 +137,24 @@ class RentalController extends Controller
             }
             $data['gambar1'] = $request->file('gambar1')->store('gambar1');
         }
-
         if ($request->file('gambar2')) {
             if ($request->oldgambar2) {
                 Storage::delete($request->oldgambar2);
             }
             $data['gambar2'] = $request->file('gambar2')->store('gambar2');
         }
-
         if ($request->file('gambar3')) {
             if ($request->oldgambar3) {
                 Storage::delete($request->oldgambar3);
             }
             $data['gambar3'] = $request->file('gambar3')->store('gambar3');
         }
-
         if ($request->file('gambar4')) {
             if ($request->oldgambar4) {
                 Storage::delete($request->oldgambar4);
             }
             $data['gambar4'] = $request->file('gambar4')->store('gambar4');
         }
-
         if ($request->file('gambar5')) {
             if ($request->oldgambar5) {
                 Storage::delete($request->oldgambar5);
