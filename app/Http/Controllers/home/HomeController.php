@@ -95,13 +95,15 @@ class HomeController extends Controller
         $allKriteria = kriteria::all();
         $kriteria = [];
         foreach ($allKriteria as $row) {
-            $kriteria[
-                $row->id
-                ] = array(
-                    $row->nama,
-                    $row->type,
-                    $row->bobot
-                );
+            if ($row->id != 1) {
+                $kriteria[
+                    $row->id
+                    ] = array(
+                        $row->nama,
+                        $row->type,
+                        $row->bobot
+                    );
+            }
         }
 
         $filterCars = car::query();
@@ -121,7 +123,7 @@ class HomeController extends Controller
         foreach ($allCars as $row) {
         $alter[$row->id]
             = array(
-                $row->merk_id,
+                // $row->merk_id,
                 $row->Tahun_Produksi_id,
                 $row->Kondisi_Fisik_id,
                 $row->Kondisi_Mesin_id,
@@ -192,14 +194,14 @@ class HomeController extends Controller
                         "nilai" => $all->nilai,
                     ];
                 }
-                if ($all->id == $key[7]) {
-                    $db[] = [
-                        "car_id" => $car,
-                        "kriteria_id" => $all->kriteria_id,
-                        "alternatif_id" => $all->id,
-                        "nilai" => $all->nilai,
-                    ];
-                }
+                // if ($all->id == $key[7]) {
+                //     $db[] = [
+                //         "car_id" => $car,
+                //         "kriteria_id" => $all->kriteria_id,
+                //         "alternatif_id" => $all->id,
+                //         "nilai" => $all->nilai,
+                //     ];
+                // }
             }
         }
 
@@ -268,13 +270,15 @@ class HomeController extends Controller
         $kriteria = [];
         // input data kriteria dalam array
         foreach ($allKriteria as $row) {
-            $kriteria[
-                $row->id
-                ] = array(
-                    $row->nama,
-                    $row->type,
-                    $row->bobot
-                );
+            if ($row->id != 1) {
+                $kriteria[
+                    $row->id
+                    ] = array(
+                        $row->nama,
+                        $row->type,
+                        $row->bobot
+                    );
+            }
         }
 
         // buat variabel query untuk menyimpan query
@@ -298,7 +302,7 @@ class HomeController extends Controller
         foreach ($allCars as $row) {
         $alter[$row->id]
             = array(
-                $row->merk_id,
+                // $row->merk_id,
                 $row->Tahun_Produksi_id,
                 $row->Kondisi_Fisik_id,
                 $row->Kondisi_Mesin_id,
@@ -369,14 +373,14 @@ class HomeController extends Controller
                         "nilai" => $all->nilai,
                     ];
                 }
-                if ($all->id == $key[7]) {
-                    $db[] = [
-                        "car_id" => $car,
-                        "kriteria_id" => $all->kriteria_id,
-                        "alternatif_id" => $all->id,
-                        "nilai" => $all->nilai,
-                    ];
-                }
+                // if ($all->id == $key[7]) {
+                //     $db[] = [
+                //         "car_id" => $car,
+                //         "kriteria_id" => $all->kriteria_id,
+                //         "alternatif_id" => $all->id,
+                //         "nilai" => $all->nilai,
+                //     ];
+                // }
             }
         }
 
@@ -409,20 +413,28 @@ class HomeController extends Controller
 
         $optimasi = [];
         // Proses Optimasi Metode MOORA
+
         foreach($alter as $id_cars => $a){
             $optimasi[$id_cars] = 0;
+            // $tesb[$id_cars] = 0;
+            // $tesc[$id_cars] = 0;
             foreach($kriteria as $id_kriteria => $k){
                 $data[$id_cars] = $normal[$id_cars][$id_kriteria] * $k[2];
+                // $tes[] = $normal[$id_cars][$id_kriteria] * $k[2];
+                // $tes[] = $id_cars.'|'.$id_kriteria;
                 if ($k[1] == 'benefit') {
                     $optimasi[$id_cars] += $data[$id_cars];
+                    // $tesb[$id_cars] += $data[$id_cars];
                 } elseif ($k[1] == 'cost') {
                     $optimasi[$id_cars] -= $data[$id_cars];
+                    // $tesc[$id_cars] -= $data[$id_cars];
                 } else {
                     continue;
                 }
             }
         }
-
+        // $tess =  ;
+        // return response()->json($tess);
         // $index = key($result);
         $rank = $optimasi;
         arsort($rank);

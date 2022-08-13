@@ -2,13 +2,13 @@
 
 @section('container')
 <div class="row justify-content-center mt-5">
-    <div class="col-lg-12">
+    {{-- <div class="col-lg-12">
         <div class="card px-5 py-5">
             <h2 class="text-center m-b-20 p-b-5 b-b-default f-w-600">PERHITUNGAN HASIL SISTEM REKOMENDASI RENTAL MOBIL</h2>
         </div>
-    </div>
+    </div> --}}
     <div class="col-lg-12 justify-content-center">
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-lg-12">
                 <div class="card px-5 pt-5">
                     <h4 class="m-b-20 p-b-5 b-b-default f-w-600">Pengambilan data kriteria dan alternatif dari database</h4>
@@ -213,7 +213,7 @@
                     </table>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="row">
             <div class="col-lg-12">
                 <div class="card px-5 pt-5">
@@ -226,34 +226,40 @@
                         <thead>
                             <tr>
                                 <th scope="col">Ranking</th>
-                                <th scope="col">No Polisi</th>
+                                <th scope="col">ID</th>
+                                {{-- <th scope="col">No Polisi</th> --}}
                                 <th scope="col">Merk</th>
                                 <th scope="col">Tahun</th>
+                                <th scope="col">Konfisi Fisik</th>
+                                <th scope="col">Kondisi Mesin</th>
                                 <th scope="col">Seater</th>
                                 <th scope="col">CC</th>
                                 <th scope="col">Jenis BBM</th>
                                 <th scope="col">Harga Sewa</th>
-                                <th scope="col">Stok</th>
-                                <th scope="col">Action</th>
+                                {{-- <th scope="col">Stok</th> --}}
+                                {{-- <th scope="col">Action</th> --}}
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($cars as $car)
                                 <tr>
                                     <th scope="row">{{ $car->ranking }}</th>
-                                    <td>{{ $car->no_polisi }}</td>
+                                    <td>{{ $car->id }}</td>
+                                    {{-- <td>{{ $car->no_polisi }}</td> --}}
                                     <td>{{ $car->merk->nama }}</td>
                                     <td>{{ $car->tahun_produksi->nama }}</td>
+                                    <td>{{ $car->kondisi_fisik->nama }}</td>
+                                    <td>{{ $car->kondisi_mesin->nama }}</td>
                                     <td>{{ $car->muatan_penumpang->nama }}</td>
                                     <td>{{ $car->kapasitas_mesin->nama }}</td>
                                     <td>{{ $car->jenis_bbm->nama }}</td>
-                                    <td>{{ $car->stok }}</td>
                                     <td>{{ "Rp. " . number_format($car->harga_sewa->nama,2,',','.') . '\hari' }}</td>
-                                    <td>
+                                    {{-- <td>{{ $car->stok }}</td> --}}
+                                    {{-- <td>
                                         <a href="{{ route('detailMobil', $car->slug) }}" class="btn btn-sm btn-info">
                                             <i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i>
                                         </a>
-                                    </td>
+                                    </td> --}}
                                 </tr>
                             @endforeach
                         </tbody>
