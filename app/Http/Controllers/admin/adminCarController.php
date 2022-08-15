@@ -65,6 +65,12 @@ class adminCarController extends Controller
             'gambar5' => 'image|file|max:1024',
         ];
 
+        $request['stok'] = 'standby';
+        $request['slug'] = Str::random(50);
+        // $request['no_polisi'] = 'bl'.rand(100, 999).rand(0, 9).'al';
+        $request->validate($rules);
+        $data = $request->all();
+
         if ($request->file('gambar1')) {
             $data['gambar1'] = $request->file('gambar1')->store('gambar1');
         }
@@ -80,12 +86,6 @@ class adminCarController extends Controller
         if ($request->file('gambar5')) {
             $data['gambar5'] = $request->file('gambar5')->store('gambar5');
         }
-
-        $request['stok'] = 'standby';
-        $request['slug'] = Str::random(50);
-        $request['no_polisi'] = 'bl'.rand(100, 999).rand(0, 9).'al';
-        $request->validate($rules);
-        $data = $request->all();
 
         $kriteria = kriteria::all();
         $data['kata_kunci'] = '';
