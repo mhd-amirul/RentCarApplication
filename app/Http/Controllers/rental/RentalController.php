@@ -41,7 +41,7 @@ class RentalController extends Controller
         ];
 
         $request['stok'] = 'standby';
-        $request['slug'] = Str::random(50);
+        $request['slug'] = sha1(Str::random(10).time().microtime());;
         $request->validate($rules);
         $data = $request->all();
 
