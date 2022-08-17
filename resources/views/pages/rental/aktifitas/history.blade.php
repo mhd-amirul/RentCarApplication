@@ -27,7 +27,7 @@
                         <div class="row">
                             <div class="col-sm-5">
                                 <div class="form-floating">
-                                    <input type="datetime-local" name="date_from" class="form-control rounded-top" id="date_from">
+                                    <input type="datetime-local" name="date_from" class="form-control rounded-top" id="date_from" required>
                                     <label for="date_from">Date From</label>
                                     @error('batas_pinjam')
                                         <div class="invalid-feedback">
@@ -38,7 +38,7 @@
                             </div>
                             <div class="col-sm-5">
                                 <div class="form-floating">
-                                    <input type="datetime-local" name="date_to" class="form-control rounded-top" id="date_to">
+                                    <input type="datetime-local" name="date_to" class="form-control rounded-top" id="date_to" required>
                                     <label for="date_to">Date To</label>
                                     @error('batas_pinjam')
                                         <div class="invalid-feedback">

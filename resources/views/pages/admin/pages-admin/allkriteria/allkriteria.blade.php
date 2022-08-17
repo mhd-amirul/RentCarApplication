@@ -97,10 +97,10 @@
                                     <td>{{ $kriteria->bobot }}</td>
                                     <td>{{ $kriteria->type }}</td>
                                     <td>
-                                        {{-- @if ($kriteria->id == 1)
-                                        @else --}}
+                                        @if ($kriteria->id == 1)
+                                        @else
                                             <a href="{{ route('allkriteria.edit', $kriteria->id) }}" class="btn-sm btn-warning" style="color: rgb(0, 0, 0);"><i class="bi bi-pencil-square"></i></i></a>
-                                        {{-- @endif --}}
+                                        @endif
                                         {{-- <form action="{{ route('allkriteria.destroy', $kriteria->id) }}" method="post" class="d-inline" id="deleteKrit-form-{{ $kriteria->id }}">
                                             @method('delete')
                                             @csrf

@@ -58,7 +58,7 @@ class adminCarController extends Controller
             'stok' => 'required',
             'no_polisi' => 'required',
             'deskripsi' => 'required',
-            'gambar1' => 'image|file|max:1024',
+            'gambar1' => 'required|image|file|max:1024',
             'gambar2' => 'image|file|max:1024',
             'gambar3' => 'image|file|max:1024',
             'gambar4' => 'image|file|max:1024',
@@ -67,7 +67,6 @@ class adminCarController extends Controller
 
         $request['stok'] = 'standby';
         $request['slug'] = sha1(Str::random(10).time().microtime());
-        // $request['no_polisi'] = 'bl'.rand(100, 999).rand(0, 9).'al';
         $request->validate($rules);
         $data = $request->all();
 
@@ -124,7 +123,7 @@ class adminCarController extends Controller
     public function updateCarAdmin(Request $request, car $car)
     {
         $rules = [
-            // 'deskripsi' => 'required',
+            'deskripsi' => 'required',
             'gambar1' => 'image|file|max:1024',
             'gambar2' => 'image|file|max:1024',
             'gambar3' => 'image|file|max:1024',

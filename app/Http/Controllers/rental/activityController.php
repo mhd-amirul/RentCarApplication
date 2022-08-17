@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\car;
 use App\Models\history;
 use App\Models\shop;
-use Barryvdh\DomPDF\Facade as PDF;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -53,10 +52,10 @@ class activityController extends Controller
             'car_id' => 'required',
             'shop_id' => 'required',
             'status' => 'required',
-            // 'sim_peminjam' => 'mimes:jpeg,png,jpg|max:300',
-            // 'ktp_peminjam' => 'mimes:jpeg,png,jpg|max:300',
-            // 'foto_peminjam' => 'mimes:jpeg,png,jpg|max:300',
-            // 'berkas_pinjam' => 'mimes:pdf,jpeg,jpg,png|max:1024'
+            'sim_peminjam' => 'required|image|file|max:300',
+            'ktp_peminjam' => 'required|image|file|max:300',
+            'foto_peminjam' => 'required|image|file|max:300',
+            'berkas_pinjam' => 'required|file|max:1024'
         ];
 
         $data = $request->validate($rules);
@@ -130,10 +129,10 @@ class activityController extends Controller
             'nama_pinjam' => 'required',
             'tgl_pinjam' => 'required',
             'batas_pinjam' => 'required',
-            // 'sim_peminjam' => 'mimes:jpeg,png|max:300',
-            // 'ktp_peminjam' => 'mimes:jpeg,png|max:300',
-            // 'foto_peminjam' => 'mimes:jpeg,png|max:300',
-            // 'berkas_pinjam' => 'mimes:pdf,jpeg,png|max:1024'
+            'sim_peminjam' => 'image|file|max:300',
+            'ktp_peminjam' => 'image|file|max:300',
+            'foto_peminjam' => 'image|file|max:300',
+            'berkas_pinjam' => 'file|max:1024'
         ];
 
         if ($request->nik_pinjam != $history->nik_pinjam) {
@@ -222,7 +221,7 @@ class activityController extends Controller
     {
         if ($request->type == 'filter') {
             $filter = history::query();
-            $filter->where('status', 'off');
+            $filter->where('status', 'off')->where('shop_id', $shop->id);
             $filter->whereBetween('tgl_pinjam', [$request->date_from, $request->date_to]);
             return view('pages.rental.aktifitas.history')
             ->with(

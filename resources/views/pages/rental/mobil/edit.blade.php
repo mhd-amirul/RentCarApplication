@@ -18,9 +18,17 @@
                                     @foreach ($alternatif as $data)
                                         @if ($data->kriteria_id == $item->id)
                                             @if (old($item->nama."_id", $car[str_replace(' ','_',$item->nama.'_id')]) == $data->id)
-                                                <option value="{{ $data->id }}" selected>{{ $data->nama }}</option>
+                                                @if ($item->id == 8)
+                                                    <option value="{{ $data->id }}">{{ "Rp. " . number_format($data->nama,2,',','.') . '\hari' }}</option>
+                                                @else
+                                                    <option value="{{ $data->id }}" selected>{{ $data->nama }}</option>
+                                                @endif
                                             @else
-                                                <option value="{{ $data->id }}">{{ $data->nama }}</option>
+                                                @if ($item->id == 8)
+                                                    <option value="{{ $data->id }}">{{ "Rp. " . number_format($data->nama,2,',','.') . '\hari' }}</option>
+                                                @else
+                                                    <option value="{{ $data->id }}">{{ $data->nama }}</option>
+                                                @endif
                                             @endif
                                         @endif
                                     @endforeach

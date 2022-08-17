@@ -77,7 +77,7 @@
                                 <h5 class="m-b-20 p-b-5 b-b-default f-w-600 mt-3">Upload Berkas</h5>
                             </div>
                             <div class="col-sm-5">
-                                <label for="sim_peminjam">Upload SIM (JPG/PNG)</label>
+                                <label for="sim_peminjam">Upload SIM</label>
                                 <input type="file" class="form-control @error('sim_peminjam') is-invalid @enderror" id="sim_peminjam" name="sim_peminjam">
                                 @error('sim_peminjam')
                                 <div class="invalid-feedback">
@@ -86,7 +86,7 @@
                                 @enderror
                             </div>
                             <div class="col-sm-5">
-                                <label for="ktp_peminjam">Upload KTP (JPG/PNG)</label>
+                                <label for="ktp_peminjam">Upload KTP</label>
                                 <input type="file" class="form-control @error('ktp_peminjam') is-invalid @enderror" id="ktp_peminjam" name="ktp_peminjam">
                                 @error('ktp_peminjam')
                                 <div class="invalid-feedback">
@@ -97,7 +97,7 @@
                         </div>
                         <div class="row justify-content-center mt-3">
                             <div class="col-sm-5">
-                                <label for="foto_peminjam">Upload Pas Foto (JPG/PNG)</label>
+                                <label for="foto_peminjam">Upload Pas Foto</label>
                                 <input type="file" class="form-control @error('foto_peminjam') is-invalid @enderror" id="foto_peminjam" name="foto_peminjam">
                                 @error('foto_peminjam')
                                 <div class="invalid-feedback">
@@ -106,7 +106,7 @@
                                 @enderror
                             </div>
                             <div class="col-sm-5">
-                                <label for="berkas_pinjam">Upload Berkas Lainnya (PDF/JPG/PNG)</label>
+                                <label for="berkas_pinjam">Upload Berkas Lainnya</label>
                                 <input type="file" class="form-control @error('berkas_pinjam') is-invalid @enderror" id="berkas_pinjam" name="berkas_pinjam">
                                 @error('berkas_pinjam')
                                 <div class="invalid-feedback">

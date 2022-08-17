@@ -15,17 +15,17 @@ class TokoController extends Controller
     public function index()
     {
         $shop = shop::where('user_id', auth()->user()->id)->first();
-        date_default_timezone_set('Asia/Jakarta');
-        $a = new DateTime($shop->created_at);
-        $now = new DateTime();
-        $interval = $a->diff($now);
-        $sentence = 'Toko ini sudah berdiri selama ' . $interval->y . ' tahun ' .$interval->m . ' bulan ' . $interval->d . ' hari ' . $interval->h . ' jam';
+        // date_default_timezone_set('Asia/Jakarta');
+        // $a = new DateTime($shop->created_at);
+        // $now = new DateTime();
+        // $interval = $a->diff($now);
+        // $sentence = 'Toko ini sudah berdiri selama ' . $interval->y . ' tahun ' .$interval->m . ' bulan ' . $interval->d . ' hari ' . $interval->h . ' jam';
         return view('pages.rental.toko.shop')
                 ->with(
                     [
                         'title' => 'Toko',
                         'shop' => $shop,
-                        'jejak' => $sentence,
+                        // 'jejak' => $sentence,
                         'cars' => car::where('shop_id', $shop->id)
                                     ->orderBy('id')
                                     ->filter(request(['search']))

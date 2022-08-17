@@ -131,8 +131,11 @@
                                         <i class="mr-2 bi bi-house-fill"></i>Diproses
                                     </a>  --}}
                                     @if ($makeshop->status == 'review')
-                                        <a class="ml-1 mt-1 btn btn-sm">
+                                        {{-- <a class="ml-1 mt-1 btn btn-sm">
                                             <marquee class="text-success" scrollamount="11"><h5>Harap menunggu! Pemintaan anda sedang diproses Admin!</h5></marquee>
+                                        </a> --}}
+                                        <a class="ml-1 mt-1 btn btn-danger text-white">
+                                            Pendaftaran Berhasil! Pemintaan sedang diproses Admin!
                                         </a>
                                     @endif
                                 @else

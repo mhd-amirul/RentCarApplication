@@ -19,7 +19,11 @@
                                                 @if (old($item->nama."_id") == $data->id)
                                                     <option value="{{ $data->id }}" selected>{{ $data->nama }}</option>
                                                 @else
-                                                    <option value="{{ $data->id }}">{{ $data->nama }}</option>
+                                                    @if ($item->id == 8)
+                                                        <option value="{{ $data->id }}">{{ "Rp. " . number_format($data->nama,2,',','.') . '\hari' }}</option>
+                                                    @else
+                                                        <option value="{{ $data->id }}">{{ $data->nama }}</option>
+                                                    @endif
                                                 @endif
                                             @endif
                                         @endforeach

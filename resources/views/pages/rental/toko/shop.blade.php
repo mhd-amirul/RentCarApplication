@@ -51,12 +51,12 @@
                             <label for="nm_pu">NIK</label>
                         </div>
                     </div>
-                    <div class="col-sm-12 mb-4">
+                    {{-- <div class="col-sm-12 mb-4">
                         <div class="form-floating">
                             <input type="text" class="form-control rounded-top" value="{{ $jejak }}">
                             <label for="nm_pu">Jejak</label>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col-sm-6 mb-4">
                         <p class="m-b-10 f-w-600">Surat Izin Usaha</p>
                         <div style="max-height: 200px; max-width: 376px; overflow: hidden;" class="border border-dark">
@@ -109,7 +109,7 @@
                     @if ($shop->longitude != null && $shop->latitude != null)
                         <a href="{{ route('shop.create') }}" class="btn btn-sm btn-primary mb-2">Tambah Mobil</a>
                     @else
-                        <a href="{{ route('setLocation', $shop->slug) }}"><h6 class="mb-21 mt-2">Set lokasi toko dahulu</h6></a>
+                        <a href="{{ route('setLocation', $shop->slug) }}"><h6 class="mb-21 mt-2">Set lokasi toko dahulu untuk menambah mobil!</h6></a>
                     @endif
                 </div>
             </div>
