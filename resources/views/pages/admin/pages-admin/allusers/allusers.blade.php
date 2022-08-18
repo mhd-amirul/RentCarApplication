@@ -100,7 +100,7 @@
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->role }}</td>
                                     <td>0{{ $user->no_hp }}</td>
-                                    <td>0{{ $user->created_at }}</td>
+                                    <td>{{ $user->created_at }}</td>
                                     <td>
                                         <a href="{{ route('allusers.show',$user->slug) }}" class="btn-sm btn-primary"><i class="bi bi-eye-fill" style="color: rgb(0, 0, 0);"></i></a>
                                         <form action="{{ route('allusers.destroy', $user->slug) }}" method="post" class="d-inline" id="deleteUser-form-{{ $user->id }}">

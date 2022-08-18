@@ -25,7 +25,7 @@
                         @csrf
                         <input type="text" name="type" value="filter" hidden>
                         <div class="row">
-                            <div class="col-sm-5">
+                            <div class="col-sm-5 mt-1">
                                 <div class="form-floating">
                                     <input type="datetime-local" name="date_from" class="form-control rounded-top" id="date_from" required>
                                     <label for="date_from">Date From</label>
@@ -36,7 +36,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-sm-5">
+                            <div class="col-sm-5 mt-1">
                                 <div class="form-floating">
                                     <input type="datetime-local" name="date_to" class="form-control rounded-top" id="date_to" required>
                                     <label for="date_to">Date To</label>
@@ -47,7 +47,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-2 mt-1">
                                 <button class="btn btn-lg btn-success text-decoration-none"><i class="bi bi-printer-fill"></i> Filter</button>
                             </div>
                         </div>

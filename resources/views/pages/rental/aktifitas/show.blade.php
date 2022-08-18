@@ -32,7 +32,7 @@
                         @csrf
                         <input type="text" name="type" value="show" hidden>
                         <input type="text" name="slug" value="{{ $history->slug }}" hidden>
-                        <button class="btn btn-primary text-decoration-none"><i class="bi bi-printer-fill"></i> Print</button>
+                        <button class="btn btn-primary text-decoration-none mt-1"><i class="bi bi-printer-fill"></i> Print</button>
                     </form>
                 </div>
             </div>
