@@ -1,0 +1,8 @@
+BL3489KK
+
+Merk	: Mitsubishi Xpander
+Tahun	: 2018
+Seater	: 7
+CC	: 1500cc
+BBM	: Pertalite
+Harga	: Rp. 400.000.00\hari
