@@ -118,7 +118,7 @@
                             <tbody>
                             @forelse ($car as $car)
                             <tr class="text-center">
-                                <th scope="row">{{ $loop->iteration }}</th>
+                                <th scope="row">{{ $car->id }}</th>
                                 <td>{{ $car->merk->nama }}</td>
                                 <td>{{ $car->no_polisi }}</td>
                                 <td>{{ $car->tahun_produksi->nama }}</td>

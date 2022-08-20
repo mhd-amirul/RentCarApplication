@@ -1956,6 +1956,11 @@ class DatabaseSeeder extends Seeder
                     'stok' => 'standby',
                     'no_polisi' => 'BL2680sd',
                     'deskripsi' => NULL,
+                    'gambar1' => 'gambar1/mhKzxq8kr00bQYkjk9rKqCiRpwNcek8QDzUomWyX.webp',
+                    'gambar2' => 'gambar2/9GZCHMseiKS2ktr1OosFjYRqgGYJ4m9NxXhYvaG6.webp',
+                    'gambar3' => 'gambar3/w9mEWRfQnBjDBzCJDBlLIQEE7pHjhlNR09IuqrKd.webp',
+                    'gambar4' => 'gambar4/n5h24kUus6ZqjSWLJDOaLeFbJ058ANZgexOxxJOE.webp',
+                    'gambar5' => 'gambar5/eIXdlHEJBGNtdjm2Pcz5grg1R4HkphBWCcGV1ZcC.webp',
                     'kata_kunci' => 'Toyota Hiace, 2015, Baik, Baik, 16, 2500cc, Solar, 1500000, ',]);
                 car::create([
                     'slug' => 'f0199448f8d01d37387ba546aa28b830e4ac721b',
@@ -1972,6 +1977,11 @@ class DatabaseSeeder extends Seeder
                     'stok' => 'standby',
                     'no_polisi' => 'BL4093ll',
                     'deskripsi' => NULL,
+                    'gambar1' => 'gambar1/mhKzxq8kr00bQYkjk9rKqCiRpwNcek8QDzUomWyX.webp',
+                    'gambar2' => 'gambar2/9GZCHMseiKS2ktr1OosFjYRqgGYJ4m9NxXhYvaG6.webp',
+                    'gambar3' => 'gambar3/w9mEWRfQnBjDBzCJDBlLIQEE7pHjhlNR09IuqrKd.webp',
+                    'gambar4' => 'gambar4/n5h24kUus6ZqjSWLJDOaLeFbJ058ANZgexOxxJOE.webp',
+                    'gambar5' => 'gambar5/eIXdlHEJBGNtdjm2Pcz5grg1R4HkphBWCcGV1ZcC.webp',
                     'kata_kunci' => 'Toyota Hiace, 2015, Baik, Baik, 16, 2500cc, Solar, 1500000, ',]);
                 car::create([
                     'slug' => 'd5e07b7d6af08480ce8f843e3f973f57c865639b',
@@ -2324,6 +2334,11 @@ class DatabaseSeeder extends Seeder
                     'stok' => 'standby',
                     'no_polisi' => 'BL7880ga',
                     'deskripsi' => NULL,
+                    'gambar1' => 'gambar1/mhKzxq8kr00bQYkjk9rKqCiRpwNcek8QDzUomWyX.webp',
+                    'gambar2' => 'gambar2/9GZCHMseiKS2ktr1OosFjYRqgGYJ4m9NxXhYvaG6.webp',
+                    'gambar3' => 'gambar3/w9mEWRfQnBjDBzCJDBlLIQEE7pHjhlNR09IuqrKd.webp',
+                    'gambar4' => 'gambar4/n5h24kUus6ZqjSWLJDOaLeFbJ058ANZgexOxxJOE.webp',
+                    'gambar5' => 'gambar5/eIXdlHEJBGNtdjm2Pcz5grg1R4HkphBWCcGV1ZcC.webp',
                     'kata_kunci' => 'Toyota Hiace, 2015, Baik, Baik, 16, 2500cc, Solar, 1500000, ',]);
                 car::create([
                     'slug' => '3231e5a8e457410f883fd404364477d5db2b21fe',
@@ -2340,6 +2355,11 @@ class DatabaseSeeder extends Seeder
                     'stok' => 'standby',
                     'no_polisi' => 'BL6689zd',
                     'deskripsi' => NULL,
+                    'gambar1' => 'gambar1/mhKzxq8kr00bQYkjk9rKqCiRpwNcek8QDzUomWyX.webp',
+                    'gambar2' => 'gambar2/9GZCHMseiKS2ktr1OosFjYRqgGYJ4m9NxXhYvaG6.webp',
+                    'gambar3' => 'gambar3/w9mEWRfQnBjDBzCJDBlLIQEE7pHjhlNR09IuqrKd.webp',
+                    'gambar4' => 'gambar4/n5h24kUus6ZqjSWLJDOaLeFbJ058ANZgexOxxJOE.webp',
+                    'gambar5' => 'gambar5/eIXdlHEJBGNtdjm2Pcz5grg1R4HkphBWCcGV1ZcC.webp',
                     'kata_kunci' => 'Toyota Hiace, 2015, Baik, Baik, 16, 2500cc, Solar, 1500000, ',]);
                 car::create([
                     'slug' => '7cf10a0fe1a450bba2b23ac1bf6541e707414ebb',
@@ -2587,6 +2607,11 @@ class DatabaseSeeder extends Seeder
                     'stok' => 'standby',
                     'no_polisi' => 'BL8306gs',
                     'deskripsi' => NULL,
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2018, Baik, Baik, 7, 1300cc, Pertalite, 300000, ',]);
                 car::create([
                     'slug' => '55d17d11ade4c210f116a7b36a00700e1b05864c',
@@ -2603,6 +2628,11 @@ class DatabaseSeeder extends Seeder
                     'stok' => 'standby',
                     'no_polisi' => 'BL7979lg',
                     'deskripsi' => NULL,
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2018, Baik, Baik, 7, 1300cc, Pertalite, 300000, ',]);
                 car::create([
                     'slug' => '6e0e04d1f59a53234d4f2bfc432d156c3a52fd5e',
@@ -2619,6 +2649,11 @@ class DatabaseSeeder extends Seeder
                     'stok' => 'standby',
                     'no_polisi' => 'BL6041zs',
                     'deskripsi' => NULL,
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2019, Baik, Baik, 7, 1500cc, Pertalite, 350000, ',]);
                 car::create([
                     'slug' => '9c25c62fe8d023302ad56adf2455020befe03f13',
@@ -2635,6 +2670,11 @@ class DatabaseSeeder extends Seeder
                     'stok' => 'standby',
                     'no_polisi' => 'BL1615gb',
                     'deskripsi' => NULL,
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2019, Baik, Baik, 7, 1500cc, Pertalite, 350000, ',]);
 
             //
@@ -2674,6 +2714,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2032DC',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2015, kurang baik, kurang baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -2690,6 +2735,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3985ZU',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2018, kurang baik, sangat baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -2706,6 +2756,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5070PY',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2022, sangat baik, sangat baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -2722,6 +2777,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5360PK',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2022, kurang baik, kurang baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -2780,6 +2841,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2161YX',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2015, Baik, Baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -2796,6 +2862,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5368HY',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, Baik, Baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -2875,6 +2946,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8565QZ',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2020, kurang baik, sangat baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -2954,6 +3030,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2360OH',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2019, sangat baik, kurang baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -2991,6 +3072,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9773QI',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2015, Baik, sangat baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -3007,6 +3093,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2916IW',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2018, Baik, Baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -3023,6 +3114,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7167LK',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2018, kurang baik, sangat baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -3123,6 +3219,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1635NK',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, sangat baik, Baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -3160,6 +3261,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8127OH',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, Baik, Baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -3176,6 +3283,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1978TW',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, Baik, kurang baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -3234,6 +3346,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6394CS',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2021, Baik, Baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -3292,6 +3409,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8596JU',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2018, Baik, sangat baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -3329,6 +3452,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3119KP',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2019, kurang baik, Baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -3387,6 +3515,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7129ZN',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2016, sangat baik, sangat baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -3550,6 +3684,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9203WT',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2021, Baik, sangat baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -3566,6 +3705,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1442PG',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2020, sangat baik, sangat baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -3582,6 +3726,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8049KG',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2016, Baik, Baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -3598,6 +3747,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1033JU',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2015, sangat baik, sangat baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -3656,6 +3810,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5356DL',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2021, Baik, Baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -3672,6 +3831,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6633UF',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2015, Baik, Baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -3730,6 +3894,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9260AJ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, Baik, Baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -3746,6 +3915,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6841HJ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2017, kurang baik, sangat baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -3804,6 +3978,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8241LH',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2020, sangat baik, Baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -4156,6 +4335,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7492MF',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2020, sangat baik, Baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -4172,6 +4356,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9559YM',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2021, Baik, kurang baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -4188,6 +4377,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6309LY',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2018, kurang baik, kurang baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -4225,6 +4420,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5241LD',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2018, Baik, Baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -4262,6 +4462,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7359TQ',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2015, kurang baik, Baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -4278,6 +4483,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5539DO',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2021, Baik, Baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -4294,6 +4505,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6997NQ',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2020, kurang baik, Baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -4310,6 +4526,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2347NQ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2019, sangat baik, sangat baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -4326,6 +4547,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5091EK',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, sangat baik, Baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -4363,6 +4589,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6916QK',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2019, sangat baik, sangat baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -4379,6 +4610,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6459DW',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2019, kurang baik, Baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -4437,6 +4673,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4406LQ',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2020, Baik, kurang baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -4516,6 +4757,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1018XH',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2018, sangat baik, Baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -4532,6 +4778,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1518MI',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2017, Baik, kurang baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -4569,6 +4820,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7131WB',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, kurang baik, kurang baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -4585,6 +4842,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1700VQ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2019, kurang baik, sangat baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -4685,6 +4947,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9395GX',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2021, sangat baik, Baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -4722,6 +4990,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8651RT',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2015, sangat baik, Baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -4843,6 +5116,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5925YV',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, Baik, Baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -4943,6 +5221,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4282FP',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2016, sangat baik, sangat baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -4959,6 +5242,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4117XS',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, Baik, sangat baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -4996,6 +5285,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6357QW',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2016, Baik, Baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -5012,6 +5306,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1784VC',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2022, Baik, Baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -5028,6 +5328,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4602RE',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2017, sangat baik, Baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -5065,6 +5371,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4826ZK',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2020, sangat baik, sangat baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -5102,6 +5413,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1536RL',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2022, kurang baik, Baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -5160,6 +5477,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5453IC',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2022, Baik, sangat baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -5176,6 +5498,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9066JG',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2015, Baik, kurang baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -5213,6 +5541,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8391QB',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, Baik, sangat baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -5229,6 +5563,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4694VU',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2021, Baik, kurang baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -5539,6 +5879,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7186OH',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2020, kurang baik, kurang baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -5576,6 +5921,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7857HQ',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2016, Baik, kurang baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -5613,6 +5964,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5304OR',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2018, kurang baik, sangat baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -5650,6 +6006,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7344RR',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2021, kurang baik, kurang baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -5729,6 +6090,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9330JQ',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2015, Baik, kurang baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -5745,6 +6112,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7880KK',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, Baik, Baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -5761,6 +6134,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8961KO',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2019, sangat baik, Baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -5777,6 +6155,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4190DB',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2017, Baik, Baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -5793,6 +6176,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9014PT',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2021, Baik, sangat baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -5809,6 +6197,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9701DZ',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2020, Baik, kurang baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -5825,6 +6219,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6331XP',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2021, Baik, kurang baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -5862,6 +6261,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1048JD',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2020, sangat baik, Baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -5878,6 +6283,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3883XX',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2021, Baik, kurang baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -5978,6 +6388,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1340CO',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2016, sangat baik, Baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -6015,6 +6430,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8800WB',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2016, Baik, sangat baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -6052,6 +6472,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5421TW',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2017, Baik, sangat baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -6068,6 +6494,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4961HF',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2017, Baik, sangat baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -6084,6 +6515,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3992WJ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2021, kurang baik, kurang baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -6142,6 +6578,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9390CV',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2016, sangat baik, sangat baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -6242,6 +6684,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3856FS',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, Baik, Baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -6258,6 +6705,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2826CL',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, kurang baik, sangat baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -6274,6 +6726,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5744MN',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, sangat baik, kurang baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -6353,6 +6810,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8332WC',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2021, sangat baik, kurang baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -6369,6 +6831,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6702LB',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2015, sangat baik, Baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -6490,6 +6958,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8094NA',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2016, Baik, sangat baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -6569,6 +7042,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8563HE',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2021, Baik, Baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -6606,6 +7085,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8987XT',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2022, kurang baik, kurang baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -6622,6 +7106,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4154WW',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2015, sangat baik, kurang baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -6680,6 +7169,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7912XC',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2022, kurang baik, kurang baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -6696,6 +7191,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9102BN',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2022, sangat baik, kurang baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -6712,6 +7212,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5272VA',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2015, sangat baik, Baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -6728,6 +7233,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6381NY',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2021, sangat baik, kurang baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -6765,6 +7275,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9916JU',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2022, Baik, Baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -6865,6 +7380,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7390LO',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2019, kurang baik, sangat baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -6881,6 +7401,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6155WE',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2016, kurang baik, Baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -7191,6 +7716,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3152KN',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2016, Baik, kurang baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -7207,6 +7737,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5223MK',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, kurang baik, kurang baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -7244,6 +7780,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5988QU',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2018, Baik, Baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -7260,6 +7801,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7426MG',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2016, kurang baik, Baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -7297,6 +7843,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5861CJ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2016, kurang baik, kurang baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -7355,6 +7906,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1729HW',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2016, sangat baik, Baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -7371,6 +7927,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9207WC',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2018, kurang baik, kurang baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -7429,6 +7990,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4761XL',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2017, Baik, sangat baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -7466,6 +8033,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3813VV',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2015, sangat baik, kurang baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -7629,6 +8202,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3355LL',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2021, sangat baik, sangat baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -7645,6 +8223,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7374PW',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2022, Baik, sangat baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -7724,6 +8307,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7111EK',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2018, kurang baik, sangat baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -7740,6 +8328,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3359CU',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2015, sangat baik, Baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -7756,6 +8349,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8889IN',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2021, sangat baik, Baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -7961,6 +8560,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3460QY',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2016, Baik, Baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -8040,6 +8645,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7375DK',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2021, Baik, kurang baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -8077,6 +8687,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8973MB',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2016, Baik, Baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -8135,6 +8750,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9288GJ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2017, Baik, kurang baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -8172,6 +8792,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5568FX',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2021, kurang baik, Baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -8209,6 +8834,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2774VL',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2017, sangat baik, kurang baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -8267,6 +8897,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6481RJ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2017, sangat baik, Baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -8325,6 +8960,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6194AX',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2022, sangat baik, sangat baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -8404,6 +9044,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1197OE',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2016, Baik, Baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -8924,6 +9569,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4967RP',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, Baik, Baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -8982,6 +9632,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8088AQ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2015, sangat baik, sangat baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -8998,6 +9653,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3724GY',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2018, sangat baik, Baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -9014,6 +9674,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8618WS',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2017, Baik, sangat baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -9198,6 +9863,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5269RE',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2017, kurang baik, sangat baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -9277,6 +9947,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5885TC',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2017, sangat baik, kurang baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -9314,6 +9989,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8623NH',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2018, kurang baik, sangat baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -9330,6 +10010,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9302GV',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2022, kurang baik, Baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -9346,6 +10032,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9309OV',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2016, sangat baik, sangat baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -9404,6 +10095,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7116OK',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, Baik, Baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -9420,6 +10116,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1970UF',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2015, sangat baik, kurang baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -9436,6 +10138,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4177MT',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, Baik, kurang baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -9494,6 +10201,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5826OL',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2019, sangat baik, Baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -9510,6 +10222,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9211RB',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, Baik, Baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -9526,6 +10243,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1218IQ',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2017, sangat baik, sangat baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -9584,6 +10307,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1543RY',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2022, Baik, sangat baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -9747,6 +10476,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8737FJ',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2021, sangat baik, sangat baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -9868,6 +10602,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2647TC',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2022, sangat baik, sangat baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -9884,6 +10623,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5995TD',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, Baik, Baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -9921,6 +10665,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7113RB',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2018, Baik, kurang baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -9937,6 +10686,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1070OL',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2016, sangat baik, kurang baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -9953,6 +10707,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2713IT',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2016, kurang baik, sangat baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -9969,6 +10728,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7897YT',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2020, kurang baik, kurang baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -10006,6 +10771,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3809QY',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2017, sangat baik, Baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -10022,6 +10792,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4551EI',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2019, kurang baik, Baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -10059,6 +10834,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7620HO',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2020, kurang baik, kurang baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -10369,6 +11149,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9825KD',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2019, kurang baik, kurang baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -10406,6 +11191,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4673ST',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2020, kurang baik, Baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -10422,6 +11212,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1591VG',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2016, kurang baik, kurang baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -10522,6 +11318,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9088VD',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2018, Baik, kurang baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -10559,6 +11360,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3460KW',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2021, kurang baik, kurang baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -10575,6 +11381,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2953JH',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2018, Baik, Baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -10591,6 +11402,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3757ZL',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2020, kurang baik, sangat baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -10607,6 +11423,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3495OB',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, kurang baik, Baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -10665,6 +11486,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3888UW',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2018, sangat baik, Baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -10681,6 +11508,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3348CZ',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2017, kurang baik, kurang baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -10718,6 +11550,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7590WJ',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2016, kurang baik, kurang baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -10797,6 +11634,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7096RC',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2017, Baik, kurang baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -10834,6 +11676,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4575ZS',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2018, Baik, sangat baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -10850,6 +11697,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4238KT',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2018, Baik, Baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -10887,6 +11739,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6492SR',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, kurang baik, sangat baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -10924,6 +11781,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5318RJ',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2021, sangat baik, kurang baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -10961,6 +11823,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8791GI',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2017, sangat baik, Baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -11019,6 +11886,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2308MR',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2018, kurang baik, kurang baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -11035,6 +11907,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4070GI',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2020, kurang baik, Baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -11072,6 +11949,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1034VX',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2016, sangat baik, Baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -11109,6 +11991,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8678MU',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2016, kurang baik, kurang baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -11167,6 +12054,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4884ND',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, Baik, Baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -11246,6 +12138,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2282JW',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2016, sangat baik, kurang baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -11262,6 +12159,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3508MJ',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2017, Baik, Baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -11425,6 +12327,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4733AN',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2016, sangat baik, kurang baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -11462,6 +12369,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2286FT',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, Baik, kurang baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -11583,6 +12495,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5451RJ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2019, sangat baik, Baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -12061,6 +12978,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9327DA',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2019, Baik, sangat baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -12140,6 +13062,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2485YO',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2019, kurang baik, Baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -12198,6 +13125,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2636IG',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2018, kurang baik, Baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -12235,6 +13167,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7383PQ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2018, sangat baik, kurang baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -12314,6 +13251,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5515TQ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2021, sangat baik, sangat baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -12330,6 +13272,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8142VE',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, sangat baik, kurang baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -12367,6 +13314,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2738IQ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2021, kurang baik, kurang baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -12425,6 +13377,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3212ZX',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2015, kurang baik, kurang baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -12462,6 +13419,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3536RQ',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2020, sangat baik, Baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -12499,6 +13462,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6914RF',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2022, kurang baik, kurang baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -12515,6 +13483,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7347QB',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, Baik, kurang baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -12531,6 +13504,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6984AY',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2016, kurang baik, sangat baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -12610,6 +13588,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1352CY',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2018, Baik, kurang baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -12626,6 +13610,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3364CK',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2022, sangat baik, Baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -12684,6 +13674,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4885AI',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2022, sangat baik, kurang baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -12700,6 +13696,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3727PV',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2020, sangat baik, Baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -12716,6 +13717,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3231YP',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2022, Baik, sangat baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -12732,6 +13738,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6358TJ',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2016, sangat baik, sangat baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -12748,6 +13760,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2267AM',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2015, kurang baik, Baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -12806,6 +13824,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9406EG',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, sangat baik, kurang baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -12822,6 +13846,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3427BA',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, Baik, Baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -12859,6 +13888,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4754IF',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, kurang baik, kurang baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -12875,6 +13909,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8212GC',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2016, sangat baik, sangat baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -12933,6 +13973,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8374HS',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2022, Baik, kurang baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -12949,6 +13994,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6523SR',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2017, Baik, Baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -13007,6 +14057,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9387JR',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2015, kurang baik, Baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -13044,6 +14100,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6800UX',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2018, kurang baik, Baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -13060,6 +14122,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5552PX',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2021, Baik, sangat baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -13097,6 +14164,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6472PK',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2015, Baik, sangat baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -13113,6 +14185,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8753ZW',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2021, kurang baik, Baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -13255,6 +14332,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1550PR',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, Baik, sangat baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -13271,6 +14353,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1704AD',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2022, Baik, Baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -13287,6 +14374,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8218JZ',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, sangat baik, sangat baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -13324,6 +14417,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8247YV',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2019, sangat baik, sangat baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -13340,6 +14438,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6381CW',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, sangat baik, kurang baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -13356,6 +14459,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4650FA',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2017, kurang baik, Baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -13393,6 +14501,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1862SJ',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2022, Baik, Baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -13787,6 +14900,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3877BB',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, sangat baik, kurang baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -13803,6 +14921,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8099VC',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2018, Baik, Baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -14008,6 +15131,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2299WM',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2017, sangat baik, sangat baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -14066,6 +15194,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5196QS',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2020, kurang baik, sangat baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -14124,6 +15257,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1486SN',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2018, sangat baik, kurang baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -14203,6 +15341,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4860RL',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2021, sangat baik, sangat baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -14240,6 +15383,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8712BZ',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, kurang baik, sangat baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -14277,6 +15425,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4335PI',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2019, kurang baik, kurang baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -14293,6 +15446,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1765ZK',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2015, Baik, sangat baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -14435,6 +15593,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1135IR',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2018, kurang baik, sangat baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -14451,6 +15614,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9431UC',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, sangat baik, Baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -14551,6 +15719,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7466VD',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2022, sangat baik, sangat baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -14567,6 +15741,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6095KN',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, kurang baik, sangat baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -14625,6 +15804,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1638RX',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2018, sangat baik, Baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -14641,6 +15825,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5560GV',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2019, sangat baik, kurang baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -14657,6 +15846,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4270EV',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2015, kurang baik, sangat baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -14694,6 +15888,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9725NO',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2016, Baik, Baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -14752,6 +15951,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8899VL',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2017, sangat baik, Baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -14768,6 +15972,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6791DU',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2017, kurang baik, kurang baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -14784,6 +15993,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5888KF',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2018, Baik, kurang baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -14800,6 +16014,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5670NK',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2017, sangat baik, Baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -14816,6 +16035,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5614VN',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2020, Baik, sangat baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -14832,6 +16056,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9895VM',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2021, Baik, kurang baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -14911,6 +16141,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7657QF',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2019, Baik, Baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -14948,6 +16183,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4512FI',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2021, sangat baik, Baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -14964,6 +16205,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6001FF',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2016, Baik, kurang baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -15022,6 +16268,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8217LT',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2019, kurang baik, sangat baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -15059,6 +16310,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4263JR',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, Baik, kurang baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -15075,6 +16331,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9455WV',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2021, sangat baik, Baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -15196,6 +16458,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3955HK',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2016, kurang baik, kurang baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -15212,6 +16479,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8726ZB',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, sangat baik, Baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -15228,6 +16500,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9888QV',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2021, Baik, Baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -15769,6 +17046,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7994IE',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, sangat baik, Baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -15785,6 +17067,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9724EB',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, Baik, sangat baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -15843,6 +17130,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8439MS',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, Baik, kurang baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -15859,6 +17151,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2133GH',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2017, Baik, kurang baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -15875,6 +17172,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1759IN',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2021, Baik, kurang baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -15912,6 +17215,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6891EL',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2022, kurang baik, sangat baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -15928,6 +17236,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3822LZ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, kurang baik, kurang baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -15944,6 +17257,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8665ZP',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2018, sangat baik, Baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -15960,6 +17279,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4758EB',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2021, kurang baik, sangat baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -15976,6 +17300,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1577OI',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2018, sangat baik, Baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -16034,6 +17363,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7848HH',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, kurang baik, sangat baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -16113,6 +17447,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8850MC',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, sangat baik, Baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -16276,6 +17615,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1352WK',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, sangat baik, kurang baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -16292,6 +17637,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3898FR',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2018, Baik, sangat baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -16308,6 +17658,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2955QI',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2015, kurang baik, sangat baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -16324,6 +17679,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3282TC',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2021, kurang baik, kurang baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -16361,6 +17721,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7855ND',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2020, kurang baik, sangat baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -16377,6 +17742,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4449VW',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2018, sangat baik, Baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -16435,6 +17805,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2173AD',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, kurang baik, kurang baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -16535,6 +17910,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3404QL',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2021, kurang baik, Baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -16551,6 +17931,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4852PZ',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2015, sangat baik, kurang baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -16567,6 +17952,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5424LW',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2017, Baik, Baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -16604,6 +17994,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2693BK',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2017, Baik, kurang baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -16683,6 +18078,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1658OS',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, kurang baik, Baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -16699,6 +18099,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6105TO',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2021, Baik, kurang baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -16715,6 +18121,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7767QF',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, kurang baik, kurang baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -16731,6 +18143,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9474XD',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2022, kurang baik, Baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -16747,6 +18164,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7445NU',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2018, kurang baik, Baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -16763,6 +18185,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3426PL',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2018, kurang baik, Baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -16842,6 +18269,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6147JL',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2022, kurang baik, Baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -16858,6 +18291,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9414XC',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2020, sangat baik, Baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -16874,6 +18312,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2663ES',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2019, Baik, kurang baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -16953,6 +18396,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2597VV',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, Baik, Baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -16990,6 +18438,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4368QO',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2017, sangat baik, sangat baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -17027,6 +18481,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3798TB',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2019, Baik, kurang baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -17064,6 +18523,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7006KO',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2015, Baik, kurang baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -17080,6 +18545,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1900MN',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2021, Baik, kurang baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -17096,6 +18566,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2359SX',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2016, Baik, sangat baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -17112,6 +18588,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2040IP',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2018, sangat baik, Baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -17191,6 +18672,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7881DB',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, kurang baik, sangat baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -17207,6 +18693,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1056PU',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2018, sangat baik, kurang baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -17244,6 +18735,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7115KY',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2020, Baik, sangat baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -17281,6 +18777,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5813RA',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2017, sangat baik, kurang baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -17549,6 +19050,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8020RE',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2016, kurang baik, kurang baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -17565,6 +19072,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1265MX',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, kurang baik, Baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -17602,6 +19115,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9340FV',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2016, kurang baik, kurang baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -17618,6 +19136,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6576JF',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2017, kurang baik, Baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -17634,6 +19157,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5378LK',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2016, Baik, kurang baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -17713,6 +19241,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1122FU',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2017, sangat baik, sangat baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -17729,6 +19263,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2032AQ',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2021, Baik, Baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -17787,6 +19326,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3222OE',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, sangat baik, kurang baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -17803,6 +19348,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4641BI',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2017, sangat baik, kurang baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -17819,6 +19369,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7998PK',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2015, sangat baik, sangat baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -17856,6 +19411,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1994DF',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, sangat baik, sangat baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -17914,6 +19475,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5437FK',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2015, Baik, sangat baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -18098,6 +19664,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8975WW',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, Baik, sangat baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -18156,6 +19727,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5679TH',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2022, kurang baik, sangat baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -18193,6 +19770,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8624TD',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, Baik, sangat baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -18209,6 +19791,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2709FC',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2018, Baik, sangat baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -18246,6 +19833,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL6917BC',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2022, sangat baik, kurang baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -18325,6 +19918,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9706SH',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2016, Baik, sangat baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -18341,6 +19939,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4065HD',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, kurang baik, Baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -18378,6 +19982,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1210QT',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2021, sangat baik, Baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -18499,6 +20108,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8110LH',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2020, sangat baik, Baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -18557,6 +20171,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1961CE',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2015, kurang baik, sangat baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -18594,6 +20214,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9624FG',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2016, Baik, kurang baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -18610,6 +20236,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7588ZX',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2021, kurang baik, Baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -18626,6 +20257,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4333SS',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2022, Baik, kurang baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -18705,6 +20341,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3027ZP',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2017, Baik, sangat baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -18721,6 +20363,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8079QR',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2017, sangat baik, kurang baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -18758,6 +20406,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1771FI',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2015, Baik, kurang baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -18795,6 +20448,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2523ZL',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2020, sangat baik, Baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -18811,6 +20469,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3060GK',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2019, kurang baik, Baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -18827,6 +20490,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5147VZ',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2020, Baik, kurang baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -18843,6 +20512,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2479MZ',
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
                     'kata_kunci' => 'Suzuki Ertiga, 2015, kurang baik, sangat baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -18859,6 +20533,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1544BT',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, sangat baik, kurang baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -18875,6 +20555,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5099CP',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2021, Baik, sangat baik, 7, 1300cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -18954,6 +20639,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3999AK',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2021, Baik, kurang baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -18970,6 +20660,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1067SA',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2015, Baik, sangat baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -18986,6 +20682,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1922EJ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2018, Baik, Baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -19002,6 +20703,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5975WS',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2017, sangat baik, Baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -19039,6 +20745,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1492RX',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2016, Baik, sangat baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -19118,6 +20829,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7470QE',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2021, sangat baik, kurang baik, 7, 1300cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -19134,6 +20850,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5351KB',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, kurang baik, sangat baik, 7, 1500cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -19192,6 +20913,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7334VJ',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2015, sangat baik, Baik, 7, 1300cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -19229,6 +20955,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4666EG',
+                    'gambar1' => 'gambar1/6gtVA4AleCCqyt5aoUrnhmpMsyflvOIA4qKUmhWY.webp',
+                    'gambar2' => 'gambar2/44tky8F1fMQSodMlR2I8jJte8Gonmdqtjd74p2oq.webp',
+                    'gambar3' => 'gambar3/OCCRqxPvpST59yQFeWrEsMpDtGXMt5aN2H1xzU7f.webp',
+                    'gambar4' => 'gambar4/C1gJYSKyhOoPcaou9u4zI9FUVSkXQsIv3Ju6l30k.webp',
+                    'gambar5' => 'gambar5/zY91YSkLGbe3FyBcXGtalPy7fQEUvY7OxTCiatWC.webp',
                     'kata_kunci' => 'Mitsubishi Xpander, 2015, Baik, Baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -19308,6 +21039,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL3463IC',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2022, Baik, sangat baik, 7, 1200cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -19366,6 +21103,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '54',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8637GJ',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2019, kurang baik, Baik, 7, 1500cc, Pertalite, 400000, ',]);
 
                 Car::create([
@@ -19403,6 +21146,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL8385HX',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2022, sangat baik, Baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -19419,6 +21168,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5122ZE',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2016, sangat baik, kurang baik, 7, 1500cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -19435,6 +21190,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL4217SB',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2021, kurang baik, kurang baik, 7, 1500cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -19682,6 +21442,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '52',
                     'stok' => 'standby',
                     'no_polisi' => 'BL9911RC',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2022, Baik, sangat baik, 7, 1200cc, Pertalite, 300000, ',]);
 
                 Car::create([
@@ -19740,6 +21505,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL1444GL',
+                    'gambar1' => 'gambar1/0QFe43upvizAfLXgClkVmrSvpuH5hBuZn2KG8r7j.webp',
+                    'gambar2' => 'gambar2/bE4qeCUJ03oiM93jil3Qyq4T4rrg05mFyRCBE88t.webp',
+                    'gambar3' => 'gambar3/CqPQ3Y0Dg0deBYL1jju5qcgMxIR1xFLKgdgL33YU.webp',
+                    'gambar4' => 'gambar4/XxSIcU7DggcqyIPHtWA87FHK98GgWOWyHCWT0mos.webp',
+                    'gambar5' => 'gambar5/odN2b913cbotEWK7W4U9JJThundYkpoNUzKTElEL.webp',
+
                     'kata_kunci' => 'Toyota Calya, 2020, Baik, sangat baik, 7, 1200cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -19777,6 +21548,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL7386YL',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2021, kurang baik, kurang baik, 7, 1300cc, Pertalite, 450000, ',]);
 
                 Car::create([
@@ -19814,6 +21590,11 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '53',
                     'stok' => 'standby',
                     'no_polisi' => 'BL5496IL',
+                    'gambar1' => 'gambar1/YE4GUW8jK9tLsbp0z1ZPyUjLMPLJF7vh5ytPU3l5.webp',
+                    'gambar2' => 'gambar2/yKvlIVsV0jwrMElbXB8t7uhPYe8VgL7JQcBn5spS.webp',
+                    'gambar3' => 'gambar3/p5XVk1jy0oSDYtsLomhR2vJDuswhoHoQYsSNyRd8.webp',
+                    'gambar4' => 'gambar4/jnuuLVfkbOvGNEDCoQqfYuU3EzMQcO0h1SqVCRqv.webp',
+                    'gambar5' => 'gambar5/2IBJlGgmDuV6RBSaXCV5StMgqNxZrFu1y5r2YO8o.webp',
                     'kata_kunci' => 'Honda Mobilio RS, 2015, sangat baik, kurang baik, 7, 1200cc, Pertalite, 350000, ',]);
 
                 Car::create([
@@ -19872,7 +21653,12 @@ class DatabaseSeeder extends Seeder
                     'Harga_Sewa_id' => '55',
                     'stok' => 'standby',
                     'no_polisi' => 'BL2011BV',
-                'kata_kunci' => 'Suzuki Ertiga, 2017, Baik, sangat baik, 7, 1200cc, Pertalite, 450000, ',]);
+                    'gambar1' => 'gambar1/o1RAIixPpJRg2u7gTaokRnOMzKESgbKzSpRguOrG.webp',
+                    'gambar2' => 'gambar2/mhcSPS5yQA7r0dndLwSVqM7EVJ9zt2ljOF3UgR2M.webp',
+                    'gambar3' => 'gambar3/D9ryi2DxecwoFImcMzqx6E0gZK70BUfRbviB0kja.webp',
+                    'gambar4' => 'gambar4/VrKVlRuIGoauKtmRLQO5WOUpvx1g3nEl9neB6f9v.webp',
+                    'gambar5' => 'gambar5/1JCMOZwtmWL50kH87Jn4AqigN76WosdMoiK6b9bY.webp',
+                    'kata_kunci' => 'Suzuki Ertiga, 2017, Baik, sangat baik, 7, 1200cc, Pertalite, 450000, ',]);
 
             //
         //
@@ -19903,76 +21689,76 @@ class DatabaseSeeder extends Seeder
                 'komentar' => 'Good',]);
         //
         // sample History an Activity
-            history::create([
-                'slug' => sha1(Str::random(10).time().microtime()),
-                'shop_id' => 1,
-                'nama_pinjam' => 'Boyhaqi',
-                'nik_pinjam' => 1108040204 .''.rand(100000, 999999),
-                'tgl_pinjam' => date_create("2022-08-17 00:00:00"),
-                'batas_pinjam' => date_create("2022-08-18 00:00:00"),
-                'sim_peminjam' => null,
-                'ktp_peminjam' => null,
-                'foto_peminjam' => null,
-                'berkas_pinjam' => null,
-                'status' => 'on',
-                'car_id' => 1,
-            ]);
-            history::create([
-                'slug' => sha1(Str::random(10).time().microtime()),
-                'shop_id' => 1,
-                'nama_pinjam' => 'Muhammad Reza',
-                'nik_pinjam' => 1108040204 .''.rand(100000, 999999),
-                'tgl_pinjam' => date_create("2022-08-17 00:00:00"),
-                'batas_pinjam' => date_create("2022-08-18 00:00:00"),
-                'sim_peminjam' => null,
-                'ktp_peminjam' => null,
-                'foto_peminjam' => null,
-                'berkas_pinjam' => null,
-                'status' => 'on',
-                'car_id' => 1,
-            ]);
-            history::create([
-                'slug' => sha1(Str::random(10).time().microtime()),
-                'shop_id' => 1,
-                'nama_pinjam' => 'Rahmat Muharram',
-                'nik_pinjam' => 1108040204 .''.rand(100000, 999999),
-                'tgl_pinjam' => date_create("2022-08-17 00:00:00"),
-                'batas_pinjam' => date_create("2022-08-18 00:00:00"),
-                'sim_peminjam' => null,
-                'ktp_peminjam' => null,
-                'foto_peminjam' => null,
-                'berkas_pinjam' => null,
-                'status' => 'on',
-                'car_id' => 1,
-            ]);
-            history::create([
-                'slug' => sha1(Str::random(10).time().microtime()),
-                'shop_id' => 1,
-                'nama_pinjam' => 'Naja Nova',
-                'nik_pinjam' => 1108040204 .''.rand(100000, 999999),
-                'tgl_pinjam' => date_create("2022-08-17 00:00:00"),
-                'batas_pinjam' => date_create("2022-08-18 00:00:00"),
-                'sim_peminjam' => null,
-                'ktp_peminjam' => null,
-                'foto_peminjam' => null,
-                'berkas_pinjam' => null,
-                'status' => 'on',
-                'car_id' => 1,
-            ]);
-            history::create([
-                'slug' => sha1(Str::random(10).time().microtime()),
-                'shop_id' => 1,
-                'nama_pinjam' => 'Muhammad Syukran',
-                'nik_pinjam' => 1108040204 .''.rand(100000, 999999),
-                'tgl_pinjam' => date_create("2022-08-17 00:00:00"),
-                'batas_pinjam' => date_create("2022-08-18 00:00:00"),
-                'sim_peminjam' => null,
-                'ktp_peminjam' => null,
-                'foto_peminjam' => null,
-                'berkas_pinjam' => null,
-                'status' => 'on',
-                'car_id' => 1,
-            ]);
+            // history::create([
+            //     'slug' => sha1(Str::random(10).time().microtime()),
+            //     'shop_id' => 1,
+            //     'nama_pinjam' => 'Boyhaqi',
+            //     'nik_pinjam' => 1108040204 .''.rand(100000, 999999),
+            //     'tgl_pinjam' => date_create("2022-08-17 00:00:00"),
+            //     'batas_pinjam' => date_create("2022-08-18 00:00:00"),
+            //     'sim_peminjam' => null,
+            //     'ktp_peminjam' => null,
+            //     'foto_peminjam' => null,
+            //     'berkas_pinjam' => null,
+            //     'status' => 'on',
+            //     'car_id' => 1,
+            // ]);
+            // history::create([
+            //     'slug' => sha1(Str::random(10).time().microtime()),
+            //     'shop_id' => 1,
+            //     'nama_pinjam' => 'Muhammad Reza',
+            //     'nik_pinjam' => 1108040204 .''.rand(100000, 999999),
+            //     'tgl_pinjam' => date_create("2022-08-17 00:00:00"),
+            //     'batas_pinjam' => date_create("2022-08-18 00:00:00"),
+            //     'sim_peminjam' => null,
+            //     'ktp_peminjam' => null,
+            //     'foto_peminjam' => null,
+            //     'berkas_pinjam' => null,
+            //     'status' => 'on',
+            //     'car_id' => 1,
+            // ]);
+            // history::create([
+            //     'slug' => sha1(Str::random(10).time().microtime()),
+            //     'shop_id' => 1,
+            //     'nama_pinjam' => 'Rahmat Muharram',
+            //     'nik_pinjam' => 1108040204 .''.rand(100000, 999999),
+            //     'tgl_pinjam' => date_create("2022-08-17 00:00:00"),
+            //     'batas_pinjam' => date_create("2022-08-18 00:00:00"),
+            //     'sim_peminjam' => null,
+            //     'ktp_peminjam' => null,
+            //     'foto_peminjam' => null,
+            //     'berkas_pinjam' => null,
+            //     'status' => 'on',
+            //     'car_id' => 1,
+            // ]);
+            // history::create([
+            //     'slug' => sha1(Str::random(10).time().microtime()),
+            //     'shop_id' => 1,
+            //     'nama_pinjam' => 'Naja Nova',
+            //     'nik_pinjam' => 1108040204 .''.rand(100000, 999999),
+            //     'tgl_pinjam' => date_create("2022-08-17 00:00:00"),
+            //     'batas_pinjam' => date_create("2022-08-18 00:00:00"),
+            //     'sim_peminjam' => null,
+            //     'ktp_peminjam' => null,
+            //     'foto_peminjam' => null,
+            //     'berkas_pinjam' => null,
+            //     'status' => 'on',
+            //     'car_id' => 1,
+            // ]);
+            // history::create([
+            //     'slug' => sha1(Str::random(10).time().microtime()),
+            //     'shop_id' => 1,
+            //     'nama_pinjam' => 'Muhammad Syukran',
+            //     'nik_pinjam' => 1108040204 .''.rand(100000, 999999),
+            //     'tgl_pinjam' => date_create("2022-08-17 00:00:00"),
+            //     'batas_pinjam' => date_create("2022-08-18 00:00:00"),
+            //     'sim_peminjam' => null,
+            //     'ktp_peminjam' => null,
+            //     'foto_peminjam' => null,
+            //     'berkas_pinjam' => null,
+            //     'status' => 'on',
+            //     'car_id' => 1,
+            // ]);
             history::create([
                 'slug' => sha1(Str::random(10).time().microtime()),
                 'shop_id' => 1,
