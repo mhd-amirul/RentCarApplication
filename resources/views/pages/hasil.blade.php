@@ -14,7 +14,7 @@
             </div>
         </div>
         @forelse( $cars as $car )
-            @if ($loop->first)
+            @if ($car->ranking == 1)
                 <div class="col-sm-6">
                     <div class="card mb-3 text-center">
                         <div style="max-height: 350px; overflow: hidden;" class="bg-dark">
@@ -38,28 +38,35 @@
                         </div>
                     </div>
                 </div>
-            @else
-                <div class="col-sm-4 mb-3">
-                    <div class="card">
-                        <img src="{{ isset($car->gambar1) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar1) }}" alt="{{ $car->merk->nama }}" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Rank. {{ $car->ranking }}</h5>
-                            <h4 class="card-title">Merk : {{ $car->merk->nama }}</h4>
-                            <p>
-                                <small>
-                                    <a href="{{ route('profileToko', $car->shop->slug) }}" class="text-decoration-none">{{ $car->shop->nm_usaha }}</a>
-                                    {{ $car->created_at->diffForHumans() }}
-                                </small>
-                            </p>
-                            <p class="card-text">Tahun Produksi : {{ $car->tahun_produksi->nama }}, Muatan Penumpang : {{ $car->muatan_penumpang->nama }}, Harga Sewa : {{ "Rp. " . number_format($car->harga_sewa->nama,2,',','.') }}</p>
-                            <a href="{{ route('detailMobil', $car->slug) }}" class="btn btn-sm btn-primary">Detail</a>
-                        </div>
-                    </div>
-                </div>
             @endif
         @empty
             <h1 class="text-center mt-2" style="margin-bottom: 7cm">MOBIL TIDAK DITEMUKAN</h1>
         @endforelse
+        <div class="row justify-content-center ml-1">
+            @forelse ($cars as $car)
+                @if ($car->ranking != 1)
+                    <div class="col-sm-4 mb-3">
+                        <div class="card">
+                            <img src="{{ isset($car->gambar1) == null ? url('images/notfound.png') : asset('storage/' . $car->gambar1) }}" alt="{{ $car->merk->nama }}" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Rank. {{ $car->ranking }}</h5>
+                                <h4 class="card-title">Merk : {{ $car->merk->nama }}</h4>
+                                <p>
+                                    <small>
+                                        <a href="{{ route('profileToko', $car->shop->slug) }}" class="text-decoration-none">{{ $car->shop->nm_usaha }}</a>
+                                        {{ $car->created_at->diffForHumans() }}
+                                    </small>
+                                </p>
+                                <p class="card-text">Tahun Produksi : {{ $car->tahun_produksi->nama }}, Muatan Penumpang : {{ $car->muatan_penumpang->nama }}, Harga Sewa : {{ "Rp. " . number_format($car->harga_sewa->nama,2,',','.') }}</p>
+                                <a href="{{ route('detailMobil', $car->slug) }}" class="btn btn-sm btn-primary">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+            @empty
+                <p></p>
+            @endforelse
+        </div>
     </div>
 </div>
 @endsection
@@ -118,7 +125,27 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    {{-- <script type="text/javascript">
+
+@endpush
+
+@push('script-map')
+    <script type="text/javascript">
+        const array = {!! json_encode($cars) !!}
+        var data = [], len = array.length, i = 0;
+        console.log(array)
+        for(i;i<len;i++){
+            data.push({
+                name: array[i].merk.nama,
+                rank: "Rank. " + array[i].ranking,
+                tahun: array[i].tahun_produksi.nama,
+                seater: array[i].muatan_penumpang.nama,
+                harga: array[i].harga_sewa.nama,
+                // nilai akhir
+                y: array[i].nilai,
+                z: array[i].nilai
+            });
+        }
+
         $(function() {
             Highcharts.chart('container', {
                 chart: {
@@ -130,91 +157,89 @@
                 tooltip: {
                     headerFormat: '',
                     pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
+                        'Rank : {point.rank}<br/>' +
                         'Tahun : {point.tahun}<br/>' +
                         'Seater : {point.seater}<br/>' +
-                        'CC : {point.CC}<br/>' +
-                        'BBM : {point.BBM}<br/>' +
-                        'Harga : {point.Harga}<br/>' +
-                        'y : {point.y}<br/>' +
-                        'z : {point.z}<br/>'
+                        'Harga : {point.harga}<br/>' +
+                        'Nilai Akhir : {point.y}<br/>'
+                        // 'Nilai  : {point.z}<br/>'
                 },
                 series: [{
                     minPointSize: 10,
                     innerSize: '20%',
                     zMin: 0,
                     name: 'countries',
-                    data: [
-                        {
-                            name: 'Rank. 1 : Avanza',
-                            tahun: 2020,
-                            seater:7,
-                            CC:1500+'cc',
-                            BBM:'Pertalite',
-                            Harga:400000,
-                            // nilai akhir
-                            y: 505370,
-                            z: 92.9
-                        }
-                    ]
+                    data: data
+                    // [
+                    //     {
+                    //         name: 'Rank. 1 : Avanza',
+                    //         tahun: 2020,
+                    //         seater:7,
+                    //         harga:400000,
+                    //         // nilai akhir
+                    //         y: 505370,
+                    //         z: 92.9
+                    //     }
+                    // ]
                 }]
             });
         });
-    </script> --}}
-@endpush
-
-@push('script-map')
-<script type="text/javascript">
-    const array = {!! json_encode($cars) !!}
-    var data = [], len = array.length, i = 0;
-    console.log(array)
-    for(i;i<len;i++){
-        data.push({
-            name: "Rank. " + array[i].merk.nama,
-            tahun: array[i].tahun_produksi.nama,
-            seater: array[i].muatan_penumpang.nama,
-            harga: array[i].harga_sewa.nama,
-            // nilai akhir
-            y: array[i].nilai,
-            z: 92.9
-        });
-    }
-
-    $(function() {
+    </script>
+    {{-- <script>
+        const array = {!! json_encode($cars) !!}
+        var data = [], len = array.length, i = 0;
+        console.log(array)
+        for(i;i<len;i++){
+            data.push({
+                name : "Data"+i,
+                data : [{
+                    name: "Rank. " + array[i].ranking + " : " + array[i].merk.nama,
+                    tahun: array[i].tahun_produksi.nama,
+                    seater: array[i].muatan_penumpang.nama,
+                    harga: array[i].harga_sewa.nama,
+                    // nilai akhir
+                    y: array[i].nilai,
+                    z: array[i].nilai
+                }]
+            });
+        }
         Highcharts.chart('container', {
-            chart: {
-                type: 'variablepie'
-            },
-            title: {
-                text: 'Chart Hasil Rekomendasi Mobil Rental'
-            },
-            tooltip: {
-                headerFormat: '',
-                pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
-                    'Tahun : {point.tahun}<br/>' +
-                    'Seater : {point.seater}<br/>' +
-                    'Harga : {point.harga}<br/>' +
-                    'y : {point.y}<br/>' +
-                    'z : {point.z}<br/>'
-            },
-            series: [{
-                minPointSize: 10,
-                innerSize: '20%',
-                zMin: 0,
-                name: 'countries',
-                data: data
-                // [
-                //     {
-                //         name: 'Rank. 1 : Avanza',
-                //         tahun: 2020,
-                //         seater:7,
-                //         harga:400000,
-                //         // nilai akhir
-                //         y: 505370,
-                //         z: 92.9
-                //     }
-                // ]
-            }]
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'Chart Hasil Rekomendasi Mobil Rental'
+                },
+                subtitle: {
+                    text: 'Source: CarRental.com'
+                },
+                xAxis: {
+                    categories: [
+                        'Jumlah Data'
+                    ],
+                    crosshair: true
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'Jumlah Data'
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                        '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+                    footerFormat: '</table>',
+                    shared: true,
+                    useHTML: true
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                series: data
         });
-    });
-</script>
+    </script> --}}
 @endpush

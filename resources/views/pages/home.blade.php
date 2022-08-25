@@ -46,7 +46,7 @@
     </div> --}}
 
     {{-- PROMOSI --}}
-    <div class="col-lg-10">
+    {{-- <div class="col-lg-10">
         <div class="card border border-gray-800 mx-3 shadow-lg">
             <section class="ftco-section">
                 <div class="container">
@@ -79,7 +79,7 @@
             </section>
         </div>
 
-    </div>
+    </div> --}}
 
     {{-- TOP RATING --}}
     <div class="col-lg-10">

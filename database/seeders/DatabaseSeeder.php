@@ -276,59 +276,59 @@ class DatabaseSeeder extends Seeder
             alternatif::create([
                 "kriteria_id" => 8,
                 "Nama" => 300000,
-                "Nilai" => 14]);
+                "Nilai" => 1]);
             alternatif::create([
                 "kriteria_id" => 8,
                 "Nama" => 350000,
-                "Nilai" => 13]);
-            alternatif::create([
-                "kriteria_id" => 8,
-                "Nama" => 400000,
-                "Nilai" => 12]);
-            alternatif::create([
-                "kriteria_id" => 8,
-                "Nama" => 450000,
-                "Nilai" => 11]);
-            alternatif::create([
-                "kriteria_id" => 8,
-                "Nama" => 500000,
-                "Nilai" => 10]);
-            alternatif::create([
-                "kriteria_id" => 8,
-                "Nama" => 550000,
-                "Nilai" => 9]);
-            alternatif::create([
-                "kriteria_id" => 8,
-                "Nama" => 600000,
-                "Nilai" => 8]);
-            alternatif::create([
-                "kriteria_id" => 8,
-                "Nama" => 650000,
-                "Nilai" => 7]);
-            alternatif::create([
-                "kriteria_id" => 8,
-                "Nama" => 700000,
-                "Nilai" => 6]);
-            alternatif::create([
-                "kriteria_id" => 8,
-                "Nama" => 1000000,
-                "Nilai" => 5]);
-            alternatif::create([
-                "kriteria_id" => 8,
-                "Nama" => 1200000,
-                "Nilai" => 4]);
-            alternatif::create([
-                "kriteria_id" => 8,
-                "Nama" => 1300000,
-                "Nilai" => 3]);
-            alternatif::create([
-                "kriteria_id" => 8,
-                "Nama" => 1400000,
                 "Nilai" => 2]);
             alternatif::create([
                 "kriteria_id" => 8,
+                "Nama" => 400000,
+                "Nilai" => 3]);
+            alternatif::create([
+                "kriteria_id" => 8,
+                "Nama" => 450000,
+                "Nilai" => 4]);
+            alternatif::create([
+                "kriteria_id" => 8,
+                "Nama" => 500000,
+                "Nilai" => 5]);
+            alternatif::create([
+                "kriteria_id" => 8,
+                "Nama" => 550000,
+                "Nilai" => 6]);
+            alternatif::create([
+                "kriteria_id" => 8,
+                "Nama" => 600000,
+                "Nilai" => 7]);
+            alternatif::create([
+                "kriteria_id" => 8,
+                "Nama" => 650000,
+                "Nilai" => 8]);
+            alternatif::create([
+                "kriteria_id" => 8,
+                "Nama" => 700000,
+                "Nilai" => 9]);
+            alternatif::create([
+                "kriteria_id" => 8,
+                "Nama" => 1000000,
+                "Nilai" => 10]);
+            alternatif::create([
+                "kriteria_id" => 8,
+                "Nama" => 1200000,
+                "Nilai" => 11]);
+            alternatif::create([
+                "kriteria_id" => 8,
+                "Nama" => 1300000,
+                "Nilai" => 12]);
+            alternatif::create([
+                "kriteria_id" => 8,
+                "Nama" => 1400000,
+                "Nilai" => 13]);
+            alternatif::create([
+                "kriteria_id" => 8,
                 "Nama" => 1500000,
-                "Nilai" => 1]);
+                "Nilai" => 14]);
         //
 
         // Table User====================================================================================
