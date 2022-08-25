@@ -1333,3 +1333,67 @@ JS MAPBOX ======================================================================
         // const nm_usaha = document.getElementById("nm_usaha").value;
         // const alamat = document.getElementById("alamat").value;
         // const no_hp = document.getElementById("no_hp").value;
+
+HIGHCHART =====================================================================================
+@push('script-map')
+<script>
+    //     Highcharts.chart('Chart-admin', {
+        //         chart: {
+        //             type: 'column'
+        //         },
+        //         title: {
+        //             text: 'Data Rekam Sistem Rekomendasi Rental'
+        //         },
+        //         subtitle: {
+        //             text: 'Source: CarRental.com'
+        //         },
+        //         xAxis: {
+        //             categories: [
+        //                 'Jumlah Data'
+        //             ],
+        //             crosshair: true
+        //         },
+        //         yAxis: {
+        //             min: 0,
+        //             title: {
+        //                 text: 'Jumlah Data'
+        //             }
+        //         },
+        //         tooltip: {
+        //             headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        //             pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+        //                 '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+        //             footerFormat: '</table>',
+        //             shared: true,
+        //             useHTML: true
+        //         },
+        //         plotOptions: {
+        //             column: {
+        //                 pointPadding: 0.2,
+        //                 borderWidth: 0
+        //             }
+        //         },
+        //         series: [{
+        //             name: 'User',
+        //             data: [49.9]
+
+        //         }, {
+        //             name: 'Shop',
+        //             data: [83.6]
+
+        //         }, {
+        //             name: 'Car',
+        //             data: [48.9]
+
+        //         },{
+        //             name: 'Kriteria',
+        //             data: [48.9]
+
+        //         }, {
+        //             name: 'Alternatif',
+        //             data: [42.4]
+
+        //         }]
+    // });
+</script>
+@endpush

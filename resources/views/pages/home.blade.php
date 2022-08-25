@@ -44,13 +44,15 @@
             <h1>KATA KATA</h1>
         </div>
     </div> --}}
+
+    {{-- PROMOSI --}}
     <div class="col-lg-10">
         <div class="card border border-gray-800 mx-3 shadow-lg">
             <section class="ftco-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
-                            <h3 class="text-dark mt-3">Top Rated :</h3>
+                            <h3 class="text-dark mt-3">Discount :</h3>
                             <hr>
                         </div>
                         <div class="col-md-12">
@@ -78,6 +80,44 @@
         </div>
 
     </div>
+
+    {{-- TOP RATING --}}
+    <div class="col-lg-10">
+        <div class="card border border-gray-800 mx-3 shadow-lg">
+            <section class="ftco-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3 class="text-dark mt-3">Top Rating :</h3>
+                            <hr>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="featured-carousel owl-carousel mb-4">
+                                @forelse ($cars as $car)
+                                    <div class="item">
+                                        <div class="work">
+                                            <div class="img d-flex align-items-center justify-content-center rounded">
+                                                <img src="{{ asset('storage/' . $car->gambar1) }}" alt="" width="200" height="200" class="mt-2">
+                                            </div>
+                                            <div class="text pt-3 w-100 text-center">
+                                                <h5><a href="{{ route('detailMobil', $car->slug) }}" class="text-dark">{{ $car->merk->nama }}</a></h5>
+                                                <span><a href="{{ route('profileToko', $car->shop->slug) }}" class="text-decoration-none text-dark">{{ $car->shop->nm_usaha }}</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @empty
+                                    <h4 class="text-center mx-3 my-3"> - </h4>
+                                @endforelse
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    {{-- PILIH KRITERIA --}}
     <div class="col-lg-10">
         <div class="card border border-gray-800 mx-3 shadow-lg">
             <div class="row justify-content-center mb-5">

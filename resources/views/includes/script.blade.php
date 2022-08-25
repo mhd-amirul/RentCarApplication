@@ -31,4 +31,4 @@
     //     })
     // }
 </script>
-{{-- @yield('chart-Script') --}}
+@yield('chart-Script')

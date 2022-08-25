@@ -248,10 +248,17 @@ class HomeController extends Controller
         // $index = key($result);
         arsort($optimasi);
         $cars = [];
+        $i = 0;
         foreach ($optimasi as $id_cars => $value) {
+            $i += 1;
             $cars[] = car::where('id', $id_cars)->first();
+            foreach ($cars as $car) {
+                if ($car->id == $id_cars) {
+                    $car->nilai = $value;
+                    $car->ranking = $i;
+                }
+            }
         }
-
         $cars = array_slice($cars, 0, 10);
 
         return view('pages.hasil')
