@@ -89,6 +89,9 @@
                             <a href="{{ route('activityView', $shop->slug) }}" class="ml-1 mt-1 btn btn-sm btn-dark text-white">
                                 <i class="bi bi-activity"></i> Aktifitas
                             </a>
+                            <a href="" class="ml-1 mt-1 btn btn-sm btn-warning">
+                                <i class="bi bi-percent"></i> Discount
+                            </a>
                             <form action="{{ route('toko.destroy', $shop->slug) }}" method="post" class="d-inline" id="deleteShop-form">
                                 @method('delete')
                                 @csrf

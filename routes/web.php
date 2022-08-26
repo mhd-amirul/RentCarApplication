@@ -11,6 +11,7 @@ use App\Http\Controllers\home\HomeController;
 use App\Http\Controllers\map\mapController;
 use App\Http\Controllers\profile\ProfilController;
 use App\Http\Controllers\rental\activityController;
+use App\Http\Controllers\rental\discountController;
 use App\Http\Controllers\rental\RentalController;
 use App\Http\Controllers\rental\TokoController;
 use App\Http\Controllers\rental\ulasanController;
@@ -124,6 +125,8 @@ Route::group(['middleware' => 'auth'], function ()
                     Route::put('activityReturn/{history}', 'activityReturn')->name('activityReturn');
                     Route::delete('activityDelete/{history}', 'activityDelete')->name('activityDelete');
                 });
+
+                Route::resource('discount', discountController::class);
 
                 Route::get('map/{map}', [mapController::class, 'setLocation'])->name('setLocation');
                 Route::put('map/update/{map}', [mapController::class, 'saveLocation'])->name('saveLocation');
