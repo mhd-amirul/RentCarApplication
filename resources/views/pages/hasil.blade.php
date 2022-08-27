@@ -8,11 +8,15 @@
                 <h4 class="m-b-20 p-b-5 b-b-default f-w-600 text-center">HASIL REKOMENDASI</h4>
             </div>
         </div>
-        <div class="col-lg-6">
-            <div class="card pt-3 pb-3">
+        @if ($cars)
+            <div class="col-lg-6">
+                <div class="card pt-3 pb-3">
                     <div id="container" class="mt-5 mx-3"></div>
+                </div>
             </div>
-        </div>
+        @else
+
+        @endif
         @forelse( $cars as $car )
             @if ($car->ranking == 1)
                 <div class="col-sm-6">
@@ -161,7 +165,7 @@
                         'Tahun : {point.tahun}<br/>' +
                         'Seater : {point.seater}<br/>' +
                         'Harga : {point.harga}<br/>' +
-                        'Nilai Akhir : {point.y}<br/>'
+                        'Rasio : {point.y}<br/>'
                         // 'Nilai  : {point.z}<br/>'
                 },
                 series: [{

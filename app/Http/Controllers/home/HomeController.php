@@ -9,6 +9,7 @@ use App\Models\alternatif;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\discount;
 use App\Models\nilai;
 use App\Models\ulasan;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -18,7 +19,16 @@ class HomeController extends Controller
     public function index()
     {
         $rate = ulasan::where('rating', '5')->get();
-        // return response()->json($rate);
+        $diskon = discount::all();
+        foreach ($diskon as $disk) {
+            $disCars[] = car::where('id', $disk->car_id)->first();
+            foreach ($disCars as $car) {
+                if ($car->id == $disk->car_id) {
+                    $car['diskon'] = $disk->discount;
+                }
+            }
+        }
+        // return response()->json($disCars);
 
         $i = 0;
         foreach ($rate as $r) {
@@ -35,7 +45,8 @@ class HomeController extends Controller
                 'kriteria' => kriteria::whereNotIn('id', [3,4])->get(),
                 'alternatif' => alternatif::all(),
                 'shop' => shop::where('status', 'active')->get(),
-                'cars' => $cars
+                'cars' => $cars,
+                'diskon' => $disCars
             ]);
     }
 
@@ -49,7 +60,11 @@ class HomeController extends Controller
         if ($rate && $jumlah != null) {
             $hasil = $rate / $jumlah;
         }
-
+        $diskon = discount::where('car_id', $car->id)->first();
+        if ($diskon) {
+            $dis = $car->harga_sewa->nama * ($diskon->discount / 100);
+            $car['Harga_Sewa_id'] = $car->harga_sewa->nama - $dis;
+        }
         return view('pages.detail')
             ->with(
                 [
@@ -58,6 +73,7 @@ class HomeController extends Controller
                     'ulasan' => $ulasan->get(),
                     'rating' => $hasil,
                     'review' => $jumlah,
+                    'diskon' => $diskon,
                     // 'reviewCheck' => ulasan::where('user_id', auth()->user()->id)->first()
                 ]
             );

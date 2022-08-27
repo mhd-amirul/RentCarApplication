@@ -46,7 +46,7 @@
     </div> --}}
 
     {{-- PROMOSI --}}
-    {{-- <div class="col-lg-10">
+    <div class="col-lg-10">
         <div class="card border border-gray-800 mx-3 shadow-lg">
             <section class="ftco-section">
                 <div class="container">
@@ -57,7 +57,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="featured-carousel owl-carousel mb-4">
-                                @forelse ($cars as $car)
+                                @forelse ($diskon as $car)
                                     <div class="item">
                                         <div class="work">
                                             <div class="img d-flex align-items-center justify-content-center rounded">
@@ -65,7 +65,7 @@
                                             </div>
                                             <div class="text pt-3 w-100 text-center">
                                                 <h5><a href="{{ route('detailMobil', $car->slug) }}" class="text-dark">{{ $car->merk->nama }}</a></h5>
-                                                <span><a href="{{ route('profileToko', $car->shop->slug) }}" class="text-decoration-none text-dark">{{ $car->shop->nm_usaha }}</a></span>
+                                                <span><a href="{{ route('profileToko', $car->shop->slug) }}" class="text-decoration-none text-dark">diskon {{ $car->diskon }} %</a></span>
                                             </div>
                                         </div>
                                     </div>
@@ -79,7 +79,7 @@
             </section>
         </div>
 
-    </div> --}}
+    </div>
 
     {{-- TOP RATING --}}
     <div class="col-lg-10">

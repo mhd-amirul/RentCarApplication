@@ -126,7 +126,11 @@ Route::group(['middleware' => 'auth'], function ()
                     Route::delete('activityDelete/{history}', 'activityDelete')->name('activityDelete');
                 });
 
-                Route::resource('discount', discountController::class);
+                Route::controller(discountController::class)->group(function () {
+                    Route::get('discount', 'index')->name('dcindex');
+                    Route::get('discount/add', 'create')->name('dcadd');
+                    Route::post('discount/add', 'store')->name('dcstore');
+                });
 
                 Route::get('map/{map}', [mapController::class, 'setLocation'])->name('setLocation');
                 Route::put('map/update/{map}', [mapController::class, 'saveLocation'])->name('saveLocation');
