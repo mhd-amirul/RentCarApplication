@@ -44,8 +44,8 @@
                                     <td>{{ $h->discount }} %</td>
                                     <td>{{ $h->created_at }}</td>
                                     <td>
-                                        <a href="" class="btn-sm btn-warning" style="color: rgb(0, 0, 0);"><i class="bi bi-pencil-square"></i></i></a>
-                                        <form action="" method="post" class="d-inline" id="deleteDisk-form-{{ $h->id }}">
+                                        <a href="{{ route('dcedit', $h->id) }}" class="btn-sm btn-warning" style="color: rgb(0, 0, 0);"><i class="bi bi-pencil-square"></i></i></a>
+                                        <form action="{{ route('dcdelete', $h->id) }}" method="post" class="d-inline" id="deleteDisk-form-{{ $h->id }}">
                                             @method('delete')
                                             @csrf
                                             <a href="#" class="btn-sm btn-danger text-decoration-none" id="deleteDisk" data-id="{{ $h->id }}" style="color: rgb(0, 0, 0);"><i class="bi bi-trash-fill"></i></a>
@@ -66,3 +66,25 @@
     </div>
 </div>
 @endsection
+
+@push('sweet')
+    <script>
+        $(document).on('click', '#deleteDisk', function(e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: "Hapus mobil ?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#deleteDisk-form-'+id).submit();
+                }
+            })
+        });
+    </script>
+@endpush

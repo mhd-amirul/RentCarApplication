@@ -130,6 +130,9 @@ Route::group(['middleware' => 'auth'], function ()
                     Route::get('discount', 'index')->name('dcindex');
                     Route::get('discount/add', 'create')->name('dcadd');
                     Route::post('discount/add', 'store')->name('dcstore');
+                    Route::get('discount/edit/{id}', 'edit')->name('dcedit');
+                    Route::put('discount/edit/{id}', 'update')->name('dcedit');
+                    Route::delete('discount/delete/{id}', 'delete')->name('dcdelete');
                 });
 
                 Route::get('map/{map}', [mapController::class, 'setLocation'])->name('setLocation');

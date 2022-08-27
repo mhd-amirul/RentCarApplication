@@ -62,4 +62,44 @@ class discountController extends Controller
                 ]
             );
     }
+
+    public function edit($id)
+    {
+        $discount = discount::findorfail($id);
+        $cars = car::where('id', $discount->car_id);
+        return view('pages.rental.Discount.edit')
+            ->with([
+                'diskon' => $discount,
+                'title' => 'Edit Diskon',
+                'car' => $cars->first()
+            ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $diskon = discount::findorfail($id);
+        $rules = [
+            'discount' => 'required|int|digits:2',
+            // 'shop_id' => 'required',
+            // 'car_id' => 'required'
+        ];
+        // return response()->json($request);
+
+        $request->validate($rules);
+        $data = $request->all();
+        $diskon->update($data);
+
+        return redirect()
+            ->route('dcindex')
+            ->with('success', 'Ubah diskon berhasil');
+    }
+
+    public function delete($id)
+    {
+
+        discount::findorfail($id)->delete();
+        return redirect()->back()->with(
+            'success', 'diskon berhasil dihapus'
+        );
+    }
 }

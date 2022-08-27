@@ -15,7 +15,6 @@
                 </div>
             </div>
         @else
-
         @endif
         @forelse( $cars as $car )
             @if ($car->ranking == 1)
