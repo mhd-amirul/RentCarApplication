@@ -221,7 +221,7 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="row">
+        <div class="row">
             <div class="col-lg-12">
                 <div class="card px-5 pt-5">
                     <h4 class="m-b-20 p-b-5 b-b-default f-w-600">Hasil rekomendasi mobil rental</h4>
@@ -274,8 +274,8 @@
                 </div>
             </div>
 
-        </div> --}}
-        <div class="row justify-content-start">
+        </div>
+        {{-- <div class="row justify-content-start">
             <div class="col-lg-12 mt-4">
                 <div class="card px-5 pt-5">
                     <h4 class="m-b-20 p-b-5 b-b-default f-w-600 text-center">HASIL REKOMENDASI</h4>
@@ -343,7 +343,7 @@
                     <p></p>
                 @endforelse
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
 @endsection

@@ -20,6 +20,7 @@ class HomeController extends Controller
     {
         $rate = ulasan::where('rating', '5')->get();
         $diskon = discount::all();
+        $disCars = [];
         foreach ($diskon as $disk) {
             $disCars[] = car::where('id', $disk->car_id)->first();
             foreach ($disCars as $car) {
@@ -81,16 +82,23 @@ class HomeController extends Controller
 
     public function daftarMobil()
     {
+        // return view('pages.mobil')
+        //     ->with(
+        //         [
+        //             'title' => 'Daftar Mobil',
+        //             'cars' => car::orderBy('Tahun_Produksi_id')
+        //                             ->filter(request(['search']))
+        //                             ->paginate(20)
+        //                             ->withQueryString()
+        //         ]
+        //     );
         return view('pages.mobil')
-            ->with(
-                [
-                    'title' => 'Daftar Mobil',
-                    'cars' => car::orderBy('Tahun_Produksi_id')
-                                    ->filter(request(['search']))
-                                    ->paginate(20)
-                                    ->withQueryString()
-                ]
-            );
+        ->with(
+            [
+                'title' => 'Daftar Mobil',
+                'cars' => car::all()
+            ]
+        );
     }
 
     public function profileToko(shop $shop)
