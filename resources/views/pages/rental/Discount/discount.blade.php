@@ -9,13 +9,6 @@
                 <div class="col-sm-12">
                     <a href="{{ route('toko.index') }}" class="mt-1 btn btn-dark"><i class="bi bi-arrow-left-circle"></i> Back</a>
                     <a href="{{ route('dcadd') }}" class="mt-1 btn btn-primary"><i class="bi bi-file-earmark-plus"></i> Tambah</a>
-                    {{-- <a href="" class="mt-1 btn btn-secondary"><i class="bi bi-clock-history"></i>  History</a> --}}
-                    {{-- <form action="" method="GET" class="d-inline">
-                        @csrf
-                        <input type="text" name="type" value="activities" hidden>
-                        <button class="btn btn-success text-decoration-none mt-1"><i class="bi bi-printer-fill"></i> Print</button>
-                    </form> --}}
-                    {{-- <a target="blank" href="{{ route('activityViewCetak', $shop->id) }}" class="btn btn-success"><i class="bi bi-printer-fill"></i>  Print</a> --}}
                 </div>
             </div>
             <div class="row d-flex justify-content-start mt-3">

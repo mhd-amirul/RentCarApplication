@@ -51,12 +51,6 @@
                             <label for="nm_pu">No Hp</label>
                         </div>
                     </div>
-                    {{-- <div class="col-sm-6 mb-4">
-                        <p class="m-b-10 f-w-600">Surat Izin Usaha</p>
-                        <div style="max-height: 200px; max-width: 376px; overflow: hidden;" class="border border-dark">
-                            <img src="{{ isset($shop->img_siu) == null ? url('images/notfound.png') : asset('storage/' . $shop->img_siu) }}" alt="#" class="img-fluid">
-                        </div>
-                    </div> --}}
                     <div class="row">
                         <div class="col-sm-10 mt-5">
                             <a href="{{ route('sharelok', $shop->slug) }}" class="mr-1 mt-1 btn btn-primary">

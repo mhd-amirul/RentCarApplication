@@ -1,12 +1,6 @@
 @extends('layouts.main')
 
 @section('container')
-{{-- @if (session()->has('success'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        {{ session('success') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-@endif --}}
 @if ($data->role === 'user')
     @if ($makeshop)
         @if ($makeshop->status == 'decline')
@@ -127,13 +121,7 @@
                                 </a>
                             @elseif ($data->role === 'user')
                                 @if ($makeshop)
-                                    {{--  <a class="ml-1 mt-1 btn btn-warning">
-                                        <i class="mr-2 bi bi-house-fill"></i>Diproses
-                                    </a>  --}}
                                     @if ($makeshop->status == 'review')
-                                        {{-- <a class="ml-1 mt-1 btn btn-sm">
-                                            <marquee class="text-success" scrollamount="11"><h5>Harap menunggu! Pemintaan anda sedang diproses Admin!</h5></marquee>
-                                        </a> --}}
                                         <a class="ml-1 mt-1 btn btn-danger text-white">
                                             Pendaftaran Berhasil! Pemintaan sedang diproses Admin!
                                         </a>

@@ -447,76 +447,8 @@
                     zMin: 0,
                     name: 'countries',
                     data: data
-                    // [
-                    //     {
-                    //         name: 'Rank. 1 : Avanza',
-                    //         tahun: 2020,
-                    //         seater:7,
-                    //         harga:400000,
-                    //         // nilai akhir
-                    //         y: 505370,
-                    //         z: 92.9
-                    //     }
-                    // ]
                 }]
             });
         });
     </script>
-    {{-- <script>
-        const array = {!! json_encode($cars) !!}
-        var data = [], len = array.length, i = 0;
-        console.log(array)
-        for(i;i<len;i++){
-            data.push({
-                name : "Data"+i,
-                data : [{
-                    name: "Rank. " + array[i].ranking + " : " + array[i].merk.nama,
-                    tahun: array[i].tahun_produksi.nama,
-                    seater: array[i].muatan_penumpang.nama,
-                    harga: array[i].harga_sewa.nama,
-                    // nilai akhir
-                    y: array[i].nilai,
-                    z: array[i].nilai
-                }]
-            });
-        }
-        Highcharts.chart('container', {
-                chart: {
-                    type: 'column'
-                },
-                title: {
-                    text: 'Chart Hasil Rekomendasi Mobil Rental'
-                },
-                subtitle: {
-                    text: 'Source: CarRental.com'
-                },
-                xAxis: {
-                    categories: [
-                        'Jumlah Data'
-                    ],
-                    crosshair: true
-                },
-                yAxis: {
-                    min: 0,
-                    title: {
-                        text: 'Jumlah Data'
-                    }
-                },
-                tooltip: {
-                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                        '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
-                    footerFormat: '</table>',
-                    shared: true,
-                    useHTML: true
-                },
-                plotOptions: {
-                    column: {
-                        pointPadding: 0.2,
-                        borderWidth: 0
-                    }
-                },
-                series: data
-        });
-    </script> --}}
 @endpush

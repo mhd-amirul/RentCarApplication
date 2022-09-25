@@ -6,29 +6,5 @@
         $(".loader").fadeOut();
         $("#preloder").delay(100).fadeOut("slow");
     });
-
-    // $('#delete').on('click', function(e) {
-    //     e.preventDefault();
-    //     sweetDelete();
-    // });
-
-
-
-    // function sweetDelete () {
-    //     let form = $(this).closest('form');
-    //     Swal.fire({
-    //         title: 'Are you sure?',
-    //         text: "You won't be able to revert this!",
-    //         icon: 'warning',
-    //         showCancelButton: true,
-    //         confirmButtonColor: '#d33',
-    //         cancelButtonColor: '#aaa',
-    //         confirmButtonText: 'Yes, delete it!'
-    //     }).then((result) => {
-    //         if (result.isConfirmed) {
-    //             form.submit();
-    //         }
-    //     })
-    // }
 </script>
 @yield('chart-Script')

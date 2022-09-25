@@ -82,23 +82,16 @@ class HomeController extends Controller
 
     public function daftarMobil()
     {
-        // return view('pages.mobil')
-        //     ->with(
-        //         [
-        //             'title' => 'Daftar Mobil',
-        //             'cars' => car::orderBy('Tahun_Produksi_id')
-        //                             ->filter(request(['search']))
-        //                             ->paginate(20)
-        //                             ->withQueryString()
-        //         ]
-        //     );
         return view('pages.mobil')
-        ->with(
-            [
-                'title' => 'Daftar Mobil',
-                'cars' => car::all()
-            ]
-        );
+            ->with(
+                [
+                    'title' => 'Daftar Mobil',
+                    'cars' => car::orderBy('Tahun_Produksi_id')
+                                    ->filter(request(['search']))
+                                    ->paginate(20)
+                                    ->withQueryString()
+                ]
+            );
     }
 
     public function profileToko(shop $shop)

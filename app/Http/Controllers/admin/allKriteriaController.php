@@ -50,29 +50,4 @@ class allKriteriaController extends Controller
             ->route('allkriteria.index')
             ->with('success', 'Kriteria berhasil dihapus');
     }
-
-
-    // public function create()
-    // {
-    //     return view('pages.admin.pages-admin.allkriteria.tambah')
-    //         ->with(
-    //             [
-    //                 'title' => 'Tambah Kriteria',
-    //             ]
-    //         );
-    // }
-
-    // public function store(Request $request)
-    // {
-    //     $data = $request->validate(
-    //         [
-    //             'nama' => 'required',
-    //             'type' => 'required',
-    //             'bobot' => 'required'
-    //         ]
-    //     );
-
-    //     kriteria::create($data);
-    //     return redirect()->route('allkriteria.index');
-    // }
 }

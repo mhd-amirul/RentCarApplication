@@ -17,17 +17,6 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="col-lg-2">
-                    <div class="card text-white bg-secondary">
-                        <div class="card-body">
-                            <div class="pt-1">
-                                <a class="text-white fs-6" href="{{ route('allkriteria.create') }}">
-                                    <i class="mr-2 bi bi-plus-circle"> Add Kriteria</i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
                 <div class="col-lg-2">
                     <div class="card text-white bg-primary">
                         <div class="card-body">

@@ -135,24 +135,5 @@
         $('#declineShop').on('click', function() {
             $('#declineShop-form').submit();
         })
-
-        // $('#declineShop').on('click', function(e) {
-            //     e.preventDefault();
-            //     let id = $(this).data('id');
-            //     Swal.fire({
-            //         title: 'Are you sure ?',
-            //         text: 'Terima toko ?',
-            //         icon: 'warning',
-            //         confirmButtonColor: '#3085d6',
-            //         cancelButtonColor: '#d33',
-            //         confirmButtonText: 'Confirm',
-            //         showCancelButton: true,
-            //     }).then((result) => {
-            //         if (result.isConfirmed) {
-            //             $('#declineShop-form').submit();
-            //             // console.log('id')
-            //         }
-            //     })
-        // });
     </script>
 @endpush
